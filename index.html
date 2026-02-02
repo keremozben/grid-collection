@@ -141,8 +141,6 @@
       }
 
       .store-badge {
-        background: var(--color-text);
-        color: var(--color-background);
         padding: 0.75rem 1.5rem;
         border-radius: 8px;
         text-decoration: none;
@@ -155,8 +153,12 @@
         gap: 0.5rem;
       }
 
+      .store-badge img {
+        width: 160px;
+      }
+
       .store-badge:hover {
-        transform: scale(1.05);
+        transform: scale(1.2);
         opacity: 0.9;
       }
 
@@ -472,8 +474,12 @@
         </div>
 
         <div class="store-badges">
-          <a href="#" class="store-badge"> <span>📱</span> App Store </a>
-          <a href="#" class="store-badge"> <span>🤖</span> Google Play </a>
+          <a href="#" class="store-badge">
+            <img src="app-store.png" alt="App Store" />
+          </a>
+          <a href="#" class="store-badge">
+            <img src="google-play.png" alt="Google Play" />
+          </a>
         </div>
       </div>
 

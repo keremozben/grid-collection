@@ -21,19 +21,29 @@
         box-sizing: border-box;
       }
 
+      :root {
+        --color-primary: #ff6b35;
+        --color-secondary: #004e89;
+        --color-background: #1a1a2e;
+        --color-surface: #16213e;
+        --color-surface-alt: #0f3460;
+        --color-text: #ffffff;
+        --color-text-secondary: rgba(255, 255, 255, 0.7);
+        --color-text-muted: rgba(255, 255, 255, 0.5);
+        --color-cell-active: #2a2a4e;
+        --color-cell-filled: #ff6b35;
+        --color-cell-passive: #0d0d1a;
+        --color-success: #10b981;
+      }
+
       body {
         font-family:
           "Inter",
           -apple-system,
           BlinkMacSystemFont,
           sans-serif;
-        background: linear-gradient(
-          135deg,
-          #1a1a2e 0%,
-          #16213e 50%,
-          #0f3460 100%
-        );
-        color: #e0e0e0;
+        background: var(--color-background);
+        color: var(--color-text);
         min-height: 100vh;
         line-height: 1.6;
       }
@@ -53,7 +63,7 @@
       .logo {
         font-size: 1.5rem;
         font-weight: 700;
-        color: #6366f1;
+        color: var(--color-primary);
       }
 
       .nav-links {
@@ -63,7 +73,7 @@
       }
 
       .nav-links a {
-        color: #e0e0e0;
+        color: var(--color-text-secondary);
         text-decoration: none;
         font-weight: 500;
         transition: color 0.3s;
@@ -71,37 +81,42 @@
 
       .nav-links a:hover,
       .nav-links a.active {
-        color: #6366f1;
+        color: var(--color-primary);
       }
 
+      /* Hero Section */
       .hero {
-        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 4rem;
         padding: 4rem 2rem;
-        max-width: 900px;
+        max-width: 1100px;
         margin: 0 auto;
       }
 
-      .hero h1 {
-        font-size: 3rem;
-        margin-bottom: 1rem;
-        background: linear-gradient(135deg, #6366f1, #a855f7);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
+      .hero-content {
+        flex: 1;
+        max-width: 500px;
       }
 
-      .hero p {
+      .hero h1 {
+        font-size: 3.5rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+        color: var(--color-primary);
+      }
+
+      .hero-tagline {
         font-size: 1.25rem;
-        color: #a0a0a0;
+        color: var(--color-text-secondary);
         margin-bottom: 1.5rem;
       }
 
       .hero-stats {
         display: flex;
-        justify-content: center;
-        gap: 2rem;
-        flex-wrap: wrap;
-        margin-top: 2rem;
+        gap: 1.5rem;
+        margin-bottom: 2rem;
       }
 
       .stat-item {
@@ -109,38 +124,137 @@
       }
 
       .stat-number {
-        font-size: 2.5rem;
+        font-size: 1.75rem;
         font-weight: 700;
-        color: #6366f1;
+        color: var(--color-primary);
       }
 
       .stat-label {
-        font-size: 0.9rem;
-        color: #888;
+        font-size: 0.8rem;
+        color: var(--color-text-muted);
       }
 
+      .store-badges {
+        display: flex;
+        gap: 1rem;
+        flex-wrap: wrap;
+      }
+
+      .store-badge {
+        background: var(--color-text);
+        color: var(--color-background);
+        padding: 0.75rem 1.5rem;
+        border-radius: 8px;
+        text-decoration: none;
+        font-weight: 600;
+        transition:
+          transform 0.3s,
+          opacity 0.3s;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+
+      .store-badge:hover {
+        transform: scale(1.05);
+        opacity: 0.9;
+      }
+
+      /* Phone Mockup */
+      .hero-mockup {
+        flex-shrink: 0;
+      }
+
+      .phone-frame {
+        width: 280px;
+        height: 560px;
+        background: #000;
+        border-radius: 40px;
+        padding: 12px;
+        box-shadow: 0 25px 80px rgba(255, 107, 53, 0.2);
+      }
+
+      .phone-screen {
+        width: 100%;
+        height: 100%;
+        background: var(--color-background);
+        border-radius: 32px;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 2rem 1rem;
+      }
+
+      .mock-title {
+        font-size: 0.9rem;
+        color: var(--color-primary);
+        font-weight: 600;
+        margin-bottom: 1rem;
+      }
+
+      /* Mini 5x5 grid demo */
+      .mock-grid {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 4px;
+        width: 180px;
+      }
+
+      .mock-cell {
+        width: 32px;
+        height: 32px;
+        border-radius: 6px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 14px;
+        font-weight: 600;
+      }
+
+      .mock-cell.active {
+        background: var(--color-cell-active);
+        color: var(--color-text);
+      }
+
+      .mock-cell.passive {
+        background: var(--color-cell-passive);
+      }
+
+      .mock-cell.filled {
+        background: var(--color-cell-filled);
+        color: white;
+      }
+
+      .mock-cell.highlight {
+        background: var(--color-cell-active);
+        border: 2px dashed var(--color-primary);
+      }
+
+      /* Section */
       .section {
-        max-width: 900px;
+        max-width: 1000px;
         margin: 0 auto;
-        padding: 3rem 2rem;
+        padding: 4rem 2rem;
       }
 
       .section h2 {
         font-size: 2rem;
-        margin-bottom: 1.5rem;
-        color: #fff;
+        margin-bottom: 2rem;
+        color: var(--color-text);
         text-align: center;
       }
 
+      /* Features Grid */
       .features {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
         gap: 1.5rem;
       }
 
       .feature-card {
-        background: rgba(255, 255, 255, 0.05);
-        border: 1px solid rgba(255, 255, 255, 0.1);
+        background: var(--color-surface);
+        border: 1px solid var(--color-surface-alt);
         border-radius: 12px;
         padding: 1.5rem;
         transition:
@@ -150,86 +264,151 @@
 
       .feature-card:hover {
         transform: translateY(-5px);
-        box-shadow: 0 10px 30px rgba(99, 102, 241, 0.2);
+        box-shadow: 0 10px 30px rgba(255, 107, 53, 0.15);
       }
 
       .feature-card h3 {
-        color: #6366f1;
+        color: var(--color-primary);
         margin-bottom: 0.5rem;
-        font-size: 1.25rem;
+        font-size: 1.1rem;
       }
 
       .feature-card p {
-        color: #a0a0a0;
-        font-size: 0.95rem;
+        color: var(--color-text-secondary);
+        font-size: 0.9rem;
       }
 
+      /* How to Play - 3 Steps */
       .how-to-play {
-        background: rgba(255, 255, 255, 0.03);
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+      }
+
+      .step-card {
+        background: var(--color-surface);
         border-radius: 16px;
-        padding: 2rem;
-      }
-
-      .how-to-play ol {
-        margin-left: 1.5rem;
-      }
-
-      .how-to-play li {
-        margin-bottom: 1rem;
-        color: #c0c0c0;
-      }
-
-      .how-to-play strong {
-        color: #fff;
-      }
-
-      .cta-section {
+        padding: 1.5rem;
         text-align: center;
-        padding: 4rem 2rem;
       }
 
-      .store-badges {
+      .step-number {
+        width: 40px;
+        height: 40px;
+        background: var(--color-primary);
+        color: white;
+        border-radius: 50%;
         display: flex;
+        align-items: center;
         justify-content: center;
-        gap: 1rem;
-        flex-wrap: wrap;
-        margin-top: 1.5rem;
+        font-weight: 700;
+        font-size: 1.25rem;
+        margin: 0 auto 1rem;
       }
 
-      .store-badge {
-        background: #fff;
-        color: #1a1a2e;
-        padding: 0.75rem 1.5rem;
-        border-radius: 8px;
-        text-decoration: none;
+      .step-title {
+        font-size: 1.1rem;
         font-weight: 600;
-        transition: transform 0.3s;
+        color: var(--color-text);
+        margin-bottom: 0.5rem;
       }
 
-      .store-badge:hover {
-        transform: scale(1.05);
+      .step-description {
+        font-size: 0.9rem;
+        color: var(--color-text-secondary);
+        margin-bottom: 1rem;
       }
 
+      /* Step Grid Demos */
+      .step-grid {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 4px;
+        width: fit-content;
+        margin: 0 auto;
+      }
+
+      .step-cell {
+        width: 36px;
+        height: 36px;
+        border-radius: 6px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 14px;
+        font-weight: 600;
+        background: var(--color-cell-active);
+      }
+
+      .step-cell.active {
+        background: var(--color-cell-filled);
+      }
+
+      .step-cell.filled {
+        background: var(--color-surface-alt);
+        color: white;
+      }
+
+      .step-cell.highlight {
+        background: var(--color-cell-active);
+        border: 2px dashed var(--color-primary);
+      }
+
+      .step-cell.passive {
+        background: var(--color-cell-passive);
+      }
+
+      /* Footer */
       footer {
         text-align: center;
         padding: 2rem;
-        border-top: 1px solid rgba(255, 255, 255, 0.1);
-        color: #666;
+        border-top: 1px solid var(--color-surface-alt);
+        color: var(--color-text-muted);
         font-size: 0.9rem;
       }
 
       footer a {
-        color: #888;
+        color: var(--color-text-secondary);
         text-decoration: none;
+        transition: color 0.3s;
       }
 
       footer a:hover {
-        color: #6366f1;
+        color: var(--color-primary);
+      }
+
+      .footer-links {
+        margin-bottom: 0.5rem;
+      }
+
+      .footer-links a {
+        margin: 0 0.75rem;
+      }
+
+      /* Responsive */
+      @media (max-width: 900px) {
+        .hero {
+          flex-direction: column-reverse;
+          text-align: center;
+          gap: 2rem;
+        }
+
+        .hero-stats {
+          justify-content: center;
+        }
+
+        .store-badges {
+          justify-content: center;
+        }
+
+        .how-to-play {
+          grid-template-columns: 1fr;
+        }
       }
 
       @media (max-width: 600px) {
         .hero h1 {
-          font-size: 2rem;
+          font-size: 2.5rem;
         }
 
         nav {
@@ -241,12 +420,19 @@
           gap: 1rem;
         }
 
-        .hero-stats {
-          gap: 1rem;
+        .phone-frame {
+          width: 240px;
+          height: 480px;
         }
 
-        .stat-number {
-          font-size: 2rem;
+        .mock-grid {
+          width: 160px;
+        }
+
+        .mock-cell {
+          width: 28px;
+          height: 28px;
+          font-size: 12px;
         }
       }
     </style>
@@ -261,130 +447,247 @@
       </ul>
     </nav>
 
+    <!-- Hero Section -->
     <section class="hero">
-      <h1>Grid Collection</h1>
-      <p>
-        The ultimate collection of number placement puzzles. 21 different grid
-        sizes, each with hundreds of handcrafted levels. A brain-teasing
-        challenge that will keep you engaged for months — or years.
-      </p>
+      <div class="hero-content">
+        <h1>Grid Collection</h1>
+        <p class="hero-tagline">
+          The ultimate collection of number placement puzzles. 21 grid sizes,
+          over 9,000 levels, endless brain-teasing fun.
+        </p>
 
-      <div class="hero-stats">
-        <div class="stat-item">
-          <div class="stat-number">21</div>
-          <div class="stat-label">Grid Sizes</div>
+        <div class="hero-stats">
+          <div class="stat-item">
+            <div class="stat-number">21</div>
+            <div class="stat-label">Grid Sizes</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">9,000+</div>
+            <div class="stat-label">Levels</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">∞</div>
+            <div class="stat-label">Hours of Fun</div>
+          </div>
         </div>
-        <div class="stat-item">
-          <div class="stat-number">9,000+</div>
-          <div class="stat-label">Levels</div>
+
+        <div class="store-badges">
+          <a href="#" class="store-badge"> <span>📱</span> App Store </a>
+          <a href="#" class="store-badge"> <span>🤖</span> Google Play </a>
         </div>
-        <div class="stat-item">
-          <div class="stat-number">∞</div>
-          <div class="stat-label">Hours of Fun</div>
+      </div>
+
+      <div class="hero-mockup">
+        <div class="phone-frame">
+          <div class="phone-screen">
+            <div class="mock-title">Stage 1 - Level 1</div>
+            <div class="mock-grid">
+              <!-- Row 1 -->
+              <div class="mock-cell filled">1</div>
+              <div class="mock-cell active"></div>
+              <div class="mock-cell active"></div>
+              <div class="mock-cell highlight"></div>
+              <div class="mock-cell active"></div>
+              <!-- Row 2 -->
+              <div class="mock-cell active"></div>
+              <div class="mock-cell active"></div>
+              <div class="mock-cell passive"></div>
+              <div class="mock-cell active"></div>
+              <div class="mock-cell active"></div>
+              <!-- Row 3 -->
+              <div class="mock-cell active"></div>
+              <div class="mock-cell highlight"></div>
+              <div class="mock-cell active"></div>
+              <div class="mock-cell active"></div>
+              <div class="mock-cell active"></div>
+              <!-- Row 4 -->
+              <div class="mock-cell active"></div>
+              <div class="mock-cell active"></div>
+              <div class="mock-cell active"></div>
+              <div class="mock-cell active"></div>
+              <div class="mock-cell passive"></div>
+              <!-- Row 5 -->
+              <div class="mock-cell active"></div>
+              <div class="mock-cell active"></div>
+              <div class="mock-cell highlight"></div>
+              <div class="mock-cell active"></div>
+              <div class="mock-cell active"></div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
+    <!-- Features Grid -->
     <section class="section">
       <h2>Why Players Love It</h2>
       <div class="features">
         <div class="feature-card">
           <h3>🧩 A Massive Collection</h3>
           <p>
-            From 5×5 to 25×25 — 21 different grid sizes, each offering a unique
-            experience. Over 9,000 levels total, with more being added
-            regularly.
+            From 5×5 to 25×25 — 21 grid sizes, each with hundreds of levels. New
+            content added regularly.
           </p>
         </div>
         <div class="feature-card">
           <h3>🔢 Number Placement Puzzles</h3>
           <p>
-            Place numbers in sequence following simple movement rules. Easy to
-            learn, but mastering every level takes true strategic thinking.
+            Place numbers in sequence following movement rules. Simple to learn,
+            challenging to master.
           </p>
         </div>
         <div class="feature-card">
           <h3>⭐ Perfect Your Strategy</h3>
           <p>
-            Earn up to 3 stars on each level. Achieve perfect runs without using
-            undo or restart to prove your mastery.
+            Earn up to 3 stars per level. Achieve perfect runs to prove your
+            mastery.
           </p>
         </div>
         <div class="feature-card">
           <h3>🏆 Unlock Achievements</h3>
           <p>
-            Track your progress with dozens of achievements. Complete levels,
-            earn perfect runs, and reach new milestones.
+            Track progress with dozens of achievements. Complete milestones and
+            become a legend.
           </p>
         </div>
         <div class="feature-card">
           <h3>🎮 Play Anywhere</h3>
           <p>
-            Your progress syncs across devices. Start on your phone, continue on
-            your tablet — your achievements follow you.
+            Progress syncs across devices. Start on your phone, continue on your
+            tablet.
           </p>
         </div>
         <div class="feature-card">
-          <h3>💎 Clean & Minimal Design</h3>
+          <h3>💎 Clean & Minimal</h3>
           <p>
-            Distraction-free interface with a modern, minimalist aesthetic. Pure
-            focus on the puzzle. No clutter, just clean lines and intuitive
-            gameplay.
+            Distraction-free interface with modern, minimalist design. Pure
+            puzzle focus.
           </p>
         </div>
       </div>
     </section>
 
+    <!-- How to Play - 3 Steps -->
     <section class="section">
       <h2>How to Play</h2>
       <div class="how-to-play">
-        <ol>
-          <li>
-            <strong>Tap any cell to start.</strong> Your goal is to fill as many
-            cells on the grid as possible by placing numbers in sequence.
-          </li>
-          <li>
-            <strong>Move by jumping cells.</strong> You can move in two ways:
-            <ul style="margin-top: 0.5rem; margin-left: 1rem">
-              <li>
-                <strong>Cardinal Jump:</strong> Skip 2 cells horizontally or
-                vertically
-              </li>
-              <li><strong>Diagonal Jump:</strong> Skip 1 cell diagonally</li>
-            </ul>
-          </li>
-          <li>
-            <strong>Plan your path carefully.</strong> You can't revisit cells
-            you've already filled. One wrong move and you might get stuck!
-          </li>
-          <li>
-            <strong>Earn stars</strong> based on how much of the grid you fill:
-            80% = 1 star, 90% = 2 stars, 100% = 3 stars (Perfect!).
-          </li>
-          <li>
-            <strong>Progress through the collection.</strong> Complete levels to
-            unlock the next. Finish 10 levels in a stage to unlock the next
-            stage.
-          </li>
-        </ol>
+        <!-- Step 1: Start -->
+        <div class="step-card">
+          <div class="step-number">1</div>
+          <div class="step-title">Start</div>
+          <div class="step-description">
+            Tap any cell to place your first number.
+          </div>
+          <div class="step-grid">
+            <div class="step-cell active"></div>
+            <div class="step-cell"></div>
+            <div class="step-cell"></div>
+            <div class="step-cell active highlight"></div>
+            <div class="step-cell"></div>
+            <div class="step-cell"></div>
+            <div class="step-cell"></div>
+            <div class="step-cell active"></div>
+            <div class="step-cell"></div>
+            <div class="step-cell"></div>
+            <div class="step-cell"></div>
+            <div class="step-cell active">1</div>
+            <div class="step-cell"></div>
+            <div class="step-cell"></div>
+            <div class="step-cell active highlight"></div>
+            <div class="step-cell active"></div>
+            <div class="step-cell"></div>
+            <div class="step-cell"></div>
+            <div class="step-cell"></div>
+            <div class="step-cell"></div>
+            <div class="step-cell"></div>
+            <div class="step-cell"></div>
+            <div class="step-cell active"></div>
+            <div class="step-cell"></div>
+            <div class="step-cell"></div>
+          </div>
+        </div>
+
+        <!-- Step 2: Move -->
+        <div class="step-card">
+          <div class="step-number">2</div>
+          <div class="step-title">Move</div>
+          <div class="step-description">
+            Jump 2 cells straight or 1 cell diagonally.
+          </div>
+          <div class="step-grid">
+            <div class="step-cell active highlight"></div>
+            <div class="step-cell"></div>
+            <div class="step-cell"></div>
+            <div class="step-cell filled">2</div>
+            <div class="step-cell"></div>
+            <div class="step-cell"></div>
+            <div class="step-cell"></div>
+            <div class="step-cell active"></div>
+            <div class="step-cell"></div>
+            <div class="step-cell"></div>
+            <div class="step-cell"></div>
+            <div class="step-cell filled">1</div>
+            <div class="step-cell"></div>
+            <div class="step-cell"></div>
+            <div class="step-cell active highlight"></div>
+            <div class="step-cell active"></div>
+            <div class="step-cell"></div>
+            <div class="step-cell"></div>
+            <div class="step-cell"></div>
+            <div class="step-cell"></div>
+            <div class="step-cell"></div>
+            <div class="step-cell"></div>
+            <div class="step-cell active"></div>
+            <div class="step-cell"></div>
+            <div class="step-cell"></div>
+          </div>
+        </div>
+
+        <!-- Step 3: Fill -->
+        <div class="step-card">
+          <div class="step-number">3</div>
+          <div class="step-title">Fill</div>
+          <div class="step-description">
+            Fill all cells to complete the level!
+          </div>
+          <div class="step-grid">
+            <div class="step-cell filled">3</div>
+            <div class="step-cell"></div>
+            <div class="step-cell"></div>
+            <div class="step-cell filled">2</div>
+            <div class="step-cell"></div>
+            <div class="step-cell"></div>
+            <div class="step-cell"></div>
+            <div class="step-cell filled">5</div>
+            <div class="step-cell"></div>
+            <div class="step-cell"></div>
+            <div class="step-cell"></div>
+            <div class="step-cell filled">1</div>
+            <div class="step-cell"></div>
+            <div class="step-cell"></div>
+            <div class="step-cell active highlight"></div>
+            <div class="step-cell filled">4</div>
+            <div class="step-cell"></div>
+            <div class="step-cell"></div>
+            <div class="step-cell"></div>
+            <div class="step-cell"></div>
+            <div class="step-cell"></div>
+            <div class="step-cell"></div>
+            <div class="step-cell filled">6</div>
+            <div class="step-cell"></div>
+            <div class="step-cell"></div>
+          </div>
+        </div>
       </div>
     </section>
 
-    <section class="cta-section">
-      <h2>Ready to Put Your Mind to the Test?</h2>
-      <p>Download Grid Collection and join thousands of puzzle enthusiasts.</p>
-      <div class="store-badges">
-        <a href="#" class="store-badge">📱 App Store</a>
-        <a href="#" class="store-badge">🤖 Google Play</a>
-      </div>
-    </section>
-
+    <!-- Footer -->
     <footer>
-      <p>© 2026 Grid Collection. All rights reserved.</p>
-      <p style="margin-top: 0.5rem">
-        <a href="privacy-policy.html">Privacy Policy</a> ·
+      <div class="footer-links">
+        <a href="privacy-policy.html">Privacy Policy</a>
         <a href="terms-of-service.html">Terms of Service</a>
-      </p>
+      </div>
+      <p>© 2026 Grid Collection. All rights reserved.</p>
     </footer>
   </body>
 </html>

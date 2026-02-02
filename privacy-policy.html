@@ -19,19 +19,25 @@
         box-sizing: border-box;
       }
 
+      :root {
+        --color-primary: #ff6b35;
+        --color-secondary: #004e89;
+        --color-background: #1a1a2e;
+        --color-surface: #16213e;
+        --color-surface-alt: #0f3460;
+        --color-text: #ffffff;
+        --color-text-secondary: rgba(255, 255, 255, 0.7);
+        --color-text-muted: rgba(255, 255, 255, 0.5);
+      }
+
       body {
         font-family:
           "Inter",
           -apple-system,
           BlinkMacSystemFont,
           sans-serif;
-        background: linear-gradient(
-          135deg,
-          #1a1a2e 0%,
-          #16213e 50%,
-          #0f3460 100%
-        );
-        color: #e0e0e0;
+        background: var(--color-background);
+        color: var(--color-text);
         min-height: 100vh;
         line-height: 1.6;
       }
@@ -51,7 +57,7 @@
       .logo {
         font-size: 1.5rem;
         font-weight: 700;
-        color: #6366f1;
+        color: var(--color-primary);
         text-decoration: none;
       }
 
@@ -62,7 +68,7 @@
       }
 
       .nav-links a {
-        color: #e0e0e0;
+        color: var(--color-text-secondary);
         text-decoration: none;
         font-weight: 500;
         transition: color 0.3s;
@@ -70,7 +76,7 @@
 
       .nav-links a:hover,
       .nav-links a.active {
-        color: #6366f1;
+        color: var(--color-primary);
       }
 
       .content {
@@ -81,52 +87,45 @@
 
       h1 {
         font-size: 2.5rem;
-        margin-bottom: 0.5rem;
-        color: #fff;
-      }
-
-      .last-updated {
-        color: #888;
         margin-bottom: 2rem;
+        color: var(--color-primary);
       }
 
       h2 {
-        font-size: 1.5rem;
+        font-size: 1.25rem;
         margin-top: 2rem;
-        margin-bottom: 1rem;
-        color: #6366f1;
+        margin-bottom: 0.5rem;
+        color: var(--color-text);
       }
 
       p {
         margin-bottom: 1rem;
-        color: #c0c0c0;
-      }
-
-      ul {
-        margin-left: 1.5rem;
-        margin-bottom: 1rem;
-      }
-
-      li {
-        margin-bottom: 0.5rem;
-        color: #c0c0c0;
+        color: var(--color-text-secondary);
       }
 
       footer {
         text-align: center;
         padding: 2rem;
-        border-top: 1px solid rgba(255, 255, 255, 0.1);
-        color: #666;
+        border-top: 1px solid var(--color-surface-alt);
+        color: var(--color-text-muted);
         font-size: 0.9rem;
       }
 
       footer a {
-        color: #888;
+        color: var(--color-text-secondary);
         text-decoration: none;
       }
 
       footer a:hover {
-        color: #6366f1;
+        color: var(--color-primary);
+      }
+
+      .footer-links {
+        margin-bottom: 0.5rem;
+      }
+
+      .footer-links a {
+        margin: 0 0.75rem;
       }
 
       @media (max-width: 600px) {
@@ -157,101 +156,107 @@
 
     <div class="content">
       <h1>Privacy Policy</h1>
-      <p class="last-updated">Last updated: February 2, 2026</p>
 
+      <h2>1. Introduction</h2>
       <p>
-        Grid Collection ("we", "our", or "us") is committed to protecting your
-        privacy. This Privacy Policy explains how we collect, use, and safeguard
-        your information when you use our mobile application.
+        At GRID, we respect your privacy and are committed to protecting your
+        personal information. This Privacy Policy explains how we collect, use,
+        disclose, and safeguard your information when you use our mobile puzzle
+        game application.
       </p>
 
-      <h2>Information We Collect</h2>
+      <h2>2. Information We Collect</h2>
       <p>
-        We collect minimal information necessary to provide you with a great
-        gaming experience:
-      </p>
-      <ul>
-        <li>
-          <strong>Game Progress Data:</strong> Your level completions, scores,
-          achievements, and statistics are stored to save your progress.
-        </li>
-        <li>
-          <strong>Device Information:</strong> Basic device identifiers for
-          analytics and crash reporting.
-        </li>
-        <li>
-          <strong>Account Information:</strong> If you choose to sign in, we
-          store your email address for cloud sync purposes.
-        </li>
-      </ul>
-
-      <h2>How We Use Your Information</h2>
-      <ul>
-        <li>To save and sync your game progress across devices</li>
-        <li>To provide customer support</li>
-        <li>To improve our game and fix bugs</li>
-        <li>To show relevant advertisements (if applicable)</li>
-      </ul>
-
-      <h2>Data Storage and Security</h2>
-      <p>
-        Your game data is stored securely using industry-standard encryption. If
-        you use cloud sync, your data is stored on Firebase (Google Cloud
-        Platform) servers.
+        We collect game progress data, including levels completed, scores,
+        achievements, gameplay statistics, and purchase history. This data is
+        stored locally on your device and optionally synced to our cloud servers
+        using Firebase. We also collect error logs to help us identify and fix
+        issues in the game. When you use Firebase anonymous authentication,
+        Firebase may collect certain device information as part of its service,
+        which we use solely for authentication and cloud synchronization
+        purposes.
       </p>
 
-      <h2>Third-Party Services</h2>
-      <p>We may use the following third-party services:</p>
-      <ul>
-        <li>
-          <strong>Firebase:</strong> For authentication, cloud storage, and
-          analytics
-        </li>
-        <li><strong>Google AdMob:</strong> For displaying advertisements</li>
-        <li><strong>App Store / Google Play:</strong> For in-app purchases</li>
-      </ul>
+      <h2>3. How We Use Your Information</h2>
       <p>
-        These services have their own privacy policies, which we encourage you
-        to review.
+        We use your game progress data to provide game functionality and enable
+        cloud synchronization across your devices. We use purchase data to
+        manage in-app purchases and restore purchases when needed. We use error
+        logs to identify and fix bugs, improve game stability, and enhance user
+        experience. We do not use your information for advertising or marketing
+        purposes.
       </p>
 
-      <h2>Children's Privacy</h2>
+      <h2>4. Data Storage and Security</h2>
       <p>
-        Grid Collection is suitable for all ages. We do not knowingly collect
-        personal information from children under 13. If you believe we have
-        collected such information, please contact us immediately.
+        Your game data is stored locally on your device using secure local
+        storage. When you choose to sync your data to the cloud, it is stored
+        securely using Firebase services. We implement appropriate technical and
+        organizational measures to protect your personal information against
+        unauthorized access, alteration, disclosure, or destruction.
       </p>
 
-      <h2>Your Rights</h2>
-      <p>You have the right to:</p>
-      <ul>
-        <li>Access your personal data</li>
-        <li>Request deletion of your data</li>
-        <li>Opt out of personalized advertising</li>
-        <li>Disable cloud sync at any time</li>
-      </ul>
+      <h2>5. Third-Party Services</h2>
+      <p>
+        We use Firebase for anonymous authentication and cloud storage. Firebase
+        may collect certain device information as part of its authentication
+        service, which we use solely for authentication and data synchronization
+        purposes. We also use Google AdMob for displaying advertisements. These
+        services have their own privacy policies governing the collection and
+        use of your information. We encourage you to review their privacy
+        policies.
+      </p>
 
-      <h2>Changes to This Policy</h2>
+      <h2>6. Children's Privacy</h2>
+      <p>
+        Our game is intended for users aged 8 and above. We do not knowingly
+        collect personal information from children under 8. If you are a parent
+        or guardian and believe your child under 8 has provided us with personal
+        information, please contact us immediately.
+      </p>
+
+      <h2>7. Your Rights</h2>
+      <p>
+        You have the right to access, correct, or delete your personal
+        information at any time. You can delete your account and all associated
+        data through the app settings. You can also reset your game progress or
+        choose not to sync your data to the cloud. If you have any questions
+        about your rights or wish to exercise them, please contact us.
+      </p>
+
+      <h2>8. Data Retention</h2>
+      <p>
+        We retain your personal information for as long as necessary to provide
+        our services and fulfill the purposes outlined in this Privacy Policy.
+        When you delete your account, we will delete your personal information
+        from our servers, except where we are required to retain it for legal or
+        regulatory purposes.
+      </p>
+
+      <h2>9. Changes to This Privacy Policy</h2>
       <p>
         We may update this Privacy Policy from time to time. We will notify you
-        of any changes by posting the new policy on this page and updating the
-        "Last updated" date.
+        of any changes by posting the new Privacy Policy on this page and
+        updating the "Last Updated" date. You are advised to review this Privacy
+        Policy periodically for any changes.
       </p>
 
-      <h2>Contact Us</h2>
+      <h2>10. Contact Us</h2>
       <p>
-        If you have any questions about this Privacy Policy, please contact us
-        at:
+        If you have any questions about this Privacy Policy or our data
+        practices, please contact us at keremozben@gmail.com.
       </p>
-      <p>Email: support@gridcollection.app</p>
+
+      <h2>11. Last Updated</h2>
+      <p>Last updated: December 2025</p>
     </div>
 
     <footer>
-      <p>© 2026 Grid Collection. All rights reserved.</p>
-      <p style="margin-top: 0.5rem">
-        <a href="privacy-policy.html">Privacy Policy</a> ·
+      <div class="footer-links">
+        <a href="privacy-policy.html">Privacy Policy</a>
         <a href="terms-of-service.html">Terms of Service</a>
-      </p>
+      </div>
+      <p>© 2026 Grid Collection. All rights reserved.</p>
     </footer>
   </body>
 </html>

@@ -438,6 +438,19 @@
         }
       }
     </style>
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-EHP1CQ1RV4"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-EHP1CQ1RV4");
+    </script>
   </head>
   <body>
     <nav>
@@ -474,10 +487,10 @@
         </div>
 
         <div class="store-badges">
-          <a href="#" class="store-badge">
+          <a href="#" class="store-badge" id="badge-app-store">
             <img src="app-store.png" alt="App Store" />
           </a>
-          <a href="#" class="store-badge">
+          <a href="#" class="store-badge" id="badge-google-play">
             <img src="google-play.png" alt="Google Play" />
           </a>
         </div>
@@ -695,5 +708,27 @@
       </div>
       <p>© 2026 Grid Collection. All rights reserved.</p>
     </footer>
+
+    <script>
+      // Tracking store badge clicks
+      const appStoreBadge = document.getElementById("badge-app-store");
+      const googlePlayBadge = document.getElementById("badge-google-play");
+
+      if (appStoreBadge) {
+        appStoreBadge.addEventListener("click", () => {
+          gtag("event", "click_store_badge", {
+            store_name: "App Store",
+          });
+        });
+      }
+
+      if (googlePlayBadge) {
+        googlePlayBadge.addEventListener("click", () => {
+          gtag("event", "click_store_badge", {
+            store_name: "Google Play",
+          });
+        });
+      }
+    </script>
   </body>
 </html>

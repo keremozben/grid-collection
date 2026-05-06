@@ -44,14 +44,20 @@
 
       nav {
         background: rgba(0, 0, 0, 0.3);
-        padding: 1rem 2rem;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
         backdrop-filter: blur(10px);
         position: sticky;
         top: 0;
         z-index: 100;
+        width: 100%;
+      }
+
+      .nav-container {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 1rem 2rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
       }
 
       .logo {
@@ -160,14 +166,16 @@
   </head>
   <body>
     <nav>
-      <a href="index.html" class="logo">Grid Collection</a>
-      <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="privacy-policy.html">Privacy Policy</a></li>
-        <li>
-          <a href="terms-of-service.html" class="active">Terms of Service</a>
-        </li>
-      </ul>
+      <div class="nav-container">
+        <a href="index.html" class="logo">Grid Collection</a>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="privacy-policy.html">Privacy Policy</a></li>
+          <li>
+            <a href="terms-of-service.html" class="active">Terms of Service</a>
+          </li>
+        </ul>
+      </div>
     </nav>
 
     <div class="content">
@@ -237,16 +245,17 @@
 
       <h2>10. Contact Information</h2>
       <p>
-        If you have any questions about these Terms of Service, please
+        If you have any questions about these Terms of Service, please contact
+        us at
         <a
           href="mailto:contact@grid-collection.com"
           style="color: var(--color-primary)"
-          >contact us</a
+          >contact@grid-collection.com</a
         >.
       </p>
 
       <h2>11. Last updated</h2>
-      <p>Last updated: December 2025</p>
+      <p>Last updated: May 2026</p>
     </div>
 
     <footer>

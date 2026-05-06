@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Grid Collection - A massive collection of 21 grid-based number placement puzzles. Over 9,000 handcrafted levels across grid sizes from 5x5 to 25x25. Test your strategic thinking!"
+      content="Grid Collection - A massive collection of 21 grid-based number placement puzzles. Over 4,500 handcrafted levels across grid sizes from 5x5 to 25x25. Test your strategic thinking!"
     />
     <title>
       Grid Collection - The Ultimate Number Placement Puzzle Collection
@@ -50,14 +50,20 @@
 
       nav {
         background: rgba(0, 0, 0, 0.3);
-        padding: 1rem 2rem;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
         backdrop-filter: blur(10px);
         position: sticky;
         top: 0;
         z-index: 100;
+        width: 100%;
+      }
+
+      .nav-container {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 1rem 2rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
       }
 
       .logo {
@@ -454,12 +460,14 @@
   </head>
   <body>
     <nav>
-      <div class="logo">Grid Collection</div>
-      <ul class="nav-links">
-        <li><a href="index.html" class="active">Home</a></li>
-        <li><a href="privacy-policy.html">Privacy Policy</a></li>
-        <li><a href="terms-of-service.html">Terms of Service</a></li>
-      </ul>
+      <div class="nav-container">
+        <div class="logo">Grid Collection</div>
+        <ul class="nav-links">
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="privacy-policy.html">Privacy Policy</a></li>
+          <li><a href="terms-of-service.html">Terms of Service</a></li>
+        </ul>
+      </div>
     </nav>
 
     <!-- Hero Section -->
@@ -468,7 +476,7 @@
         <h1>Grid Collection</h1>
         <p class="hero-tagline">
           The ultimate collection of number placement puzzles. 21 grid sizes,
-          over 9,000 levels, endless brain-teasing fun.
+          over 4,500 levels, endless brain-teasing fun.
         </p>
 
         <div class="hero-stats">

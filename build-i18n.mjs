@@ -97,8 +97,10 @@ function localize(html, t, lang) {
     flex(en[`f${n}Body`], t[`f${n}Body`]);
   }
 
-  // How to play
-  exact(en.howHeading, t.howHeading, false);
+  // How to play (context-anchored: the English text also appears in an HTML
+  // comment that precedes the heading, so a plain first-match swap would hit
+  // the comment and leave the real <h2> untranslated)
+  ctx(/(<h2>)How to Play(<\/h2>)/, (_m, a, b) => a + t.howHeading + b, "howHeading");
   ctx(/(class="step-title">)Start(<\/div>)/, (_m, a, b) => a + t.step1Title + b, "step1Title");
   ctx(/(class="step-title">)Move(<\/div>)/, (_m, a, b) => a + t.step2Title + b, "step2Title");
   ctx(/(class="step-title">)Fill(<\/div>)/, (_m, a, b) => a + t.step3Title + b, "step3Title");
@@ -119,15 +121,17 @@ function localize(html, t, lang) {
   html = html.replace('value="/" selected', 'value="/"');
   html = html.replace(`value="/${lang.path}/"`, `value="/${lang.path}/" selected`);
   html = html.replace('href="index.html" class="active"', `href="/${lang.path}/" class="active"`);
+  // legal links point to the SAME language's localized legal pages
   for (const p of ["support.html", "privacy-policy.html", "terms-of-service.html"]) {
-    html = html.split(`href="${p}"`).join(`href="/${p}"`);
+    html = html.split(`href="${p}"`).join(`href="/${lang.path}/${p}"`);
   }
   for (const p of ["app-store.png", "google-play.png"]) {
     html = html.split(`src="${p}"`).join(`src="/${p}"`);
   }
-  for (const p of ["favicon.png", "apple-touch-icon.png"]) {
+  for (const p of ["favicon.png", "apple-touch-icon.png", "styles.css"]) {
     html = html.split(`href="${p}"`).join(`href="/${p}"`);
   }
+  html = html.split('src="lang.js"').join('src="/lang.js"');
 
   // Inject translated DEMO_T so the interactive demo speaks the page language.
   html = html.replace("<body>", `<body>\n    <script>window.DEMO_T=${JSON.stringify(t.demo)};</script>`);

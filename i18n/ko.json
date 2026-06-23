@@ -41,7 +41,7 @@
     "title": "지금 해보기",
     "subtitle": "다운로드 없이 여기서 바로 첫 두 레벨을 플레이하세요.",
     "level": "레벨",
-    "undo": "Undo",
+    "undo": "실행 취소",
     "restart": "다시 시작",
     "start": "아무 활성 칸이나 눌러 시작하세요.",
     "progress": "{filled} / {total} 칸 채움.",

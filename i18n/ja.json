@@ -41,7 +41,7 @@
     "title": "今すぐ試そう",
     "subtitle": "最初の2レベルをここでプレイ — ダウンロード不要。",
     "level": "レベル",
-    "undo": "Undo",
+    "undo": "元に戻す",
     "restart": "やり直し",
     "start": "アクティブなセルをタップして始めましょう。",
     "progress": "{filled} / {total} セルを充填。",

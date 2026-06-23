@@ -1,0 +1,145 @@
+{
+  "common": {
+    "navHome": "Trang chủ",
+    "navSupport": "Hỗ trợ",
+    "navPrivacy": "Chính sách quyền riêng tư",
+    "navTerms": "Điều khoản dịch vụ",
+    "footer": "© 2026 Grid Collection. Bảo lưu mọi quyền.",
+    "langLabel": "Ngôn ngữ"
+  },
+  "support": {
+    "metaDescription": "Trang hỗ trợ cho trò chơi giải đố Grid Collection.",
+    "title": "Hỗ trợ - Grid Collection",
+    "h1": "Hỗ trợ",
+    "intro": "Nếu bạn cần trợ giúp, vui lòng liên hệ với chúng tôi qua một trong các địa chỉ email sau đây tùy theo yêu cầu của bạn:",
+    "items": [
+      {
+        "label": "Hỗ trợ trò chơi & Báo lỗi:",
+        "text": "Để được trợ giúp liên quan đến trò chơi hoặc báo lỗi, hãy gửi email cho chúng tôi tại",
+        "email": "support@grid-collection.com"
+      },
+      {
+        "label": "Thông tin chung:",
+        "text": "Để biết thông tin liên quan đến trò chơi, hãy gửi email cho chúng tôi tại",
+        "email": "info@grid-collection.com"
+      },
+      {
+        "label": "Yêu cầu khác & Đề xuất tính năng:",
+        "text": "Để được hỗ trợ về bất kỳ chủ đề nào khác liên quan đến trò chơi hoặc để đề xuất tính năng mới, hãy gửi email cho chúng tôi tại",
+        "email": "contact@grid-collection.com"
+      }
+    ]
+  },
+  "privacy": {
+    "metaDescription": "Chính sách quyền riêng tư cho trò chơi giải đố Grid Collection.",
+    "title": "Chính sách quyền riêng tư - Grid Collection",
+    "h1": "Chính sách quyền riêng tư",
+    "sections": [
+      {
+        "h": "1. Giới thiệu",
+        "p": "Tại GRID, chúng tôi tôn trọng quyền riêng tư của bạn và cam kết bảo vệ thông tin cá nhân của bạn. Chính sách quyền riêng tư này giải thích cách chúng tôi thu thập, sử dụng, tiết lộ và bảo vệ thông tin của bạn khi bạn sử dụng ứng dụng trò chơi giải đố trên di động của chúng tôi."
+      },
+      {
+        "h": "2. Thông tin chúng tôi thu thập",
+        "p": "Chúng tôi thu thập dữ liệu tiến trình trò chơi, bao gồm các màn đã hoàn thành, điểm số, thành tích, thống kê lối chơi và lịch sử mua hàng. Dữ liệu này được lưu trữ cục bộ trên thiết bị của bạn và được đồng bộ lên các máy chủ đám mây của chúng tôi bằng Firebase. Để lưu và khôi phục tiến trình của bạn, chúng tôi đăng nhập bạn tự động thông qua Game Center (iOS) hoặc Google Play Games (Android); chúng tôi chỉ nhận được một mã định danh người chơi từ các dịch vụ này — không phải địa chỉ email, tên hay bất kỳ thông tin hồ sơ cá nhân nào khác của bạn. Chúng tôi cũng thu thập dữ liệu chẩn đoán và báo cáo sự cố để giúp chúng tôi xác định và khắc phục các vấn đề trong trò chơi. Dữ liệu chẩn đoán và báo cáo sự cố bao gồm mã định danh người chơi của bạn để chúng tôi có thể đối chiếu các vấn đề với những người chơi bị ảnh hưởng; chúng không bao giờ bao gồm tên hoặc địa chỉ email của bạn."
+      },
+      {
+        "h": "3. Cách chúng tôi sử dụng thông tin của bạn",
+        "p": "Chúng tôi sử dụng dữ liệu tiến trình trò chơi của bạn để cung cấp chức năng trò chơi và để sao lưu và khôi phục tiến trình của bạn trên cùng một nền tảng. Chúng tôi sử dụng dữ liệu mua hàng để quản lý các giao dịch mua trong ứng dụng và khôi phục các giao dịch mua khi cần thiết. Chúng tôi sử dụng dữ liệu chẩn đoán để xác định và khắc phục lỗi, cải thiện độ ổn định của trò chơi và nâng cao trải nghiệm người dùng. Chúng tôi không sử dụng dữ liệu tiến trình trò chơi của bạn cho mục đích quảng cáo hoặc tiếp thị, mặc dù các đối tác quảng cáo bên thứ ba có thể sử dụng mã định danh thiết bị để phân phối quảng cáo."
+      },
+      {
+        "h": "4. Lưu trữ và bảo mật dữ liệu",
+        "p": "Dữ liệu trò chơi của bạn được lưu trữ cục bộ trên thiết bị của bạn bằng bộ lưu trữ cục bộ an toàn và được tự động đồng bộ lên đám mây bằng các dịch vụ Firebase. Chúng tôi áp dụng các biện pháp kỹ thuật và tổ chức phù hợp để bảo vệ thông tin cá nhân của bạn khỏi việc truy cập, thay đổi, tiết lộ hoặc phá hủy trái phép."
+      },
+      {
+        "h": "5. Dịch vụ của bên thứ ba",
+        "p": "Chúng tôi sử dụng nhiều dịch vụ của bên thứ ba để cung cấp và cải thiện trò chơi của mình. Những dịch vụ này bao gồm Apple Game Center và Google Play Games để đăng nhập tự động và sao lưu tiến trình; Firebase (Google) để xác thực, lưu trữ đám mây và bảo mật; Firebase Crashlytics (Google) cho các báo cáo chẩn đoán và sự cố; RevenueCat để quản lý các giao dịch mua trong ứng dụng; và Google AdMob để hiển thị quảng cáo. Các dịch vụ này có chính sách quyền riêng tư riêng của họ điều chỉnh việc thu thập và sử dụng thông tin của bạn. Chúng tôi khuyến khích bạn xem lại các chính sách quyền riêng tư của họ. Chúng tôi cũng sử dụng Firebase Analytics (Google) để thu thập thống kê lối chơi và sử dụng tổng hợp giúp chúng tôi cải thiện trò chơi."
+      },
+      {
+        "h": "6. Quyền riêng tư của trẻ em",
+        "p": "Trò chơi của chúng tôi dành cho người dùng từ 8 tuổi trở lên. Chúng tôi không cố ý thu thập thông tin cá nhân từ trẻ em dưới 8 tuổi. Nếu bạn là cha mẹ hoặc người giám hộ và tin rằng con bạn dưới 8 tuổi đã cung cấp cho chúng tôi thông tin cá nhân, vui lòng liên hệ với chúng tôi ngay lập tức."
+      },
+      {
+        "h": "7. Quyền của bạn",
+        "p": "Bạn có quyền truy cập, chỉnh sửa hoặc xóa thông tin cá nhân của mình. Vì trò chơi đăng nhập bạn tự động thông qua Game Center hoặc Google Play Games và không yêu cầu bạn tạo tài khoản bằng email hoặc mật khẩu, nên không có tài khoản trong ứng dụng nào để quản lý hoặc xóa. Để yêu cầu xóa dữ liệu của bạn, hãy liên hệ với chúng tôi tại địa chỉ email bên dưới và chúng tôi sẽ xóa dữ liệu của bạn khỏi cơ sở dữ liệu của chúng tôi và các dịch vụ bên thứ ba được kết nối (chẳng hạn như RevenueCat)."
+      },
+      {
+        "h": "8. Lưu giữ dữ liệu",
+        "p": "Chúng tôi lưu giữ thông tin cá nhân của bạn trong thời gian cần thiết để cung cấp các dịch vụ của chúng tôi và thực hiện các mục đích được nêu trong Chính sách quyền riêng tư này. Khi bạn yêu cầu xóa dữ liệu của mình, chúng tôi sẽ xóa thông tin cá nhân của bạn khỏi các máy chủ của chúng tôi và các nền tảng bên thứ ba được kết nối, ngoại trừ trường hợp chúng tôi được yêu cầu lưu giữ vì mục đích pháp lý hoặc quy định."
+      },
+      {
+        "h": "9. Thay đổi đối với Chính sách quyền riêng tư này",
+        "p": "Chúng tôi có thể cập nhật Chính sách quyền riêng tư này theo thời gian. Chúng tôi sẽ thông báo cho bạn về bất kỳ thay đổi nào bằng cách đăng Chính sách quyền riêng tư mới trên trang này và cập nhật ngày \"Cập nhật lần cuối\". Bạn nên xem lại Chính sách quyền riêng tư này định kỳ để biết về mọi thay đổi."
+      },
+      {
+        "h": "10. Liên hệ với chúng tôi",
+        "p": "Nếu bạn có bất kỳ câu hỏi nào về Chính sách quyền riêng tư này hoặc các phương thức xử lý dữ liệu của chúng tôi, vui lòng liên hệ với chúng tôi tại {email}.",
+        "email": "contact@grid-collection.com"
+      },
+      {
+        "h": "11. Cập nhật lần cuối",
+        "p": "Cập nhật lần cuối: Tháng 6 năm 2026"
+      }
+    ]
+  },
+  "terms": {
+    "metaDescription": "Điều khoản dịch vụ cho trò chơi giải đố Grid Collection.",
+    "title": "Điều khoản dịch vụ - Grid Collection",
+    "h1": "Điều khoản dịch vụ",
+    "sections": [
+      {
+        "h": "1. Chấp nhận các điều khoản",
+        "p": "Bằng việc tải xuống, cài đặt hoặc sử dụng GRID, bạn đồng ý bị ràng buộc bởi các Điều khoản dịch vụ này. Nếu bạn không đồng ý với các điều khoản này, vui lòng không sử dụng ứng dụng của chúng tôi."
+      },
+      {
+        "h": "2. Sử dụng ứng dụng",
+        "p": "GRID là một ứng dụng trò chơi giải đố. Bạn có thể sử dụng ứng dụng cho các mục đích cá nhân, phi thương mại. Bạn đồng ý không sửa đổi, dịch ngược hoặc tạo ra các tác phẩm phái sinh dựa trên ứng dụng."
+      },
+      {
+        "h": "3. Tài khoản người dùng",
+        "p": "GRID đăng nhập bạn tự động bằng Game Center trên iOS hoặc Google Play Games trên Android, vì vậy tiến trình của bạn được sao lưu và khôi phục trên cùng một nền tảng mà không cần tạo tài khoản hoặc cung cấp email. Không có tài khoản trong ứng dụng nào để tạo hoặc quản lý. Dữ liệu tiến trình của bạn được lưu trữ cục bộ trên thiết bị của bạn và được đồng bộ lên các máy chủ đám mây. Bạn chịu trách nhiệm về mọi hoạt động diễn ra dưới danh tính của bạn."
+      },
+      {
+        "h": "4. Các hoạt động bị cấm",
+        "p": "Bạn đồng ý không: (a) sử dụng ứng dụng cho bất kỳ mục đích bất hợp pháp nào; (b) cố gắng tấn công hoặc làm gián đoạn chức năng của ứng dụng; (c) chia sẻ tài khoản của bạn với người khác; (d) sử dụng các công cụ tự động để tương tác với ứng dụng."
+      },
+      {
+        "h": "5. Sở hữu trí tuệ",
+        "p": "Tất cả nội dung, tính năng và chức năng của GRID đều thuộc sở hữu của chúng tôi và được bảo vệ bởi luật bản quyền, thương hiệu và các luật sở hữu trí tuệ quốc tế khác."
+      },
+      {
+        "h": "6. Tuyên bố từ chối trách nhiệm",
+        "p": "GRID được cung cấp \"nguyên trạng\" mà không có bảo đảm dưới bất kỳ hình thức nào. Chúng tôi không đảm bảo rằng ứng dụng sẽ không có lỗi hoặc luôn sẵn sàng."
+      },
+      {
+        "h": "7. Giới hạn trách nhiệm pháp lý",
+        "p": "Trong mọi trường hợp, chúng tôi sẽ không chịu trách nhiệm về bất kỳ thiệt hại gián tiếp, ngẫu nhiên, đặc biệt hoặc do hậu quả nào phát sinh từ hoặc liên quan đến việc bạn sử dụng GRID."
+      },
+      {
+        "h": "8. Chấm dứt",
+        "p": "Chúng tôi có thể chấm dứt hoặc đình chỉ quyền truy cập của bạn vào GRID bất kỳ lúc nào, mà không cần thông báo trước, vì bất kỳ lý do gì, bao gồm cả việc vi phạm các Điều khoản dịch vụ này."
+      },
+      {
+        "h": "9. Thay đổi điều khoản",
+        "p": "Chúng tôi bảo lưu quyền sửa đổi các điều khoản này bất kỳ lúc nào. Việc tiếp tục sử dụng ứng dụng sau khi có thay đổi đồng nghĩa với việc chấp nhận các điều khoản mới."
+      },
+      {
+        "h": "10. Thông tin liên hệ",
+        "p": "Nếu bạn có bất kỳ câu hỏi nào về các Điều khoản dịch vụ này, vui lòng liên hệ với chúng tôi tại {email}.",
+        "email": "contact@grid-collection.com"
+      },
+      {
+        "h": "12. Mua hàng trong ứng dụng",
+        "p": "GRID cung cấp các giao dịch mua trong ứng dụng cho các vật phẩm tiêu hao và không tiêu hao. Khoản thanh toán sẽ được tính vào tài khoản Apple ID của bạn khi xác nhận mua hàng. Tất cả các giao dịch mua đều là thanh toán một lần và chúng tôi không cung cấp bất kỳ gói đăng ký định kỳ nào. Bạn có thể khôi phục các giao dịch mua không tiêu hao của mình bất kỳ lúc nào trong ứng dụng."
+      },
+      {
+        "h": "13. Thỏa thuận cấp phép người dùng cuối của Apple",
+        "p": "Thỏa thuận này được ký kết giữa bạn và chúng tôi, chứ không phải với Apple. Chúng tôi chịu trách nhiệm duy nhất về ứng dụng và nội dung của nó. Apple không có bất kỳ nghĩa vụ nào trong việc cung cấp bất kỳ dịch vụ bảo trì và hỗ trợ nào liên quan đến ứng dụng. Apple không chịu trách nhiệm giải quyết bất kỳ khiếu nại nào của bạn hoặc của bất kỳ bên thứ ba nào liên quan đến ứng dụng."
+      },
+      {
+        "h": "11. Cập nhật lần cuối",
+        "p": "Cập nhật lần cuối: Tháng 6 năm 2026"
+      }
+    ]
+  }
+}

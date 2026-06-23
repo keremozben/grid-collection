@@ -1,0 +1,145 @@
+{
+  "common": {
+    "navHome": "Ana Sayfa",
+    "navSupport": "Destek",
+    "navPrivacy": "Gizlilik Politikası",
+    "navTerms": "Hizmet Şartları",
+    "footer": "© 2026 Grid Collection. Tüm hakları saklıdır.",
+    "langLabel": "Dil"
+  },
+  "support": {
+    "metaDescription": "Grid Collection bulmaca oyunu için destek sayfası.",
+    "title": "Destek - Grid Collection",
+    "h1": "Destek",
+    "intro": "Yardıma ihtiyacınız olursa, talebinize göre aşağıdaki e-posta adreslerinden biri üzerinden bizimle iletişime geçmekten çekinmeyin:",
+    "items": [
+      {
+        "label": "Oyun Desteği ve Hata Bildirimleri:",
+        "text": "Oyunla ilgili yardım almak veya hata bildirmek için bize şu adresten e-posta gönderin:",
+        "email": "support@grid-collection.com"
+      },
+      {
+        "label": "Genel Bilgi:",
+        "text": "Oyunla ilgili bilgi almak için bize şu adresten e-posta gönderin:",
+        "email": "info@grid-collection.com"
+      },
+      {
+        "label": "Diğer Talepler ve Özellik İstekleri:",
+        "text": "Oyunla ilgili diğer konularda destek almak veya yeni özellik talep etmek için bize şu adresten e-posta gönderin:",
+        "email": "contact@grid-collection.com"
+      }
+    ]
+  },
+  "privacy": {
+    "metaDescription": "Grid Collection bulmaca oyunu için Gizlilik Politikası.",
+    "title": "Gizlilik Politikası - Grid Collection",
+    "h1": "Gizlilik Politikası",
+    "sections": [
+      {
+        "h": "1. Giriş",
+        "p": "GRID olarak gizliliğinize saygı duyuyor ve kişisel bilgilerinizi korumaya kararlıyız. Bu Gizlilik Politikası, mobil bulmaca oyunu uygulamamızı kullanırken bilgilerinizi nasıl topladığımızı, kullandığımızı, paylaştığımızı ve koruduğumuzu açıklar."
+      },
+      {
+        "h": "2. Topladığımız Bilgiler",
+        "p": "Tamamlanan seviyeler, puanlar, başarımlar, oynanış istatistikleri ve satın alma geçmişi dahil olmak üzere oyun ilerleme verilerinizi topluyoruz. Bu veriler cihazınızda yerel olarak saklanır ve Firebase kullanılarak bulut sunucularımıza senkronize edilir. İlerlemenizi kaydetmek ve geri yüklemek için sizi otomatik olarak Game Center (iOS) veya Google Play Games (Android) üzerinden oturum açtırırız; bu hizmetlerden yalnızca bir oyuncu tanımlayıcısı alırız — e-posta adresinizi, adınızı veya başka herhangi bir kişisel profil bilgisini değil. Ayrıca oyundaki sorunları belirlememize ve düzeltmemize yardımcı olması için tanılama verileri ve çökme raporları toplarız. Tanılama verileri ve çökme raporları, sorunları etkilenen oyuncularla eşleştirebilmemiz için oyuncu tanımlayıcınızı içerir; ancak hiçbir zaman adınızı veya e-posta adresinizi içermez."
+      },
+      {
+        "h": "3. Bilgilerinizi Nasıl Kullanıyoruz",
+        "p": "Oyun ilerleme verilerinizi, oyun işlevselliğini sağlamak ve ilerlemenizi aynı platformda yedeklemek ve geri yüklemek için kullanırız. Satın alma verilerini, uygulama içi satın alımları yönetmek ve gerektiğinde satın alımları geri yüklemek için kullanırız. Tanılama verilerini, hataları belirleyip düzeltmek, oyun kararlılığını artırmak ve kullanıcı deneyimini iyileştirmek için kullanırız. Üçüncü taraf reklam ortakları reklam sunmak için cihaz tanımlayıcılarını kullanabilse de, oyun ilerleme verilerinizi reklam veya pazarlama amaçlarıyla kullanmayız."
+      },
+      {
+        "h": "4. Veri Saklama ve Güvenlik",
+        "p": "Oyun verileriniz, güvenli yerel depolama kullanılarak cihazınızda yerel olarak saklanır ve Firebase hizmetleri kullanılarak otomatik olarak buluta senkronize edilir. Kişisel bilgilerinizi yetkisiz erişime, değiştirilmeye, ifşa edilmeye veya yok edilmeye karşı korumak için uygun teknik ve organizasyonel önlemler uygularız."
+      },
+      {
+        "h": "5. Üçüncü Taraf Hizmetler",
+        "p": "Oyunumuzu sunmak ve iyileştirmek için çeşitli üçüncü taraf hizmetler kullanırız. Bunlar arasında otomatik oturum açma ve ilerleme yedekleme için Apple Game Center ve Google Play Games; kimlik doğrulama, bulut depolama ve güvenlik için Firebase (Google); tanılama ve çökme raporları için Firebase Crashlytics (Google); uygulama içi satın alımları yönetmek için RevenueCat; ve reklam göstermek için Google AdMob yer alır. Bu hizmetlerin, bilgilerinizin toplanmasını ve kullanılmasını düzenleyen kendi gizlilik politikaları vardır. Bu hizmetlerin gizlilik politikalarını incelemenizi öneririz. Ayrıca oyunu iyileştirmemize yardımcı olan toplu oynanış ve kullanım istatistiklerini toplamak için Firebase Analytics (Google) kullanırız."
+      },
+      {
+        "h": "6. Çocukların Gizliliği",
+        "p": "Oyunumuz 8 yaş ve üzeri kullanıcılara yöneliktir. 8 yaşından küçük çocuklardan bilerek kişisel bilgi toplamayız. Bir ebeveyn veya vasi iseniz ve 8 yaşından küçük çocuğunuzun bize kişisel bilgi verdiğini düşünüyorsanız, lütfen derhal bizimle iletişime geçin."
+      },
+      {
+        "h": "7. Haklarınız",
+        "p": "Kişisel bilgilerinize erişme, bunları düzeltme veya silme hakkına sahipsiniz. Oyun sizi otomatik olarak Game Center veya Google Play Games üzerinden oturum açtırdığından ve e-posta ya da parola ile hesap oluşturmanızı gerektirmediğinden, yönetilecek veya silinecek bir uygulama içi hesap yoktur. Verilerinizin silinmesini talep etmek için aşağıdaki e-posta adresinden bizimle iletişime geçin; verilerinizi veritabanlarımızdan ve bağlı üçüncü taraf hizmetlerden (örneğin RevenueCat) sileceğiz."
+      },
+      {
+        "h": "8. Veri Saklama Süresi",
+        "p": "Kişisel bilgilerinizi, hizmetlerimizi sunmak ve bu Gizlilik Politikasında belirtilen amaçları yerine getirmek için gerekli olduğu sürece saklarız. Verilerinizin silinmesini talep ettiğinizde, yasal veya mevzuata ilişkin nedenlerle saklamamız gereken durumlar dışında, kişisel bilgilerinizi sunucularımızdan ve bağlı üçüncü taraf platformlarından kaldıracağız."
+      },
+      {
+        "h": "9. Bu Gizlilik Politikasındaki Değişiklikler",
+        "p": "Bu Gizlilik Politikasını zaman zaman güncelleyebiliriz. Herhangi bir değişikliği, yeni Gizlilik Politikasını bu sayfada yayımlayarak ve \"Son Güncelleme\" tarihini güncelleyerek size bildireceğiz. Bu Gizlilik Politikasını herhangi bir değişiklik için düzenli olarak gözden geçirmeniz önerilir."
+      },
+      {
+        "h": "10. Bizimle İletişime Geçin",
+        "p": "Bu Gizlilik Politikası veya veri uygulamalarımız hakkında herhangi bir sorunuz varsa, lütfen {email} adresinden bizimle iletişime geçin.",
+        "email": "contact@grid-collection.com"
+      },
+      {
+        "h": "11. Son Güncelleme",
+        "p": "Son güncelleme: Haziran 2026"
+      }
+    ]
+  },
+  "terms": {
+    "metaDescription": "Grid Collection bulmaca oyunu için Hizmet Şartları.",
+    "title": "Hizmet Şartları - Grid Collection",
+    "h1": "Hizmet Şartları",
+    "sections": [
+      {
+        "h": "1. Şartların Kabulü",
+        "p": "GRID'i indirerek, kurarak veya kullanarak bu Hizmet Şartlarına bağlı kalmayı kabul edersiniz. Bu şartları kabul etmiyorsanız, lütfen uygulamamızı kullanmayın."
+      },
+      {
+        "h": "2. Uygulamanın Kullanımı",
+        "p": "GRID bir bulmaca oyunu uygulamasıdır. Uygulamayı kişisel, ticari olmayan amaçlarla kullanabilirsiniz. Uygulamayı değiştirmemeyi, tersine mühendislik yapmamayı veya uygulamaya dayalı türev çalışmalar oluşturmamayı kabul edersiniz."
+      },
+      {
+        "h": "3. Kullanıcı Hesapları",
+        "p": "GRID, sizi iOS'ta Game Center veya Android'de Google Play Games kullanarak otomatik olarak oturum açtırır; böylece ilerlemeniz, bir hesap oluşturmadan veya e-posta vermeden aynı platformda yedeklenir ve geri yüklenir. Oluşturulacak veya yönetilecek bir uygulama içi hesap yoktur. İlerleme verileriniz cihazınızda yerel olarak saklanır ve bulut sunucularına senkronize edilir. Kimliğiniz altında gerçekleşen tüm faaliyetlerden siz sorumlusunuz."
+      },
+      {
+        "h": "4. Yasaklı Faaliyetler",
+        "p": "Şunları yapmamayı kabul edersiniz: (a) uygulamayı herhangi bir yasa dışı amaçla kullanmak; (b) uygulamanın işlevselliğini hacklemeye veya bozmaya çalışmak; (c) hesabınızı başkalarıyla paylaşmak; (d) uygulamayla etkileşim için otomatik araçlar kullanmak."
+      },
+      {
+        "h": "5. Fikri Mülkiyet",
+        "p": "GRID'in tüm içeriği, özellikleri ve işlevselliği bize aittir ve uluslararası telif hakkı, ticari marka ve diğer fikri mülkiyet yasalarıyla korunmaktadır."
+      },
+      {
+        "h": "6. Sorumluluk Reddi",
+        "p": "GRID, herhangi bir türde garanti olmaksızın \"olduğu gibi\" sunulur. Uygulamanın hatasız veya kesintisiz olarak kullanılabilir olacağını garanti etmeyiz."
+      },
+      {
+        "h": "7. Sorumluluğun Sınırlandırılması",
+        "p": "Hiçbir durumda, GRID'i kullanmanızdan kaynaklanan veya bununla bağlantılı olarak ortaya çıkan dolaylı, arızi, özel veya sonuç olarak ortaya çıkan zararlardan sorumlu tutulamayız."
+      },
+      {
+        "h": "8. Fesih",
+        "p": "Bu Hizmet Şartlarının ihlali dahil olmak üzere herhangi bir nedenle, önceden bildirimde bulunmaksızın, herhangi bir zamanda GRID'e erişiminizi sonlandırabilir veya askıya alabiliriz."
+      },
+      {
+        "h": "9. Şartlardaki Değişiklikler",
+        "p": "Bu şartları herhangi bir zamanda değiştirme hakkını saklı tutarız. Değişikliklerden sonra uygulamayı kullanmaya devam etmeniz, yeni şartların kabul edildiği anlamına gelir."
+      },
+      {
+        "h": "10. İletişim Bilgileri",
+        "p": "Bu Hizmet Şartları hakkında herhangi bir sorunuz varsa, lütfen {email} adresinden bizimle iletişime geçin.",
+        "email": "contact@grid-collection.com"
+      },
+      {
+        "h": "12. Uygulama İçi Satın Alımlar",
+        "p": "GRID, tüketilebilir ve tüketilemez öğeler için uygulama içi satın alımlar sunar. Satın alma onaylandığında ücret Apple ID hesabınızdan tahsil edilir. Tüm satın alımlar tek seferlik ödemelerdir ve herhangi bir yinelenen abonelik sunmuyoruz. Tüketilemez satın alımlarınızı uygulama içinde istediğiniz zaman geri yükleyebilirsiniz."
+      },
+      {
+        "h": "13. Apple Son Kullanıcı Lisans Sözleşmesi",
+        "p": "Bu sözleşme, Apple ile değil, sizinle bizim aramızda akdedilmiştir. Uygulamadan ve içeriğinden yalnızca biz sorumluyuz. Apple'ın, uygulamayla ilgili herhangi bir bakım ve destek hizmeti sağlama konusunda hiçbir yükümlülüğü yoktur. Apple, sizin veya herhangi bir üçüncü tarafın uygulamayla ilgili öne süreceği talepleri ele almaktan sorumlu değildir."
+      },
+      {
+        "h": "11. Son güncelleme",
+        "p": "Son güncelleme: Haziran 2026"
+      }
+    ]
+  }
+}

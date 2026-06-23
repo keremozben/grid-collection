@@ -18,8 +18,53 @@
   <url><loc>https://grid-collection.com/ja/</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
   <url><loc>https://grid-collection.com/ko/</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
 
-  <!-- Shared pages (English) -->
+  <!-- Localized legal pages -->
   <url><loc>https://grid-collection.com/support.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://grid-collection.com/privacy-policy.html</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
   <url><loc>https://grid-collection.com/terms-of-service.html</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://grid-collection.com/tr/support.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://grid-collection.com/tr/privacy-policy.html</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://grid-collection.com/tr/terms-of-service.html</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://grid-collection.com/de/support.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://grid-collection.com/de/privacy-policy.html</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://grid-collection.com/de/terms-of-service.html</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://grid-collection.com/es/support.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://grid-collection.com/es/privacy-policy.html</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://grid-collection.com/es/terms-of-service.html</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://grid-collection.com/fr/support.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://grid-collection.com/fr/privacy-policy.html</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://grid-collection.com/fr/terms-of-service.html</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://grid-collection.com/it/support.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://grid-collection.com/it/privacy-policy.html</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://grid-collection.com/it/terms-of-service.html</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://grid-collection.com/pt-br/support.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://grid-collection.com/pt-br/privacy-policy.html</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://grid-collection.com/pt-br/terms-of-service.html</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://grid-collection.com/pl/support.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://grid-collection.com/pl/privacy-policy.html</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://grid-collection.com/pl/terms-of-service.html</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://grid-collection.com/id/support.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://grid-collection.com/id/privacy-policy.html</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://grid-collection.com/id/terms-of-service.html</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://grid-collection.com/vi/support.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://grid-collection.com/vi/privacy-policy.html</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://grid-collection.com/vi/terms-of-service.html</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://grid-collection.com/ru/support.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://grid-collection.com/ru/privacy-policy.html</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://grid-collection.com/ru/terms-of-service.html</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://grid-collection.com/hi/support.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://grid-collection.com/hi/privacy-policy.html</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://grid-collection.com/hi/terms-of-service.html</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://grid-collection.com/zh-hans/support.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://grid-collection.com/zh-hans/privacy-policy.html</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://grid-collection.com/zh-hans/terms-of-service.html</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://grid-collection.com/zh-hant/support.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://grid-collection.com/zh-hant/privacy-policy.html</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://grid-collection.com/zh-hant/terms-of-service.html</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://grid-collection.com/ja/support.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://grid-collection.com/ja/privacy-policy.html</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://grid-collection.com/ja/terms-of-service.html</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://grid-collection.com/ko/support.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://grid-collection.com/ko/privacy-policy.html</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://grid-collection.com/ko/terms-of-service.html</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
 </urlset>

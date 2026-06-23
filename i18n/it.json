@@ -41,7 +41,7 @@
     "title": "Provalo subito",
     "subtitle": "Gioca qui ai primi due livelli — nessun download necessario.",
     "level": "Livello",
-    "undo": "Undo",
+    "undo": "Annulla",
     "restart": "Ricomincia",
     "start": "Tocca una cella attiva qualsiasi per iniziare.",
     "progress": "{filled} / {total} celle riempite.",

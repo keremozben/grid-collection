@@ -1,0 +1,145 @@
+{
+  "common": {
+    "navHome": "Accueil",
+    "navSupport": "Assistance",
+    "navPrivacy": "Politique de Confidentialité",
+    "navTerms": "Conditions d’Utilisation",
+    "footer": "© 2026 Grid Collection. Tous droits réservés.",
+    "langLabel": "Langue"
+  },
+  "support": {
+    "metaDescription": "Page d’assistance pour le jeu de puzzle Grid Collection.",
+    "title": "Assistance - Grid Collection",
+    "h1": "Assistance",
+    "intro": "Si vous avez besoin d’aide, n’hésitez pas à nous contacter à l’une des adresses e-mail suivantes en fonction de votre demande :",
+    "items": [
+      {
+        "label": "Assistance de jeu et signalement de bugs :",
+        "text": "Pour obtenir de l’aide concernant le jeu ou pour signaler des bugs, écrivez-nous à",
+        "email": "support@grid-collection.com"
+      },
+      {
+        "label": "Informations générales :",
+        "text": "Pour toute information relative au jeu, écrivez-nous à",
+        "email": "info@grid-collection.com"
+      },
+      {
+        "label": "Autres demandes et suggestions de fonctionnalités :",
+        "text": "Pour toute assistance sur d’autres sujets liés au jeu ou pour proposer de nouvelles fonctionnalités, écrivez-nous à",
+        "email": "contact@grid-collection.com"
+      }
+    ]
+  },
+  "privacy": {
+    "metaDescription": "Politique de Confidentialité du jeu de puzzle Grid Collection.",
+    "title": "Politique de Confidentialité - Grid Collection",
+    "h1": "Politique de Confidentialité",
+    "sections": [
+      {
+        "h": "1. Introduction",
+        "p": "Chez GRID, nous respectons votre vie privée et nous nous engageons à protéger vos informations personnelles. La présente Politique de Confidentialité explique comment nous collectons, utilisons, divulguons et protégeons vos informations lorsque vous utilisez notre application mobile de jeu de puzzle."
+      },
+      {
+        "h": "2. Informations que Nous Collectons",
+        "p": "Nous collectons les données de progression de jeu, y compris les niveaux terminés, les scores, les succès, les statistiques de jeu et l’historique des achats. Ces données sont stockées localement sur votre appareil et synchronisées avec nos serveurs cloud à l’aide de Firebase. Pour sauvegarder et restaurer votre progression, nous vous connectons automatiquement via Game Center (iOS) ou Google Play Games (Android) ; nous recevons uniquement un identifiant de joueur de la part de ces services — et non votre adresse e-mail, votre nom ou toute autre information de profil personnel. Nous collectons également des données de diagnostic et des rapports de plantage afin de nous aider à identifier et à corriger les problèmes du jeu. Les données de diagnostic et les rapports de plantage incluent votre identifiant de joueur afin que nous puissions associer les problèmes aux joueurs concernés ; ils n’incluent jamais votre nom ni votre adresse e-mail."
+      },
+      {
+        "h": "3. Comment Nous Utilisons Vos Informations",
+        "p": "Nous utilisons vos données de progression de jeu pour fournir les fonctionnalités du jeu ainsi que pour sauvegarder et restaurer votre progression sur la même plateforme. Nous utilisons les données d’achat pour gérer les achats intégrés et restaurer les achats en cas de besoin. Nous utilisons les données de diagnostic pour identifier et corriger les bugs, améliorer la stabilité du jeu et enrichir l’expérience utilisateur. Nous n’utilisons pas vos données de progression de jeu à des fins publicitaires ou marketing, bien que des partenaires publicitaires tiers puissent utiliser des identifiants d’appareil pour la diffusion de publicités."
+      },
+      {
+        "h": "4. Stockage et Sécurité des Données",
+        "p": "Vos données de jeu sont stockées localement sur votre appareil à l’aide d’un stockage local sécurisé et sont automatiquement synchronisées vers le cloud à l’aide des services Firebase. Nous mettons en œuvre des mesures techniques et organisationnelles appropriées pour protéger vos informations personnelles contre tout accès, altération, divulgation ou destruction non autorisés."
+      },
+      {
+        "h": "5. Services Tiers",
+        "p": "Nous utilisons divers services tiers pour fournir et améliorer notre jeu. Il s’agit notamment d’Apple Game Center et de Google Play Games pour la connexion automatique et la sauvegarde de la progression ; de Firebase (Google) pour l’authentification, le stockage cloud et la sécurité ; de Firebase Crashlytics (Google) pour les rapports de diagnostic et de plantage ; de RevenueCat pour la gestion des achats intégrés ; et de Google AdMob pour l’affichage des publicités. Ces services disposent de leurs propres politiques de confidentialité régissant la collecte et l’utilisation de vos informations. Nous vous encourageons à consulter leurs politiques de confidentialité. Nous utilisons également Firebase Analytics (Google) pour collecter des statistiques agrégées de jeu et d’utilisation qui nous aident à améliorer le jeu."
+      },
+      {
+        "h": "6. Confidentialité des Enfants",
+        "p": "Notre jeu est destiné aux utilisateurs âgés de 8 ans et plus. Nous ne collectons pas sciemment d’informations personnelles auprès d’enfants de moins de 8 ans. Si vous êtes un parent ou un tuteur et que vous pensez que votre enfant de moins de 8 ans nous a fourni des informations personnelles, veuillez nous contacter immédiatement."
+      },
+      {
+        "h": "7. Vos Droits",
+        "p": "Vous avez le droit d’accéder à vos informations personnelles, de les corriger ou de les supprimer. Étant donné que le jeu vous connecte automatiquement via Game Center ou Google Play Games et ne vous oblige pas à créer un compte avec une adresse e-mail ou un mot de passe, il n’y a aucun compte intégré à gérer ou à supprimer. Pour demander la suppression de vos données, contactez-nous à l’adresse e-mail ci-dessous et nous effacerons vos données de nos bases de données et des services tiers connectés (tels que RevenueCat)."
+      },
+      {
+        "h": "8. Conservation des Données",
+        "p": "Nous conservons vos informations personnelles aussi longtemps que nécessaire pour fournir nos services et atteindre les objectifs décrits dans la présente Politique de Confidentialité. Lorsque vous demandez la suppression de vos données, nous supprimerons vos informations personnelles de nos serveurs et des plateformes tierces connectées, sauf lorsque nous sommes tenus de les conserver à des fins légales ou réglementaires."
+      },
+      {
+        "h": "9. Modifications de la Présente Politique de Confidentialité",
+        "p": "Nous pouvons mettre à jour la présente Politique de Confidentialité de temps à autre. Nous vous informerons de tout changement en publiant la nouvelle Politique de Confidentialité sur cette page et en mettant à jour la date de « Dernière mise à jour ». Nous vous conseillons de consulter périodiquement la présente Politique de Confidentialité afin de prendre connaissance de tout changement."
+      },
+      {
+        "h": "10. Nous Contacter",
+        "p": "Si vous avez des questions concernant la présente Politique de Confidentialité ou nos pratiques en matière de données, veuillez nous contacter à {email}.",
+        "email": "contact@grid-collection.com"
+      },
+      {
+        "h": "11. Dernière Mise à Jour",
+        "p": "Dernière mise à jour : juin 2026"
+      }
+    ]
+  },
+  "terms": {
+    "metaDescription": "Conditions d’Utilisation du jeu de puzzle Grid Collection.",
+    "title": "Conditions d’Utilisation - Grid Collection",
+    "h1": "Conditions d’Utilisation",
+    "sections": [
+      {
+        "h": "1. Acceptation des Conditions",
+        "p": "En téléchargeant, installant ou utilisant GRID, vous acceptez d’être lié par les présentes Conditions d’Utilisation. Si vous n’acceptez pas ces conditions, veuillez ne pas utiliser notre application."
+      },
+      {
+        "h": "2. Utilisation de l’Application",
+        "p": "GRID est une application de jeu de puzzle. Vous pouvez utiliser l’application à des fins personnelles et non commerciales. Vous acceptez de ne pas modifier, désosser ni créer d’œuvres dérivées à partir de l’application."
+      },
+      {
+        "h": "3. Comptes Utilisateurs",
+        "p": "GRID vous connecte automatiquement à l’aide de Game Center sur iOS ou de Google Play Games sur Android, de sorte que votre progression est sauvegardée et restaurée sur la même plateforme sans créer de compte ni fournir d’adresse e-mail. Il n’y a aucun compte intégré à créer ou à gérer. Vos données de progression sont stockées localement sur votre appareil et synchronisées avec les serveurs cloud. Vous êtes responsable de toutes les activités effectuées sous votre identité."
+      },
+      {
+        "h": "4. Activités Interdites",
+        "p": "Vous acceptez de ne pas : (a) utiliser l’application à des fins illégales ; (b) tenter de pirater ou de perturber le fonctionnement de l’application ; (c) partager votre compte avec des tiers ; (d) utiliser des outils automatisés pour interagir avec l’application."
+      },
+      {
+        "h": "5. Propriété Intellectuelle",
+        "p": "L’ensemble du contenu, des caractéristiques et des fonctionnalités de GRID nous appartient et est protégé par les lois internationales sur le droit d’auteur, les marques et autres droits de propriété intellectuelle."
+      },
+      {
+        "h": "6. Avertissements",
+        "p": "GRID est fourni « en l’état », sans garantie d’aucune sorte. Nous ne garantissons pas que l’application sera exempte d’erreurs ou disponible en permanence."
+      },
+      {
+        "h": "7. Limitation de Responsabilité",
+        "p": "En aucun cas nous ne pourrons être tenus responsables de tout dommage indirect, accessoire, spécial ou consécutif résultant de ou lié à votre utilisation de GRID."
+      },
+      {
+        "h": "8. Résiliation",
+        "p": "Nous pouvons résilier ou suspendre votre accès à GRID à tout moment, sans préavis, pour quelque raison que ce soit, y compris en cas de violation des présentes Conditions d’Utilisation."
+      },
+      {
+        "h": "9. Modifications des Conditions",
+        "p": "Nous nous réservons le droit de modifier ces conditions à tout moment. La poursuite de l’utilisation de l’application après des modifications constitue une acceptation des nouvelles conditions."
+      },
+      {
+        "h": "10. Coordonnées",
+        "p": "Si vous avez des questions concernant les présentes Conditions d’Utilisation, veuillez nous contacter à {email}.",
+        "email": "contact@grid-collection.com"
+      },
+      {
+        "h": "12. Achats Intégrés",
+        "p": "GRID propose des achats intégrés pour des articles consommables et non consommables. Le paiement sera débité de votre compte Apple ID lors de la confirmation de l’achat. Tous les achats sont des paiements uniques et nous ne proposons aucun abonnement récurrent. Vous pouvez restaurer vos achats non consommables à tout moment dans l’application."
+      },
+      {
+        "h": "13. Contrat de Licence Utilisateur Final d’Apple",
+        "p": "Ce contrat est conclu entre vous et nous, et non avec Apple. Nous sommes seuls responsables de l’application et de son contenu. Apple n’a aucune obligation de fournir des services de maintenance et d’assistance concernant l’application. Apple n’est pas responsable du traitement de toute réclamation émanant de vous ou d’un tiers concernant l’application."
+      },
+      {
+        "h": "11. Dernière mise à jour",
+        "p": "Dernière mise à jour : juin 2026"
+      }
+    ]
+  }
+}

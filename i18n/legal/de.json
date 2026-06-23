@@ -1,0 +1,145 @@
+{
+  "common": {
+    "navHome": "Start",
+    "navSupport": "Support",
+    "navPrivacy": "Datenschutzerklärung",
+    "navTerms": "Nutzungsbedingungen",
+    "footer": "© 2026 Grid Collection. Alle Rechte vorbehalten.",
+    "langLabel": "Sprache"
+  },
+  "support": {
+    "metaDescription": "Support-Seite für das Puzzlespiel Grid Collection.",
+    "title": "Support - Grid Collection",
+    "h1": "Support",
+    "intro": "Wenn Sie Hilfe benötigen, können Sie uns je nach Anliegen gerne über eine der folgenden E-Mail-Adressen kontaktieren:",
+    "items": [
+      {
+        "label": "Spiel-Support & Fehlerberichte:",
+        "text": "Für Hilfe rund um das Spiel oder um Fehler zu melden, schreiben Sie uns an",
+        "email": "support@grid-collection.com"
+      },
+      {
+        "label": "Allgemeine Informationen:",
+        "text": "Für Informationen rund um das Spiel schreiben Sie uns an",
+        "email": "info@grid-collection.com"
+      },
+      {
+        "label": "Sonstige Anfragen & Funktionswünsche:",
+        "text": "Für Unterstützung zu allen anderen Themen rund um das Spiel oder um neue Funktionen vorzuschlagen, schreiben Sie uns an",
+        "email": "contact@grid-collection.com"
+      }
+    ]
+  },
+  "privacy": {
+    "metaDescription": "Datenschutzerklärung für das Puzzlespiel Grid Collection.",
+    "title": "Datenschutzerklärung - Grid Collection",
+    "h1": "Datenschutzerklärung",
+    "sections": [
+      {
+        "h": "1. Einleitung",
+        "p": "Bei GRID respektieren wir Ihre Privatsphäre und verpflichten uns, Ihre personenbezogenen Daten zu schützen. Diese Datenschutzerklärung erläutert, wie wir Ihre Daten erheben, verwenden, offenlegen und schützen, wenn Sie unsere mobile Puzzlespiel-Anwendung nutzen."
+      },
+      {
+        "h": "2. Welche Daten wir erheben",
+        "p": "Wir erheben Daten zum Spielfortschritt, einschließlich abgeschlossener Level, Punktzahlen, Erfolge, Spielstatistiken und Kaufhistorie. Diese Daten werden lokal auf Ihrem Gerät gespeichert und über Firebase mit unseren Cloud-Servern synchronisiert. Um Ihren Fortschritt zu speichern und wiederherzustellen, melden wir Sie automatisch über Game Center (iOS) oder Google Play Games (Android) an; von diesen Diensten erhalten wir lediglich eine Spielerkennung – nicht Ihre E-Mail-Adresse, Ihren Namen oder andere personenbezogene Profildaten. Außerdem erheben wir Diagnosedaten und Absturzberichte, um Probleme im Spiel zu erkennen und zu beheben. Diagnosedaten und Absturzberichte enthalten Ihre Spielerkennung, damit wir Probleme den betroffenen Spielern zuordnen können; sie enthalten niemals Ihren Namen oder Ihre E-Mail-Adresse."
+      },
+      {
+        "h": "3. Wie wir Ihre Daten verwenden",
+        "p": "Wir verwenden Ihre Spielfortschrittsdaten, um die Spielfunktionen bereitzustellen sowie um Ihren Fortschritt auf derselben Plattform zu sichern und wiederherzustellen. Wir verwenden Kaufdaten, um In-App-Käufe zu verwalten und Käufe bei Bedarf wiederherzustellen. Wir verwenden Diagnosedaten, um Fehler zu erkennen und zu beheben, die Stabilität des Spiels zu verbessern und das Nutzererlebnis zu optimieren. Wir verwenden Ihre Spielfortschrittsdaten nicht zu Werbe- oder Marketingzwecken, allerdings können Werbepartner von Drittanbietern Gerätekennungen zur Auslieferung von Anzeigen verwenden."
+      },
+      {
+        "h": "4. Datenspeicherung und Sicherheit",
+        "p": "Ihre Spieldaten werden lokal auf Ihrem Gerät in einem sicheren lokalen Speicher abgelegt und automatisch über Firebase-Dienste mit der Cloud synchronisiert. Wir ergreifen geeignete technische und organisatorische Maßnahmen, um Ihre personenbezogenen Daten vor unbefugtem Zugriff, Veränderung, Offenlegung oder Zerstörung zu schützen."
+      },
+      {
+        "h": "5. Dienste von Drittanbietern",
+        "p": "Wir nutzen verschiedene Dienste von Drittanbietern, um unser Spiel bereitzustellen und zu verbessern. Dazu gehören Apple Game Center und Google Play Games für die automatische Anmeldung und die Sicherung des Fortschritts; Firebase (Google) für Authentifizierung, Cloud-Speicher und Sicherheit; Firebase Crashlytics (Google) für Diagnose- und Absturzberichte; RevenueCat zur Verwaltung von In-App-Käufen; und Google AdMob zur Anzeige von Werbung. Diese Dienste verfügen über eigene Datenschutzerklärungen, die die Erhebung und Verwendung Ihrer Daten regeln. Wir empfehlen Ihnen, deren Datenschutzerklärungen zu lesen. Außerdem nutzen wir Firebase Analytics (Google), um aggregierte Spiel- und Nutzungsstatistiken zu erheben, die uns helfen, das Spiel zu verbessern."
+      },
+      {
+        "h": "6. Datenschutz für Kinder",
+        "p": "Unser Spiel richtet sich an Nutzer ab 8 Jahren. Wir erheben wissentlich keine personenbezogenen Daten von Kindern unter 8 Jahren. Wenn Sie ein Elternteil oder Erziehungsberechtigter sind und glauben, dass Ihr Kind unter 8 Jahren uns personenbezogene Daten übermittelt hat, kontaktieren Sie uns bitte umgehend."
+      },
+      {
+        "h": "7. Ihre Rechte",
+        "p": "Sie haben das Recht, auf Ihre personenbezogenen Daten zuzugreifen, sie zu berichtigen oder zu löschen. Da das Spiel Sie automatisch über Game Center oder Google Play Games anmeldet und Sie kein Konto mit E-Mail oder Passwort erstellen müssen, gibt es kein In-App-Konto, das verwaltet oder gelöscht werden müsste. Um die Löschung Ihrer Daten zu beantragen, kontaktieren Sie uns unter der untenstehenden E-Mail-Adresse, und wir löschen Ihre Daten aus unseren Datenbanken und verbundenen Drittanbieterdiensten (wie RevenueCat)."
+      },
+      {
+        "h": "8. Aufbewahrung von Daten",
+        "p": "Wir bewahren Ihre personenbezogenen Daten so lange auf, wie es zur Bereitstellung unserer Dienste und zur Erfüllung der in dieser Datenschutzerklärung beschriebenen Zwecke erforderlich ist. Wenn Sie die Löschung Ihrer Daten beantragen, entfernen wir Ihre personenbezogenen Daten von unseren Servern und verbundenen Drittanbieterplattformen, sofern wir nicht aus rechtlichen oder regulatorischen Gründen zur Aufbewahrung verpflichtet sind."
+      },
+      {
+        "h": "9. Änderungen dieser Datenschutzerklärung",
+        "p": "Wir können diese Datenschutzerklärung von Zeit zu Zeit aktualisieren. Wir informieren Sie über Änderungen, indem wir die neue Datenschutzerklärung auf dieser Seite veröffentlichen und das Datum „Zuletzt aktualisiert“ anpassen. Wir empfehlen Ihnen, diese Datenschutzerklärung regelmäßig auf Änderungen zu überprüfen."
+      },
+      {
+        "h": "10. Kontakt",
+        "p": "Wenn Sie Fragen zu dieser Datenschutzerklärung oder unseren Datenverarbeitungspraktiken haben, kontaktieren Sie uns bitte unter {email}.",
+        "email": "contact@grid-collection.com"
+      },
+      {
+        "h": "11. Zuletzt aktualisiert",
+        "p": "Zuletzt aktualisiert: Juni 2026"
+      }
+    ]
+  },
+  "terms": {
+    "metaDescription": "Nutzungsbedingungen für das Puzzlespiel Grid Collection.",
+    "title": "Nutzungsbedingungen - Grid Collection",
+    "h1": "Nutzungsbedingungen",
+    "sections": [
+      {
+        "h": "1. Annahme der Bedingungen",
+        "p": "Indem Sie GRID herunterladen, installieren oder nutzen, erklären Sie sich mit diesen Nutzungsbedingungen einverstanden. Wenn Sie diesen Bedingungen nicht zustimmen, nutzen Sie unsere Anwendung bitte nicht."
+      },
+      {
+        "h": "2. Nutzung der Anwendung",
+        "p": "GRID ist eine Puzzlespiel-Anwendung. Sie dürfen die App für persönliche, nicht-kommerzielle Zwecke nutzen. Sie verpflichten sich, die App nicht zu verändern, zurückzuentwickeln (Reverse Engineering) oder abgeleitete Werke auf Basis der App zu erstellen."
+      },
+      {
+        "h": "3. Benutzerkonten",
+        "p": "GRID meldet Sie automatisch über Game Center auf iOS oder Google Play Games auf Android an, sodass Ihr Fortschritt auf derselben Plattform gesichert und wiederhergestellt wird, ohne dass Sie ein Konto erstellen oder eine E-Mail angeben müssen. Es gibt kein In-App-Konto, das erstellt oder verwaltet werden müsste. Ihre Fortschrittsdaten werden lokal auf Ihrem Gerät gespeichert und mit Cloud-Servern synchronisiert. Sie sind für alle Aktivitäten verantwortlich, die unter Ihrer Identität stattfinden."
+      },
+      {
+        "h": "4. Verbotene Aktivitäten",
+        "p": "Sie verpflichten sich, Folgendes zu unterlassen: (a) die App für rechtswidrige Zwecke zu nutzen; (b) zu versuchen, die Funktionalität der App zu hacken oder zu stören; (c) Ihr Konto mit anderen zu teilen; (d) automatisierte Tools zur Interaktion mit der App zu verwenden."
+      },
+      {
+        "h": "5. Geistiges Eigentum",
+        "p": "Alle Inhalte, Funktionen und Funktionalitäten von GRID sind unser Eigentum und durch internationales Urheberrecht, Markenrecht und andere Gesetze zum Schutz des geistigen Eigentums geschützt."
+      },
+      {
+        "h": "6. Haftungsausschlüsse",
+        "p": "GRID wird „wie besehen“ ohne jegliche Gewährleistung bereitgestellt. Wir garantieren nicht, dass die App fehlerfrei oder durchgehend verfügbar ist."
+      },
+      {
+        "h": "7. Haftungsbeschränkung",
+        "p": "In keinem Fall haften wir für indirekte, zufällige, besondere oder Folgeschäden, die sich aus oder in Verbindung mit Ihrer Nutzung von GRID ergeben."
+      },
+      {
+        "h": "8. Kündigung",
+        "p": "Wir können Ihren Zugang zu GRID jederzeit, ohne vorherige Ankündigung und aus beliebigem Grund kündigen oder aussetzen, einschließlich bei Verstößen gegen diese Nutzungsbedingungen."
+      },
+      {
+        "h": "9. Änderungen der Bedingungen",
+        "p": "Wir behalten uns das Recht vor, diese Bedingungen jederzeit zu ändern. Die fortgesetzte Nutzung der App nach Änderungen gilt als Annahme der neuen Bedingungen."
+      },
+      {
+        "h": "10. Kontaktinformationen",
+        "p": "Wenn Sie Fragen zu diesen Nutzungsbedingungen haben, kontaktieren Sie uns bitte unter {email}.",
+        "email": "contact@grid-collection.com"
+      },
+      {
+        "h": "12. In-App-Käufe",
+        "p": "GRID bietet In-App-Käufe für verbrauchbare und nicht-verbrauchbare Artikel an. Die Zahlung wird bei Bestätigung des Kaufs Ihrem Apple ID-Konto belastet. Alle Käufe sind Einmalzahlungen, und wir bieten keine wiederkehrenden Abonnements an. Sie können Ihre nicht-verbrauchbaren Käufe jederzeit innerhalb der App wiederherstellen."
+      },
+      {
+        "h": "13. Apple Endbenutzer-Lizenzvereinbarung",
+        "p": "Diese Vereinbarung wird zwischen Ihnen und uns geschlossen, nicht mit Apple. Wir sind allein für die Anwendung und deren Inhalte verantwortlich. Apple ist in keiner Weise verpflichtet, Wartungs- und Supportleistungen in Bezug auf die Anwendung zu erbringen. Apple ist nicht dafür verantwortlich, etwaige Ansprüche von Ihnen oder Dritten in Bezug auf die Anwendung zu bearbeiten."
+      },
+      {
+        "h": "11. Zuletzt aktualisiert",
+        "p": "Zuletzt aktualisiert: Juni 2026"
+      }
+    ]
+  }
+}

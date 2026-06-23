@@ -1,0 +1,58 @@
+{
+  "title": "Grid Collection - The Ultimate Number Placement Puzzle Collection",
+  "metaDescription": "Grid Collection - A massive collection of grid-based number placement puzzles. Over 5,000 handcrafted levels across six grid sizes from 5x5 to 10x10. Test your strategic thinking!",
+  "ogTitle": "Grid Collection — 5,000+ Number Placement Puzzles",
+  "ogDescription": "A massive collection of grid-based number placement puzzles. Over 5,000 handcrafted levels across six grid sizes from 5x5 to 10x10. Free on the App Store.",
+  "twitterDescription": "A massive collection of grid-based number placement puzzles. Over 5,000 handcrafted levels. Free on the App Store.",
+
+  "navHome": "Home",
+  "navSupport": "Support",
+  "navPrivacy": "Privacy Policy",
+  "navTerms": "Terms of Service",
+
+  "heroTagline": "The ultimate collection of number placement puzzles. Six grid sizes from 5×5 to 10×10, over 5,000 levels, endless brain-teasing fun.",
+  "statGridSizes": "Grid Sizes",
+  "statLevels": "Levels",
+  "statHours": "Hours of Fun",
+  "badgeAppStoreAlt": "Download on the App Store",
+  "badgeGooglePlayAlt": "Coming soon to Google Play",
+  "comingSoon": "Coming soon",
+  "mockTitle": "Level 1",
+
+  "featuresHeading": "Why Players Love It",
+  "f1Title": "🧩 A Massive Collection",
+  "f1Body": "From 5×5 to 10×10 — six grid sizes, each with hundreds of handcrafted levels. New content added regularly.",
+  "f2Title": "🔢 Number Placement Puzzles",
+  "f2Body": "Place numbers in sequence following movement rules. Simple to learn, challenging to master.",
+  "f3Title": "⭐ Perfect Your Strategy",
+  "f3Body": "Earn up to 3 stars per level. Achieve perfect runs to prove your mastery.",
+  "f4Title": "🏆 Unlock Achievements",
+  "f4Body": "Track progress with dozens of achievements. Complete milestones and become a legend.",
+  "f5Title": "🎮 Never Lose Progress",
+  "f5Body": "Your progress is automatically backed up to Game Center and restored on your other Apple devices — even after reinstalling.",
+  "f6Title": "💎 Clean & Minimal",
+  "f6Body": "Distraction-free interface with modern, minimalist design. Pure puzzle focus.",
+
+  "howHeading": "How to Play",
+  "step1Title": "Start",
+  "step1Desc": "Tap any cell to place your first number.",
+  "step2Title": "Move",
+  "step2Desc": "Jump 2 cells straight or 1 cell diagonally.",
+  "step3Title": "Fill",
+  "step3Desc": "Fill all cells to complete the level!",
+
+  "footerRights": "© 2026 Grid Collection. All rights reserved.",
+
+  "demo": {
+    "title": "Try It Now",
+    "subtitle": "Play the first two levels right here — no download needed.",
+    "level": "Level",
+    "undo": "Undo",
+    "restart": "Restart",
+    "start": "Tap any active cell to begin.",
+    "progress": "{filled} / {total} cells filled.",
+    "deadEnd": "No moves left — tap Restart to try again.",
+    "win": "Solved! 🎉 You filled every cell.",
+    "cta": "Get 5,000+ levels on the App Store →"
+  }
+}

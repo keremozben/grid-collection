@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Localized homepages (hreflang alternates are declared in each page's <head>). -->
+  <url><loc>https://grid-collection.com/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://grid-collection.com/tr/</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://grid-collection.com/de/</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://grid-collection.com/es/</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://grid-collection.com/fr/</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://grid-collection.com/it/</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://grid-collection.com/pt-br/</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://grid-collection.com/pl/</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://grid-collection.com/id/</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://grid-collection.com/vi/</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://grid-collection.com/ru/</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://grid-collection.com/hi/</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://grid-collection.com/zh-hans/</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://grid-collection.com/zh-hant/</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://grid-collection.com/ja/</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://grid-collection.com/ko/</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+
+  <!-- Shared pages (English) -->
+  <url><loc>https://grid-collection.com/support.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://grid-collection.com/privacy-policy.html</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://grid-collection.com/terms-of-service.html</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+</urlset>

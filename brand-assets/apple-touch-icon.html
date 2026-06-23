@@ -1,0 +1,92 @@
+<!doctype html>
+<!--
+  apple-touch-icon.html — iOS home-screen / Safari icon for grid-collection.com
+  CAPTURE AT EXACTLY 180 × 180 px → export as  apple-touch-icon.png  (place in site root).
+  Full-bleed: iOS masks the corners itself, so DO NOT pre-round the outer square.
+  Same 5x5 rule-compliant board as the favicon (no connecting path).
+-->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { width: 180px; height: 180px; overflow: hidden; }
+
+      .tile {
+        width: 180px;
+        height: 180px;
+        background:
+          radial-gradient(140px 110px at 72% 22%, rgba(255, 107, 53, 0.24), transparent 60%),
+          linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+      }
+
+      .grid {
+        width: 132px;
+        height: 132px;
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(5, 1fr);
+        gap: 6px;
+      }
+
+      .c {
+        border-radius: 6px;
+        background: #2a2a4e; /* active */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 15px;
+        font-weight: 900;
+        color: #fff;
+      }
+      .c.pass { background: #21213a; }
+      .c.blue { background: linear-gradient(160deg, #1a6aac, #004e89); }
+      .c.orange {
+        background: linear-gradient(160deg, #ff6b35, #e85a28);
+        box-shadow: 0 0 0 2px rgba(255, 107, 53, 0.3), 0 0 14px rgba(255, 107, 53, 0.6);
+      }
+      .c.move { box-shadow: inset 0 0 0 2px #ff6b35; }
+    </style>
+  </head>
+  <body>
+    <div class="tile">
+      <div class="grid">
+        <div class="c pass"></div>
+        <div class="c blue">2</div>
+        <div class="c"></div>
+        <div class="c"></div>
+        <div class="c pass"></div>
+        <div class="c pass"></div>
+        <div class="c"></div>
+        <div class="c"></div>
+        <div class="c"></div>
+        <div class="c pass"></div>
+        <div class="c move"></div>
+        <div class="c"></div>
+        <div class="c"></div>
+        <div class="c orange">3</div>
+        <div class="c"></div>
+        <div class="c pass"></div>
+        <div class="c blue">1</div>
+        <div class="c"></div>
+        <div class="c"></div>
+        <div class="c pass"></div>
+        <div class="c pass"></div>
+        <div class="c move"></div>
+        <div class="c"></div>
+        <div class="c"></div>
+        <div class="c pass"></div>
+      </div>
+    </div>
+  </body>
+</html>

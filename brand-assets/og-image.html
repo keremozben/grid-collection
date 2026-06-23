@@ -1,0 +1,199 @@
+<!doctype html>
+<!--
+  og-image.html — Social/share image for grid-collection.com
+  CAPTURE AT EXACTLY 1200 × 630 px → export as  og-image.png  (place in site root).
+  Mirrors the in-app dark theme. NO connecting path (the game has none) — only the
+  four real cell types: filled (placed number, blue), current (orange), possible
+  move (orange highlight) and passive (dark). Board = real solvable 5x5 Level 1,
+  shown mid-solve after 6 moves.
+-->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+
+      :root {
+        --primary: #ff6b35;
+        --primary-dark: #e85a28;
+        --secondary: #004e89;
+        --secondary-light: #1a6aac;
+        --cell-active: #2a2a4e;
+        --cell-passive: #21213a;
+        --text: #ffffff;
+        --text-dim: rgba(255, 255, 255, 0.62);
+      }
+
+      html, body { width: 1200px; height: 630px; overflow: hidden; }
+
+      .canvas {
+        width: 1200px;
+        height: 630px;
+        display: flex;
+        align-items: center;
+        gap: 56px;
+        padding: 0 72px;
+        font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+        background:
+          radial-gradient(900px 600px at 78% 18%, rgba(255, 107, 53, 0.18), transparent 60%),
+          radial-gradient(700px 500px at 12% 100%, rgba(0, 78, 137, 0.32), transparent 60%),
+          linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+        color: var(--text);
+      }
+
+      .copy { flex: 1; }
+
+      .eyebrow {
+        display: inline-block;
+        font-size: 18px;
+        font-weight: 700;
+        letter-spacing: 0.22em;
+        text-transform: uppercase;
+        color: var(--primary);
+        margin-bottom: 22px;
+      }
+
+      .wordmark {
+        font-size: 92px;
+        font-weight: 900;
+        line-height: 0.98;
+        letter-spacing: -0.02em;
+        margin-bottom: 26px;
+      }
+      .wordmark .accent {
+        background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      .tagline {
+        font-size: 27px;
+        font-weight: 500;
+        line-height: 1.4;
+        color: var(--text-dim);
+        max-width: 540px;
+        margin-bottom: 34px;
+      }
+
+      .pills { display: flex; gap: 14px; }
+      .pill {
+        display: inline-flex;
+        align-items: center;
+        gap: 9px;
+        font-size: 20px;
+        font-weight: 700;
+        padding: 12px 22px;
+        border-radius: 999px;
+      }
+      .pill--solid {
+        background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+        color: #fff;
+        box-shadow: 0 10px 26px rgba(255, 107, 53, 0.35);
+      }
+      .pill--ghost {
+        background: rgba(255, 255, 255, 0.06);
+        border: 1px solid rgba(255, 255, 255, 0.16);
+        color: var(--text);
+      }
+
+      .board-wrap {
+        flex-shrink: 0;
+        width: 420px;
+        height: 420px;
+        padding: 22px;
+        border-radius: 32px;
+        background: linear-gradient(160deg, rgba(22, 33, 62, 0.95), rgba(15, 52, 96, 0.55));
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        box-shadow: 0 30px 70px rgba(0, 0, 0, 0.45);
+      }
+
+      .board {
+        width: 100%;
+        height: 100%;
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(5, 1fr);
+        gap: 10px;
+      }
+
+      .cell {
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 30px;
+        font-weight: 800;
+        background: var(--cell-passive);
+      }
+      .cell.active { background: var(--cell-active); }
+      .cell.filled {
+        background: linear-gradient(160deg, var(--secondary-light), var(--secondary));
+        color: #fff;
+      }
+      .cell.current {
+        background: linear-gradient(160deg, var(--primary), var(--primary-dark));
+        color: #fff;
+        box-shadow: 0 0 0 3px rgba(255, 107, 53, 0.35), 0 0 28px rgba(255, 107, 53, 0.6);
+      }
+      .cell.move {
+        background: var(--cell-active);
+        box-shadow: inset 0 0 0 3px var(--primary);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="canvas">
+      <div class="copy">
+        <span class="eyebrow">Number Placement Puzzle</span>
+        <h1 class="wordmark">Grid<br /><span class="accent">Collection</span></h1>
+        <p class="tagline">
+          5,000+ handcrafted levels across six grid sizes. Visit every cell in
+          one chain — endless brain-teasing fun.
+        </p>
+        <div class="pills">
+          <span class="pill pill--solid">★ Free on the App Store</span>
+          <span class="pill pill--ghost">5×5 → 10×10</span>
+        </div>
+      </div>
+
+      <div class="board-wrap">
+        <!-- Real 5x5 Level 1, mid-solve (6 moves placed). idx 0..24.
+             filled=placed number · current=last move · move=valid next move · active=empty playable · (default)=passive -->
+        <div class="board">
+          <div class="cell move"></div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell current">6</div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell active"></div>
+          <div class="cell"></div>
+          <div class="cell filled">3</div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell filled">5</div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell active"></div>
+          <div class="cell filled">2</div>
+          <div class="cell"></div>
+          <div class="cell move"></div>
+          <div class="cell filled">1</div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell filled">4</div>
+          <div class="cell"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

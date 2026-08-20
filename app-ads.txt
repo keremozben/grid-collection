@@ -1,4 +1,1 @@
-# app-ads.txt — Authorized Digital Sellers for Apps (IAB Tech Lab)
-# The Grid Collection (com.gridcollection.games) — iOS & Android
-# Declares which ad systems are authorized to sell this app's inventory.
 google.com, pub-2521389140743564, DIRECT, f08c47fec0942fa0

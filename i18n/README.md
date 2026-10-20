@@ -6,10 +6,11 @@ The site ships a localized **landing page** *and* localized **legal pages**
 
 ## Shared assets
 
-- `styles.css` (repo root) is the **single stylesheet** for every page — the
-  landing page, its 15 localized copies, and all legal pages. There is no inline
-  CSS anywhere. Language-specific rules (CJK / Devanagari font stacks) live at
-  the bottom, applied via the `html[lang="…"]` attribute.
+- `styles.css` (repo root) is the stylesheet of the landing page and its 15
+  localized copies. Language-specific rules (CJK / Devanagari font stacks) live
+  at the bottom, applied via the `html[lang="…"]` attribute.
+- The legal pages use the v2 design (`v2.html`) instead: `build-legal.mjs`
+  inlines their CSS (system fonts, no `styles.css`, no Google Fonts).
 - `lang.js` (repo root) remembers the visitor's language choice in
   `localStorage` and rewrites in-page navigation links so the selection persists
   across pages ("remember + rewrite links" — no surprise auto-redirects).

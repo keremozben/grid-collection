@@ -25,7 +25,9 @@
     <link rel="alternate" hreflang="ja" href="https://grid-collection.com/ja/privacy-policy.html" />
     <link rel="alternate" hreflang="ko" href="https://grid-collection.com/ko/privacy-policy.html" />
     <link rel="alternate" hreflang="x-default" href="https://grid-collection.com/privacy-policy.html" />
-    <link rel="icon" href="/favicon.png" type="image/png" />
+    <link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48" />
+    <link rel="icon" href="/favicon-32x32.png" type="image/png" sizes="32x32" />
+    <link rel="icon" href="/favicon-192x192.png" type="image/png" sizes="192x192" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <style>
     :root {
@@ -103,13 +105,7 @@
       display: flex; align-items: center; gap: 0.75rem; min-height: 2.75rem; text-decoration: none;
       font-weight: 800; font-size: 1.15rem; letter-spacing: -0.01em;
     }
-    .mini-board {
-      display: grid; grid-template-columns: repeat(5, 1fr); gap: 0.1rem;
-      width: 1.9rem; height: 1.9rem;
-    }
-    .mini-board__cell { border-radius: 0.1rem; background: var(--c-passive); }
-    .mini-board__cell--active { background: var(--c-orange); }
-    .mini-board__cell--filled { background: var(--c-filled); }
+    .nav__logo { display: block; width: 1.9rem; height: 1.9rem; border-radius: 0.45rem; }
     .nav__links { display: flex; gap: 0.25rem; list-style: none; margin: 0; padding: 0; }
     .nav__link {
       display: inline-flex; align-items: center; min-height: 2.75rem; padding: 0 1rem;
@@ -229,7 +225,7 @@
     <div class="glow" aria-hidden="true"></div>
     <header class="nav">
       <a href="/pl/" class="nav__brand" data-nav="home">
-        <span class="mini-board" aria-hidden="true"><span class="mini-board__cell mini-board__cell--active"></span><span class="mini-board__cell mini-board__cell--filled"></span><span class="mini-board__cell"></span><span class="mini-board__cell mini-board__cell--filled"></span><span class="mini-board__cell mini-board__cell--active"></span><span class="mini-board__cell"></span><span class="mini-board__cell mini-board__cell--active"></span><span class="mini-board__cell mini-board__cell--filled"></span><span class="mini-board__cell"></span><span class="mini-board__cell mini-board__cell--filled"></span><span class="mini-board__cell mini-board__cell--filled"></span><span class="mini-board__cell"></span><span class="mini-board__cell mini-board__cell--active"></span><span class="mini-board__cell mini-board__cell--active"></span><span class="mini-board__cell"></span><span class="mini-board__cell"></span><span class="mini-board__cell mini-board__cell--filled"></span><span class="mini-board__cell mini-board__cell--active"></span><span class="mini-board__cell mini-board__cell--filled"></span><span class="mini-board__cell mini-board__cell--active"></span><span class="mini-board__cell mini-board__cell--active"></span><span class="mini-board__cell"></span><span class="mini-board__cell mini-board__cell--filled"></span><span class="mini-board__cell"></span><span class="mini-board__cell mini-board__cell--active"></span></span>
+        <img class="nav__logo" src="/app-icon-128.png" width="128" height="128" alt="" />
         <span>Grid Collection</span>
       </a>
       <nav class="nav__menu">

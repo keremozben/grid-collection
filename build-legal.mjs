@@ -181,13 +181,7 @@ const CSS = `
       display: flex; align-items: center; gap: 0.75rem; min-height: 2.75rem; text-decoration: none;
       font-weight: 800; font-size: 1.15rem; letter-spacing: -0.01em;
     }
-    .mini-board {
-      display: grid; grid-template-columns: repeat(5, 1fr); gap: 0.1rem;
-      width: 1.9rem; height: 1.9rem;
-    }
-    .mini-board__cell { border-radius: 0.1rem; background: var(--c-passive); }
-    .mini-board__cell--active { background: var(--c-orange); }
-    .mini-board__cell--filled { background: var(--c-filled); }
+    .nav__logo { display: block; width: 1.9rem; height: 1.9rem; border-radius: 0.45rem; }
     .nav__links { display: flex; gap: 0.25rem; list-style: none; margin: 0; padding: 0; }
     .nav__link {
       display: inline-flex; align-items: center; min-height: 2.75rem; padding: 0 1rem;
@@ -286,17 +280,6 @@ const CSS = `
       .footer__links { justify-content: center; }
     }`;
 
-// 5x5 logo board, same cell colours as the game (no lines between cells)
-const MINI_BOARD = "AFPFAPAFPFFPAAPPFAFAAPFPA"
-  .split("")
-  .map(
-    (c) =>
-      `<span class="mini-board__cell${
-        c === "A" ? " mini-board__cell--active" : c === "F" ? " mini-board__cell--filled" : ""
-      }"></span>`,
-  )
-  .join("");
-
 function navAndSwitcher(t, lang, activeNav) {
   const base = baseOf(lang);
   const link = (nav, file, label) =>
@@ -310,7 +293,7 @@ function navAndSwitcher(t, lang, activeNav) {
   const c = t.common;
   return `    <header class="nav">
       <a href="${base}" class="nav__brand" data-nav="home">
-        <span class="mini-board" aria-hidden="true">${MINI_BOARD}</span>
+        <img class="nav__logo" src="/app-icon-128.png" width="128" height="128" alt="" />
         <span>Grid Collection</span>
       </a>
       <nav class="nav__menu">
@@ -407,7 +390,9 @@ function render(t, lang, page) {
     <title>${escAttr(p.title)}</title>
     <link rel="canonical" href="https://grid-collection.com${base}${page.slug}" />
 ${hreflangAlternates(page)}
-    <link rel="icon" href="/favicon.png" type="image/png" />
+    <link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48" />
+    <link rel="icon" href="/favicon-32x32.png" type="image/png" sizes="32x32" />
+    <link rel="icon" href="/favicon-192x192.png" type="image/png" sizes="192x192" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <style>${CSS}
     </style>

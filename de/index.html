@@ -25,6 +25,9 @@
   <link rel="alternate" hreflang="ja" href="https://grid-collection.com/ja/" />
   <link rel="alternate" hreflang="ko" href="https://grid-collection.com/ko/" />
   <link rel="alternate" hreflang="x-default" href="https://grid-collection.com/" />
+  <link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48" />
+  <link rel="icon" href="/favicon-32x32.png" type="image/png" sizes="32x32" />
+  <link rel="icon" href="/favicon-192x192.png" type="image/png" sizes="192x192" />
   <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
   <!-- Open Graph / Twitter -->
   <meta property="og:type" content="website" />
@@ -50,7 +53,6 @@
     gtag("js", new Date());
     gtag("config", "G-EHP1CQ1RV4");
   </script>
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%231a1a2e'/%3E%3Crect x='4' y='4' width='7' height='7' rx='1.6' fill='%23ff6b35'/%3E%3Crect x='12.5' y='4' width='7' height='7' rx='1.6' fill='%230f3460'/%3E%3Crect x='21' y='4' width='7' height='7' rx='1.6' fill='%23ff6b35'/%3E%3Crect x='4' y='12.5' width='7' height='7' rx='1.6' fill='%232d2d4a'/%3E%3Crect x='12.5' y='12.5' width='7' height='7' rx='1.6' fill='%23ff6b35'/%3E%3Crect x='21' y='12.5' width='7' height='7' rx='1.6' fill='%230f3460'/%3E%3Crect x='4' y='21' width='7' height='7' rx='1.6' fill='%230f3460'/%3E%3Crect x='12.5' y='21' width='7' height='7' rx='1.6' fill='%232d2d4a'/%3E%3Crect x='21' y='21' width='7' height='7' rx='1.6' fill='%23ff6b35'/%3E%3C/svg%3E" />
   <style>
     /* ============================================================
        1. Tokens — the game's dark theme (src/styles/themes/_dark.scss)
@@ -200,13 +202,7 @@
       display: flex; align-items: center; gap: 0.9rem; text-decoration: none;
       font-weight: 800; font-size: 1.2rem; letter-spacing: -0.01em;
     }
-    .mini-board {
-      display: grid; grid-template-columns: repeat(5, 1fr); gap: 0.12rem;
-      width: 2.1rem; height: 2.1rem;
-    }
-    .mini-board__cell { border-radius: 0.12rem; background: var(--c-passive); }
-    .mini-board__cell--active { background: var(--c-orange); }
-    .mini-board__cell--filled { background: var(--c-filled); }
+    .nav__logo { display: block; width: 2.1rem; height: 2.1rem; border-radius: 0.5rem; }
     .nav__links { display: flex; gap: 0.4rem; list-style: none; margin: 0; padding: 0; }
     .nav__link {
       display: inline-flex; align-items: center; min-height: 2.75rem; padding: 0 1.1rem;
@@ -772,7 +768,7 @@
 
   <header class="nav">
     <a class="nav__brand" href="#top" aria-label="Grid Collection">
-      <span class="mini-board" data-ref="mini-board" aria-hidden="true"></span>
+      <img class="nav__logo" src="/app-icon-128.png" width="128" height="128" alt="" />
       <span>Grid Collection</span>
     </a>
     <nav aria-label="Abschnitte" data-i18n-aria="a11y.sections">
@@ -2756,20 +2752,8 @@
     })();
 
     /* ============================================================
-       4h. Decorations — mini logo, features, cursor, reveal, counters
+       4h. Decorations — features, cursor, reveal, counters
        ============================================================ */
-    (function buildMiniBoard() {
-      const box = ref("mini-board");
-      const r = rng(7);
-      const states = ["active", "filled", "passive"];
-      const pool = Array.from({ length: 25 }, (_, i) => states[i % 3]);
-      for (let i = pool.length - 1; i > 0; i--) {
-        const j = Math.floor(r() * (i + 1));
-        [pool[i], pool[j]] = [pool[j], pool[i]];
-      }
-      for (const s of pool) box.append(el("span", `mini-board__cell mini-board__cell--${s}`));
-    })();
-
     (function decorateFeatures() {
       const r = rng(31);
       document.querySelectorAll(".feature").forEach((card) => {

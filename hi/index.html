@@ -1,623 +1,3099 @@
 <!doctype html>
 <html lang="hi">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Grid Collection - ग्रिड पर आधारित नंबर रखने वाली पहेलियों का विशाल संग्रह। 5x5 से 10x10 तक छह ग्रिड आकारों में 5,000+ हाथ से बनाए गए लेवल। अपनी रणनीतिक सोच को परखें!"
-    />
-    <title>
-      Grid Collection - नंबर रखने वाली पहेलियों का सबसे बड़ा संग्रह
-    </title>
-    <link rel="canonical" href="https://grid-collection.com/hi/" />
-    <link rel="icon" href="/favicon.png" type="image/png" />
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Grid Collection — 95,000 लेवल वाला पहेली ब्रह्मांड</title>
+  <meta name="description" content="एक नियम, आठ दिशाएँ, 95,000 लेवल। Grid Collection एक मोबाइल पहेली गेम है, जिसमें आप हर सेल को एक ही अटूट चेन से भरते हैं।" />
+  <meta name="color-scheme" content="dark" />
+  <meta name="theme-color" content="#0b0b16" />
+  <link rel="canonical" href="https://grid-collection.com/hi/" />
+  <link rel="alternate" hreflang="en" href="https://grid-collection.com/" />
+  <link rel="alternate" hreflang="tr" href="https://grid-collection.com/tr/" />
+  <link rel="alternate" hreflang="de" href="https://grid-collection.com/de/" />
+  <link rel="alternate" hreflang="es" href="https://grid-collection.com/es/" />
+  <link rel="alternate" hreflang="fr" href="https://grid-collection.com/fr/" />
+  <link rel="alternate" hreflang="it" href="https://grid-collection.com/it/" />
+  <link rel="alternate" hreflang="pt-BR" href="https://grid-collection.com/pt-br/" />
+  <link rel="alternate" hreflang="pl" href="https://grid-collection.com/pl/" />
+  <link rel="alternate" hreflang="id" href="https://grid-collection.com/id/" />
+  <link rel="alternate" hreflang="vi" href="https://grid-collection.com/vi/" />
+  <link rel="alternate" hreflang="ru" href="https://grid-collection.com/ru/" />
+  <link rel="alternate" hreflang="hi" href="https://grid-collection.com/hi/" />
+  <link rel="alternate" hreflang="zh-Hans" href="https://grid-collection.com/zh-hans/" />
+  <link rel="alternate" hreflang="zh-Hant" href="https://grid-collection.com/zh-hant/" />
+  <link rel="alternate" hreflang="ja" href="https://grid-collection.com/ja/" />
+  <link rel="alternate" hreflang="ko" href="https://grid-collection.com/ko/" />
+  <link rel="alternate" hreflang="x-default" href="https://grid-collection.com/" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <!-- Open Graph / Twitter -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Grid Collection" />
+  <meta property="og:url" content="https://grid-collection.com/hi/" />
+  <meta property="og:locale" content="hi_IN" />
+  <meta property="og:title" content="Grid Collection — 95,000 लेवल वाला पहेली ब्रह्मांड" />
+  <meta property="og:description" content="एक नियम, आठ दिशाएँ, 95,000 लेवल। Grid Collection एक मोबाइल पहेली गेम है, जिसमें आप हर सेल को एक ही अटूट चेन से भरते हैं।" />
+  <meta property="og:image" content="https://grid-collection.com/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Grid Collection — 95,000 लेवल वाला पहेली ब्रह्मांड" />
+  <meta name="twitter:description" content="एक नियम, आठ दिशाएँ, 95,000 लेवल। Grid Collection एक मोबाइल पहेली गेम है, जिसमें आप हर सेल को एक ही अटूट चेन से भरते हैं।" />
+  <meta name="twitter:image" content="https://grid-collection.com/og-image.png" />
+  <!-- Google tag (gtag.js), same property as the live site -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-EHP1CQ1RV4"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
+    gtag("config", "G-EHP1CQ1RV4");
+  </script>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%231a1a2e'/%3E%3Crect x='4' y='4' width='7' height='7' rx='1.6' fill='%23ff6b35'/%3E%3Crect x='12.5' y='4' width='7' height='7' rx='1.6' fill='%230f3460'/%3E%3Crect x='21' y='4' width='7' height='7' rx='1.6' fill='%23ff6b35'/%3E%3Crect x='4' y='12.5' width='7' height='7' rx='1.6' fill='%232d2d4a'/%3E%3Crect x='12.5' y='12.5' width='7' height='7' rx='1.6' fill='%23ff6b35'/%3E%3Crect x='21' y='12.5' width='7' height='7' rx='1.6' fill='%230f3460'/%3E%3Crect x='4' y='21' width='7' height='7' rx='1.6' fill='%230f3460'/%3E%3Crect x='12.5' y='21' width='7' height='7' rx='1.6' fill='%232d2d4a'/%3E%3Crect x='21' y='21' width='7' height='7' rx='1.6' fill='%23ff6b35'/%3E%3C/svg%3E" />
+  <style>
+    /* ============================================================
+       1. Tokens — the game's dark theme (src/styles/themes/_dark.scss)
+       ============================================================ */
+    :root {
+      color-scheme: dark;
+      --c-bg: #0b0b16;
+      --c-bg-2: #1a1a2e;
+      --c-surface: #16213e;
+      --c-filled: #0f3460;
+      --c-passive: #2d2d4a;
+      --c-orange: #ff6b35;
+      --c-orange-d: #e85a28;
+      --c-orange-l: #ff8a5c;
+      --c-accent: #f7c59f;
+      --c-blue: #1a6aac;
+      --c-blue-l: #4f9be0;
+      --c-star: #ffd700;
+      --c-error: #ef4444;
+      --c-text: #ffffff;
+      --c-text-2: rgba(255, 255, 255, 0.76);
+      --c-text-3: rgba(255, 255, 255, 0.56);
+      --c-line: rgba(255, 255, 255, 0.1);
+      --c-line-2: rgba(255, 255, 255, 0.18);
+      --c-glass: rgba(22, 22, 42, 0.55);
+      --font: "SF Pro Display", "Segoe UI Variable Display", "Segoe UI", system-ui, -apple-system, Roboto, "Helvetica Neue", Arial, sans-serif;
+      --mono: ui-monospace, "SF Mono", "Cascadia Code", "Cascadia Mono", Consolas, monospace;
+      --space-1: 0.25rem;
+      --space-2: 0.5rem;
+      --space-3: 0.75rem;
+      --space-4: 1rem;
+      --space-6: 1.5rem;
+      --space-8: 2rem;
+      --space-12: 3rem;
+      --space-16: 4rem;
+      --space-24: 6rem;
+      --radius-sm: 0.5rem;
+      --radius-md: 0.9rem;
+      --radius-lg: 1.6rem;
+      --nav-h: 4.75rem;
+      --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+      --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+      --glow-orange: 0 0 1.4rem rgba(255, 107, 53, 0.55), 0 0 4rem rgba(255, 107, 53, 0.25);
+    }
 
-    <!-- hreflang: localized alternates (generated pages live in /<lang>/) -->
-    <link rel="alternate" hreflang="en" href="https://grid-collection.com/hi/" />
-    <link rel="alternate" hreflang="tr" href="https://grid-collection.com/tr/" />
-    <link rel="alternate" hreflang="de" href="https://grid-collection.com/de/" />
-    <link rel="alternate" hreflang="es" href="https://grid-collection.com/es/" />
-    <link rel="alternate" hreflang="fr" href="https://grid-collection.com/fr/" />
-    <link rel="alternate" hreflang="it" href="https://grid-collection.com/it/" />
-    <link rel="alternate" hreflang="pt-BR" href="https://grid-collection.com/pt-br/" />
-    <link rel="alternate" hreflang="pl" href="https://grid-collection.com/pl/" />
-    <link rel="alternate" hreflang="id" href="https://grid-collection.com/id/" />
-    <link rel="alternate" hreflang="vi" href="https://grid-collection.com/vi/" />
-    <link rel="alternate" hreflang="ru" href="https://grid-collection.com/ru/" />
-    <link rel="alternate" hreflang="hi" href="https://grid-collection.com/hi/" />
-    <link rel="alternate" hreflang="zh-Hans" href="https://grid-collection.com/zh-hans/" />
-    <link rel="alternate" hreflang="zh-Hant" href="https://grid-collection.com/zh-hant/" />
-    <link rel="alternate" hreflang="ja" href="https://grid-collection.com/ja/" />
-    <link rel="alternate" hreflang="ko" href="https://grid-collection.com/ko/" />
-    <link rel="alternate" hreflang="x-default" href="https://grid-collection.com/hi/" />
+    /* ============================================================
+       2. Base — 1 rem = 1/120 of the viewport width from 1920 px up,
+          so the whole page scales 1:1 to 2560 / 3840 (4K) monitors
+       ============================================================ */
+    *, *::before, *::after { box-sizing: border-box; }
+    html {
+      font-size: clamp(14px, 0.8333vw, 64px);
+      scroll-behavior: smooth;
+      overflow-x: clip;
+      background: var(--c-bg);
+      -webkit-text-size-adjust: 100%;
+    }
+    body {
+      margin: 0;
+      font-family: var(--font);
+      color: var(--c-text);
+      background: var(--c-bg);
+      line-height: 1.5;
+      overflow-x: clip;
+      -webkit-font-smoothing: antialiased;
+    }
+    h1, h2, h3, p { margin: 0; }
+    a { color: inherit; }
+    button { font: inherit; color: inherit; }
+    img, svg, canvas { display: block; }
+    ::selection { background: var(--c-orange); color: #fff; }
+    :focus-visible { outline: 0.2rem solid var(--c-accent); outline-offset: 0.25rem; border-radius: 0.3rem; }
+    .sr-only {
+      position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+      overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0;
+    }
+    .skip-link {
+      position: fixed; left: 1rem; top: -4rem; z-index: 100; padding: 0.75rem 1.25rem;
+      background: var(--c-orange); color: #fff; border-radius: var(--radius-sm); text-decoration: none; font-weight: 700;
+    }
+    .skip-link:focus { top: 1rem; }
 
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website" />
-    <meta property="og:site_name" content="Grid Collection" />
-    <meta property="og:url" content="https://grid-collection.com/hi/" />
-    <meta
-      property="og:title"
-      content="Grid Collection — 5,000+ नंबर रखने वाली पहेलियाँ"
-    />
-    <meta
-      property="og:description"
-      content="ग्रिड पर आधारित नंबर रखने वाली पहेलियों का विशाल संग्रह। 5x5 से 10x10 तक छह ग्रिड आकारों में 5,000+ हाथ से बनाए गए लेवल। App Store पर मुफ़्त।"
-    />
-    <meta property="og:image" content="https://grid-collection.com/og-image.png" />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
+    /* ============================================================
+       3. Layout — fixed WebGL field behind everything
+       ============================================================ */
+    .field {
+      position: fixed; inset: 0; width: 100%; height: 100%; z-index: 0;
+      background: radial-gradient(120% 90% at 50% 70%, #1a1a2e 0%, #0b0b16 70%);
+    }
+    .vignette {
+      position: fixed; inset: 0; z-index: 1; pointer-events: none;
+      background:
+        radial-gradient(140% 100% at 50% 50%, transparent 55%, rgba(5, 5, 12, 0.75) 100%),
+        linear-gradient(to bottom, rgba(5, 5, 12, 0.55), transparent 18%);
+    }
+    .page { position: relative; z-index: 2; }
+    .section {
+      position: relative;
+      padding: 12rem 0;
+    }
+    .container {
+      width: min(100% - 6rem, 112rem);
+      margin-inline: auto;
+    }
+    .kicker {
+      display: inline-flex; align-items: center; gap: 0.9rem;
+      font-family: var(--mono); font-size: 0.95rem; font-weight: 600;
+      letter-spacing: 0.32em; text-transform: uppercase; color: var(--c-orange-l);
+    }
+    .kicker::before {
+      content: ""; width: 0.8rem; height: 0.8rem; border-radius: 0.2rem; background: var(--c-orange);
+      box-shadow: var(--glow-orange);
+    }
+    .heading {
+      margin-top: 1.4rem;
+      font-size: 6.2rem; line-height: 0.94; font-weight: 900; letter-spacing: -0.035em;
+      text-wrap: balance;
+    }
+    .heading__accent {
+      background: linear-gradient(100deg, var(--c-orange-l) 0%, var(--c-orange) 40%, var(--c-accent) 100%);
+      -webkit-background-clip: text; background-clip: text; color: transparent;
+    }
+    .lead {
+      margin-top: 2rem; max-width: 40rem;
+      font-size: 1.55rem; line-height: 1.5; color: var(--c-text-2);
+    }
 
-    <!-- Twitter -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta
-      name="twitter:title"
-      content="Grid Collection — 5,000+ नंबर रखने वाली पहेलियाँ"
-    />
-    <meta
-      name="twitter:description"
-      content="ग्रिड पर आधारित नंबर रखने वाली पहेलियों का विशाल संग्रह। 5,000+ हाथ से बनाए गए लेवल। App Store पर मुफ़्त।"
-    />
-    <meta name="twitter:image" content="https://grid-collection.com/og-image.png" />
+    /* ============================================================
+       4. Components (BEM blocks)
+       ============================================================ */
 
-    <!-- Structured data: rich results in Google -->
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "VideoGame",
-        "name": "Grid Collection",
-        "description": "A massive collection of grid-based number placement puzzles. Over 5,000 handcrafted levels across six grid sizes from 5x5 to 10x10.",
-        "url": "https://grid-collection.com/hi/",
-        "image": "https://grid-collection.com/og-image.png",
-        "genre": ["Puzzle", "Brain Game"],
-        "gamePlatform": ["iOS"],
-        "applicationCategory": "GameApplication",
-        "operatingSystem": "iOS",
-        "offers": {
-          "@type": "Offer",
-          "price": "0",
-          "priceCurrency": "USD",
-          "url": "https://apps.apple.com/app/id6761419296"
-        }
+    /* ---------- nav ---------- */
+    .nav {
+      position: fixed; inset: 0 0 auto 0; z-index: 50; height: var(--nav-h);
+      display: flex; align-items: center; justify-content: space-between; gap: 2rem;
+      padding: 0 3rem;
+      transition: background 0.4s, backdrop-filter 0.4s, border-color 0.4s;
+      border-bottom: 1px solid transparent;
+    }
+    .nav--solid {
+      background: rgba(11, 11, 22, 0.62);
+      backdrop-filter: blur(1.2rem) saturate(1.4);
+      -webkit-backdrop-filter: blur(1.2rem) saturate(1.4);
+      border-bottom-color: var(--c-line);
+    }
+    .nav__brand {
+      display: flex; align-items: center; gap: 0.9rem; text-decoration: none;
+      font-weight: 800; font-size: 1.2rem; letter-spacing: -0.01em;
+    }
+    .mini-board {
+      display: grid; grid-template-columns: repeat(5, 1fr); gap: 0.12rem;
+      width: 2.1rem; height: 2.1rem;
+    }
+    .mini-board__cell { border-radius: 0.12rem; background: var(--c-passive); }
+    .mini-board__cell--active { background: var(--c-orange); }
+    .mini-board__cell--filled { background: var(--c-filled); }
+    .nav__links { display: flex; gap: 0.4rem; list-style: none; margin: 0; padding: 0; }
+    .nav__link {
+      display: inline-flex; align-items: center; min-height: 2.75rem; padding: 0 1.1rem;
+      border-radius: 99rem; text-decoration: none; font-size: 1rem; font-weight: 600; color: var(--c-text-2);
+      transition: color 0.2s, background 0.2s;
+    }
+    .nav__link:hover { color: #fff; background: rgba(255, 255, 255, 0.07); }
+    .nav__link--active { color: #fff; background: rgba(255, 107, 53, 0.16); }
+    .nav__tools { display: flex; align-items: center; gap: 0.8rem; }
+    .lang-select {
+      min-height: 3.1rem; max-width: 12rem; padding: 0 2.4rem 0 1.1rem; border-radius: 99rem;
+      border: 1px solid var(--c-line); color: var(--c-text-2); text-overflow: ellipsis;
+      background: rgba(255, 255, 255, 0.06) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 8'%3E%3Cpath d='M1 1.5 6 6.5 11 1.5' fill='none' stroke='%23ff8a5c' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") right 1rem center / 0.75rem no-repeat;
+      font: 600 0.95rem var(--font); cursor: pointer; appearance: none; -webkit-appearance: none;
+      transition: color 0.2s, border-color 0.2s;
+    }
+    .lang-select:hover { color: #fff; border-color: var(--c-line-2); }
+    .lang-select option { background: var(--c-bg-2); color: var(--c-text); }
+    .sound-btn {
+      display: inline-flex; align-items: center; gap: 0.7rem; min-height: 3.1rem; padding: 0 1.1rem 0 0.95rem;
+      border-radius: 99rem; border: 1px solid var(--c-line); background: rgba(255, 255, 255, 0.06);
+      cursor: pointer; font-size: 0.95rem; font-weight: 600; color: var(--c-text-2);
+    }
+    .sound-btn:hover { color: #fff; border-color: var(--c-line-2); }
+    .sound-btn__bars { display: flex; align-items: flex-end; gap: 0.16rem; height: 1.1rem; }
+    .sound-btn__bar {
+      width: 0.22rem; height: 30%; border-radius: 0.1rem; background: var(--c-text-3);
+    }
+    .sound-btn[aria-pressed="true"] .sound-btn__bar { background: var(--c-orange); animation: eq 0.9s ease-in-out infinite; }
+    .sound-btn__bar:nth-child(2) { animation-delay: -0.3s !important; }
+    .sound-btn__bar:nth-child(3) { animation-delay: -0.6s !important; }
+    .sound-btn__bar:nth-child(4) { animation-delay: -0.15s !important; }
+    @keyframes eq { 0%, 100% { height: 25%; } 50% { height: 100%; } }
+
+    /* ---------- hero ---------- */
+    .hero {
+      position: relative; isolation: isolate;
+      min-height: 100vh; min-height: 100dvh;
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      padding: calc(var(--nav-h) + 3rem) 0 7rem; text-align: center;
+    }
+    .hero::before {
+      content: ""; position: absolute; inset: 0; z-index: -1; pointer-events: none;
+      background: radial-gradient(ellipse 46% 40% at 50% 60%, rgba(8, 8, 18, 0.78), rgba(8, 8, 18, 0.35) 60%, transparent 85%);
+    }
+    .hero__eyebrow {
+      display: inline-flex; align-items: center; gap: 0.8rem;
+      padding: 0.55rem 1.2rem 0.55rem 0.7rem; border-radius: 99rem;
+      background: rgba(255, 255, 255, 0.05); border: 1px solid var(--c-line);
+      backdrop-filter: blur(0.6rem); -webkit-backdrop-filter: blur(0.6rem);
+      font-size: 1rem; font-weight: 600; color: var(--c-text-2);
+      animation: rise 1s 0.2s var(--ease-out) backwards;
+    }
+    .hero__dot {
+      width: 0.6rem; height: 0.6rem; border-radius: 50%; background: #3ddc84;
+      box-shadow: 0 0 0.8rem #3ddc84; animation: blink 2s ease-in-out infinite;
+    }
+    @keyframes blink { 50% { opacity: 0.35; } }
+    .hero__title { margin-top: 3.2rem; display: flex; flex-direction: column; align-items: center; }
+    .hero__collection {
+      margin-top: 2.2rem;
+      font-size: 2.2rem; font-weight: 600; letter-spacing: 0.9em; margin-right: -0.9em;
+      color: var(--c-text); text-shadow: 0 0.2rem 1.2rem rgba(0, 0, 0, 0.8);
+      animation: rise 1.2s 1.25s var(--ease-out) backwards;
+    }
+    .hero__tagline {
+      margin-top: 2.6rem; max-width: 52rem;
+      font-size: 1.7rem; line-height: 1.45; color: var(--c-text-2); text-wrap: balance;
+      text-shadow: 0 0.15rem 1rem rgba(0, 0, 0, 0.9);
+      animation: rise 1.2s 1.4s var(--ease-out) backwards;
+    }
+    .hero__tagline strong { color: #fff; font-weight: 700; }
+    .hero__actions {
+      margin-top: 3rem; display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem;
+      animation: rise 1.2s 1.55s var(--ease-out) backwards;
+    }
+    .hero__stats {
+      margin: 4.2rem 0 0; padding: 0; list-style: none;
+      display: flex; gap: 0; border: 1px solid var(--c-line); border-radius: var(--radius-lg);
+      background: rgba(11, 11, 22, 0.45); backdrop-filter: blur(1rem); -webkit-backdrop-filter: blur(1rem);
+      animation: rise 1.2s 1.7s var(--ease-out) backwards;
+    }
+    .hero__stat { padding: 1.4rem 2.8rem; text-align: center; }
+    .hero__stat + .hero__stat { border-left: 1px solid var(--c-line); }
+    .hero__stat-num {
+      display: block; font-size: 2.6rem; font-weight: 800; letter-spacing: -0.02em; line-height: 1.1;
+      font-variant-numeric: tabular-nums;
+    }
+    .hero__stat-num--orange { color: var(--c-orange-l); text-shadow: 0 0 1.6rem rgba(255, 107, 53, 0.55); }
+    .hero__stat-label { display: block; margin-top: 0.3rem; font-size: 0.95rem; color: var(--c-text-3); letter-spacing: 0.04em; }
+    .hero__hint {
+      position: absolute; left: 3rem; bottom: 2.6rem;
+      display: flex; align-items: center; gap: 0.8rem;
+      font-family: var(--mono); font-size: 0.85rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--c-text-3);
+      animation: rise 1s 2.4s var(--ease-out) backwards;
+    }
+    .hero__hint-icon {
+      width: 1.6rem; height: 1.6rem; border-radius: 0.35rem; border: 2px dashed var(--c-orange);
+      animation: target-pulse 1.4s ease-in-out infinite;
+    }
+    .hero__scroll {
+      position: absolute; left: 50%; bottom: 2.2rem; translate: -50% 0;
+      display: flex; flex-direction: column; align-items: center; gap: 0.6rem;
+      font-family: var(--mono); font-size: 0.8rem; letter-spacing: 0.3em; text-transform: uppercase; color: var(--c-text-3);
+      text-decoration: none;
+      animation: rise 1s 2.6s var(--ease-out) backwards;
+    }
+    .hero__scroll-cells { display: grid; gap: 0.3rem; }
+    .hero__scroll-cell {
+      width: 0.7rem; height: 0.7rem; border-radius: 0.18rem; background: var(--c-orange);
+      animation: drip 1.8s ease-in-out infinite;
+    }
+    .hero__scroll-cell:nth-child(2) { animation-delay: 0.2s; }
+    .hero__scroll-cell:nth-child(3) { animation-delay: 0.4s; }
+    @keyframes drip { 0%, 100% { opacity: 0.15; transform: scale(0.7); } 40% { opacity: 1; transform: scale(1); } }
+    @keyframes rise { from { opacity: 0; transform: translateY(2rem); filter: blur(0.6rem); } }
+
+    /* ---------- store badges / buttons ---------- */
+    .badge {
+      display: inline-flex; align-items: center; gap: 0.95rem;
+      min-height: 4.4rem; padding: 0.6rem 1.7rem 0.6rem 1.2rem;
+      border-radius: 1.1rem; text-decoration: none; text-align: left;
+      background: #fff; color: #0b0b16; border: 1px solid #fff;
+      transition: transform 0.35s var(--ease-spring), box-shadow 0.35s;
+      box-shadow: 0 0.8rem 2.4rem rgba(0, 0, 0, 0.35);
+    }
+    .badge:hover { transform: translateY(-0.25rem) scale(1.03); box-shadow: 0 1.2rem 3rem rgba(255, 107, 53, 0.35); }
+    .badge--ghost { background: rgba(255, 255, 255, 0.06); color: #fff; border-color: var(--c-line-2); }
+    .badge--ghost:hover { box-shadow: 0 1.2rem 3rem rgba(0, 0, 0, 0.4); }
+    .badge__icon { width: 2.3rem; height: 2.3rem; flex: none; }
+    .badge__text { display: flex; flex-direction: column; line-height: 1.1; }
+    .badge__small { font-size: 0.85rem; font-weight: 600; opacity: 0.7; }
+    .badge__big { font-size: 1.55rem; font-weight: 800; letter-spacing: -0.01em; }
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center; gap: 0.7rem;
+      min-height: 4.4rem; padding: 0 2rem; border-radius: 1.1rem; border: 0; cursor: pointer;
+      font-size: 1.2rem; font-weight: 750; text-decoration: none;
+      background: linear-gradient(180deg, var(--c-orange-l), var(--c-orange) 55%, var(--c-orange-d));
+      color: #fff; box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.15) inset, 0 1rem 2.6rem rgba(255, 107, 53, 0.4);
+      transition: transform 0.35s var(--ease-spring), box-shadow 0.35s;
+    }
+    .btn:hover { transform: translateY(-0.25rem) scale(1.03); box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.25) inset, 0 1.4rem 3.4rem rgba(255, 107, 53, 0.6); }
+    .btn__arrow { transition: transform 0.3s var(--ease-out); }
+    .btn:hover .btn__arrow { transform: translateY(0.2rem); }
+    .chip-btn {
+      display: inline-flex; align-items: center; justify-content: center; gap: 0.55rem;
+      min-height: 3.2rem; padding: 0 1.3rem; border-radius: 0.9rem; cursor: pointer;
+      border: 1px solid var(--c-line-2); background: rgba(255, 255, 255, 0.05);
+      font-size: 1rem; font-weight: 650; color: var(--c-text);
+      transition: background 0.2s, border-color 0.2s, transform 0.25s var(--ease-spring);
+    }
+    .chip-btn:hover:not(:disabled) { background: rgba(255, 255, 255, 0.1); border-color: rgba(255, 255, 255, 0.3); transform: translateY(-0.12rem); }
+    .chip-btn:disabled { opacity: 0.4; cursor: default; }
+    .chip-btn--primary { background: rgba(255, 107, 53, 0.18); border-color: rgba(255, 107, 53, 0.55); }
+    .chip-btn--primary:hover:not(:disabled) { background: rgba(255, 107, 53, 0.3); border-color: var(--c-orange); }
+    .chip-btn__icon { width: 1.15rem; height: 1.15rem; }
+
+    /* ---------- wordmark (GRID drawn with board cells) ---------- */
+    .wordmark {
+      --wm-cell: 3.65rem;
+      --wm-gap: 0.55rem;
+      display: grid;
+      grid-template-columns: repeat(18, var(--wm-cell));
+      grid-auto-rows: var(--wm-cell);
+      gap: var(--wm-gap);
+      perspective: 90rem;
+      transform: rotateX(var(--wm-rx, 0deg)) rotateY(var(--wm-ry, 0deg));
+      transform-style: preserve-3d;
+      transition: transform 0.6s var(--ease-out);
+    }
+    .wordmark--small { --wm-cell: 2.35rem; --wm-gap: 0.36rem; }
+    .wm__cell { position: relative; perspective: 30rem; transform-style: preserve-3d; }
+    .wm__cell--off::before {
+      content: ""; position: absolute; inset: 18%; border-radius: 22%;
+      background: rgba(45, 45, 74, 0.35);
+    }
+    .wm__cell--on {
+      cursor: pointer;
+      animation: wm-drop 1.1s var(--d, 0s) var(--ease-out) backwards;
+    }
+    .wm__inner {
+      position: absolute; inset: 0; transform-style: preserve-3d;
+      transition: transform 0.65s var(--ease-spring);
+    }
+    .wm__cell--flipped .wm__inner { transform: rotateY(180deg); }
+    .wm__face {
+      position: absolute; inset: 0; border-radius: 16%;
+      backface-visibility: hidden; -webkit-backface-visibility: hidden;
+      display: grid; place-items: center;
+      font-weight: 800; font-size: calc(var(--wm-cell) * 0.44); font-variant-numeric: tabular-nums;
+    }
+    .wm__face--front {
+      background: var(--c-orange);
+      box-shadow: inset 0 0.18rem 0 rgba(255, 255, 255, 0.28), inset 0 -0.25rem 0 rgba(0, 0, 0, 0.18),
+        0 0 calc(var(--wm-cell) * 0.5 * var(--glow, 1)) rgba(255, 107, 53, calc(0.55 * var(--glow, 1)));
+      transition: box-shadow 0.4s;
+    }
+    .wm__face--back {
+      transform: rotateY(180deg);
+      background: var(--c-filled); color: #fff;
+      box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.12), 0 0 1.6rem rgba(26, 106, 172, 0.5);
+    }
+    .wordmark--beat .wm__face--front { --glow: 2.2; transition: box-shadow 0.08s; }
+    @keyframes wm-drop {
+      from { opacity: 0; transform: translate3d(0, -2rem, 40rem) rotateX(-75deg) scale(1.4); }
+      60% { opacity: 1; }
+    }
+
+    /* ---------- reveal on scroll ---------- */
+    .reveal { opacity: 0; transform: translateY(3rem); transition: opacity 1.1s var(--ease-out), transform 1.1s var(--ease-out); transition-delay: calc(var(--i, 0) * 90ms); }
+    .reveal--in { opacity: 1; transform: none; }
+
+    /* ---------- section 1: rule ---------- */
+    .rule__grid { display: grid; grid-template-columns: 1fr 46rem; gap: 8rem; align-items: center; }
+    .rule__cards { margin-top: 3rem; display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; }
+    .rule-card {
+      padding: 1.6rem; border-radius: var(--radius-lg);
+      background: var(--c-glass); border: 1px solid var(--c-line);
+      backdrop-filter: blur(1rem); -webkit-backdrop-filter: blur(1rem);
+    }
+    .rule-card__demo { display: flex; gap: 0.35rem; height: 3.6rem; align-items: center; }
+    .rule-card__demo--diag { display: grid; grid-template-columns: repeat(3, 1.1rem); grid-template-rows: repeat(3, 1.1rem); gap: 0.25rem; height: 3.6rem; align-content: center; }
+    .rule-card__cell { width: 2rem; height: 2rem; border-radius: 0.4rem; background: var(--c-passive); }
+    .rule-card__demo--diag .rule-card__cell { width: 1.1rem; height: 1.1rem; border-radius: 0.25rem; }
+    .rule-card__cell--head { background: var(--c-orange); box-shadow: var(--glow-orange); }
+    .rule-card__cell--skip { background: transparent; border: 1px solid var(--c-line-2); animation: skip-blink 1.6s ease-in-out infinite; }
+    .rule-card__cell--skip + .rule-card__cell--skip { animation-delay: 0.2s; }
+    .rule-card__cell--land { background: rgba(255, 107, 53, 0.25); border: 2px dashed var(--c-orange); animation: target-pulse 1.2s ease-in-out infinite; }
+    .rule-card__cell--none { background: rgba(45, 45, 74, 0.35); }
+    @keyframes skip-blink { 50% { border-color: var(--c-orange-l); background: rgba(255, 138, 92, 0.08); } }
+    .rule-card__title { margin-top: 1.1rem; font-size: 1.35rem; font-weight: 800; }
+    .rule-card__text { margin-top: 0.4rem; font-size: 1.05rem; color: var(--c-text-2); }
+    .rule__note {
+      margin-top: 1.6rem; display: flex; gap: 0.8rem; align-items: center;
+      font-size: 1.1rem; color: var(--c-text-3);
+    }
+    .rule__note::before { content: "↯"; color: var(--c-orange-l); font-size: 1.4rem; }
+    .rule__stage { perspective: 110rem; }
+    .rule-board {
+      --cols: 7;
+      display: grid; grid-template-columns: repeat(var(--cols), 1fr); gap: 0.55rem;
+      padding: 1.4rem; border-radius: 2rem;
+      background: linear-gradient(160deg, rgba(26, 26, 46, 0.92), rgba(15, 18, 38, 0.92));
+      border: 1px solid var(--c-line);
+      box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.55), 0 0 0 1px rgba(255, 255, 255, 0.03) inset;
+      transform: rotateX(var(--tilt-x, 12deg)) rotateY(var(--tilt-y, -10deg));
+      transition: transform 0.8s var(--ease-out);
+      container-type: inline-size;
+    }
+    .rcell {
+      position: relative; aspect-ratio: 1; border: 0; padding: 0; border-radius: 18%;
+      background: #222241; cursor: default;
+      display: grid; place-items: center;
+      font-size: calc(100cqi / 7 * 0.36); font-weight: 800; font-variant-numeric: tabular-nums;
+      transition: background 0.35s, transform 0.4s var(--ease-spring), box-shadow 0.35s;
+    }
+    .rcell--filled { background: var(--c-filled); color: #fff; box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.08); }
+    .rcell--head {
+      background: var(--c-orange); color: #fff; z-index: 2;
+      box-shadow: var(--glow-orange), inset 0 0.18rem 0 rgba(255, 255, 255, 0.3);
+      transform: translateZ(0) scale(1.04);
+    }
+    .rcell--head::after {
+      content: ""; position: absolute; inset: 0; border-radius: inherit; background: var(--c-orange); z-index: -1;
+      animation: ghost 2s ease-out infinite;
+    }
+    .rcell--target {
+      cursor: pointer;
+      background: rgba(255, 107, 53, 0.22);
+      outline: 2px dashed var(--c-orange); outline-offset: -2px;
+      animation: target-pulse 1.1s ease-in-out infinite;
+      color: var(--c-orange-l);
+    }
+    .rcell--target:hover, .rcell--target:focus-visible { background: rgba(255, 107, 53, 0.45); transform: scale(1.08); animation: none; color: #fff; }
+    .rcell--skip { background: rgba(247, 197, 159, 0.12); box-shadow: inset 0 0 0 1px rgba(247, 197, 159, 0.5); }
+    .rcell--skip::before {
+      content: "·  ·"; position: absolute; color: var(--c-accent); font-size: calc(100cqi / 7 * 0.3); letter-spacing: -0.1em;
+    }
+    .rcell__arrow { font-size: calc(100cqi / 7 * 0.38); font-weight: 700; }
+    .rule__hud { margin-top: 2rem; display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+    .rule__counter { font-family: var(--mono); font-size: 1.05rem; color: var(--c-text-3); }
+    .rule__counter-num { color: #fff; font-size: 1.6rem; font-weight: 800; margin-right: 0.4rem; }
+    .rule__msg { min-height: 1.6rem; font-size: 1.05rem; color: var(--c-accent); text-align: center; margin-top: 1rem; }
+    @keyframes target-pulse { 50% { box-shadow: 0 0 1.4rem rgba(255, 107, 53, 0.45); background-color: rgba(255, 107, 53, 0.34); } }
+    @keyframes ghost { from { transform: scale(1); opacity: 0.55; } to { transform: scale(1.55); opacity: 0; } }
+
+    /* ---------- section 2: play ---------- */
+    .play__grid { display: grid; grid-template-columns: 34rem 1fr; gap: 6rem; align-items: start; }
+    .play__tabs { margin-top: 2.6rem; display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.6rem; }
+    .play-tab {
+      display: flex; flex-direction: column; align-items: flex-start; gap: 0.1rem;
+      min-height: 4.2rem; padding: 0.7rem 1rem; border-radius: 1rem; cursor: pointer; text-align: left;
+      border: 1px solid var(--c-line); background: rgba(255, 255, 255, 0.04);
+      transition: background 0.25s, border-color 0.25s, transform 0.3s var(--ease-spring);
+    }
+    .play-tab:hover { background: rgba(255, 255, 255, 0.08); transform: translateY(-0.12rem); }
+    .play-tab[aria-pressed="true"] { background: rgba(255, 107, 53, 0.16); border-color: var(--c-orange); box-shadow: 0 0 1.6rem rgba(255, 107, 53, 0.22); }
+    .play-tab__grid { font-size: 1.25rem; font-weight: 800; }
+    .play-tab__meta { font-size: 0.85rem; color: var(--c-text-3); }
+    .play__hud {
+      margin-top: 2rem; padding: 1.6rem; border-radius: var(--radius-lg);
+      background: var(--c-glass); border: 1px solid var(--c-line);
+      backdrop-filter: blur(1rem); -webkit-backdrop-filter: blur(1rem);
+    }
+    .play__level { display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; }
+    .play__level-name { font-size: 1.15rem; font-weight: 750; }
+    .play__level-count { font-family: var(--mono); font-size: 1rem; color: var(--c-text-3); font-variant-numeric: tabular-nums; }
+    .progress { position: relative; margin-top: 1.1rem; height: 0.9rem; border-radius: 99rem; background: rgba(255, 255, 255, 0.08); }
+    .progress__fill {
+      position: absolute; inset: 0 auto 0 0; width: var(--p, 0%); border-radius: inherit;
+      background: linear-gradient(90deg, var(--c-orange-d), var(--c-orange), var(--c-orange-l));
+      box-shadow: 0 0 1rem rgba(255, 107, 53, 0.6);
+      transition: width 0.45s var(--ease-out);
+    }
+    .progress__mark {
+      position: absolute; top: -0.35rem; bottom: -0.35rem; left: var(--at); width: 2px; background: rgba(255, 255, 255, 0.35);
+    }
+    .stars { margin-top: 1.2rem; display: flex; gap: 0.6rem; align-items: center; }
+    .star { width: 2.3rem; height: 2.3rem; color: rgba(255, 255, 255, 0.14); transition: color 0.3s, transform 0.5s var(--ease-spring), filter 0.3s; }
+    .star--on { color: var(--c-star); filter: drop-shadow(0 0 0.7rem rgba(255, 215, 0, 0.7)); transform: scale(1.12); }
+    .stars__legend { margin-left: auto; font-family: var(--mono); font-size: 0.8rem; color: var(--c-text-3); }
+    .play__status { margin-top: 1.2rem; min-height: 3.2rem; font-size: 1.1rem; color: var(--c-text-2); }
+    .play__controls { margin-top: 1.2rem; display: grid; grid-template-columns: 1fr 1fr; gap: 0.6rem; }
+    .play__stage { position: relative; perspective: 120rem; }
+    .play__board-wrap {
+      position: relative; width: 50rem; margin-left: auto;
+      padding: 1.6rem; border-radius: 2.2rem;
+      background: linear-gradient(160deg, rgba(26, 26, 46, 0.94), rgba(14, 17, 36, 0.94));
+      border: 1px solid var(--c-line);
+      box-shadow: 0 3rem 7rem rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(255, 255, 255, 0.03) inset;
+      transform: rotateX(var(--tilt-x, 0deg)) rotateY(var(--tilt-y, 0deg));
+      transition: transform 0.8s var(--ease-out);
+      container-type: inline-size;
+    }
+    .pboard {
+      --cols: 5;
+      display: grid; grid-template-columns: repeat(var(--cols), 1fr);
+      gap: calc(3rem / var(--cols));
+    }
+    .pcell {
+      position: relative; aspect-ratio: 1; padding: 0; border: 0; background: none; cursor: pointer;
+      perspective: 40rem;
+      --ax: 0; --ay: 1;
+    }
+    .pcell:disabled { cursor: default; }
+    .pcell__inner {
+      position: absolute; inset: 0; transform-style: preserve-3d;
+      transition: transform 0.6s var(--ease-spring);
+    }
+    .pcell--filled .pcell__inner { transform: rotate3d(var(--ax), var(--ay), 0, 180deg); }
+    .pcell__face {
+      position: absolute; inset: 0; border-radius: calc(100cqi / var(--cols) * 0.16);
+      backface-visibility: hidden; -webkit-backface-visibility: hidden;
+      display: grid; place-items: center;
+      font-size: calc(100cqi / var(--cols) * 0.4); font-weight: 800; font-variant-numeric: tabular-nums; color: #fff;
+    }
+    .pcell__face--front {
+      background: var(--c-orange);
+      box-shadow: inset 0 0.15rem 0 rgba(255, 255, 255, 0.25), inset 0 -0.2rem 0 rgba(0, 0, 0, 0.16);
+      transition: background 0.3s, box-shadow 0.3s;
+    }
+    .pcell__face--back {
+      transform: rotate3d(var(--ax), var(--ay), 0, 180deg);
+      background: var(--c-filled);
+      box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.08);
+      transition: background 0.35s, box-shadow 0.35s;
+    }
+    .pcell--passive .pcell__face--front { background: var(--c-passive); box-shadow: none; }
+    .pcell--target .pcell__face--front {
+      background: rgba(255, 107, 53, 0.3);
+      outline: 2px dashed var(--c-orange); outline-offset: -2px;
+      animation: target-pulse 1s ease-in-out infinite;
+    }
+    .pcell--target:hover .pcell__face--front { background: rgba(255, 107, 53, 0.55); }
+    .pcell--last .pcell__face--back { background: var(--c-orange); box-shadow: var(--glow-orange); }
+    .pcell--last .pcell__face--back::after {
+      content: ""; position: absolute; inset: 0; border-radius: inherit; background: var(--c-orange); z-index: -1;
+      animation: ghost 2s ease-out infinite;
+    }
+    .pcell--active:not(.pcell--target):hover .pcell__face--front { background: var(--c-orange-l); }
+    .pcell--shake { animation: shake 0.38s ease-in-out; }
+    .pcell--shake .pcell__face--front { background: var(--c-error); }
+    @keyframes shake { 20% { transform: translateX(-10%); } 40% { transform: translateX(9%); } 60% { transform: translateX(-6%); } 80% { transform: translateX(3%); } }
+    .play__fx { position: absolute; inset: -12rem; width: calc(100% + 24rem); height: calc(100% + 24rem); pointer-events: none; z-index: 5; }
+    .result {
+      position: absolute; inset: 0; z-index: 6; border-radius: 2.2rem;
+      display: grid; place-items: center; text-align: center;
+      background: radial-gradient(80% 70% at 50% 50%, rgba(11, 11, 22, 0.8), rgba(11, 11, 22, 0.62));
+      backdrop-filter: blur(0.5rem); -webkit-backdrop-filter: blur(0.5rem);
+      opacity: 0; pointer-events: none; transition: opacity 0.5s var(--ease-out);
+    }
+    .result--open { opacity: 1; pointer-events: auto; }
+    .result__inner { padding: 2rem; transform: scale(0.92); transition: transform 0.6s var(--ease-spring); }
+    .result--open .result__inner { transform: none; }
+    .result__stars { display: flex; justify-content: center; gap: 1rem; }
+    .result__star { width: 5.4rem; height: 5.4rem; color: rgba(255, 255, 255, 0.12); }
+    .result__star--on { color: var(--c-star); filter: drop-shadow(0 0 1.4rem rgba(255, 215, 0, 0.75)); animation: star-pop 0.7s var(--ease-spring) backwards; }
+    .result__star--on:nth-child(2) { animation-delay: 0.22s; }
+    .result__star--on:nth-child(3) { animation-delay: 0.44s; }
+    @keyframes star-pop { from { transform: scale(0) rotate(-90deg); opacity: 0; } }
+    .result__title { margin-top: 1.6rem; font-size: 4.2rem; font-weight: 900; letter-spacing: -0.03em; line-height: 1; }
+    .result__text { margin-top: 0.8rem; font-size: 1.3rem; color: var(--c-text-2); }
+    .result__badge {
+      margin-top: 1.1rem; display: inline-block; padding: 0.45rem 1rem; border-radius: 99rem;
+      background: rgba(255, 215, 0, 0.12); border: 1px solid rgba(255, 215, 0, 0.45); color: var(--c-star);
+      font-size: 0.95rem; font-weight: 700;
+    }
+    .result__actions { margin-top: 2rem; display: flex; justify-content: center; gap: 0.8rem; flex-wrap: wrap; }
+    .result__more { margin-top: 1.6rem; font-size: 1rem; color: var(--c-text-3); }
+
+    /* ---------- section 3: journey (sticky, scroll scrubbed) ---------- */
+    .journey { height: 760vh; padding: 0; }
+    .journey__sticky { position: sticky; top: 0; height: 100vh; overflow: hidden; }
+    .journey__canvas { position: absolute; inset: 0; width: 100%; height: 100%; }
+    .journey__panel {
+      position: absolute; left: max(3rem, calc((100vw - 112rem) / 2)); top: 50%; translate: 0 -50%; width: 40rem;
+    }
+    .journey__size {
+      margin-top: 2.4rem; font-size: 13rem; font-weight: 900; line-height: 0.85; letter-spacing: -0.05em;
+      font-variant-numeric: tabular-nums;
+      background: linear-gradient(180deg, #fff 30%, rgba(255, 255, 255, 0.45));
+      -webkit-background-clip: text; background-clip: text; color: transparent;
+    }
+    .journey--extreme .journey__size {
+      background: linear-gradient(180deg, var(--c-accent) 0%, var(--c-orange) 55%, var(--c-orange-d));
+      -webkit-background-clip: text; background-clip: text;
+      filter: drop-shadow(0 0 2.2rem rgba(255, 107, 53, 0.45));
+      font-size: 8.6rem; letter-spacing: -0.03em;
+    }
+    .journey__facts { margin: 2rem 0 0; padding: 0; list-style: none; display: flex; flex-wrap: wrap; gap: 0.6rem; }
+    .journey__fact {
+      padding: 0.55rem 1rem; border-radius: 99rem; border: 1px solid var(--c-line-2); background: rgba(11, 11, 22, 0.55);
+      font-size: 1.05rem; font-weight: 650; font-variant-numeric: tabular-nums;
+    }
+    .journey__fact--hot { border-color: rgba(255, 107, 53, 0.6); color: var(--c-orange-l); }
+    .journey__desc { margin-top: 1.6rem; font-size: 1.5rem; line-height: 1.45; color: var(--c-text-2); min-height: 4.4rem; }
+    .journey__unlock { margin-top: 1.4rem; font-size: 1rem; color: var(--c-text-3); }
+    .journey__steps { margin: 3rem 0 0; padding: 0; list-style: none; display: flex; gap: 0.4rem; }
+    .journey__step {
+      flex: 1; height: 0.45rem; border-radius: 99rem; background: rgba(255, 255, 255, 0.1);
+      transition: background 0.4s, box-shadow 0.4s;
+    }
+    .journey__step--done { background: rgba(255, 107, 53, 0.45); }
+    .journey__step--on { background: var(--c-orange); box-shadow: 0 0 1rem rgba(255, 107, 53, 0.7); }
+    .journey__step--extreme { flex: 1.6; }
+    .journey__step-labels { display: flex; gap: 0.4rem; margin-top: 0.6rem; font-family: var(--mono); font-size: 0.75rem; color: var(--c-text-3); }
+    .journey__step-label { flex: 1; }
+    .journey__step-label--extreme { flex: 1.6; }
+    .journey__counter {
+      position: absolute; right: max(3rem, calc((100vw - 112rem) / 2)); bottom: 3rem;
+      font-family: var(--mono); font-size: 1.1rem; color: var(--c-text-3); font-variant-numeric: tabular-nums;
+      opacity: 0; transition: opacity 0.5s;
+    }
+    .journey--extreme .journey__counter { opacity: 1; }
+    .journey__counter-num { color: #fff; font-size: 2rem; font-weight: 800; }
+    .journey__swap { animation: swap-in 0.7s var(--ease-out); }
+    @keyframes swap-in { from { opacity: 0; transform: translateY(1.2rem); filter: blur(0.5rem); } }
+
+    /* ---------- section 4: 95,000 particles ---------- */
+    .count { height: 460vh; padding: 0; }
+    .count__sticky { position: sticky; top: 0; height: 100vh; overflow: hidden; }
+    .count__canvas { position: absolute; inset: 0; width: 100%; height: 100%; }
+    .count__head { position: absolute; left: 0; right: 0; top: calc(var(--nav-h) + 4rem); text-align: center; pointer-events: none; }
+    .count__caption { margin-top: 1.2rem; font-size: 3.4rem; font-weight: 850; letter-spacing: -0.03em; min-height: 4.2rem; }
+    .count__sub { margin-top: 0.6rem; font-size: 1.2rem; color: var(--c-text-3); }
+    .count__labels { position: absolute; inset: 0; pointer-events: none; }
+    .count__label {
+      position: absolute; left: var(--x); top: var(--y); translate: -50% 0; text-align: center;
+      opacity: 0; transition: opacity 0.6s var(--ease-out), transform 0.6s var(--ease-out); transform: translateY(1rem);
+      transition-delay: calc(var(--i) * 70ms);
+    }
+    .count--chart .count__label { opacity: 1; transform: none; }
+    .count__label-grid { font-size: 1.8rem; font-weight: 850; }
+    .count__label-num { font-family: var(--mono); font-size: 1rem; color: var(--c-text-3); }
+
+    /* ---------- section 5: features ---------- */
+    .features__grid { margin-top: 5rem; display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.4rem; perspective: 140rem; }
+    .feature {
+      position: relative; min-height: 21rem; padding: 2.2rem; border-radius: var(--radius-lg);
+      background: rgba(18, 18, 36, 0.72); border: 1px solid var(--c-line); overflow: hidden;
+      backdrop-filter: blur(1rem); -webkit-backdrop-filter: blur(1rem);
+      transform: rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg));
+      transition: transform 0.5s var(--ease-out), border-color 0.4s, opacity 1.1s var(--ease-out);
+    }
+    .feature::before {
+      content: ""; position: absolute; inset: 0; pointer-events: none;
+      background: radial-gradient(28rem circle at var(--mx, 50%) var(--my, -20%), rgba(255, 107, 53, 0.22), transparent 60%);
+      opacity: var(--spot, 0); transition: opacity 0.4s;
+    }
+    .feature:hover { border-color: rgba(255, 107, 53, 0.45); }
+    .feature__icon {
+      position: relative; width: 4rem; height: 4rem; border-radius: 1.1rem; display: grid; place-items: center;
+      background: linear-gradient(160deg, rgba(255, 107, 53, 0.28), rgba(255, 107, 53, 0.08));
+      border: 1px solid rgba(255, 107, 53, 0.4); color: var(--c-orange-l);
+    }
+    .feature__icon--blue { background: linear-gradient(160deg, rgba(26, 106, 172, 0.4), rgba(15, 52, 96, 0.2)); border-color: rgba(79, 155, 224, 0.45); color: var(--c-blue-l); }
+    .feature__icon svg { width: 2rem; height: 2rem; }
+    .feature__title { position: relative; margin-top: 1.8rem; font-size: 1.6rem; font-weight: 800; letter-spacing: -0.01em; }
+    .feature__text { position: relative; margin-top: 0.7rem; font-size: 1.1rem; line-height: 1.5; color: var(--c-text-2); }
+    .feature__cells { position: absolute; right: 1.6rem; top: 1.8rem; display: grid; grid-template-columns: repeat(5, 0.55rem); gap: 0.2rem; opacity: 0.8; }
+    .feature__cell { width: 0.55rem; height: 0.55rem; border-radius: 0.12rem; background: var(--c-passive); }
+    .feature__cell--a { background: var(--c-orange); }
+    .feature__cell--f { background: var(--c-filled); }
+    .feature:hover .feature__cell--a { animation: drip 1.2s ease-in-out infinite; animation-delay: calc(var(--k) * 60ms); }
+
+    /* ---------- section 6: final CTA ---------- */
+    .cta { min-height: 100vh; display: flex; align-items: center; text-align: center; padding: 10rem 0 6rem; }
+    .cta__inner { display: flex; flex-direction: column; align-items: center; }
+    .cta__title { margin-top: 4rem; font-size: 8rem; font-weight: 900; letter-spacing: -0.045em; line-height: 0.95; }
+    .cta__text { margin-top: 1.8rem; font-size: 1.6rem; color: var(--c-text-2); }
+    .cta__actions { margin-top: 3rem; display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center; }
+    .footer {
+      position: relative; z-index: 2; padding: 2.6rem 3rem; border-top: 1px solid var(--c-line);
+      display: flex; justify-content: space-between; align-items: center; gap: 2rem; flex-wrap: wrap;
+      background: rgba(8, 8, 16, 0.7); backdrop-filter: blur(1rem); -webkit-backdrop-filter: blur(1rem);
+      font-size: 1rem; color: var(--c-text-3);
+    }
+    .footer__links { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+    .footer__link { display: inline-flex; align-items: center; min-height: 2.75rem; padding: 0 0.9rem; border-radius: 0.6rem; text-decoration: none; color: var(--c-text-2); }
+    .footer__link:hover { color: #fff; background: rgba(255, 255, 255, 0.06); }
+
+    /* ---------- decorative cursor ---------- */
+    .cursor {
+      position: fixed; left: 0; top: 0; z-index: 90; pointer-events: none;
+      width: 1.5rem; height: 1.5rem; margin: -0.75rem 0 0 -0.75rem; border-radius: 0.35rem;
+      border: 2px solid var(--c-orange); opacity: 0;
+      transition: width 0.3s var(--ease-out), height 0.3s var(--ease-out), margin 0.3s var(--ease-out), background 0.3s, opacity 0.3s, border-radius 0.3s;
+      transform: translate3d(var(--cx, -100px), var(--cy, -100px), 0) rotate(var(--cr, 0deg));
+      will-change: transform;
+    }
+    .cursor--on { opacity: 0.9; }
+    .cursor--hover { width: 3.4rem; height: 3.4rem; margin: -1.7rem 0 0 -1.7rem; background: rgba(255, 107, 53, 0.12); border-style: dashed; border-radius: 0.7rem; }
+
+    .no-webgl .field { background: radial-gradient(90% 70% at 50% 85%, rgba(255, 107, 53, 0.2), transparent 60%), radial-gradient(120% 90% at 50% 70%, #1a1a2e 0%, #0b0b16 70%); }
+
+    /* ============================================================
+       5. Media queries and motion
+       ============================================================ */
+    @media (max-width: 1100px) {
+      html { font-size: 12px; }
+      .nav__links { display: none; }
+      .rule__grid, .play__grid { grid-template-columns: 1fr; gap: 4rem; }
+      .play__board-wrap { margin: 0 auto; width: min(50rem, 100%); }
+      .features__grid { grid-template-columns: repeat(2, 1fr); }
+      .journey__panel { width: 28rem; }
+      .hero__stats { flex-wrap: wrap; justify-content: center; }
+    }
+    /* Japanese: break lines between phrases, not inside words (Chromium; others ignore it) */
+    html:lang(ja) body { word-break: auto-phrase; }
+    /* Phones: everything sized for one narrow column; long words (de, ru, pl…) may hyphenate. */
+    @media (max-width: 760px) {
+      .nav { padding: 0 1.2rem; gap: 0.8rem; }
+      .nav__brand { gap: 0.6rem; font-size: 1.05rem; white-space: nowrap; }
+      .nav__tools { gap: 0.5rem; }
+      .lang-select { max-width: 10rem; min-height: 3.6rem; }
+      .sound-btn { min-height: 3.6rem; padding: 0 1rem; }
+      .sound-btn [data-ref="sound-label"] {
+        position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap;
       }
-    </script>
+      .container { width: calc(100% - 3rem); }
+      .wordmark { --wm-cell: calc((100vw - 3rem) / 18 - 0.25rem); --wm-gap: 0.25rem; }
+      .wordmark--small { --wm-cell: calc((100vw - 5rem) / 18 - 0.25rem); }
+      .hero__collection { font-size: 1.6rem; letter-spacing: 0.6em; margin-right: -0.6em; }
+      .hero__tagline { padding-inline: 1.5rem; }
+      .heading { font-size: 3.8rem; }
+      .cta__title { font-size: 4.6rem; }
+      .heading, .cta__title, .feature__title, .rule-card__title { hyphens: auto; -webkit-hyphens: auto; overflow-wrap: break-word; }
+      .rule__cards { grid-template-columns: 1fr; }
+      .features__grid { grid-template-columns: 1fr; margin-top: 3.5rem; }
+      .feature { min-height: 0; }
+      .journey__panel { left: 1.5rem; width: calc(100vw - 3rem); }
+      .journey__size { font-size: 9rem; }
+      .journey--extreme .journey__size { font-size: 6rem; }
+      .footer { padding: 2rem 1.5rem; justify-content: center; text-align: center; }
+      .footer__links { justify-content: center; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
+      .reveal { opacity: 1; transform: none; }
+    }
+    @media (pointer: coarse) { .cursor { display: none; } }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#play" data-i18n="a11y.skip">गेम पर जाएँ</a>
+  <canvas class="field" aria-hidden="true"></canvas>
+  <div class="vignette" aria-hidden="true"></div>
+  <div class="cursor" aria-hidden="true"></div>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="/styles.css" />
-    <script src="/lang.js" defer></script>
-    <!-- Google tag (gtag.js) -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=G-EHP1CQ1RV4"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
-      gtag("config", "G-EHP1CQ1RV4");
-    </script>
-  </head>
-  <body>
-    <script>window.DEMO_T={"title":"अभी आज़माएँ","subtitle":"पहले दो लेवल यहीं खेलें — कोई डाउनलोड ज़रूरी नहीं।","level":"लेवल","undo":"पूर्ववत करें","restart":"फिर से शुरू करें","start":"शुरू करने के लिए किसी भी सक्रिय सेल पर टैप करें।","progress":"{filled} / {total} सेल भरीं।","deadEnd":"कोई चाल शेष नहीं — फिर से कोशिश करने के लिए फिर से शुरू करें पर टैप करें।","win":"हल हो गया! 🎉 आपने हर सेल भर दी।","cta":"App Store पर 5,000+ लेवल पाएँ →"};</script>
-    <nav>
-      <div class="nav-container">
-        <div class="logo">Grid Collection</div>
-        <ul class="nav-links">
-          <li><a href="/hi/" class="active" data-nav="home">होम</a></li>
-          <li><a href="/hi/support.html" data-nav="support">सहायता</a></li>
-          <li><a href="/hi/privacy-policy.html" data-nav="privacy">गोपनीयता नीति</a></li>
-          <li><a href="/hi/terms-of-service.html" data-nav="terms">सेवा की शर्तें</a></li>
-        </ul>
-        <select
-          class="lang-select"
-          aria-label="Language"
-          onchange="if(this.value)location.href=this.value"
-        >
-          <option value="/">English</option>
-          <option value="/tr/">Türkçe</option>
-          <option value="/de/">Deutsch</option>
-          <option value="/es/">Español</option>
-          <option value="/fr/">Français</option>
-          <option value="/it/">Italiano</option>
-          <option value="/pt-br/">Português (BR)</option>
-          <option value="/pl/">Polski</option>
-          <option value="/id/">Bahasa Indonesia</option>
-          <option value="/vi/">Tiếng Việt</option>
-          <option value="/ru/">Русский</option>
-          <option value="/hi/" selected>हिन्दी</option>
-          <option value="/zh-hans/">简体中文</option>
-          <option value="/zh-hant/">繁體中文</option>
-          <option value="/ja/">日本語</option>
-          <option value="/ko/">한국어</option>
-        </select>
-      </div>
+  <header class="nav">
+    <a class="nav__brand" href="#top" aria-label="Grid Collection">
+      <span class="mini-board" data-ref="mini-board" aria-hidden="true"></span>
+      <span>Grid Collection</span>
+    </a>
+    <nav aria-label="अनुभाग" data-i18n-aria="a11y.sections">
+      <ul class="nav__links">
+        <li><a class="nav__link" href="#rule" data-nav="rule" data-i18n="nav.rule">नियम</a></li>
+        <li><a class="nav__link" href="#play" data-nav="play" data-i18n="nav.play">खेलें</a></li>
+        <li><a class="nav__link" href="#collection" data-nav="collection" data-i18n="nav.collection">संग्रह</a></li>
+        <li><a class="nav__link" href="#features" data-nav="features" data-i18n="nav.features">विशेषताएँ</a></li>
+        <li><a class="nav__link" href="#download" data-nav="download" data-i18n="nav.download">डाउनलोड</a></li>
+      </ul>
     </nav>
+    <div class="nav__tools">
+      <select class="lang-select" aria-label="भाषा" onchange="if(this.value)location.href=this.value">
+        <option value="/">English</option>
+        <option value="/tr/">Türkçe</option>
+        <option value="/de/">Deutsch</option>
+        <option value="/es/">Español</option>
+        <option value="/fr/">Français</option>
+        <option value="/it/">Italiano</option>
+        <option value="/pt-br/">Português (BR)</option>
+        <option value="/pl/">Polski</option>
+        <option value="/id/">Bahasa Indonesia</option>
+        <option value="/vi/">Tiếng Việt</option>
+        <option value="/ru/">Русский</option>
+        <option value="/hi/" selected>हिन्दी</option>
+        <option value="/zh-hans/">简体中文</option>
+        <option value="/zh-hant/">繁體中文</option>
+        <option value="/ja/">日本語</option>
+        <option value="/ko/">한국어</option>
+      </select>
+      <button class="sound-btn" type="button" data-action="sound" aria-pressed="true">
+        <span class="sound-btn__bars" aria-hidden="true"><span class="sound-btn__bar"></span><span class="sound-btn__bar"></span><span class="sound-btn__bar"></span><span class="sound-btn__bar"></span></span>
+        <span data-ref="sound-label">आवाज़ चालू</span>
+      </button>
+    </div>
+  </header>
 
-    <!-- Hero Section -->
-    <section class="hero">
-      <div class="hero-content">
-        <h1>Grid Collection</h1>
-        <p class="hero-tagline">
-          नंबर रखने वाली पहेलियों का सबसे बेहतरीन संग्रह। 5×5 से 10×10 तक छह ग्रिड आकार, 5,000+ लेवल, और दिमाग को कसने वाला अनंत मज़ा।
-        </p>
+  <main class="page" id="top">
+    <!-- ======================= HERO ======================= -->
+    <section class="hero" data-section="hero" data-dim="1">
+      <p class="hero__eyebrow"><span class="hero__dot" aria-hidden="true"></span><span data-i18n="hero.eyebrow">iPhone और Android के लिए पहेली गेम</span></p>
+      <h1 class="hero__title">
+        <span class="sr-only">Grid Collection</span>
+        <span class="wordmark" data-ref="wordmark-hero" aria-hidden="true"></span>
+        <span class="hero__collection" aria-hidden="true">COLLECTION</span>
+      </h1>
+      <p class="hero__tagline" data-i18n="hero.tagline">एक नियम, आठ दिशाएँ, 95,000 लेवल। हर नारंगी सेल को एक ही अटूट चेन से भरें।</p>
+      <div class="hero__actions">
+        <a class="badge" href="https://apps.apple.com/app/id6761419296" target="_blank" rel="noopener">
+          <svg class="badge__icon" viewBox="0 0 48 48" aria-hidden="true"><rect width="48" height="48" rx="11" fill="#1a1a2e"/><path d="M18.5 33.5 26 19.5M29.5 33.5 22 19.5M14.5 29h19" stroke="#ff6b35" stroke-width="3.4" stroke-linecap="round" fill="none"/></svg>
+          <span class="badge__text"><span class="badge__small" data-i18n="badge.iosSmall">डाउनलोड करें</span><span class="badge__big">App Store</span></span>
+        </a>
+        <a class="badge badge--ghost" href="mailto:contact@grid-collection.com?subject=Android" aria-describedby="android-soon">
+          <svg class="badge__icon" viewBox="0 0 48 48" aria-hidden="true"><path d="M12 7.5 30.5 24 12 40.5c-.6-.4-1-1.1-1-2V9.5c0-.9.4-1.6 1-2z" fill="#4f9be0"/><path d="M12 7.5c.7-.4 1.6-.4 2.4 0l21.3 12.3-5.2 4.2z" fill="#3ddc84"/><path d="M12 40.5c.7.4 1.6.4 2.4 0l21.3-12.3-5.2-4.2z" fill="#ff6b35"/><path d="m35.7 19.8 4.3 2.5c1.4.8 1.4 2.6 0 3.4l-4.3 2.5-5.2-4.2z" fill="#ffd700"/></svg>
+          <span class="badge__text"><span class="badge__small" id="android-soon" data-i18n="badge.playSmall">जल्द आ रहा है</span><span class="badge__big">Google Play</span></span>
+        </a>
+        <a class="btn" href="#play"><span data-i18n="hero.play">ब्राउज़र में खेलें</span><span class="btn__arrow" aria-hidden="true">↓</span></a>
+      </div>
+      <ul class="hero__stats">
+        <li class="hero__stat"><span class="hero__stat-num hero__stat-num--orange" data-count="95000">95,000</span><span class="hero__stat-label" data-i18n="stat.levels">लेवल</span></li>
+        <li class="hero__stat"><span class="hero__stat-num" data-count="6">6</span><span class="hero__stat-label" data-i18n="stat.grids">ग्रिड आकार</span></li>
+        <li class="hero__stat"><span class="hero__stat-num" data-count="55">55</span><span class="hero__stat-label" data-i18n="stat.stages">स्टेज</span></li>
+        <li class="hero__stat"><span class="hero__stat-num" data-count="136">136</span><span class="hero__stat-label" data-i18n="stat.extreme">Extreme लेवल</span></li>
+      </ul>
+      <p class="hero__hint" aria-hidden="true"><span class="hero__hint-icon"></span><span data-i18n="hero.hint">लहर बनाने के लिए कहीं भी क्लिक करें</span></p>
+      <a class="hero__scroll" href="#rule"><span class="hero__scroll-cells" aria-hidden="true"><span class="hero__scroll-cell"></span><span class="hero__scroll-cell"></span><span class="hero__scroll-cell"></span></span><span data-i18n="hero.scroll">स्क्रॉल करें</span></a>
+    </section>
 
-        <div class="hero-stats">
-          <div class="stat-item">
-            <div class="stat-number">6</div>
-            <div class="stat-label">ग्रिड आकार</div>
+    <!-- ======================= 01 RULE ======================= -->
+    <section class="section rule" id="rule" data-section="rule" data-dim="0.62">
+      <div class="container rule__grid">
+        <div>
+          <p class="kicker reveal" data-i18n="rule.kicker">01 — नियम</p>
+          <h2 class="heading reveal" style="--i:1"><span data-i18n="rule.title1">एक नियम।</span><br /><span class="heading__accent" data-i18n="rule.title2">आठ दिशाएँ।</span></h2>
+          <p class="lead reveal" style="--i:2" data-i18n="rule.lead">किसी भी सेल से शुरू करें। हर चाल एक तय दूरी की छलाँग है। लक्ष्य: सभी सक्रिय सेल को एक ही चेन से भरना।</p>
+          <div class="rule__cards">
+            <article class="rule-card reveal" style="--i:3">
+              <div class="rule-card__demo" aria-hidden="true">
+                <span class="rule-card__cell rule-card__cell--head"></span><span class="rule-card__cell rule-card__cell--skip"></span><span class="rule-card__cell rule-card__cell--skip"></span><span class="rule-card__cell rule-card__cell--land"></span>
+              </div>
+              <h3 class="rule-card__title" data-i18n="rule.straightTitle">सीधी: 2 छोड़ें, तीसरी पर उतरें</h3>
+              <p class="rule-card__text" data-i18n="rule.straightText">ऊपर, नीचे, बाएँ या दाएँ; बीच की दो सेल के ऊपर से।</p>
+            </article>
+            <article class="rule-card reveal" style="--i:4">
+              <div class="rule-card__demo rule-card__demo--diag" aria-hidden="true">
+                <span class="rule-card__cell rule-card__cell--head"></span><span class="rule-card__cell rule-card__cell--none"></span><span class="rule-card__cell rule-card__cell--none"></span>
+                <span class="rule-card__cell rule-card__cell--none"></span><span class="rule-card__cell rule-card__cell--skip"></span><span class="rule-card__cell rule-card__cell--none"></span>
+                <span class="rule-card__cell rule-card__cell--none"></span><span class="rule-card__cell rule-card__cell--none"></span><span class="rule-card__cell rule-card__cell--land"></span>
+              </div>
+              <h3 class="rule-card__title" data-i18n="rule.diagTitle">तिरछी: 1 छोड़ें, दूसरी पर उतरें</h3>
+              <p class="rule-card__text" data-i18n="rule.diagText">चारों तिरछी दिशाओं में; बीच की एक सेल के ऊपर से।</p>
+            </article>
           </div>
-          <div class="stat-item">
-            <div class="stat-number">5,000+</div>
-            <div class="stat-label">लेवल</div>
-          </div>
-          <div class="stat-item">
-            <div class="stat-number">∞</div>
-            <div class="stat-label">घंटों का मज़ा</div>
-          </div>
+          <p class="rule__note reveal" style="--i:5" data-i18n="rule.note">जिन सेल के ऊपर से आप कूदते हैं, वे भरी हों या खाली, इससे कोई फ़र्क नहीं पड़ता।</p>
         </div>
-
-        <div class="store-badges">
-          <a
-            href="https://apps.apple.com/app/id6761419296"
-            class="store-badge"
-            id="badge-app-store"
-            target="_blank"
-            rel="noopener"
-          >
-            <img src="/app-store.png" alt="App Store पर डाउनलोड करें" />
-          </a>
-          <a
-            href="mailto:contact@grid-collection.com?subject=Notify%20me%20when%20Grid%20Collection%20comes%20to%20Android"
-            class="store-badge store-badge--soon"
-            id="badge-google-play"
-            aria-label="Google Play — coming soon, email me when it launches"
-          >
-            <img src="/google-play.png" alt="जल्द ही Google Play पर" />
-            <span class="badge-ribbon">जल्द आ रहा है</span>
-          </a>
+        <div class="rule__stage reveal" style="--i:2">
+          <div class="rule-board" data-ref="rule-board" role="group" aria-label="नियम बोर्ड" data-i18n-aria="rule.board"></div>
+          <div class="rule__hud">
+            <p class="rule__counter"><span class="rule__counter-num" data-ref="rule-moves">0</span><span data-i18n="rule.moves">चालें</span></p>
+            <button class="chip-btn" type="button" data-action="rule-reset" data-i18n="rule.reset">दोबारा शुरू करें</button>
+          </div>
+          <p class="rule__msg" data-ref="rule-msg" aria-live="polite"></p>
         </div>
       </div>
+    </section>
 
-      <div class="hero-mockup">
-        <div class="phone-frame">
-          <div class="phone-screen">
-            <div class="mock-title">लेवल 1</div>
-            <div class="mock-grid">
-              <!-- Row 1 -->
-              <div class="mock-cell filled">2</div>
-              <div class="mock-cell active"></div>
-              <div class="mock-cell active"></div>
-              <div class="mock-cell filled">5</div>
-              <div class="mock-cell active"></div>
-              <!-- Row 2 -->
-              <div class="mock-cell active"></div>
-              <div class="mock-cell active"></div>
-              <div class="mock-cell active"></div>
-              <div class="mock-cell active"></div>
-              <div class="mock-cell active"></div>
-              <!-- Row 3 -->
-              <div class="mock-cell active"></div>
-              <div class="mock-cell filled">6</div>
-              <div class="mock-cell filled">1</div>
-              <div class="mock-cell active"></div>
-              <div class="mock-cell highlight"></div>
-              <!-- Row 4 -->
-              <div class="mock-cell filled">3</div>
-              <div class="mock-cell active"></div>
-              <div class="mock-cell active"></div>
-              <div class="mock-cell filled">4</div>
-              <div class="mock-cell active"></div>
-              <!-- Row 5 -->
-              <div class="mock-cell active"></div>
-              <div class="mock-cell active"></div>
-              <div class="mock-cell active"></div>
-              <div class="mock-cell highlight"></div>
-              <div class="mock-cell active"></div>
+    <!-- ======================= 02 PLAY ======================= -->
+    <section class="section play" id="play" data-section="play" data-dim="0.5">
+      <div class="container play__grid">
+        <div>
+          <p class="kicker reveal" data-i18n="play.kicker">02 — खेलें</p>
+          <h2 class="heading reveal" style="--i:1"><span data-i18n="play.title1">अब आपकी</span> <span class="heading__accent" data-i18n="play.title2">चाल।</span></h2>
+          <p class="lead reveal" style="--i:2" data-i18n="play.lead">सीधे गेम से लिए गए असली लेवल। हर लेवल 100% भरा जा सकता है, लेकिन हर रास्ता वहाँ तक नहीं पहुँचता।</p>
+          <div class="play__tabs reveal" style="--i:3" data-ref="play-tabs" role="group" aria-label="लेवल चुनें" data-i18n-aria="play.pick"></div>
+          <div class="play__hud reveal" style="--i:4">
+            <div class="play__level"><span class="play__level-name" data-ref="play-level"></span><span class="play__level-count" data-ref="play-count"></span></div>
+            <div class="progress" aria-hidden="true">
+              <span class="progress__fill" data-ref="play-progress"></span>
+              <span class="progress__mark" style="--at:80%"></span><span class="progress__mark" style="--at:90%"></span>
+            </div>
+            <div class="stars" data-ref="play-stars">
+              <svg class="star" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2.6l2.8 5.9 6.4.8-4.7 4.4 1.2 6.4L12 17l-5.7 3.1 1.2-6.4-4.7-4.4 6.4-.8z"/></svg>
+              <svg class="star" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2.6l2.8 5.9 6.4.8-4.7 4.4 1.2 6.4L12 17l-5.7 3.1 1.2-6.4-4.7-4.4 6.4-.8z"/></svg>
+              <svg class="star" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2.6l2.8 5.9 6.4.8-4.7 4.4 1.2 6.4L12 17l-5.7 3.1 1.2-6.4-4.7-4.4 6.4-.8z"/></svg>
+              <span class="stars__legend" data-i18n="play.legend">80% · 90% · 100%</span>
+            </div>
+            <p class="play__status" data-ref="play-status" aria-live="polite"></p>
+            <div class="play__controls">
+              <button class="chip-btn" type="button" data-action="play-undo"><svg class="chip-btn__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 14 4 9l5-5M4 9h10.5a5.5 5.5 0 0 1 0 11H11" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg><span data-i18n="play.undo">वापस लें</span></button>
+              <button class="chip-btn" type="button" data-action="play-restart"><svg class="chip-btn__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 12a8 8 0 1 1-2.3-5.6M20 4v4.5h-4.5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg><span data-i18n="play.restart">फिर से शुरू</span></button>
+              <button class="chip-btn" type="button" data-action="play-hint"><svg class="chip-btn__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19 15 9M17 3v4M15 5h4M20 10v3M18.5 11.5h3" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg><span data-i18n="play.hint">शुरुआती संकेत</span></button>
+              <button class="chip-btn chip-btn--primary" type="button" data-action="play-solve"><svg class="chip-btn__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4.5v15l12-7.5z" fill="currentColor"/></svg><span data-i18n="play.solve">हल देखें</span></button>
+            </div>
+          </div>
+        </div>
+        <div class="play__stage reveal" style="--i:2">
+          <div class="play__board-wrap" data-ref="play-wrap">
+            <canvas class="play__fx" data-ref="play-fx" aria-hidden="true"></canvas>
+            <div class="pboard" data-ref="play-board" role="group" aria-label="पहेली बोर्ड" data-i18n-aria="play.board"></div>
+            <div class="result" data-ref="play-result" role="dialog" aria-modal="false" aria-labelledby="result-title">
+              <div class="result__inner">
+                <div class="result__stars" data-ref="result-stars">
+                  <svg class="result__star" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2.6l2.8 5.9 6.4.8-4.7 4.4 1.2 6.4L12 17l-5.7 3.1 1.2-6.4-4.7-4.4 6.4-.8z"/></svg>
+                  <svg class="result__star" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2.6l2.8 5.9 6.4.8-4.7 4.4 1.2 6.4L12 17l-5.7 3.1 1.2-6.4-4.7-4.4 6.4-.8z"/></svg>
+                  <svg class="result__star" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2.6l2.8 5.9 6.4.8-4.7 4.4 1.2 6.4L12 17l-5.7 3.1 1.2-6.4-4.7-4.4 6.4-.8z"/></svg>
+                </div>
+                <h3 class="result__title" id="result-title" data-ref="result-title"></h3>
+                <p class="result__text" data-ref="result-text"></p>
+                <p class="result__badge" data-ref="result-badge" data-i18n="play.perfect">एक भी चाल वापस लिए बिना 100%: उत्तम बैज आपका है।</p>
+                <div class="result__actions">
+                  <button class="chip-btn" type="button" data-action="play-undo" data-ref="result-undo"><span data-i18n="play.undo">वापस लें</span></button>
+                  <button class="chip-btn" type="button" data-action="play-restart"><span data-i18n="play.retry">फिर से कोशिश करें</span></button>
+                  <button class="chip-btn chip-btn--primary" type="button" data-action="play-next"><span data-i18n="play.next">अगला लेवल</span> <span aria-hidden="true">→</span></button>
+                </div>
+                <p class="result__more" data-i18n="play.more">94,999 और लेवल आपका इंतज़ार कर रहे हैं।</p>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Features Grid -->
-    <section class="section">
-      <h2>खिलाड़ी इसे क्यों पसंद करते हैं</h2>
-      <div class="features">
-        <div class="feature-card">
-          <h3>🧩 एक विशाल संग्रह</h3>
-          <p>
-            5×5 से 10×10 तक — छह ग्रिड आकार, हर एक में सैकड़ों हाथ से बनाए गए लेवल। नया कंटेंट नियमित रूप से जुड़ता रहता है।
-          </p>
+    <!-- ======================= 03 JOURNEY ======================= -->
+    <section class="section journey" id="collection" data-section="collection" data-dim="0.36">
+      <div class="journey__sticky">
+        <canvas class="journey__canvas" data-ref="journey-canvas" aria-hidden="true"></canvas>
+        <div class="journey__panel">
+          <p class="kicker" data-i18n="journey.kicker">03 — संग्रह</p>
+          <p class="journey__size" data-ref="journey-size" aria-live="polite">5×5</p>
+          <ul class="journey__facts" data-ref="journey-facts"></ul>
+          <p class="journey__desc" data-ref="journey-desc"></p>
+          <p class="journey__unlock" data-ref="journey-unlock"></p>
+          <ol class="journey__steps" data-ref="journey-steps" aria-hidden="true"></ol>
+          <div class="journey__step-labels" data-ref="journey-step-labels" aria-hidden="true"></div>
         </div>
-        <div class="feature-card">
-          <h3>🔢 नंबर रखने वाली पहेलियाँ</h3>
-          <p>
-            चाल नियमों का पालन करते हुए क्रम में नंबर रखें। सीखने में आसान, महारत हासिल करने में चुनौतीपूर्ण।
-          </p>
+        <p class="journey__counter" aria-hidden="true"><span data-i18n="journey.move">चाल</span> <span class="journey__counter-num" data-ref="journey-count">0</span> / 400</p>
+      </div>
+    </section>
+
+    <!-- ======================= 04 COUNT ======================= -->
+    <section class="section count" data-section="count" data-dim="0.18">
+      <div class="count__sticky">
+        <canvas class="count__canvas" data-ref="count-canvas" aria-hidden="true"></canvas>
+        <div class="count__head">
+          <p class="kicker" data-i18n="count.kicker">04 — पैमाना</p>
+          <p class="count__caption" data-ref="count-caption" aria-live="polite"></p>
+          <p class="count__sub" data-i18n="count.sub">95,000 बिंदु, हर बिंदु एक लेवल। अपने कर्सर से इन्हें बिखेरें।</p>
         </div>
-        <div class="feature-card">
-          <h3>⭐ अपनी रणनीति निखारें</h3>
-          <p>
-            हर लेवल पर 3 सितारे तक कमाएँ। उत्तम प्रयास हासिल करके अपनी महारत साबित करें।
-          </p>
-        </div>
-        <div class="feature-card">
-          <h3>🏆 उपलब्धियाँ अनलॉक करें</h3>
-          <p>
-            दर्जनों उपलब्धियों के साथ अपनी प्रगति ट्रैक करें। मील के पत्थर पूरे करें और एक दिग्गज बनें।
-          </p>
-        </div>
-        <div class="feature-card">
-          <h3>🎮 प्रगति कभी न खोएँ</h3>
-          <p>
-            आपकी प्रगति अपने-आप Game Center में बैकअप होती है और आपके दूसरे Apple उपकरणों पर पुनर्स्थापित हो जाती है — फिर से इंस्टॉल करने के बाद भी।
-          </p>
-        </div>
-        <div class="feature-card">
-          <h3>💎 साफ़ और सरल</h3>
-          <p>
-            आधुनिक, मिनिमलिस्ट डिज़ाइन वाला ध्यान भटकाने से मुक्त इंटरफ़ेस। शुद्ध पहेली पर पूरा ध्यान।
-          </p>
+        <div class="count__labels" data-ref="count-labels" aria-hidden="true"></div>
+      </div>
+    </section>
+
+    <!-- ======================= 05 FEATURES ======================= -->
+    <section class="section features" id="features" data-section="features" data-dim="0.5">
+      <div class="container">
+        <p class="kicker reveal" data-i18n="features.kicker">05 — गहराई</p>
+        <h2 class="heading reveal" style="--i:1"><span data-i18n="features.title1">छोटा नियम।</span> <span class="heading__accent" data-i18n="features.title2">बड़ा खेल।</span></h2>
+        <div class="features__grid" data-ref="features">
+          <article class="feature reveal" style="--i:0">
+            <span class="feature__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2.6l2.8 5.9 6.4.8-4.7 4.4 1.2 6.4L12 17l-5.7 3.1 1.2-6.4-4.7-4.4 6.4-.8z"/></svg></span>
+            <h3 class="feature__title" data-i18n="f1.t">तीन सितारे</h3>
+            <p class="feature__text" data-i18n="f1.d">80% पर एक सितारा, 90% पर दो, 100% पर तीन। बिना कोई चाल वापस लिए पूरा करें, तो उत्तम बैज भी आपका।</p>
+          </article>
+          <article class="feature reveal" style="--i:1">
+            <span class="feature__icon feature__icon--blue"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20 15 9M17 3v4M15 5h4M20 10v3M18.5 11.5h3M7.5 4v2.5M6.25 5.25h2.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span>
+            <h3 class="feature__title" data-i18n="f2.t">सहायक टूल</h3>
+            <p class="feature__text" data-i18n="f2.d">अटक गए? सही शुरुआती सेल, या हल का 25%, 50% या 75%, बस एक टैप दूर है।</p>
+          </article>
+          <article class="feature reveal" style="--i:2">
+            <span class="feature__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 8h17v4h-17zM5 12h14v8.5H5zM12 8v12.5M12 8c-1.8-3.6-6-3.8-6-1.3C6 8 9.5 8 12 8zm0 0c1.8-3.6 6-3.8 6-1.3C18 8 14.5 8 12 8z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg></span>
+            <h3 class="feature__title" data-i18n="f3.t">दैनिक बोनस</h3>
+            <p class="feature__text" data-i18n="f3.d">हर 24 घंटे में एक सरप्राइज़ बॉक्स: सिक्के या कोई सहायक टूल।</p>
+          </article>
+          <article class="feature reveal" style="--i:3">
+            <span class="feature__icon feature__icon--blue"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5.5 21V4M5.5 4.5h11.5l-2.3 4 2.3 4H5.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            <h3 class="feature__title" data-i18n="f4.t">मील के पत्थर</h3>
+            <p class="feature__text" data-i18n="f4.d">हर 5 लेवल पर अतिरिक्त इनाम: सिक्के, कुछ समय के लिए असीमित लाइव्स या टूल पैक।</p>
+          </article>
+          <article class="feature reveal" style="--i:4">
+            <span class="feature__icon feature__icon--blue"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 4h8v5a4 4 0 0 1-8 0zM8 6H5a3 3 0 0 0 3 4.2M16 6h3a3 3 0 0 1-3 4.2M12 13v4M8 20.5h8M10 17h4v3.5h-4z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg></span>
+            <h3 class="feature__title" data-i18n="f5.t">लीडरबोर्ड</h3>
+            <p class="feature__text" data-i18n="f5.d">Game Center पर अपने प्रगति स्कोर से दुनिया भर के खिलाड़ियों से मुकाबला करें।</p>
+          </article>
+          <article class="feature reveal" style="--i:5">
+            <span class="feature__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 3 9 5-9 5-9-5zM3 12.5l9 5 9-5M3 16.5l9 5 9-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg></span>
+            <h3 class="feature__title" data-i18n="f6.t">55 स्टेज</h3>
+            <p class="feature__text" data-i18n="f6.d">हर ग्रिड सक्रिय सेल की संख्या के हिसाब से स्टेज में बँटा है। कठिनाई कदम-दर-कदम बढ़ती है।</p>
+          </article>
+          <article class="feature reveal" style="--i:6">
+            <span class="feature__icon feature__icon--blue"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l8 3v6c0 4.5-3.4 8-8 9-4.6-1-8-4.5-8-9V6zM8.5 12l2.5 2.5 4.5-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/></svg></span>
+            <h3 class="feature__title" data-i18n="f7.t">खाते की ज़रूरत नहीं</h3>
+            <p class="feature__text" data-i18n="f7.d">न साइन-अप, न पासवर्ड। Game Center आपको अपने-आप साइन इन करता है और आपकी प्रगति का बैकअप लेता है।</p>
+          </article>
+          <article class="feature reveal" style="--i:7">
+            <span class="feature__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18zM3 12h18M12 3c2.6 2.6 3.6 5.6 3.6 9s-1 6.4-3.6 9M12 3C9.4 5.6 8.4 8.6 8.4 12s1 6.4 3.6 9" fill="none" stroke="currentColor" stroke-width="2"/></svg></span>
+            <h3 class="feature__title" data-i18n="f8.t">16 भाषाएँ</h3>
+            <p class="feature__text" data-i18n="f8.d">तुर्की से जापानी तक, 16 भाषाओं में खेलें।</p>
+          </article>
         </div>
       </div>
     </section>
 
-    <!-- How to Play - 3 Steps -->
-    <section class="section">
-      <h2>कैसे खेलें</h2>
-      <div class="how-to-play">
-        <!-- Step 1: Start -->
-        <div class="step-card">
-          <div class="step-number">1</div>
-          <div class="step-title">शुरू करें</div>
-          <div class="step-description">
-            अपना पहला नंबर रखने के लिए किसी भी सेल पर टैप करें।
-          </div>
-          <div class="step-grid">
-            <div class="step-cell active"></div>
-            <div class="step-cell"></div>
-            <div class="step-cell"></div>
-            <div class="step-cell active highlight"></div>
-            <div class="step-cell"></div>
-            <div class="step-cell"></div>
-            <div class="step-cell"></div>
-            <div class="step-cell active"></div>
-            <div class="step-cell"></div>
-            <div class="step-cell"></div>
-            <div class="step-cell"></div>
-            <div class="step-cell active">1</div>
-            <div class="step-cell"></div>
-            <div class="step-cell"></div>
-            <div class="step-cell active highlight"></div>
-            <div class="step-cell active"></div>
-            <div class="step-cell"></div>
-            <div class="step-cell"></div>
-            <div class="step-cell"></div>
-            <div class="step-cell"></div>
-            <div class="step-cell"></div>
-            <div class="step-cell"></div>
-            <div class="step-cell active"></div>
-            <div class="step-cell"></div>
-            <div class="step-cell"></div>
-          </div>
-        </div>
-
-        <!-- Step 2: Move -->
-        <div class="step-card">
-          <div class="step-number">2</div>
-          <div class="step-title">चलें</div>
-          <div class="step-description">
-            सीधे 2 सेल या तिरछे 1 सेल कूदें।
-          </div>
-          <div class="step-grid">
-            <div class="step-cell active highlight"></div>
-            <div class="step-cell"></div>
-            <div class="step-cell"></div>
-            <div class="step-cell filled">2</div>
-            <div class="step-cell"></div>
-            <div class="step-cell"></div>
-            <div class="step-cell"></div>
-            <div class="step-cell active"></div>
-            <div class="step-cell"></div>
-            <div class="step-cell"></div>
-            <div class="step-cell"></div>
-            <div class="step-cell filled">1</div>
-            <div class="step-cell"></div>
-            <div class="step-cell"></div>
-            <div class="step-cell active highlight"></div>
-            <div class="step-cell active"></div>
-            <div class="step-cell"></div>
-            <div class="step-cell"></div>
-            <div class="step-cell"></div>
-            <div class="step-cell"></div>
-            <div class="step-cell"></div>
-            <div class="step-cell"></div>
-            <div class="step-cell active"></div>
-            <div class="step-cell"></div>
-            <div class="step-cell"></div>
-          </div>
-        </div>
-
-        <!-- Step 3: Fill -->
-        <div class="step-card">
-          <div class="step-number">3</div>
-          <div class="step-title">भरें</div>
-          <div class="step-description">
-            लेवल पूरा करने के लिए सभी सेल भरें!
-          </div>
-          <div class="step-grid">
-            <div class="step-cell filled">3</div>
-            <div class="step-cell"></div>
-            <div class="step-cell"></div>
-            <div class="step-cell filled">2</div>
-            <div class="step-cell"></div>
-            <div class="step-cell"></div>
-            <div class="step-cell"></div>
-            <div class="step-cell filled">5</div>
-            <div class="step-cell"></div>
-            <div class="step-cell"></div>
-            <div class="step-cell"></div>
-            <div class="step-cell filled">1</div>
-            <div class="step-cell"></div>
-            <div class="step-cell"></div>
-            <div class="step-cell active highlight"></div>
-            <div class="step-cell filled">4</div>
-            <div class="step-cell"></div>
-            <div class="step-cell"></div>
-            <div class="step-cell"></div>
-            <div class="step-cell"></div>
-            <div class="step-cell"></div>
-            <div class="step-cell"></div>
-            <div class="step-cell filled">6</div>
-            <div class="step-cell"></div>
-            <div class="step-cell"></div>
-          </div>
+    <!-- ======================= CTA ======================= -->
+    <section class="section cta" id="download" data-section="download" data-dim="1">
+      <div class="container cta__inner">
+        <span class="wordmark wordmark--small" data-ref="wordmark-cta" aria-hidden="true"></span>
+        <h2 class="cta__title reveal"><span data-i18n="cta.title1">पहली चाल</span> <span class="heading__accent" data-i18n="cta.title2">आपकी है।</span></h2>
+        <p class="cta__text reveal" style="--i:1" data-i18n="cta.text">Grid Collection App Store पर मुफ़्त है। Android वर्शन जल्द आ रहा है।</p>
+        <div class="cta__actions reveal" style="--i:2">
+          <a class="badge" href="https://apps.apple.com/app/id6761419296" target="_blank" rel="noopener">
+            <svg class="badge__icon" viewBox="0 0 48 48" aria-hidden="true"><rect width="48" height="48" rx="11" fill="#1a1a2e"/><path d="M18.5 33.5 26 19.5M29.5 33.5 22 19.5M14.5 29h19" stroke="#ff6b35" stroke-width="3.4" stroke-linecap="round" fill="none"/></svg>
+            <span class="badge__text"><span class="badge__small" data-i18n="badge.iosSmall">डाउनलोड करें</span><span class="badge__big">App Store</span></span>
+          </a>
+          <a class="badge badge--ghost" href="mailto:contact@grid-collection.com?subject=Android">
+            <svg class="badge__icon" viewBox="0 0 48 48" aria-hidden="true"><path d="M12 7.5 30.5 24 12 40.5c-.6-.4-1-1.1-1-2V9.5c0-.9.4-1.6 1-2z" fill="#4f9be0"/><path d="M12 7.5c.7-.4 1.6-.4 2.4 0l21.3 12.3-5.2 4.2z" fill="#3ddc84"/><path d="M12 40.5c.7.4 1.6.4 2.4 0l21.3-12.3-5.2-4.2z" fill="#ff6b35"/><path d="m35.7 19.8 4.3 2.5c1.4.8 1.4 2.6 0 3.4l-4.3 2.5-5.2-4.2z" fill="#ffd700"/></svg>
+            <span class="badge__text"><span class="badge__small" data-i18n="badge.playSmall">जल्द आ रहा है</span><span class="badge__big">Google Play</span></span>
+          </a>
         </div>
       </div>
     </section>
+  </main>
 
-    <!-- Playable Demo -->
-    <section class="section" id="play">
-      <h2 id="demo-title">अभी आज़माएँ</h2>
-      <div class="demo">
-        <p class="demo-subtitle" id="demo-subtitle">
-          पहले दो लेवल यहीं खेलें — कोई डाउनलोड ज़रूरी नहीं।
-        </p>
-        <div class="demo-tabs" id="demo-tabs">
-          <button class="demo-tab active" data-level="0"></button>
-          <button class="demo-tab" data-level="1"></button>
-        </div>
-        <div class="demo-board" id="demo-board" role="grid" aria-label="Puzzle board"></div>
-        <div class="demo-status" id="demo-status"></div>
-        <div class="demo-controls">
-          <button class="demo-btn" id="demo-undo"></button>
-          <button class="demo-btn" id="demo-restart"></button>
-        </div>
-        <div class="demo-cta" id="demo-cta" style="display: none">
-          <a
-            href="https://apps.apple.com/app/id6761419296"
-            target="_blank"
-            rel="noopener"
-            id="demo-cta-link"
-          ></a>
-        </div>
-      </div>
-    </section>
+  <footer class="footer">
+    <span data-i18n="footer.rights">© 2026 Grid Collection</span>
+    <nav class="footer__links" aria-label="फ़ुटर लिंक" data-i18n-aria="a11y.footer">
+      <a class="footer__link" href="/hi/support.html" data-nav="support">सहायता</a>
+      <a class="footer__link" href="/hi/privacy-policy.html" data-nav="privacy">गोपनीयता नीति</a>
+      <a class="footer__link" href="/hi/terms-of-service.html" data-nav="terms">सेवा की शर्तें</a>
+    </nav>
+  </footer>
 
-    <!-- Footer -->
-    <footer>
-      <div class="footer-links">
-        <a href="/hi/support.html" data-nav="support">सहायता</a>
-        <a href="/hi/privacy-policy.html" data-nav="privacy">गोपनीयता नीति</a>
-        <a href="/hi/terms-of-service.html" data-nav="terms">सेवा की शर्तें</a>
-      </div>
-      <p>© 2026 Grid Collection. सर्वाधिकार सुरक्षित।</p>
-    </footer>
+  <noscript><p class="lead">एक नियम, आठ दिशाएँ, 95,000 लेवल। Grid Collection एक मोबाइल पहेली गेम है, जिसमें आप हर सेल को एक ही अटूट चेन से भरते हैं। App Store: https://apps.apple.com/app/id6761419296</p></noscript>
 
-    <!-- Playable demo: self-contained, 1:1 with the game's real move rules.
-         All user-facing text comes from DEMO_T (one place to localize). -->
-    <script>
-      window.DEMO_T = window.DEMO_T || {
-        title: "Try It Now",
-        subtitle: "Play the first two levels right here — no download needed.",
-        level: "Level",
-        undo: "Undo",
-        restart: "Restart",
-        start: "Tap any active cell to begin.",
-        progress: "{filled} / {total} cells filled.",
-        deadEnd: "No moves left — tap Restart to try again.",
-        win: "Solved! 🎉 You filled every cell.",
-        cta: "Get 5,000+ levels on the App Store →",
+  <script type="module">
+    // @ts-check
+
+    /* ============================================================
+       1. Config
+       ============================================================ */
+
+    /** Move table — same order as the game's solution encoding (src/levels.ts). */
+    const DR = [-3, 3, 0, 0, -2, -2, 2, 2];
+    const DC = [0, 0, -3, 3, -2, 2, -2, 2];
+    const ARROWS = ["↑", "↓", "←", "→", "↖", "↗", "↙", "↘"];
+
+    /** public/levels/levels-meta.json — levels per stage (stage = active-cell count). */
+    const META = {
+      "5x5": { 11: 500, 12: 500, 13: 500, 14: 500, 15: 500, 16: 500, 17: 500, 18: 500, 19: 500, 20: 500 },
+      "6x6": { 12: 2000, 15: 2000, 18: 2000, 21: 2000, 24: 2000, 27: 2000, 30: 2000 },
+      "7x7": { 16: 2000, 19: 2000, 22: 2000, 25: 2000, 28: 2000, 31: 2000, 34: 2000, 37: 2000, 40: 2000 },
+      "8x8": { 20: 2000, 25: 2000, 30: 2000, 35: 2000, 40: 2000, 45: 2000, 50: 2000, 55: 2000 },
+      "9x9": { 30: 2000, 35: 2000, 40: 2000, 45: 2000, 50: 2000, 55: 2000, 60: 2000, 65: 2000, 70: 2000 },
+      "10x10": { 35: 2000, 40: 2000, 45: 2000, 50: 2000, 55: 2000, 60: 2000, 65: 2000, 70: 2000, 75: 2000, 80: 2000, 85: 2000, 90: 2000 },
+    };
+
+    /**
+     * @typedef {{ id: string, n: number, stages: number[], levels: number }} GridInfo
+     * @type {GridInfo[]}
+     */
+    const GRIDS = Object.entries(META).map(([id, stages]) => {
+      const keys = Object.keys(stages).map(Number).sort((a, b) => a - b);
+      return { id, n: Number(id.split("x")[0]), stages: keys, levels: Object.values(stages).reduce((s, v) => s + v, 0) };
+    });
+    const TOTAL_LEVELS = GRIDS.reduce((s, g) => s + g.levels, 0); // 95,000
+
+    /**
+     * Real levels from public/levels/<grid>/<activeCells>.json (binary = hex
+     * pattern, s = encoded solution), decoded and checked below.
+     * @type {{ g: string, st: number, n: number, b: string, s: string }[]}
+     */
+    const RAW_LEVELS = [
+      { g: "5x5", st: 12, n: 1, b: "14696E4", s: "0j41541527207" },
+      { g: "5x5", st: 16, n: 327, b: "0C7EFC6", s: "01727063436072706" },
+      { g: "6x6", st: 18, n: 1, b: "81467D59B", s: "0j57272075120413413" },
+      { g: "7x7", st: 22, n: 3, b: "0269682BB9698", s: "0e313443164360413453162" },
+      { g: "8x8", st: 30, n: 1, b: "99247F9190FC10B9", s: "0n21643034635167246031405215361" },
+      { g: "10x10", st: 45, n: 1, b: "2F120BBC84F66705D0D990136", s: "1455721725452175542757664411351343061220515507" },
+    ];
+
+    /** GRID glyphs (5 rows) — lit cells only, no connecting lines (brand rule). */
+    const GLYPHS = {
+      G: [".###", "#...", "#.##", "#..#", ".###"],
+      R: ["###.", "#..#", "###.", "#.#.", "#..#"],
+      I: ["###", ".#.", ".#.", ".#.", "###"],
+      D: ["###.", "#..#", "#..#", "#..#", "###."],
+    };
+
+    const STORAGE_KEY = "grid-site:v1";
+    const APP_STORE_URL = "https://apps.apple.com/app/id6761419296";
+    const REDUCED = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const FINE_POINTER = window.matchMedia("(pointer: fine)").matches;
+
+    // Filled per language by build-home.mjs from i18n/home/<code>.json.
+    /** @type {Record<string, string>} */
+    const TEXT = {"meta.title":"Grid Collection — 95,000 लेवल वाला पहेली ब्रह्मांड","meta.desc":"एक नियम, आठ दिशाएँ, 95,000 लेवल। Grid Collection एक मोबाइल पहेली गेम है, जिसमें आप हर सेल को एक ही अटूट चेन से भरते हैं।","a11y.skip":"गेम पर जाएँ","a11y.sections":"अनुभाग","a11y.footer":"फ़ुटर लिंक","nav.rule":"नियम","nav.play":"खेलें","nav.collection":"संग्रह","nav.features":"विशेषताएँ","nav.download":"डाउनलोड","sound.on":"आवाज़ चालू","sound.off":"आवाज़ बंद","hero.eyebrow":"iPhone और Android के लिए पहेली गेम","hero.tagline":"एक नियम, आठ दिशाएँ, 95,000 लेवल। हर नारंगी सेल को एक ही अटूट चेन से भरें।","hero.play":"ब्राउज़र में खेलें","hero.hint":"लहर बनाने के लिए कहीं भी क्लिक करें","hero.scroll":"स्क्रॉल करें","badge.iosSmall":"डाउनलोड करें","badge.playSmall":"जल्द आ रहा है","stat.levels":"लेवल","stat.grids":"ग्रिड आकार","stat.stages":"स्टेज","stat.extreme":"Extreme लेवल","rule.kicker":"01 — नियम","rule.title1":"एक नियम।","rule.title2":"आठ दिशाएँ।","rule.lead":"किसी भी सेल से शुरू करें। हर चाल एक तय दूरी की छलाँग है। लक्ष्य: सभी सक्रिय सेल को एक ही चेन से भरना।","rule.straightTitle":"सीधी: 2 छोड़ें, तीसरी पर उतरें","rule.straightText":"ऊपर, नीचे, बाएँ या दाएँ; बीच की दो सेल के ऊपर से।","rule.diagTitle":"तिरछी: 1 छोड़ें, दूसरी पर उतरें","rule.diagText":"चारों तिरछी दिशाओं में; बीच की एक सेल के ऊपर से।","rule.note":"जिन सेल के ऊपर से आप कूदते हैं, वे भरी हों या खाली, इससे कोई फ़र्क नहीं पड़ता।","rule.board":"नियम बोर्ड","rule.moves":"चालें","rule.reset":"दोबारा शुरू करें","rule.hint":"डैश वाली किसी एक सेल पर टैप करें।","rule.dead":"चेन अटक गई। पूरा खेल यही है: आगे का रास्ता पहले से देखना।","rule.cell":"पंक्ति {r}, कॉलम {c}","rule.target":"यहाँ कूदें","play.kicker":"02 — खेलें","play.title1":"अब आपकी","play.title2":"चाल।","play.lead":"सीधे गेम से लिए गए असली लेवल। हर लेवल 100% भरा जा सकता है, लेकिन हर रास्ता वहाँ तक नहीं पहुँचता।","play.pick":"लेवल चुनें","play.board":"पहेली बोर्ड","play.stage":"{grid} · स्टेज {stage} · लेवल {level}","play.cells":"{n} सेल","play.count":"{f} / {t}","play.legend":"80% · 90% · 100%","play.undo":"वापस लें","play.restart":"फिर से शुरू","play.hint":"शुरुआती संकेत","play.solve":"हल देखें","play.start":"शुरू करने के लिए किसी भी नारंगी सेल पर टैप करें।","play.going":"डैश वाली सेल वे हैं जहाँ आप जा सकते हैं। भरा गया: {p}%।","play.hintUsed":"सही शुरुआती सेल रख दी गई है। आगे का खेल आपका।","play.solving":"हल चल रहा है…","play.win":"उत्तम!","play.partial":"बस ज़रा सा रह गया!","play.dead":"और कोई चाल नहीं","play.result":"आपने बोर्ड का {p}% भरा।","play.resultWin":"हर सेल, एक चेन।","play.perfect":"एक भी चाल वापस लिए बिना 100%: उत्तम बैज आपका है।","play.retry":"फिर से कोशिश करें","play.next":"अगला लेवल","play.more":"94,999 और लेवल आपका इंतज़ार कर रहे हैं।","play.cellActive":"खाली","play.cellFilled":"चाल {n}","play.cellPassive":"बंद","journey.kicker":"03 — संग्रह","journey.move":"चाल","journey.stages":"{n} स्टेज","journey.levels":"{n} लेवल","journey.cells":"{a}–{b} सक्रिय सेल","journey.unlock":"हर आकार, पिछले आकार में 300 सितारे जुटाने पर अनलॉक होता है।","journey.d5":"वॉर्म-अप। अपनी उँगलियों को नियम सिखाएँ।","journey.d6":"रास्ते बँटने लगते हैं।","journey.d7":"अब एक नहीं, पाँच चाल आगे की सोचें।","journey.d8":"चेन लंबी होती है, गलती की गुंजाइश घटती है।","journey.d9":"धैर्य और योजना। हर कोना एक जाल हो सकता है।","journey.d10":"उस्तादों के लिए: 90 सेल तक एक ही चेन।","journey.exTitle":"EXTREME","journey.exLevels":"136 लेवल","journey.exSizes":"5×5 → 20×20","journey.exAll":"हर सेल सक्रिय","journey.exDesc":"न संकेत, न बंद सेल। स्क्रॉल करते रहें: यह 20×20 बोर्ड 400 चालों में खुद को हल करता है।","journey.exUnlock":"1,000 सितारों पर अनलॉक होता है।","count.kicker":"04 — पैमाना","count.p0":"हर बिंदु एक लेवल है।","count.p1":"हर एक हल होने लायक। हर एक 100%।","count.p2":"छह आकार, 55 स्टेज। आसान से कठिन तक।","count.sub":"95,000 बिंदु, हर बिंदु एक लेवल। अपने कर्सर से इन्हें बिखेरें।","count.label":"{n} लेवल","features.kicker":"05 — गहराई","features.title1":"छोटा नियम।","features.title2":"बड़ा खेल।","f1.t":"तीन सितारे","f1.d":"80% पर एक सितारा, 90% पर दो, 100% पर तीन। बिना कोई चाल वापस लिए पूरा करें, तो उत्तम बैज भी आपका।","f2.t":"सहायक टूल","f2.d":"अटक गए? सही शुरुआती सेल, या हल का 25%, 50% या 75%, बस एक टैप दूर है।","f3.t":"दैनिक बोनस","f3.d":"हर 24 घंटे में एक सरप्राइज़ बॉक्स: सिक्के या कोई सहायक टूल।","f4.t":"मील के पत्थर","f4.d":"हर 5 लेवल पर अतिरिक्त इनाम: सिक्के, कुछ समय के लिए असीमित लाइव्स या टूल पैक।","f5.t":"लीडरबोर्ड","f5.d":"Game Center पर अपने प्रगति स्कोर से दुनिया भर के खिलाड़ियों से मुकाबला करें।","f6.t":"55 स्टेज","f6.d":"हर ग्रिड सक्रिय सेल की संख्या के हिसाब से स्टेज में बँटा है। कठिनाई कदम-दर-कदम बढ़ती है।","f7.t":"खाते की ज़रूरत नहीं","f7.d":"न साइन-अप, न पासवर्ड। Game Center आपको अपने-आप साइन इन करता है और आपकी प्रगति का बैकअप लेता है।","f8.t":"16 भाषाएँ","f8.d":"तुर्की से जापानी तक, 16 भाषाओं में खेलें।","cta.title1":"पहली चाल","cta.title2":"आपकी है।","cta.text":"Grid Collection App Store पर मुफ़्त है। Android वर्शन जल्द आ रहा है।","footer.rights":"© 2026 Grid Collection"};
+    const LOCALE = "hi-IN";
+
+    /* ============================================================
+       2. State and persistence
+       ============================================================ */
+
+    /** @typedef {{ sound: boolean }} Prefs */
+
+    /** @param {unknown} v @returns {v is Prefs} */
+    function isPrefs(v) {
+      if (!v || typeof v !== "object") return false;
+      const o = /** @type {Record<string, unknown>} */ (v);
+      return typeof o.sound === "boolean";
+    }
+
+    /** @returns {Prefs} */
+    function loadPrefs() {
+      try {
+        const raw = localStorage.getItem(STORAGE_KEY);
+        const parsed = raw ? JSON.parse(raw) : null;
+        if (isPrefs(parsed)) return parsed;
+      } catch {
+        /* storage blocked or corrupt — fall through to defaults */
+      }
+      return { sound: true };
+    }
+
+    const prefs = loadPrefs();
+
+    function savePrefs() {
+      try {
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(prefs));
+      } catch {
+        /* ignore */
+      }
+    }
+
+    /* ============================================================
+       3. Helpers
+       ============================================================ */
+
+    /** @param {string} sel @param {ParentNode} [root] @returns {HTMLElement} */
+    const $ = (sel, root = document) => /** @type {HTMLElement} */ (root.querySelector(sel));
+    /** @param {string} name @returns {HTMLElement} */
+    const ref = (name) => $(`[data-ref="${name}"]`);
+
+    /**
+     * @param {string} tag @param {string} [cls] @param {string} [text]
+     * @returns {HTMLElement}
+     */
+    function el(tag, cls, text) {
+      const e = document.createElement(tag);
+      if (cls) e.className = cls;
+      if (text != null) e.textContent = text;
+      return e;
+    }
+
+    /** @param {number} v @param {number} a @param {number} b */
+    const clamp = (v, a, b) => Math.min(b, Math.max(a, v));
+    /** @param {number} a @param {number} b @param {number} t */
+    const lerp = (a, b, t) => a + (b - a) * t;
+    /** @param {number} t */
+    const easeInOut = (t) => (t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2);
+    /** @param {number} t */
+    const easeOut = (t) => 1 - Math.pow(1 - t, 3);
+    /** @param {number} t */
+    const easeOutBack = (t) => 1 + 2.4 * Math.pow(t - 1, 3) + 1.4 * Math.pow(t - 1, 2);
+
+    /** Deterministic PRNG (mulberry32). @param {number} seed */
+    function rng(seed) {
+      let s = seed >>> 0;
+      return () => {
+        s = (s + 0x6d2b79f5) | 0;
+        let t = Math.imul(s ^ (s >>> 15), 1 | s);
+        t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t;
+        return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
       };
-    </script>
-    <script>
-      (function () {
-        const T = window.DEMO_T;
-        // Real, solvable 5x5 levels (binary = active pattern, hex; solution = move order).
-        const LEVELS = [
-          { binary: "1252362", solution: [19, 16, 8, 23, 11, 3, 0, 15, 18, 6] },
-          { binary: "144C6C4", solution: [0, 15, 18, 6, 9, 17, 2, 10, 22, 14] },
-        ];
-        const COLS = 5,
-          TOTAL = 25;
+    }
 
-        const boardEl = document.getElementById("demo-board");
-        const statusEl = document.getElementById("demo-status");
-        const undoBtn = document.getElementById("demo-undo");
-        const restartBtn = document.getElementById("demo-restart");
-        const ctaEl = document.getElementById("demo-cta");
-        const tabsEl = document.getElementById("demo-tabs");
-        if (!boardEl) return;
+    /** @param {string} key @param {Record<string, string | number>} [vars] */
+    function t(key, vars) {
+      let s = TEXT[key] ?? key;
+      if (vars) for (const [k, v] of Object.entries(vars)) s = s.split(`{${k}}`).join(String(v));
+      return s;
+    }
 
-        // Static text from DEMO_T
-        document.getElementById("demo-title").textContent = T.title;
-        document.getElementById("demo-subtitle").textContent = T.subtitle;
-        undoBtn.textContent = T.undo;
-        restartBtn.textContent = T.restart;
-        document.getElementById("demo-cta-link").textContent = T.cta;
-        const tabBtns = tabsEl.querySelectorAll(".demo-tab");
-        tabBtns.forEach((b, i) => (b.textContent = T.level + " " + (i + 1)));
+    /** @param {number} n */
+    const fmt = (n) => new Intl.NumberFormat(LOCALE).format(n);
 
-        let active = [],
-          order = [],
-          moves = [],
-          curLevel = 0,
-          cells = [];
+    /**
+     * Decode a stored level exactly like the app (decodeBinary + decodeSolution)
+     * and verify the solution visits every active cell once with legal moves.
+     * @param {{ g: string, st: number, n: number, b: string, s: string }} raw
+     */
+    function decodeLevel(raw) {
+      const [rows, cols] = raw.g.split("x").map(Number);
+      const len = rows * cols;
+      let bin = "";
+      for (const ch of raw.b) bin += parseInt(ch, 16).toString(2).padStart(4, "0");
+      if (bin.length > len) bin = bin.slice(-len);
+      bin = bin.padStart(len, "0");
+      const active = [...bin].map((c) => c === "1");
+      let cell = parseInt(raw.s.slice(0, 2), 36);
+      const solution = [cell];
+      for (let i = 2; i < raw.s.length; i++) {
+        const d = raw.s.charCodeAt(i) - 48;
+        cell += DR[d] * cols + DC[d];
+        solution.push(cell);
+      }
+      const activeCount = active.filter(Boolean).length;
+      const ok = solution.length === activeCount && new Set(solution).size === activeCount && solution.every((i) => active[i]);
+      if (!ok) throw new Error(`level ${raw.g}/${raw.st}#${raw.n} does not decode`);
+      const stageNo = GRIDS.find((g) => g.id === raw.g)?.stages.indexOf(raw.st) ?? 0;
+      return { grid: raw.g, rows, cols, active, solution, activeCount, stage: stageNo + 1, level: raw.n };
+    }
 
-        function decode(hex) {
-          const b = BigInt("0x" + hex).toString(2).padStart(TOTAL, "0");
-          return b.slice(-TOTAL);
-        }
-        const rc = (i) => [Math.floor(i / COLS), i % COLS];
-        const current = () => (moves.length ? moves[moves.length - 1] : -1);
-        const totalActive = () => active.filter(Boolean).length;
+    /** @param {number} from @param {number} to @param {number} cols @param {number} rows */
+    function moveDir(from, to, cols, rows) {
+      const r1 = Math.floor(from / cols), c1 = from % cols, r2 = Math.floor(to / cols), c2 = to % cols;
+      for (let d = 0; d < 8; d++) if (r1 + DR[d] === r2 && c1 + DC[d] === c2 && r2 < rows) return d;
+      return -1;
+    }
 
-        function isValidMove(from, to) {
-          if (!active[to] || order[to]) return false;
-          const [r1, c1] = rc(from),
-            [r2, c2] = rc(to);
-          const dr = Math.abs(r1 - r2),
-            dc = Math.abs(c1 - c2);
-          return (dr === 3 && dc === 0) || (dc === 3 && dr === 0) || (dr === 2 && dc === 2);
-        }
-        function validMovesFrom(idx) {
+    /**
+     * Full-board tour with the game's 8 moves (Warnsdorff + random tie-break),
+     * for the Extreme board — Extreme levels have every cell active.
+     * @param {number} rows @param {number} cols @param {number} seed
+     */
+    function makeTour(rows, cols, seed) {
+      const r = rng(seed);
+      const n = rows * cols;
+      for (let attempt = 0; attempt < 300; attempt++) {
+        const seen = new Uint8Array(n);
+        let cur = Math.floor(r() * n);
+        const path = [cur];
+        seen[cur] = 1;
+        /** @param {number} i */
+        const free = (i) => {
           const out = [];
-          for (let t = 0; t < TOTAL; t++) if (isValidMove(idx, t)) out.push(t);
+          const y = Math.floor(i / cols), x = i % cols;
+          for (let d = 0; d < 8; d++) {
+            const ny = y + DR[d], nx = x + DC[d];
+            if (ny >= 0 && ny < rows && nx >= 0 && nx < cols && !seen[ny * cols + nx]) out.push(ny * cols + nx);
+          }
           return out;
-        }
-
-        function buildBoard() {
-          boardEl.innerHTML = "";
-          cells = [];
-          for (let i = 0; i < TOTAL; i++) {
-            const c = document.createElement("button");
-            c.className = "demo-cell";
-            c.type = "button";
-            c.addEventListener("click", () => tap(i));
-            boardEl.appendChild(c);
-            cells.push(c);
+        };
+        while (path.length < n) {
+          const options = free(cur);
+          if (!options.length) break;
+          let best = options[0], bestScore = Infinity;
+          for (const o of options) {
+            seen[o] = 1;
+            const score = free(o).length + r() * 0.5;
+            seen[o] = 0;
+            if (score < bestScore) { bestScore = score; best = o; }
           }
+          cur = best;
+          seen[cur] = 1;
+          path.push(cur);
         }
+        if (path.length === n) return path;
+      }
+      return [];
+    }
 
-        function render() {
-          const cur = current();
-          const moveSet = cur >= 0 ? new Set(validMovesFrom(cur)) : null;
-          for (let i = 0; i < TOTAL; i++) {
-            const el = cells[i];
-            el.className = "demo-cell";
-            el.textContent = order[i] ? order[i] : "";
-            if (!active[i]) continue; // passive
-            if (i === cur) el.classList.add("is-current");
-            else if (order[i]) el.classList.add("is-filled");
-            else if (moveSet && moveSet.has(i)) el.classList.add("is-move");
-            else el.classList.add("is-active");
-          }
-          undoBtn.disabled = moves.length === 0;
-        }
+    /** Scroll progress of a tall sticky section, 0..1. @param {HTMLElement} section */
+    function stickyProgress(section) {
+      const r = section.getBoundingClientRect();
+      const span = r.height - window.innerHeight;
+      return span > 0 ? clamp(-r.top / span, 0, 1) : 0;
+    }
 
-        function setStatus(msg, win) {
-          statusEl.textContent = msg;
-          statusEl.classList.toggle("win", !!win);
-        }
-        function progressMsg() {
-          return T.progress
-            .replace("{filled}", moves.length)
-            .replace("{total}", totalActive());
-        }
-        function showCTA(show) {
-          ctaEl.style.display = show ? "block" : "none";
-        }
+    /* ============================================================
+       4a. Sound — WebAudio synthesis, no files (voices from the
+           app's splash "Soft pulse", src/shell/splash/splashAudio.ts)
+       ============================================================ */
+    const Sound = (() => {
+      /** @type {AudioContext | null} */
+      let ctx = null;
+      /** @type {GainNode | null} */
+      let bus = null;
+      /** @type {GainNode | null} */
+      let master = null;
+      let lastTick = 0;
+      const PENTA = [0, 2, 4, 7, 9];
 
-        function tap(idx) {
-          if (!active[idx]) return;
-          if (moves.length === 0) {
-            if (!order[idx]) place(idx);
-          } else if (isValidMove(current(), idx)) {
-            place(idx);
-          } else if (!order[idx] && active[idx]) {
-            shake(idx);
-          }
+      function init() {
+        if (ctx) return ctx;
+        const Ctor = window.AudioContext || /** @type {any} */ (window).webkitAudioContext;
+        if (!Ctor) return null;
+        try {
+          ctx = new Ctor();
+        } catch {
+          return null;
         }
-        function place(idx) {
-          moves.push(idx);
-          order[idx] = moves.length;
-          render();
-          checkEnd();
+        const c = /** @type {AudioContext} */ (ctx);
+        const comp = c.createDynamicsCompressor();
+        master = c.createGain();
+        master.gain.value = 0.6;
+        bus = c.createGain();
+        const dry = c.createGain();
+        const wet = c.createGain();
+        const verb = c.createConvolver();
+        const len = Math.floor(c.sampleRate * 2.2);
+        const ir = c.createBuffer(2, len, c.sampleRate);
+        for (let ch = 0; ch < 2; ch++) {
+          const d = ir.getChannelData(ch);
+          for (let i = 0; i < len; i++) d[i] = (Math.random() * 2 - 1) * Math.pow(1 - i / len, 2.8);
         }
-        function shake(idx) {
-          cells[idx].classList.add("shake");
-          setTimeout(() => cells[idx].classList.remove("shake"), 300);
-        }
-        function undo() {
-          if (!moves.length) return;
-          order[moves.pop()] = 0;
-          render();
-          setStatus(moves.length ? progressMsg() : T.start);
-          showCTA(false);
-        }
-        function checkEnd() {
-          if (moves.length === totalActive()) {
-            setStatus(T.win, true);
-            showCTA(true);
-            return;
-          }
-          if (validMovesFrom(current()).length === 0) {
-            setStatus(T.deadEnd);
-            return;
-          }
-          setStatus(progressMsg());
-        }
+        verb.buffer = ir;
+        dry.gain.value = 0.82;
+        wet.gain.value = 0.5;
+        bus.connect(dry);
+        bus.connect(verb);
+        verb.connect(wet);
+        dry.connect(master);
+        wet.connect(master);
+        master.connect(comp);
+        comp.connect(c.destination);
+        return ctx;
+      }
 
-        function loadLevel(i) {
-          curLevel = i;
-          const bits = decode(LEVELS[i].binary);
-          active = [...bits].map((c) => c === "1");
-          order = new Array(TOTAL).fill(0);
-          moves = [];
-          tabBtns.forEach((b, k) => b.classList.toggle("active", k === i));
-          render();
-          setStatus(T.start);
-          showCTA(false);
-        }
+      /** Browsers start audio only after a gesture — called on the first one. */
+      function unlock() {
+        if (!prefs.sound) return;
+        const c = init();
+        if (c && c.state === "suspended") c.resume().catch(() => {});
+      }
 
-        undoBtn.addEventListener("click", undo);
-        restartBtn.addEventListener("click", () => loadLevel(curLevel));
-        tabBtns.forEach((b) =>
-          b.addEventListener("click", () => loadLevel(Number(b.dataset.level)))
-        );
+      function ready() {
+        return !!(prefs.sound && ctx && ctx.state === "running" && bus);
+      }
 
-        buildBoard();
-        loadLevel(0);
-      })();
-    </script>
-    <script>
-      // Tracking store badge clicks
-      const appStoreBadge = document.getElementById("badge-app-store");
-      const googlePlayBadge = document.getElementById("badge-google-play");
+      /**
+       * @param {number} t0
+       * @param {{ type?: OscillatorType, f: number, f2?: number, glide?: number, a?: number, d?: number, g?: number }} o
+       */
+      function tone(t0, { type = "sine", f, f2, glide = 0.1, a = 0.005, d = 0.4, g = 0.5 }) {
+        const c = /** @type {AudioContext} */ (ctx);
+        const osc = c.createOscillator();
+        const env = c.createGain();
+        osc.type = type;
+        osc.frequency.setValueAtTime(f, t0);
+        if (f2) osc.frequency.exponentialRampToValueAtTime(f2, t0 + glide);
+        env.gain.setValueAtTime(0.0001, t0);
+        env.gain.exponentialRampToValueAtTime(g, t0 + a);
+        env.gain.exponentialRampToValueAtTime(0.0001, t0 + a + d);
+        osc.connect(env);
+        env.connect(/** @type {GainNode} */ (bus));
+        osc.start(t0);
+        osc.stop(t0 + a + d + 0.05);
+      }
 
-      if (appStoreBadge) {
-        appStoreBadge.addEventListener("click", () => {
-          gtag("event", "click_store_badge", {
-            store_name: "App Store",
+      /** @param {number} t0 @param {number} dur @param {number} f0 @param {number} f1 @param {number} g */
+      function noise(t0, dur, f0, f1, g) {
+        const c = /** @type {AudioContext} */ (ctx);
+        const len = Math.floor(c.sampleRate * dur);
+        const buf = c.createBuffer(1, len, c.sampleRate);
+        const data = buf.getChannelData(0);
+        for (let i = 0; i < len; i++) data[i] = Math.random() * 2 - 1;
+        const src = c.createBufferSource();
+        src.buffer = buf;
+        const bp = c.createBiquadFilter();
+        bp.type = "bandpass";
+        bp.Q.value = 1.4;
+        bp.frequency.setValueAtTime(f0, t0);
+        bp.frequency.exponentialRampToValueAtTime(f1, t0 + dur);
+        const env = c.createGain();
+        env.gain.setValueAtTime(0.0001, t0);
+        env.gain.exponentialRampToValueAtTime(g, t0 + dur * 0.4);
+        env.gain.exponentialRampToValueAtTime(0.0001, t0 + dur);
+        src.connect(bp);
+        bp.connect(env);
+        env.connect(/** @type {GainNode} */ (bus));
+        src.start(t0);
+      }
+
+      /** Pentatonic note for the i-th move (rises, wraps every 3 octaves). @param {number} i */
+      const noteHz = (i) => {
+        const k = i % 15;
+        return 293.66 * Math.pow(2, (Math.floor(k / 5) * 12 + PENTA[k % 5]) / 12);
+      };
+
+      return {
+        unlock,
+        ready,
+        init,
+        /** Splash "Soft pulse" — fired with every wave. @param {number} [pitch] @param {number} [gain] */
+        pulse(pitch = 1, gain = 1) {
+          if (!ready()) return;
+          const t0 = /** @type {AudioContext} */ (ctx).currentTime + 0.01;
+          const hz = 110 * pitch;
+          tone(t0, { f: hz * 1.45, f2: hz * 0.65, glide: 0.16, d: 0.32, g: 0.85 * gain });
+          tone(t0, { f: hz * 2.9, d: 0.08, g: 0.12 * gain });
+        },
+        /** Placing a stone. @param {number} i move index (0-based) */
+        move(i) {
+          if (!ready()) return;
+          const t0 = /** @type {AudioContext} */ (ctx).currentTime + 0.005;
+          const f = noteHz(i);
+          tone(t0, { type: "triangle", f, d: 0.42, g: 0.32 });
+          tone(t0, { f: f * 2, d: 0.18, g: 0.08 });
+          tone(t0, { type: "square", f: 2400, f2: 900, glide: 0.02, d: 0.025, g: 0.02 });
+        },
+        error() {
+          if (!ready()) return;
+          const t0 = /** @type {AudioContext} */ (ctx).currentTime + 0.005;
+          tone(t0, { type: "sawtooth", f: 150, f2: 92, glide: 0.14, d: 0.2, g: 0.07 });
+          tone(t0, { f: 96, d: 0.22, g: 0.2 });
+        },
+        tick() {
+          if (!ready()) return;
+          const now = performance.now();
+          if (now - lastTick < 45) return;
+          lastTick = now;
+          const t0 = /** @type {AudioContext} */ (ctx).currentTime + 0.003;
+          tone(t0, { f: 1760 + Math.random() * 300, d: 0.035, g: 0.035 });
+        },
+        flip() {
+          if (!ready()) return;
+          const t0 = /** @type {AudioContext} */ (ctx).currentTime + 0.003;
+          tone(t0, { type: "triangle", f: 980, f2: 520, glide: 0.06, d: 0.07, g: 0.09 });
+        },
+        /** @param {number} k 0..2 */
+        star(k) {
+          if (!ready()) return;
+          const t0 = /** @type {AudioContext} */ (ctx).currentTime + 0.005;
+          const f = [880, 1108.73, 1318.51][k] || 880;
+          tone(t0, { type: "triangle", f, d: 0.6, g: 0.2 });
+          tone(t0, { f: f * 2, d: 0.3, g: 0.06 });
+        },
+        win() {
+          if (!ready()) return;
+          const t0 = /** @type {AudioContext} */ (ctx).currentTime + 0.02;
+          [0, 4, 7, 12, 16].forEach((st, i) => {
+            const f = 392 * Math.pow(2, st / 12);
+            tone(t0 + i * 0.075, { type: "triangle", f, d: 0.5, g: 0.22 });
           });
+          [0, 4, 7, 11].forEach((st) => tone(t0 + 0.42, { f: 196 * Math.pow(2, st / 12), a: 0.04, d: 1.8, g: 0.12 }));
+          noise(t0 + 0.38, 1.2, 3000, 9000, 0.03);
+        },
+        deadEnd() {
+          if (!ready()) return;
+          const t0 = /** @type {AudioContext} */ (ctx).currentTime + 0.02;
+          [7, 3, 0].forEach((st, i) => tone(t0 + i * 0.13, { type: "triangle", f: 330 * Math.pow(2, st / 12), d: 0.5, g: 0.18 }));
+        },
+        whoosh() {
+          if (!ready()) return;
+          const t0 = /** @type {AudioContext} */ (ctx).currentTime + 0.01;
+          noise(t0, 0.7, 300, 2600, 0.06);
+        },
+        /** @param {boolean} on */
+        setEnabled(on) {
+          if (on) unlock();
+          else if (ctx && ctx.state === "running") ctx.suspend().catch(() => {});
+        },
+      };
+    })();
+
+    /* ============================================================
+       4b. Field — fullscreen WebGL2 shader: an endless plane of game
+           cells (active / filled / passive), ring waves + cursor heat.
+           Camera flies from a low perspective (hero) to top-down.
+       ============================================================ */
+    const Field = (() => {
+      const canvas = /** @type {HTMLCanvasElement} */ ($(".field"));
+      const gl = canvas.getContext("webgl2", { antialias: false, alpha: false, powerPreference: "high-performance" });
+      const MAX_WAVES = 12;
+      const WAVE_SPEED = 8.5;
+
+      const VS = `#version 300 es
+        in vec2 aPos;
+        void main() { gl_Position = vec4(aPos, 0.0, 1.0); }`;
+
+      const FS = `#version 300 es
+        precision highp float;
+        uniform vec2 uRes;
+        uniform float uTime;
+        uniform vec3 uCam;      // pitch, height, fov
+        uniform vec2 uOff;
+        uniform vec4 uWaves[${MAX_WAVES}];
+        uniform vec3 uMouse;
+        uniform float uDim;
+        uniform float uHaze;
+        out vec4 outColor;
+
+        const vec3 ORANGE = vec3(1.0, 0.420, 0.208);
+        const vec3 ORANGE_HOT = vec3(1.0, 0.47, 0.25);
+        const vec3 NAVY = vec3(0.059, 0.204, 0.376);
+        const vec3 BLUE_HOT = vec3(0.11, 0.45, 0.74);
+        const vec3 PASSIVE = vec3(0.176, 0.176, 0.290);
+        const vec3 BG = vec3(0.043, 0.043, 0.086);
+        const vec3 BG2 = vec3(0.102, 0.102, 0.180);
+
+        float hash(vec2 p) {
+          vec3 p3 = fract(vec3(p.xyx) * 0.1031);
+          p3 += dot(p3, p3.yzx + 33.33);
+          return fract((p3.x + p3.y) * p3.z);
+        }
+        float sdRound(vec2 p, float b, float r) {
+          vec2 q = abs(p) - vec2(b - r);
+          return length(max(q, 0.0)) + min(max(q.x, q.y), 0.0) - r;
+        }
+
+        void main() {
+          vec2 uv = (gl_FragCoord.xy - 0.5 * uRes) / uRes.y;
+          float cp = cos(uCam.x), sp = sin(uCam.x);
+          vec3 fw = vec3(0.0, -sp, cp);
+          vec3 up = vec3(0.0, cp, sp);
+          vec3 rd = normalize(fw + uCam.z * (uv.x * vec3(1.0, 0.0, 0.0) + uv.y * up));
+
+          float hz = exp(-abs(rd.y) * 10.0);
+          vec3 col = mix(BG, BG2, clamp(0.55 - rd.y * 1.4, 0.0, 1.0));
+          col += vec3(1.0, 0.40, 0.18) * hz * 0.30 * uHaze;
+          col += vec3(0.10, 0.25, 0.55) * pow(hz, 3.0) * 0.12 * uHaze;
+          // faint stars above the horizon
+          vec2 sg = floor(gl_FragCoord.xy / 3.0);
+          float st = step(0.9975, hash(sg)) * smoothstep(0.02, 0.25, rd.y) * uHaze;
+          col += st * (0.35 + 0.35 * sin(uTime * 2.0 + hash(sg + 3.1) * 40.0));
+
+          if (rd.y < -0.0015) {
+            float t = uCam.y / -rd.y;
+            vec2 w = rd.xz * t + uOff;
+            vec2 cell = floor(w);
+            vec2 f = w - cell - 0.5;
+            float h = hash(cell);
+            float h2 = hash(cell + 17.31);
+            vec2 cc = cell + 0.5;
+
+            float heat = 0.0;
+            for (int i = 0; i < ${MAX_WAVES}; i++) {
+              vec4 wv = uWaves[i];
+              float age = uTime - wv.z;
+              if (wv.w <= 0.0 || age < 0.0 || age > 8.0) continue;
+              float r = length(cc - wv.xy);
+              float x = (r - age * ${WAVE_SPEED.toFixed(2)}) / 1.7;
+              heat += exp(-x * x) * wv.w * exp(-age * 0.42);
+            }
+            vec2 md = cc - uMouse.xy;
+            heat += uMouse.z * exp(-dot(md, md) / 6.0);
+            heat += 0.4 * pow(0.5 + 0.5 * sin(uTime * (0.4 + h2 * 1.1) + h2 * 60.0), 30.0);
+            heat = clamp(heat, 0.0, 1.6);
+            float e = smoothstep(0.0, 1.0, heat);
+
+            vec3 base; vec3 hot; float glowK;
+            if (h < 0.34) { base = ORANGE * 0.2; hot = ORANGE_HOT; glowK = 0.8; }
+            else if (h < 0.67) { base = NAVY * 0.8; hot = BLUE_HOT; glowK = 0.55; }
+            else { base = PASSIVE * 0.62; hot = PASSIVE * 1.6; glowK = 0.15; }
+
+            float size = mix(0.32, 0.44, e);
+            float d = sdRound(f, size, size * 0.34);
+            float aa = max(fwidth(d), 1e-4);
+            float fill = 1.0 - smoothstep(-aa, aa, d);
+            vec3 c = mix(base, hot, e) * (1.0 + 0.12 * (f.y - f.x * 0.4));
+            float glow = exp(-max(d, 0.0) * 7.0) * e * glowK;
+            float px = max(fwidth(w.x), fwidth(w.y));
+            float lod = 1.0 - smoothstep(0.08, 0.38, px);
+            vec3 avg = (ORANGE * 0.34 + NAVY + PASSIVE * 0.85) / 3.0 * 0.5;
+            vec3 ground = BG * 0.6 + (c * fill + hot * glow * 0.45) * lod + avg * (1.0 - lod);
+            float fog = 1.0 - exp(-max(t - uCam.y, 0.0) * 0.03);
+            col = mix(ground, col, fog);
+          }
+          col *= uDim;
+          col += (hash(gl_FragCoord.xy + fract(uTime * 7.0)) - 0.5) / 128.0;
+          outColor = vec4(col, 1.0);
+        }`;
+
+      const cam = { pitch: 0.34, height: 2.4, fov: 1.0, ox: 0, oz: 0, drift: 0, dim: 1, haze: 1 };
+      const mouse = { x: 0, y: 0, k: 0, last: -10, active: false };
+      const waves = new Float32Array(MAX_WAVES * 4);
+      let waveIndex = 0;
+      let quality = 1;
+      let frameAvg = 16;
+      let w = 0, h = 0;
+
+      if (!gl) {
+        document.documentElement.classList.add("no-webgl");
+      }
+
+      /** @type {WebGLProgram | null} */
+      let prog = null;
+      /** @type {Record<string, WebGLUniformLocation | null>} */
+      const U = {};
+
+      if (gl) {
+        /** @param {number} type @param {string} src */
+        const sh = (type, src) => {
+          const s = /** @type {WebGLShader} */ (gl.createShader(type));
+          gl.shaderSource(s, src);
+          gl.compileShader(s);
+          if (!gl.getShaderParameter(s, gl.COMPILE_STATUS)) throw new Error(String(gl.getShaderInfoLog(s)));
+          return s;
+        };
+        prog = /** @type {WebGLProgram} */ (gl.createProgram());
+        gl.attachShader(prog, sh(gl.VERTEX_SHADER, VS));
+        gl.attachShader(prog, sh(gl.FRAGMENT_SHADER, FS));
+        gl.linkProgram(prog);
+        if (!gl.getProgramParameter(prog, gl.LINK_STATUS)) throw new Error(String(gl.getProgramInfoLog(prog)));
+        gl.useProgram(prog);
+        const buf = gl.createBuffer();
+        gl.bindBuffer(gl.ARRAY_BUFFER, buf);
+        gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([-1, -1, 3, -1, -1, 3]), gl.STATIC_DRAW);
+        const loc = gl.getAttribLocation(prog, "aPos");
+        gl.enableVertexAttribArray(loc);
+        gl.vertexAttribPointer(loc, 2, gl.FLOAT, false, 0, 0);
+        for (const n of ["uRes", "uTime", "uCam", "uOff", "uWaves", "uMouse", "uDim", "uHaze"]) U[n] = gl.getUniformLocation(prog, n);
+      }
+
+      function resize() {
+        if (!gl) return;
+        const dpr = Math.min(window.devicePixelRatio || 1, 1.5) * quality;
+        w = Math.max(1, Math.round(window.innerWidth * dpr));
+        h = Math.max(1, Math.round(window.innerHeight * dpr));
+        canvas.width = w;
+        canvas.height = h;
+        gl.viewport(0, 0, w, h);
+      }
+
+      /**
+       * Screen point (CSS px) → world cell coordinates on the plane, same
+       * maths as the shader. Returns null above the horizon.
+       * @param {number} px @param {number} py
+       * @returns {[number, number] | null}
+       */
+      function project(px, py) {
+        const W = window.innerWidth, H = window.innerHeight;
+        const ux = (px - W / 2) / H, uy = (H / 2 - py) / H;
+        const cp = Math.cos(cam.pitch), sp = Math.sin(cam.pitch);
+        let dx = cam.fov * ux, dy = -sp + cam.fov * uy * cp, dz = cp + cam.fov * uy * sp;
+        const len = Math.hypot(dx, dy, dz);
+        dx /= len; dy /= len; dz /= len;
+        if (dy > -0.0015) return null;
+        const tt = cam.height / -dy;
+        return [dx * tt + cam.ox, dz * tt + cam.oz];
+      }
+
+      /** @param {number} px @param {number} py @param {number} strength */
+      function waveAt(px, py, strength) {
+        const p = project(px, py);
+        if (!p) return false;
+        waves.set([p[0], p[1], now(), strength], waveIndex * 4);
+        waveIndex = (waveIndex + 1) % MAX_WAVES;
+        return true;
+      }
+
+      /** @param {Element} elem @param {number} strength */
+      function waveAtElement(elem, strength) {
+        const r = elem.getBoundingClientRect();
+        return waveAt(r.left + r.width / 2, r.top + r.height / 2, strength);
+      }
+
+      const t0 = performance.now();
+      const now = () => (performance.now() - t0) / 1000;
+
+      /** @param {number} px @param {number} py */
+      function pointer(px, py) {
+        mouse.x = px;
+        mouse.y = py;
+        mouse.last = now();
+        mouse.active = true;
+      }
+
+      /**
+       * @param {number} dt seconds
+       * @param {{ heroK: number, dim: number }} view
+       */
+      function frame(dt, view) {
+        const time = now();
+        const e = easeInOut(view.heroK);
+        cam.pitch = lerp(0.36, 1.3, e);
+        cam.height = lerp(3.1, 17, e);
+        cam.fov = lerp(1.0, 1.05, e);
+        cam.haze = 1 - e;
+        cam.dim = lerp(cam.dim, view.dim, 1 - Math.exp(-dt * 3));
+        if (!REDUCED) cam.drift += dt * lerp(0.9, 0.18, e);
+        cam.ox = REDUCED ? 0 : Math.sin(time * 0.05) * 3;
+        cam.oz = cam.drift + (window.scrollY / window.innerHeight) * 2.2;
+
+        const idle = time - mouse.last > 2.5;
+        mouse.k = lerp(mouse.k, mouse.active && !idle ? 1 : 0, 1 - Math.exp(-dt * (idle ? 1.2 : 6)));
+        const mp = mouse.active ? project(mouse.x, mouse.y) : null;
+
+        if (!gl || !prog) return;
+        frameAvg = lerp(frameAvg, dt * 1000, 0.05);
+        if (frameAvg > 26 && quality > 0.55) {
+          quality = Math.max(0.55, quality * 0.85);
+          frameAvg = 16;
+          resize();
+        }
+        gl.uniform2f(U.uRes, w, h);
+        gl.uniform1f(U.uTime, time);
+        gl.uniform3f(U.uCam, cam.pitch, cam.height, cam.fov);
+        gl.uniform2f(U.uOff, cam.ox, cam.oz);
+        gl.uniform4fv(U.uWaves, waves);
+        gl.uniform3f(U.uMouse, mp ? mp[0] : 0, mp ? mp[1] : 0, mp ? mouse.k : 0);
+        gl.uniform1f(U.uDim, cam.dim);
+        gl.uniform1f(U.uHaze, cam.haze);
+        gl.drawArrays(gl.TRIANGLES, 0, 3);
+      }
+
+      resize();
+      return { resize, frame, waveAt, waveAtElement, pointer, now, hasGL: !!gl };
+    })();
+
+    /* ============================================================
+       4c. Wordmark — "GRID" built from board cells (hero + CTA)
+       ============================================================ */
+    /** @param {HTMLElement} root @param {number} baseDelay */
+    function buildWordmark(root, baseDelay) {
+      const letters = ["G", "R", "I", "D"];
+      /** @type {string[]} */
+      const rows = ["", "", "", "", ""];
+      letters.forEach((L, li) => {
+        const g = GLYPHS[/** @type {keyof typeof GLYPHS} */ (L)];
+        for (let r = 0; r < 5; r++) rows[r] += g[r] + (li < letters.length - 1 ? "." : "");
+      });
+      const cols = rows[0].length;
+      let seq = 0;
+      const cx = (cols - 1) / 2, cy = 2;
+      for (let r = 0; r < 5; r++) {
+        for (let c = 0; c < cols; c++) {
+          const on = rows[r][c] === "#";
+          const cell = el("span", `wm__cell ${on ? "wm__cell--on" : "wm__cell--off"}`);
+          if (on) {
+            seq += 1;
+            const dist = Math.hypot(c - cx, (r - cy) * 1.4);
+            cell.style.setProperty("--d", `${(baseDelay + dist * 0.045 + Math.random() * 0.12).toFixed(3)}s`);
+            cell.dataset.seq = String(seq);
+            const inner = el("span", "wm__inner");
+            inner.append(el("span", "wm__face wm__face--front"), el("span", "wm__face wm__face--back", String(seq)));
+            cell.append(inner);
+          }
+          root.append(cell);
+        }
+      }
+      return {
+        beat() {
+          if (REDUCED) return;
+          root.classList.add("wordmark--beat");
+          root.animate(
+            [{ scale: "1" }, { scale: "1.035", offset: 0.22 }, { scale: "1" }],
+            { duration: 620, easing: "cubic-bezier(.2,.8,.3,1)" },
+          );
+          window.setTimeout(() => root.classList.remove("wordmark--beat"), 160);
+        },
+      };
+    }
+
+    /* ============================================================
+       4d. Rule board — 7x7, every cell active: tap dashed targets
+       ============================================================ */
+    const Rule = (() => {
+      const N = 7;
+      const root = ref("rule-board");
+      const movesEl = ref("rule-moves");
+      const msgEl = ref("rule-msg");
+      /** @type {HTMLButtonElement[]} */
+      const cells = [];
+      const order = new Int16Array(N * N);
+      let head = 24;
+      let count = 1;
+
+      for (let i = 0; i < N * N; i++) {
+        const b = /** @type {HTMLButtonElement} */ (el("button", "rcell"));
+        b.type = "button";
+        b.dataset.action = "rule-move";
+        b.dataset.cell = String(i);
+        root.append(b);
+        cells.push(b);
+      }
+
+      function targets() {
+        /** @type {Map<number, number>} */
+        const out = new Map();
+        const r = Math.floor(head / N), c = head % N;
+        for (let d = 0; d < 8; d++) {
+          const nr = r + DR[d], nc = c + DC[d];
+          if (nr < 0 || nc < 0 || nr >= N || nc >= N) continue;
+          const i = nr * N + nc;
+          if (!order[i]) out.set(i, d);
+        }
+        return out;
+      }
+
+      function render() {
+        const ts = targets();
+        cells.forEach((b, i) => {
+          b.className = "rcell";
+          b.textContent = "";
+          b.disabled = true;
+          const r = Math.floor(i / N) + 1, c = (i % N) + 1;
+          let label = t("rule.cell", { r, c });
+          if (i === head) {
+            b.classList.add("rcell--head");
+            b.textContent = String(order[i]);
+          } else if (order[i]) {
+            b.classList.add("rcell--filled");
+            b.textContent = String(order[i]);
+          } else if (ts.has(i)) {
+            b.classList.add("rcell--target");
+            b.disabled = false;
+            b.append(el("span", "rcell__arrow", ARROWS[/** @type {number} */ (ts.get(i))]));
+            label += ` — ${t("rule.target")}`;
+          }
+          b.setAttribute("aria-label", label);
+        });
+        movesEl.textContent = String(count - 1);
+        msgEl.textContent = ts.size === 0 ? t("rule.dead") : count === 1 ? t("rule.hint") : "";
+      }
+
+      /** Highlight the cells a jump flies over. @param {number} i */
+      function preview(i) {
+        cells.forEach((b) => b.classList.remove("rcell--skip"));
+        const d = targets().get(i);
+        if (d == null) return;
+        const r = Math.floor(head / N), c = head % N;
+        const steps = Math.max(Math.abs(DR[d]), Math.abs(DC[d]));
+        for (let s = 1; s < steps; s++) {
+          const k = (r + (DR[d] / steps) * s) * N + (c + (DC[d] / steps) * s);
+          cells[k].classList.add("rcell--skip");
+        }
+        Sound.tick();
+      }
+
+      /** @param {number} i */
+      function move(i) {
+        const d = targets().get(i);
+        if (d == null) return;
+        count += 1;
+        order[i] = count;
+        const from = cells[head];
+        head = i;
+        render();
+        Sound.move(count - 2);
+        if (!REDUCED) {
+          const axis = DC[d] !== 0 && DR[d] === 0 ? "rotateY" : DR[d] !== 0 && DC[d] === 0 ? "rotateX" : "rotate3d(1,1,0,";
+          const spin = axis.startsWith("rotate3d") ? "rotate3d(1,1,0,180deg)" : `${axis}(180deg)`;
+          cells[i].animate([{ transform: `perspective(30rem) ${spin} scale(0.8)` }, { transform: "perspective(30rem) scale(1.04)" }], { duration: 520, easing: "cubic-bezier(.34,1.56,.64,1)" });
+          from.animate([{ transform: "scale(1.15)" }, { transform: "scale(1)" }], { duration: 400, easing: "ease-out" });
+        }
+        Field.waveAtElement(cells[i], 0.5);
+        if (targets().size === 0) Sound.deadEnd();
+      }
+
+      function reset() {
+        order.fill(0);
+        head = 24;
+        count = 1;
+        order[head] = 1;
+        render();
+      }
+
+      /** @param {number} tiltX @param {number} tiltY */
+      function tilt(tiltX, tiltY) {
+        root.style.setProperty("--tilt-x", `${tiltX.toFixed(2)}deg`);
+        root.style.setProperty("--tilt-y", `${tiltY.toFixed(2)}deg`);
+      }
+
+      reset();
+      return { move, preview, reset, render, tilt, root };
+    })();
+
+    /* ============================================================
+       4e. Play — real levels, flip cards, sparks, stars, solution
+       ============================================================ */
+    const Play = (() => {
+      const LEVELS = RAW_LEVELS.map(decodeLevel);
+      const boardEl = ref("play-board");
+      const wrapEl = ref("play-wrap");
+      const tabsEl = ref("play-tabs");
+      const statusEl = ref("play-status");
+      const progressEl = ref("play-progress");
+      const countEl = ref("play-count");
+      const levelEl = ref("play-level");
+      const starsEls = [...ref("play-stars").querySelectorAll(".star")];
+      const resultEl = ref("play-result");
+      const resultStars = [...ref("result-stars").querySelectorAll(".result__star")];
+      const fxCanvas = /** @type {HTMLCanvasElement} */ (ref("play-fx"));
+      const fx = /** @type {CanvasRenderingContext2D} */ (fxCanvas.getContext("2d"));
+
+      /** @typedef {{ x: number, y: number, vx: number, vy: number, life: number, max: number, size: number, rot: number, vr: number, color: string }} Spark */
+      /** @type {Spark[]} */
+      let sparks = [];
+      let current = 0;
+      /** @type {ReturnType<typeof decodeLevel>} */
+      let L = LEVELS[0];
+      /** @type {HTMLButtonElement[]} */
+      let cells = [];
+      /** @type {number[]} */
+      let moves = [];
+      /** @type {Int16Array} */
+      let order = new Int16Array(0);
+      let undoUsed = false;
+      let finished = false;
+      let solving = 0;
+      let starsShown = 0;
+      let lastStatus = "";
+
+      LEVELS.forEach((lv, i) => {
+        const b = el("button", "play-tab");
+        b.setAttribute("type", "button");
+        b.dataset.action = "play-tab";
+        b.dataset.index = String(i);
+        b.append(el("span", "play-tab__grid", lv.grid.replace("x", "×")), el("span", "play-tab__meta"));
+        tabsEl.append(b);
+      });
+
+      /** @param {number} i */
+      function load(i) {
+        stopSolve();
+        current = (i + LEVELS.length) % LEVELS.length;
+        L = LEVELS[current];
+        boardEl.style.setProperty("--cols", String(L.cols));
+        boardEl.replaceChildren();
+        cells = [];
+        for (let k = 0; k < L.rows * L.cols; k++) {
+          const b = /** @type {HTMLButtonElement} */ (el("button", "pcell"));
+          b.type = "button";
+          b.dataset.action = "play-cell";
+          b.dataset.cell = String(k);
+          const inner = el("span", "pcell__inner");
+          inner.append(el("span", "pcell__face pcell__face--front"), el("span", "pcell__face pcell__face--back"));
+          b.append(inner);
+          if (!L.active[k]) b.disabled = true;
+          boardEl.append(b);
+          cells.push(b);
+          if (!REDUCED) {
+            const r = Math.floor(k / L.cols), c = k % L.cols;
+            b.animate(
+              [{ transform: "translateZ(0) rotateX(-80deg) scale(0.5)", opacity: 0 }, { transform: "none", opacity: 1 }],
+              { duration: 620, delay: (r + c) * 32, easing: "cubic-bezier(.34,1.56,.64,1)", fill: "backwards" },
+            );
+          }
+        }
+        tabsEl.querySelectorAll(".play-tab").forEach((b, k) => b.setAttribute("aria-pressed", String(k === current)));
+        reset();
+      }
+
+      function reset() {
+        stopSolve();
+        moves = [];
+        order = new Int16Array(L.rows * L.cols);
+        undoUsed = false;
+        finished = false;
+        starsShown = 0;
+        closeResult();
+        render();
+        setStatus(t("play.start"));
+      }
+
+      const head = () => (moves.length ? moves[moves.length - 1] : -1);
+
+      /** @param {number} from @param {number} to */
+      function isValid(from, to) {
+        if (!L.active[to] || order[to]) return false;
+        const dr = Math.abs(Math.floor(from / L.cols) - Math.floor(to / L.cols));
+        const dc = Math.abs((from % L.cols) - (to % L.cols));
+        return (dr === 3 && dc === 0) || (dr === 0 && dc === 3) || (dr === 2 && dc === 2);
+      }
+
+      /** @param {number} from */
+      function validFrom(from) {
+        const out = [];
+        for (let k = 0; k < cells.length; k++) if (isValid(from, k)) out.push(k);
+        return out;
+      }
+
+      const pct = () => Math.round((moves.length / L.activeCount) * 100);
+      const starsFor = (/** @type {number} */ p) => (p >= 100 ? 3 : p >= 90 ? 2 : p >= 80 ? 1 : 0);
+
+      function render() {
+        const h = head();
+        const ts = new Set(h >= 0 && !finished ? validFrom(h) : []);
+        cells.forEach((b, k) => {
+          const back = /** @type {HTMLElement} */ (b.querySelector(".pcell__face--back"));
+          b.classList.remove("pcell--passive", "pcell--active", "pcell--filled", "pcell--last", "pcell--target");
+          let label = "";
+          if (!L.active[k]) {
+            b.classList.add("pcell--passive");
+            label = t("play.cellPassive");
+          } else if (order[k]) {
+            b.classList.add("pcell--filled");
+            if (k === h) b.classList.add("pcell--last");
+            back.textContent = String(order[k]);
+            label = t("play.cellFilled", { n: order[k] });
+          } else {
+            b.classList.add("pcell--active");
+            if (ts.has(k)) b.classList.add("pcell--target");
+            label = t("play.cellActive");
+          }
+          b.setAttribute("aria-label", `${Math.floor(k / L.cols) + 1}:${(k % L.cols) + 1} ${label}`);
+        });
+        const p = pct();
+        progressEl.style.setProperty("--p", `${p}%`);
+        countEl.textContent = t("play.count", { f: moves.length, t: L.activeCount });
+        levelEl.textContent = t("play.stage", { grid: L.grid.replace("x", "×"), stage: L.stage, level: fmt(L.level) });
+        const s = starsFor(p);
+        starsEls.forEach((st, k) => st.classList.toggle("star--on", k < s));
+        if (s > starsShown) {
+          for (let k = starsShown; k < s; k++) window.setTimeout(() => Sound.star(k), (k - starsShown) * 140);
+        }
+        starsShown = s;
+        tabsEl.querySelectorAll(".play-tab__meta").forEach((m, k) => {
+          m.textContent = t("play.cells", { n: LEVELS[k].activeCount });
         });
       }
 
-      if (googlePlayBadge) {
-        googlePlayBadge.addEventListener("click", () => {
-          gtag("event", "click_store_badge", {
-            store_name: "Google Play",
-          });
-        });
+      /** @param {string} s */
+      function setStatus(s) {
+        lastStatus = s;
+        statusEl.textContent = s;
       }
-    </script>
-  </body>
+
+      /** @param {number} k */
+      function tap(k) {
+        if (finished || solving) return;
+        if (!L.active[k]) return;
+        if (!moves.length) {
+          place(k);
+        } else if (isValid(head(), k)) {
+          place(k);
+        } else if (!order[k]) {
+          const b = cells[k];
+          b.classList.remove("pcell--shake");
+          void b.offsetWidth;
+          b.classList.add("pcell--shake");
+          window.setTimeout(() => b.classList.remove("pcell--shake"), 400);
+          Sound.error();
+        }
+      }
+
+      /** @param {number} k @param {{ quiet?: boolean }} [opts] */
+      function place(k, opts = {}) {
+        const prev = head();
+        const b = cells[k];
+        if (prev >= 0) {
+          const d = moveDir(prev, k, L.cols, L.rows);
+          const dx = Math.sign(DC[d] || 0), dy = Math.sign(DR[d] || 0);
+          b.style.setProperty("--ax", String(-dy));
+          b.style.setProperty("--ay", String(dx || (dy ? 0 : 1)));
+        } else {
+          b.style.setProperty("--ax", "0");
+          b.style.setProperty("--ay", "1");
+        }
+        moves.push(k);
+        order[k] = moves.length;
+        render();
+        Sound.move(moves.length - 1);
+        burst(k, opts.quiet ? 6 : 14);
+        if (moves.length === 1 || moves.length % 4 === 0) Field.waveAtElement(b, 0.45);
+        checkEnd();
+      }
+
+      function undo() {
+        if (!moves.length || solving) return;
+        if (finished) {
+          finished = false;
+          closeResult();
+        }
+        const k = /** @type {number} */ (moves.pop());
+        order[k] = 0;
+        undoUsed = true;
+        starsShown = starsFor(pct());
+        render();
+        Sound.flip();
+        setStatus(moves.length ? t("play.going", { p: pct() }) : t("play.start"));
+      }
+
+      function hint() {
+        reset();
+        place(L.solution[0]);
+        setStatus(t("play.hintUsed"));
+      }
+
+      function solve() {
+        reset();
+        setStatus(t("play.solving"));
+        const step = clamp(4200 / L.activeCount, 70, 280);
+        let i = 0;
+        const tick = () => {
+          solving = 0;
+          if (i >= L.solution.length) return;
+          place(L.solution[i++], { quiet: true });
+          if (!finished) {
+            setStatus(t("play.solving"));
+            solving = window.setTimeout(tick, step);
+          }
+        };
+        solving = window.setTimeout(tick, 250);
+      }
+
+      function stopSolve() {
+        if (solving) window.clearTimeout(solving);
+        solving = 0;
+      }
+
+      function checkEnd() {
+        const p = pct();
+        if (moves.length === L.activeCount) {
+          finished = true;
+          win();
+          return;
+        }
+        if (validFrom(head()).length === 0) {
+          finished = true;
+          render();
+          Sound.deadEnd();
+          wrapEl.animate([{ translate: "0 0" }, { translate: "-0.6rem 0" }, { translate: "0.5rem 0" }, { translate: "0 0" }], { duration: 380 });
+          window.setTimeout(() => openResult(starsFor(p) > 0 ? t("play.partial") : t("play.dead"), t("play.result", { p }), starsFor(p), false), 520);
+          return;
+        }
+        setStatus(t("play.going", { p }));
+      }
+
+      function win() {
+        render();
+        const last = head();
+        const lr = Math.floor(last / L.cols), lc = last % L.cols;
+        window.setTimeout(() => {
+          Sound.win();
+          if (!REDUCED) {
+            cells.forEach((b, k) => {
+              if (!L.active[k]) return;
+              const dist = Math.hypot(Math.floor(k / L.cols) - lr, (k % L.cols) - lc);
+              b.animate(
+                [{ transform: "translateZ(0) scale(1)" }, { transform: "translateY(-14%) scale(1.14)" }, { transform: "none" }],
+                { duration: 620, delay: dist * 60, easing: "cubic-bezier(.34,1.56,.64,1)" },
+              );
+            });
+          }
+          Field.waveAtElement(boardEl, 1.5);
+          window.setTimeout(() => Field.waveAtElement(boardEl, 1.1), 380);
+          confetti();
+        }, 260);
+        window.setTimeout(() => openResult(t("play.win"), t("play.resultWin"), 3, !undoUsed), 1300);
+      }
+
+      /** @param {string} title @param {string} text @param {number} stars @param {boolean} perfect */
+      function openResult(title, text, stars, perfect) {
+        ref("result-title").textContent = title;
+        ref("result-text").textContent = text;
+        ref("result-badge").hidden = !perfect;
+        ref("result-undo").hidden = stars === 3;
+        resultStars.forEach((s, k) => {
+          s.classList.remove("result__star--on");
+          if (k < stars) {
+            void (/** @type {HTMLElement} */ (/** @type {unknown} */ (s)).getBoundingClientRect());
+            s.classList.add("result__star--on");
+            window.setTimeout(() => Sound.star(k), 220 * k + 120);
+          }
+        });
+        resultEl.classList.add("result--open");
+        setStatus(text);
+        const next = /** @type {HTMLElement} */ (resultEl.querySelector('[data-action="play-next"]'));
+        next.focus({ preventScroll: true });
+      }
+
+      function closeResult() {
+        resultEl.classList.remove("result--open");
+      }
+
+      /* ---- particles (Canvas 2D overlay) ---- */
+      function sizeFx() {
+        const r = fxCanvas.getBoundingClientRect();
+        const dpr = Math.min(window.devicePixelRatio || 1, 2);
+        const W = Math.round(r.width * dpr), H = Math.round(r.height * dpr);
+        if (fxCanvas.width !== W || fxCanvas.height !== H) {
+          fxCanvas.width = W;
+          fxCanvas.height = H;
+        }
+        return { r, dpr };
+      }
+
+      /** @param {number} k @param {number} n */
+      function burst(k, n) {
+        if (REDUCED) return;
+        const { r: fr } = sizeFx();
+        const cr = cells[k].getBoundingClientRect();
+        const x = cr.left + cr.width / 2 - fr.left, y = cr.top + cr.height / 2 - fr.top;
+        const colors = ["#ff6b35", "#ff8a5c", "#f7c59f", "#ffffff"];
+        for (let i = 0; i < n; i++) {
+          const a = Math.random() * Math.PI * 2, sp = (0.25 + Math.random() * 0.9) * cr.width * 3.2;
+          sparks.push({
+            x, y, vx: Math.cos(a) * sp, vy: Math.sin(a) * sp - cr.width * 0.8, life: 0, max: 0.45 + Math.random() * 0.4,
+            size: cr.width * (0.06 + Math.random() * 0.08), rot: Math.random() * 6, vr: (Math.random() - 0.5) * 16,
+            color: colors[i % colors.length],
+          });
+        }
+      }
+
+      function confetti() {
+        if (REDUCED) return;
+        const { r: fr } = sizeFx();
+        const br = boardEl.getBoundingClientRect();
+        const colors = ["#ff6b35", "#ff8a5c", "#f7c59f", "#ffd700", "#1a6aac", "#ffffff"];
+        for (let i = 0; i < 160; i++) {
+          const x = br.left - fr.left + Math.random() * br.width;
+          const y = br.top - fr.top + br.height * (0.2 + Math.random() * 0.6);
+          const a = -Math.PI / 2 + (Math.random() - 0.5) * 2.2, sp = br.width * (0.6 + Math.random() * 1.1);
+          sparks.push({
+            x, y, vx: Math.cos(a) * sp, vy: Math.sin(a) * sp, life: 0, max: 1.2 + Math.random() * 0.9,
+            size: br.width * (0.008 + Math.random() * 0.014), rot: Math.random() * 6, vr: (Math.random() - 0.5) * 20,
+            color: colors[i % colors.length],
+          });
+        }
+      }
+
+      /** @param {number} dt */
+      function frame(dt) {
+        if (!sparks.length) return;
+        const { dpr } = sizeFx();
+        fx.setTransform(1, 0, 0, 1, 0, 0);
+        fx.clearRect(0, 0, fxCanvas.width, fxCanvas.height);
+        fx.setTransform(dpr, 0, 0, dpr, 0, 0);
+        const g = fxCanvas.clientWidth * 0.9;
+        sparks = sparks.filter((s) => (s.life += dt) < s.max);
+        for (const s of sparks) {
+          s.vy += g * dt;
+          s.vx *= 1 - dt * 1.4;
+          s.x += s.vx * dt;
+          s.y += s.vy * dt;
+          s.rot += s.vr * dt;
+          const k = 1 - s.life / s.max;
+          fx.save();
+          fx.translate(s.x, s.y);
+          fx.rotate(s.rot);
+          fx.scale(Math.cos(s.rot * 1.7), 1);
+          fx.globalAlpha = Math.min(1, k * 1.6);
+          fx.fillStyle = s.color;
+          const z = s.size;
+          fx.beginPath();
+          fx.roundRect(-z / 2, -z / 2, z, z, z * 0.22);
+          fx.fill();
+          fx.restore();
+        }
+        if (!sparks.length) fx.clearRect(0, 0, fxCanvas.width, fxCanvas.height);
+      }
+
+      /** @param {number} tiltX @param {number} tiltY */
+      function tilt(tiltX, tiltY) {
+        wrapEl.style.setProperty("--tilt-x", `${tiltX.toFixed(2)}deg`);
+        wrapEl.style.setProperty("--tilt-y", `${tiltY.toFixed(2)}deg`);
+      }
+
+      function refreshText() {
+        render();
+        if (!finished && !solving) setStatus(moves.length ? t("play.going", { p: pct() }) : t("play.start"));
+        else if (solving) setStatus(t("play.solving"));
+        else setStatus(lastStatus);
+      }
+
+      load(0);
+      return {
+        load, tap, undo, hint, solve, frame, tilt, refreshText, wrapEl,
+        restart: () => reset(),
+        next: () => load(current + 1),
+        get levelCount() { return LEVELS.length; },
+      };
+    })();
+
+    /* ============================================================
+       4f. Journey — sticky canvas: 5x5 → 10x10, then Extreme 20x20
+           which solves itself as you scroll
+       ============================================================ */
+    const Journey = (() => {
+      const section = /** @type {HTMLElement} */ ($(".journey"));
+      const canvas = /** @type {HTMLCanvasElement} */ (ref("journey-canvas"));
+      const ctx = /** @type {CanvasRenderingContext2D} */ (canvas.getContext("2d"));
+      const sizeEl = ref("journey-size");
+      const factsEl = ref("journey-facts");
+      const descEl = ref("journey-desc");
+      const unlockEl = ref("journey-unlock");
+      const stepsEl = ref("journey-steps");
+      const stepLabelsEl = ref("journey-step-labels");
+      const countEl = ref("journey-count");
+      const MAXN = 20;
+      const EX = 6;
+      const RGB = [[255, 107, 53], [15, 52, 96], [45, 45, 74]];
+
+      // Board cell states: equal thirds, random, kept while the board grows.
+      const r0 = rng(20261015);
+      const states = new Uint8Array(MAXN * MAXN).map(() => Math.floor(r0() * 3));
+      const tour = makeTour(MAXN, MAXN, 7);
+      const tourOrder = new Int16Array(MAXN * MAXN);
+      tour.forEach((cell, i) => (tourOrder[cell] = i + 1));
+
+      let visible = false;
+      let shown = -1;
+      let nFrom = 5, nTo = 5, growStart = -10, growDur = 0.9;
+      let exMix = 0;
+      let lastSolved = -1;
+      let W = 0, H = 0, dpr = 1;
+
+      for (let i = 0; i <= EX; i++) {
+        stepsEl.append(el("li", `journey__step${i === EX ? " journey__step--extreme" : ""}`));
+        stepLabelsEl.append(el("span", `journey__step-label${i === EX ? " journey__step-label--extreme" : ""}`, i === EX ? "EXTREME" : GRIDS[i].id.replace("x", "×")));
+      }
+
+      function resize() {
+        dpr = Math.min(window.devicePixelRatio || 1, 2);
+        W = canvas.clientWidth;
+        H = canvas.clientHeight;
+        canvas.width = Math.round(W * dpr);
+        canvas.height = Math.round(H * dpr);
+      }
+
+      /** @param {string} text @param {boolean} [hot] */
+      const fact = (text, hot) => el("li", `journey__fact${hot ? " journey__fact--hot" : ""}`, text);
+
+      /** @param {number} idx */
+      function setPanel(idx) {
+        section.classList.toggle("journey--extreme", idx === EX);
+        factsEl.replaceChildren();
+        if (idx === EX) {
+          sizeEl.textContent = t("journey.exTitle");
+          factsEl.append(fact(t("journey.exLevels"), true), fact(t("journey.exSizes")), fact(t("journey.exAll")));
+          descEl.textContent = t("journey.exDesc");
+          unlockEl.textContent = t("journey.exUnlock");
+        } else {
+          const g = GRIDS[idx];
+          sizeEl.textContent = g.id.replace("x", "×");
+          factsEl.append(
+            fact(t("journey.levels", { n: fmt(g.levels) }), true),
+            fact(t("journey.stages", { n: g.stages.length })),
+            fact(t("journey.cells", { a: g.stages[0], b: g.stages[g.stages.length - 1] })),
+          );
+          descEl.textContent = t(`journey.d${g.n}`);
+          unlockEl.textContent = idx === 0 ? "" : t("journey.unlock");
+        }
+        [...stepsEl.children].forEach((s, i) => {
+          s.classList.toggle("journey__step--on", i === idx);
+          s.classList.toggle("journey__step--done", i < idx);
+        });
+        for (const e of [sizeEl, factsEl, descEl]) {
+          e.classList.remove("journey__swap");
+          void e.offsetWidth;
+          e.classList.add("journey__swap");
+        }
+      }
+
+      /** @param {number} time @param {number} dt */
+      function frame(time, dt) {
+        if (!visible) return;
+        const p = stickyProgress(section);
+        const idx = p < 0.6 ? Math.min(5, Math.floor(p / 0.1)) : EX;
+        const nNow = currentN(time);
+        if (idx !== shown) {
+          const first = shown === -1;
+          shown = idx;
+          setPanel(idx);
+          nFrom = first ? (idx === EX ? MAXN : idx + 5) : nNow;
+          nTo = idx === EX ? MAXN : idx + 5;
+          growDur = idx === EX ? 1.6 : 0.9;
+          growStart = first ? -10 : time;
+          if (!first) {
+            Sound.whoosh();
+            Sound.pulse(idx === EX ? 0.75 : 1 + idx * 0.06, 0.6);
+          }
+        }
+        exMix = lerp(exMix, idx === EX ? 1 : 0, 1 - Math.exp(-dt * 3));
+        const solveQ = idx === EX ? clamp((p - 0.68) / 0.3, 0, 1) * tour.length : 0;
+        const solved = Math.floor(solveQ);
+        if (solved !== lastSolved) {
+          if (solved > lastSolved && solved > 0) Sound.tick();
+          lastSolved = solved;
+          countEl.textContent = String(solved);
+        }
+        draw(currentN(time), solveQ, time);
+      }
+
+      /** @param {number} time */
+      function currentN(time) {
+        const k = clamp((time - growStart) / growDur, 0, 1);
+        return lerp(nFrom, nTo, easeInOut(k));
+      }
+
+      /**
+       * @param {number} n board size (float while growing)
+       * @param {number} solveQ cells solved (float)
+       * @param {number} time
+       */
+      function draw(n, solveQ, time) {
+        ctx.setTransform(1, 0, 0, 1, 0, 0);
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+        const narrow = W < 1100;
+        const boardPx = Math.min(H * 0.8, W * (narrow ? 0.5 : 0.46));
+        const cx = narrow ? W * 0.68 : W * 0.66, cy = H * 0.52;
+        const pitch = boardPx / n;
+        const size = pitch * 0.86;
+        const half = (n - 1) / 2;
+        const cells = Math.ceil(n);
+        const solved = Math.floor(solveQ);
+        const frac = solveQ - solved;
+        const frontier = solved < tour.length ? tour[solved] : -1;
+        const lastCell = solved > 0 ? tour[solved - 1] : -1;
+        const sweep = ((time * 0.35) % 3) * (MAXN * 2) - MAXN;
+
+        // board plate
+        const plate = boardPx + pitch * 0.9;
+        ctx.fillStyle = "rgba(14, 16, 34, 0.82)";
+        ctx.strokeStyle = "rgba(255,255,255,0.08)";
+        ctx.lineWidth = 1;
+        ctx.beginPath();
+        ctx.roundRect(cx - plate / 2, cy - plate / 2, plate, plate, Math.max(14, pitch * 0.5));
+        ctx.fill();
+        ctx.stroke();
+
+        ctx.textAlign = "center";
+        ctx.textBaseline = "middle";
+        const showNums = size > 16;
+        if (showNums) ctx.font = `800 ${Math.round(size * 0.4)}px "Segoe UI", system-ui, sans-serif`;
+
+        for (let r = 0; r < cells; r++) {
+          for (let c = 0; c < cells; c++) {
+            const appear = clamp(n - Math.max(r, c), 0, 1);
+            if (appear <= 0) continue;
+            const sc = appear < 1 ? easeOutBack(appear) : 1;
+            const x = cx + (c - half) * pitch, y = cy + (r - half) * pitch;
+            const id = r * MAXN + c;
+            const st = states[id];
+            const ord = tourOrder[id];
+            let col = RGB[st];
+            let rgb = [col[0], col[1], col[2]];
+            // Extreme: every cell turns active (orange)
+            if (exMix > 0.001) for (let k = 0; k < 3; k++) rgb[k] = lerp(rgb[k], RGB[0][k], exMix);
+            let sx = 1;
+            let num = 0;
+            let glow = false;
+            if (solveQ > 0 && ord > 0) {
+              if (ord <= solved) {
+                rgb = id === lastCell ? [255, 107, 53] : [15, 52, 96];
+                num = ord;
+                glow = id === lastCell;
+              } else if (id === frontier) {
+                sx = Math.abs(Math.cos(frac * Math.PI));
+                if (frac > 0.5) { rgb = [15, 52, 96]; num = ord; }
+              }
+            }
+            // diagonal light sweep
+            const sw = Math.exp(-Math.pow(r + c - sweep, 2) / 6) * 0.22;
+            const fill = `rgb(${Math.round(rgb[0] + (255 - rgb[0]) * sw)},${Math.round(rgb[1] + (255 - rgb[1]) * sw)},${Math.round(rgb[2] + (255 - rgb[2]) * sw)})`;
+            const s = size * sc;
+            ctx.save();
+            ctx.translate(x, y);
+            ctx.scale(sx, 1);
+            if (glow) {
+              ctx.shadowColor = "rgba(255,107,53,0.9)";
+              ctx.shadowBlur = size * 0.9;
+            }
+            ctx.fillStyle = fill;
+            ctx.beginPath();
+            ctx.roundRect(-s / 2, -s / 2, s, s, s * 0.16);
+            ctx.fill();
+            ctx.shadowBlur = 0;
+            if (num && showNums && sc > 0.9) {
+              ctx.fillStyle = "#fff";
+              ctx.fillText(String(num), 0, size * 0.03);
+            }
+            ctx.restore();
+          }
+        }
+      }
+
+      function refreshText() {
+        if (shown >= 0) setPanel(shown);
+      }
+
+      const io = new IntersectionObserver((entries) => {
+        for (const e of entries) visible = e.isIntersecting;
+      });
+      io.observe(section);
+      resize();
+      return { frame, resize, refreshText };
+    })();
+
+    /* ============================================================
+       4g. Count — 95,000 WebGL points (one per level): galaxy →
+           the number → a bar of cells per grid size
+       ============================================================ */
+    const Count = (() => {
+      const section = /** @type {HTMLElement} */ ($(".count"));
+      const canvas = /** @type {HTMLCanvasElement} */ (ref("count-canvas"));
+      const captionEl = ref("count-caption");
+      const labelsEl = ref("count-labels");
+      const gl = canvas.getContext("webgl2", { antialias: false, premultipliedAlpha: true, alpha: true });
+      const N = TOTAL_LEVELS;
+      const PALETTE = [
+        [1.0, 0.54, 0.36], [1.0, 0.42, 0.21], [0.97, 0.77, 0.62], [0.91, 0.35, 0.16], [0.31, 0.61, 0.88], [0.1, 0.42, 0.67],
+      ];
+      let visible = false;
+      let phase = -1;
+      let aspect = 1;
+      const mouse = { x: 9, y: 9, k: 0 };
+
+      if (!gl) {
+        captionEl.textContent = t("count.p1");
+        return { frame() {}, resize() {}, refreshText() {}, pointer() {} };
+      }
+
+      const VS = `#version 300 es
+        in vec2 aA;       // galaxy: radius, angle
+        in vec2 aB;       // number
+        in vec2 aC;       // chart
+        in vec2 aMeta;    // grid index, seed
+        uniform float uT;
+        uniform float uTime;
+        uniform float uAspect;
+        uniform vec3 uMouse;
+        uniform float uSize;
+        uniform vec3 uPal[6];
+        out vec3 vCol;
+        out float vA;
+        void main() {
+          float seed = aMeta.y;
+          float ang = aA.y + uTime * 0.07;
+          vec2 g = vec2(cos(ang), sin(ang) * 0.42) * aA.x * vec2(1.25, 1.0);
+          g.y += sin(ang * 3.0 + seed * 6.28) * 0.02 - 0.14;
+          float l1 = smoothstep(0.0, 1.0, clamp((uT - seed * 0.4) / 0.6, 0.0, 1.0));
+          float l2 = smoothstep(0.0, 1.0, clamp((uT - 1.0 - seed * 0.4) / 0.6, 0.0, 1.0));
+          vec2 p = mix(g, aB, l1);
+          p = mix(p, aC, l2);
+          float swirl = sin(l1 * 3.14159) + sin(l2 * 3.14159);
+          p += vec2(-p.y, p.x) * swirl * 0.18 * (seed - 0.5);
+          vec2 d = p - uMouse.xy;
+          float L = length(d);
+          float R = 0.28;
+          if (L < R) p += normalize(d + 1e-5) * (R - L) * 0.9 * uMouse.z;
+          gl_Position = vec4(p.x / uAspect, p.y, 0.0, 1.0);
+          float tw = 0.75 + 0.25 * sin(uTime * 2.0 + seed * 50.0);
+          gl_PointSize = uSize * (1.0 + 0.6 * (1.0 - l1) * tw);
+          vCol = uPal[int(aMeta.x)];
+          vA = mix(0.6 * tw, 1.0, max(l1, l2));
+        }`;
+
+      const FS = `#version 300 es
+        precision mediump float;
+        in vec3 vCol;
+        in float vA;
+        out vec4 o;
+        void main() {
+          vec2 q = abs(gl_PointCoord - 0.5);
+          float d = max(q.x, q.y);
+          float a = (1.0 - smoothstep(0.38, 0.5, d)) * vA;
+          o = vec4(vCol * a, a);
+        }`;
+
+      /** @param {number} type @param {string} src */
+      const sh = (type, src) => {
+        const s = /** @type {WebGLShader} */ (gl.createShader(type));
+        gl.shaderSource(s, src);
+        gl.compileShader(s);
+        if (!gl.getShaderParameter(s, gl.COMPILE_STATUS)) throw new Error(String(gl.getShaderInfoLog(s)));
+        return s;
+      };
+      const prog = /** @type {WebGLProgram} */ (gl.createProgram());
+      gl.attachShader(prog, sh(gl.VERTEX_SHADER, VS));
+      gl.attachShader(prog, sh(gl.FRAGMENT_SHADER, FS));
+      gl.linkProgram(prog);
+      if (!gl.getProgramParameter(prog, gl.LINK_STATUS)) throw new Error(String(gl.getProgramInfoLog(prog)));
+      gl.useProgram(prog);
+      /** @type {Record<string, WebGLUniformLocation | null>} */
+      const U = {};
+      for (const n of ["uT", "uTime", "uAspect", "uMouse", "uSize", "uPal"]) U[n] = gl.getUniformLocation(prog, n);
+      gl.uniform3fv(U.uPal, PALETTE.flat());
+
+      // which grid each point belongs to (in grid order)
+      const gridOf = new Uint8Array(N);
+      {
+        let k = 0;
+        GRIDS.forEach((g, gi) => { for (let i = 0; i < g.levels; i++) gridOf[k++] = gi; });
+      }
+      const r1 = rng(95000);
+      const A = new Float32Array(N * 2);
+      const meta = new Float32Array(N * 2);
+      const gauss = () => (r1() + r1() + r1() - 1.5) / 1.5;
+      for (let i = 0; i < N; i++) {
+        const disk = r1() < 0.28;
+        const rad = Math.max(0.03, 0.06 + Math.pow(i / N, 0.85) * 1.2 + gauss() * 0.07);
+        A[i * 2] = rad;
+        A[i * 2 + 1] = disk ? r1() * Math.PI * 2 : (i % 2) * Math.PI + rad * 3.4 + gauss() * (0.22 + 0.1 / (rad + 0.2));
+        meta[i * 2] = gridOf[i];
+        meta[i * 2 + 1] = r1();
+      }
+      const B = new Float32Array(N * 2);
+      const C = new Float32Array(N * 2);
+
+      /** @param {string} name @param {Float32Array} data @param {number} usage */
+      function attr(name, data, usage) {
+        const buf = gl.createBuffer();
+        gl.bindBuffer(gl.ARRAY_BUFFER, buf);
+        gl.bufferData(gl.ARRAY_BUFFER, data, usage);
+        const loc = gl.getAttribLocation(prog, name);
+        gl.enableVertexAttribArray(loc);
+        gl.vertexAttribPointer(loc, 2, gl.FLOAT, false, 0, 0);
+        return buf;
+      }
+      const vao = gl.createVertexArray();
+      gl.bindVertexArray(vao);
+      attr("aA", A, gl.STATIC_DRAW);
+      const bufB = attr("aB", B, gl.DYNAMIC_DRAW);
+      const bufC = attr("aC", C, gl.DYNAMIC_DRAW);
+      attr("aMeta", meta, gl.STATIC_DRAW);
+
+      /** Sample the big number from a 2D canvas into point targets. */
+      function buildNumber() {
+        const text = fmt(TOTAL_LEVELS);
+        const cv = document.createElement("canvas");
+        cv.width = 1800;
+        cv.height = 560;
+        const c2 = /** @type {CanvasRenderingContext2D} */ (cv.getContext("2d", { willReadFrequently: true }));
+        c2.fillStyle = "#fff";
+        c2.textAlign = "center";
+        c2.textBaseline = "middle";
+        c2.font = `900 470px "Segoe UI Black", "Segoe UI", "SF Pro Display", system-ui, sans-serif`;
+        c2.fillText(text, cv.width / 2, cv.height / 2 + 20);
+        const img = c2.getImageData(0, 0, cv.width, cv.height).data;
+        /** @type {number[]} */
+        const pix = [];
+        let minX = cv.width, maxX = 0, minY = cv.height, maxY = 0;
+        for (let y = 0; y < cv.height; y += 2) {
+          for (let x = 0; x < cv.width; x += 2) {
+            if (img[(y * cv.width + x) * 4 + 3] > 140) {
+              pix.push(x, y);
+              if (x < minX) minX = x;
+              if (x > maxX) maxX = x;
+              if (y < minY) minY = y;
+              if (y > maxY) maxY = y;
+            }
+          }
+        }
+        const tw = maxX - minX, th = maxY - minY;
+        const targetW = Math.min(aspect * 1.7, 3.1);
+        const s = targetW / tw;
+        const r2 = rng(17);
+        const count = pix.length / 2;
+        const xs = new Float32Array(N), ys = new Float32Array(N);
+        for (let i = 0; i < N; i++) {
+          const k = Math.floor(r2() * count) * 2;
+          xs[i] = pix[k] + r2() * 2;
+          ys[i] = pix[k + 1] + r2() * 2;
+        }
+        const idx = Array.from({ length: N }, (_, i) => i).sort((a, b) => xs[a] + ys[a] * 0.35 - (xs[b] + ys[b] * 0.35));
+        for (let i = 0; i < N; i++) {
+          const j = idx[i];
+          B[i * 2] = (xs[j] - minX - tw / 2) * s;
+          B[i * 2 + 1] = -(ys[j] - minY - th / 2) * s - 0.05;
+        }
+        gl.bindBuffer(gl.ARRAY_BUFFER, bufB);
+        gl.bufferSubData(gl.ARRAY_BUFFER, 0, B);
+      }
+
+      /** Six columns of cells, one point per level, height ∝ level count. */
+      function buildChart() {
+        const totalW = Math.min(aspect * 1.6, 3.0);
+        const gap = totalW * 0.04;
+        const colW = (totalW - gap * 5) / 6;
+        const maxLv = Math.max(...GRIDS.map((g) => g.levels));
+        const maxH = 1.05;
+        const sp = Math.sqrt((colW * maxH) / maxLv);
+        const per = Math.max(1, Math.floor(colW / sp));
+        const base = -0.62;
+        let k = 0;
+        labelsEl.replaceChildren();
+        GRIDS.forEach((g, gi) => {
+          const x0 = -totalW / 2 + gi * (colW + gap);
+          for (let i = 0; i < g.levels; i++) {
+            const row = Math.floor(i / per), col = i % per;
+            C[k * 2] = x0 + (col + 0.5) * (colW / per);
+            C[k * 2 + 1] = base + row * sp;
+            k++;
+          }
+          const lab = el("div", "count__label");
+          const cxu = x0 + colW / 2;
+          lab.style.setProperty("--x", `${((cxu / aspect + 1) / 2) * 100}%`);
+          lab.style.setProperty("--y", `${((1 - base) / 2) * 100 + 2}%`);
+          lab.style.setProperty("--i", String(gi));
+          lab.append(el("div", "count__label-grid", g.id.replace("x", "×")), el("div", "count__label-num", t("count.label", { n: fmt(g.levels) })));
+          labelsEl.append(lab);
+        });
+        gl.bindBuffer(gl.ARRAY_BUFFER, bufC);
+        gl.bufferSubData(gl.ARRAY_BUFFER, 0, C);
+      }
+
+      function resize() {
+        const dpr = Math.min(window.devicePixelRatio || 1, 2);
+        const W = canvas.clientWidth, H = canvas.clientHeight;
+        canvas.width = Math.round(W * dpr);
+        canvas.height = Math.round(H * dpr);
+        gl.viewport(0, 0, canvas.width, canvas.height);
+        aspect = W / Math.max(1, H);
+        buildNumber();
+        buildChart();
+        gl.uniform1f(U.uSize, Math.max(1.6, (H / 560) * dpr));
+      }
+
+      /** @param {number} px @param {number} py */
+      function pointer(px, py) {
+        const r = canvas.getBoundingClientRect();
+        mouse.x = ((px - r.left) / r.width * 2 - 1) * aspect;
+        mouse.y = -((py - r.top) / r.height * 2 - 1);
+        mouse.k = 1;
+      }
+
+      /** @param {number} time @param {number} dt */
+      function frame(time, dt) {
+        if (!visible) return;
+        const p = stickyProgress(section);
+        const uT = p < 0.1 ? 0 : p < 0.4 ? (p - 0.1) / 0.3 : p < 0.55 ? 1 : p < 0.82 ? 1 + (p - 0.55) / 0.27 : 2;
+        const ph = uT < 0.55 ? 0 : uT < 1.55 ? 1 : 2;
+        if (ph !== phase) {
+          if (phase !== -1) Sound.whoosh();
+          phase = ph;
+          captionEl.textContent = t(`count.p${ph}`);
+          captionEl.classList.remove("journey__swap");
+          void captionEl.offsetWidth;
+          captionEl.classList.add("journey__swap");
+          section.classList.toggle("count--chart", ph === 2);
+        }
+        mouse.k = Math.max(0, mouse.k - dt * 0.6);
+        gl.clearColor(0, 0, 0, 0);
+        gl.clear(gl.COLOR_BUFFER_BIT);
+        gl.enable(gl.BLEND);
+        gl.blendFunc(gl.ONE, gl.ONE_MINUS_SRC_ALPHA);
+        gl.useProgram(prog);
+        gl.bindVertexArray(vao);
+        gl.uniform1f(U.uT, uT);
+        gl.uniform1f(U.uTime, REDUCED ? 0 : time);
+        gl.uniform1f(U.uAspect, aspect);
+        gl.uniform3f(U.uMouse, mouse.x, mouse.y, mouse.k);
+        gl.drawArrays(gl.POINTS, 0, N);
+      }
+
+      function refreshText() {
+        buildNumber();
+        buildChart();
+        if (phase >= 0) captionEl.textContent = t(`count.p${phase}`);
+      }
+
+      const io = new IntersectionObserver((entries) => {
+        for (const e of entries) visible = e.isIntersecting;
+      });
+      io.observe(section);
+      resize();
+      return { frame, resize, refreshText, pointer };
+    })();
+
+    /* ============================================================
+       4h. Decorations — mini logo, features, cursor, reveal, counters
+       ============================================================ */
+    (function buildMiniBoard() {
+      const box = ref("mini-board");
+      const r = rng(7);
+      const states = ["active", "filled", "passive"];
+      const pool = Array.from({ length: 25 }, (_, i) => states[i % 3]);
+      for (let i = pool.length - 1; i > 0; i--) {
+        const j = Math.floor(r() * (i + 1));
+        [pool[i], pool[j]] = [pool[j], pool[i]];
+      }
+      for (const s of pool) box.append(el("span", `mini-board__cell mini-board__cell--${s}`));
+    })();
+
+    (function decorateFeatures() {
+      const r = rng(31);
+      document.querySelectorAll(".feature").forEach((card) => {
+        const box = el("span", "feature__cells");
+        box.setAttribute("aria-hidden", "true");
+        for (let i = 0; i < 25; i++) {
+          const v = r();
+          const c = el("span", `feature__cell${v < 0.34 ? " feature__cell--a" : v < 0.67 ? " feature__cell--f" : ""}`);
+          c.style.setProperty("--k", String(i));
+          box.append(c);
+        }
+        card.append(box);
+      });
+    })();
+
+    const heroWordmark = buildWordmark(ref("wordmark-hero"), REDUCED ? 0 : 0.35);
+    const ctaWordmark = buildWordmark(ref("wordmark-cta"), 0);
+
+    const cursorEl = /** @type {HTMLElement} */ ($(".cursor"));
+    const cursor = { x: -100, y: -100, tx: -100, ty: -100 };
+
+    const revealIO = new IntersectionObserver(
+      (entries) => {
+        for (const e of entries) {
+          if (e.isIntersecting) {
+            e.target.classList.add("reveal--in");
+            revealIO.unobserve(e.target);
+          }
+        }
+      },
+      { rootMargin: "0px 0px -8% 0px" },
+    );
+    document.querySelectorAll(".reveal").forEach((n) => revealIO.observe(n));
+
+    function runCounters() {
+      document.querySelectorAll("[data-count]").forEach((node) => {
+        const target = Number(/** @type {HTMLElement} */ (node).dataset.count);
+        if (REDUCED) {
+          node.textContent = fmt(target) + (target === TOTAL_LEVELS ? "+" : "");
+          return;
+        }
+        const start = performance.now() + 1700;
+        const dur = 1800;
+        const step = () => {
+          const k = clamp((performance.now() - start) / dur, 0, 1);
+          node.textContent = fmt(Math.round(target * easeOut(k))) + (target === TOTAL_LEVELS && k === 1 ? "+" : "");
+          if (k < 1) requestAnimationFrame(step);
+        };
+        step();
+      });
+    }
+
+    /* ============================================================
+       5. i18n render
+       ============================================================ */
+    // Static copy (data-i18n, title, links) is rendered per language by build-home.mjs;
+    // this only fills what the scripts generate.
+    function applyLang() {
+      document.querySelectorAll("[data-count]").forEach((node) => {
+        const v = Number(/** @type {HTMLElement} */ (node).dataset.count);
+        if (node.textContent && /\d/.test(node.textContent)) node.textContent = fmt(v) + (v === TOTAL_LEVELS ? "+" : "");
+      });
+      applySound();
+      Rule.render();
+      Play.refreshText();
+      Journey.refreshText();
+      Count.refreshText();
+    }
+
+    function applySound() {
+      const b = /** @type {HTMLElement} */ ($('[data-action="sound"]'));
+      b.setAttribute("aria-pressed", String(prefs.sound));
+      ref("sound-label").textContent = t(prefs.sound ? "sound.on" : "sound.off");
+    }
+
+    /* ============================================================
+       6. Events — one delegated listener per event type
+       ============================================================ */
+    let audioUnlocked = false;
+    function unlockAudio() {
+      if (audioUnlocked) return;
+      audioUnlocked = true;
+      Sound.unlock();
+    }
+
+    document.addEventListener("pointerdown", unlockAudio, { capture: true });
+    document.addEventListener("keydown", unlockAudio, { capture: true });
+
+    document.addEventListener("click", (ev) => {
+      const target = /** @type {HTMLElement} */ (ev.target);
+      const act = /** @type {HTMLElement | null} */ (target.closest("[data-action]"));
+      if (act) {
+        const a = act.dataset.action;
+        if (a === "sound") {
+          prefs.sound = !prefs.sound;
+          savePrefs();
+          Sound.setEnabled(prefs.sound);
+          applySound();
+          if (prefs.sound) window.setTimeout(() => Sound.pulse(1.2, 0.7), 60);
+        } else if (a === "rule-move") {
+          Rule.move(Number(act.dataset.cell));
+        } else if (a === "rule-reset") {
+          Rule.reset();
+          Sound.flip();
+        } else if (a === "play-cell") {
+          Play.tap(Number(act.dataset.cell));
+        } else if (a === "play-tab") {
+          Play.load(Number(act.dataset.index));
+          Sound.whoosh();
+        } else if (a === "play-undo") {
+          Play.undo();
+        } else if (a === "play-restart") {
+          Play.restart();
+          Sound.flip();
+        } else if (a === "play-hint") {
+          Play.hint();
+        } else if (a === "play-solve") {
+          Play.solve();
+        } else if (a === "play-next") {
+          Play.next();
+          Sound.whoosh();
+        }
+        return;
+      }
+      const wm = target.closest(".wm__cell--on");
+      if (wm) {
+        flipWordmarkCell(/** @type {HTMLElement} */ (wm));
+        Field.waveAtElement(wm, 1.2);
+        Sound.pulse(0.9 + Math.random() * 0.4, 0.9);
+        return;
+      }
+      if (target.closest("a, button, input, select, textarea, label")) return;
+      if (Field.waveAt(ev.clientX, ev.clientY, 1.3)) Sound.pulse(0.85 + Math.random() * 0.5, 0.9);
+    });
+
+    /** @param {HTMLElement} cell */
+    function flipWordmarkCell(cell) {
+      if (cell.classList.contains("wm__cell--flipped")) return;
+      cell.classList.add("wm__cell--flipped");
+      Sound.move(Number(cell.dataset.seq) - 1);
+      window.setTimeout(() => cell.classList.remove("wm__cell--flipped"), 1700);
+    }
+
+    document.addEventListener("pointerover", (ev) => {
+      const target = /** @type {HTMLElement} */ (ev.target);
+      const wm = /** @type {HTMLElement | null} */ (target.closest(".wm__cell--on"));
+      if (wm && ev.pointerType === "mouse") flipWordmarkCell(wm);
+      const rc = /** @type {HTMLElement | null} */ (target.closest(".rcell--target"));
+      if (rc) Rule.preview(Number(rc.dataset.cell));
+      if (FINE_POINTER) cursorEl.classList.toggle("cursor--hover", !!target.closest("a, button, .wm__cell--on"));
+    });
+
+    document.addEventListener("focusin", (ev) => {
+      const rc = /** @type {HTMLElement | null} */ (/** @type {HTMLElement} */ (ev.target).closest(".rcell--target"));
+      if (rc) Rule.preview(Number(rc.dataset.cell));
+    });
+
+    /** @type {{ x: number, y: number }} */
+    const pointerPos = { x: window.innerWidth / 2, y: window.innerHeight / 2 };
+    document.addEventListener("pointermove", (ev) => {
+      pointerPos.x = ev.clientX;
+      pointerPos.y = ev.clientY;
+      Field.pointer(ev.clientX, ev.clientY);
+      Count.pointer(ev.clientX, ev.clientY);
+      cursor.tx = ev.clientX;
+      cursor.ty = ev.clientY;
+      if (FINE_POINTER) cursorEl.classList.add("cursor--on");
+      const feature = /** @type {HTMLElement | null} */ (/** @type {HTMLElement} */ (ev.target).closest(".feature"));
+      document.querySelectorAll(".feature").forEach((f) => {
+        const card = /** @type {HTMLElement} */ (f);
+        if (card !== feature) {
+          card.style.setProperty("--spot", "0");
+          card.style.setProperty("--rx", "0deg");
+          card.style.setProperty("--ry", "0deg");
+        }
+      });
+      if (feature && !REDUCED) {
+        const r = feature.getBoundingClientRect();
+        const x = (ev.clientX - r.left) / r.width, y = (ev.clientY - r.top) / r.height;
+        feature.style.setProperty("--mx", `${(x * 100).toFixed(1)}%`);
+        feature.style.setProperty("--my", `${(y * 100).toFixed(1)}%`);
+        feature.style.setProperty("--spot", "1");
+        feature.style.setProperty("--rx", `${((0.5 - y) * 10).toFixed(2)}deg`);
+        feature.style.setProperty("--ry", `${((x - 0.5) * 12).toFixed(2)}deg`);
+      }
+    });
+    document.addEventListener("pointerleave", () => cursorEl.classList.remove("cursor--on"));
+
+    window.addEventListener("resize", () => {
+      Field.resize();
+      Journey.resize();
+      Count.resize();
+    });
+
+    /* ============================================================
+       7. Init + main loop
+       ============================================================ */
+    const sections = /** @type {HTMLElement[]} */ ([...document.querySelectorAll("[data-section]")]);
+    const navEl = /** @type {HTMLElement} */ ($(".nav"));
+    const heroWm = ref("wordmark-hero");
+    const ctaWm = ref("wordmark-cta");
+    const ruleSection = /** @type {HTMLElement} */ ($(".rule"));
+    const playSection = /** @type {HTMLElement} */ ($(".play"));
+    const ctaSection = /** @type {HTMLElement} */ ($(".cta"));
+    let lastBeat = 0.6;
+    let lastCtaBeat = 0;
+    let activeNav = "";
+
+    function currentSection() {
+      const mid = window.innerHeight * 0.5;
+      for (const s of sections) {
+        const r = s.getBoundingClientRect();
+        if (r.top <= mid && r.bottom > mid) return s;
+      }
+      return sections[0];
+    }
+
+    let prevTime = performance.now();
+    /** @param {number} now */
+    function loop(now) {
+      const dt = Math.min(0.1, (now - prevTime) / 1000);
+      prevTime = now;
+      const time = Field.now();
+      const H = window.innerHeight;
+      const sec = currentSection();
+
+      // Camera: hero perspective → top-down; back to perspective for the final CTA.
+      const ctaTop = ctaSection.getBoundingClientRect().top;
+      const ctaK = clamp(1 - ctaTop / (H * 0.9), 0, 1);
+      const heroK = Math.min(clamp(window.scrollY / (H * 0.85), 0, 1), 1 - ctaK);
+      Field.frame(dt, { heroK, dim: Number(sec.dataset.dim || 1) });
+
+      // Hero heartbeat: a wave from the wordmark every 2.6 s (+ the splash pulse).
+      if (!REDUCED && heroK < 0.6 && time - lastBeat > 2.6) {
+        lastBeat = time;
+        if (Field.waveAtElement(heroWm, 1)) {
+          heroWordmark.beat();
+          if (window.scrollY < H * 0.5) Sound.pulse(1, 0.45);
+        }
+      }
+      if (!REDUCED && ctaK > 0.85 && time - lastCtaBeat > 2.6) {
+        lastCtaBeat = time;
+        if (Field.waveAtElement(ctaWm, 1)) {
+          ctaWordmark.beat();
+          Sound.pulse(1, 0.45);
+        }
+      }
+
+      // Nav
+      navEl.classList.toggle("nav--solid", window.scrollY > 40);
+      const navKey = sec.dataset.section || "";
+      if (navKey !== activeNav) {
+        activeNav = navKey;
+        document.querySelectorAll("[data-nav]").forEach((a) => a.classList.toggle("nav__link--active", /** @type {HTMLElement} */ (a).dataset.nav === navKey));
+      }
+
+      // Board tilts follow the cursor
+      if (!REDUCED) {
+        const nx = pointerPos.x / window.innerWidth - 0.5, ny = pointerPos.y / H - 0.5;
+        if (sec === ruleSection) Rule.tilt(10 - ny * 8, -8 + nx * 10);
+        if (sec === playSection) Play.tilt(-ny * 5, nx * 6);
+        const heroEl = /** @type {HTMLElement} */ (heroWm);
+        heroEl.style.setProperty("--wm-rx", `${(-ny * 9).toFixed(2)}deg`);
+        heroEl.style.setProperty("--wm-ry", `${(nx * 12).toFixed(2)}deg`);
+      }
+
+      Play.frame(dt);
+      Journey.frame(time, dt);
+      Count.frame(time, dt);
+
+      // Decorative cursor (lerped)
+      if (FINE_POINTER) {
+        cursor.x = lerp(cursor.x, cursor.tx, 1 - Math.exp(-dt * 18));
+        cursor.y = lerp(cursor.y, cursor.ty, 1 - Math.exp(-dt * 18));
+        cursorEl.style.setProperty("--cx", `${cursor.x.toFixed(1)}px`);
+        cursorEl.style.setProperty("--cy", `${cursor.y.toFixed(1)}px`);
+        cursorEl.style.setProperty("--cr", `${((time * 40) % 360).toFixed(1)}deg`);
+      }
+      requestAnimationFrame(loop);
+    }
+
+    applyLang();
+    runCounters();
+    requestAnimationFrame(loop);
+    // Exposed for the verification script only.
+    /** @type {any} */ (window).__site = { Play, Field, prefs, levels: RAW_LEVELS.map(decodeLevel), APP_STORE_URL };
+  </script>
+  <script src="/lang.js" defer></script>
+  <script>
+    // Tracking store badge clicks (same event as the live site)
+    document.querySelectorAll("a.badge").forEach((badge) => {
+      badge.addEventListener("click", () => {
+        gtag("event", "click_store_badge", {
+          store_name: badge.getAttribute("href").startsWith("https://apps.apple.com") ? "App Store" : "Google Play",
+        });
+      });
+    });
+  </script>
+</body>
 </html>

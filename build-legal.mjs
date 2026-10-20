@@ -13,8 +13,8 @@
  * the language <select> switcher and links /lang.js, which remembers the
  * visitor's language choice and rewrites in-page navigation accordingly.
  *
- * Pages use the v2 design (v2.html): CSS is inlined from CSS below, system
- * fonts only; they no longer load /styles.css or Google Fonts.
+ * Pages use the v2 design of the landing page (i18n/home/_template.html): CSS
+ * is inlined from CSS below, system fonts only; no /styles.css or Google Fonts.
  */
 import { readFileSync, writeFileSync, mkdirSync } from "node:fs";
 import { fileURLToPath } from "node:url";
@@ -88,7 +88,7 @@ function para(sec) {
   return html;
 }
 
-// Same look as v2.html (card #13 design): the game's dark theme, a tilted
+// Same look as the landing page (card #13 design): the game's dark theme, a tilted
 // plane of game cells behind the page, glass panels, system fonts only.
 // Inlined into every page so a legal page needs no other request.
 const CELL = (x, y, fill, op) =>

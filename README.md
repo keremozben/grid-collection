@@ -173,10 +173,10 @@ kapalı; veri saklama 14 ay (gizlilik politikası "en fazla 14 ay" diyor).
 ### Mağaza dönüşümü ve kampanya linkleri
 
 - **App Store:** butonlar kampanya linkidir:
-  `https://apps.apple.com/app/apple-store/id6761419296?pt=<provider token>&ct=web_<konum>&mt=8` (`ct` her buton
+  `https://apps.apple.com/app/apple-store/id6761419296?pt=128707729&ct=web_<konum>&mt=8` (`ct` her buton
   için ayrı: `web_hero`, `web_cta`, `web_noscript`). Provider token `assets/analytics-config.js`'teki
-  `APP_STORE_PROVIDER_TOKEN` sabitinde (App Store Connect → App Analytics → Campaigns). **Şu an boş**: linkler
-  `pt` olmadan çıkar. Doldurunca `node tools/build-langs.mjs`.
+  `APP_STORE_PROVIDER_TOKEN` sabitinde (App Store Connect → App Analytics → Campaigns; hesap düzeyinde,
+  `128707729`). Değişirse `node tools/build-langs.mjs`.
 - **Google Play** yayına girince "Yakında" `mailto:` butonları şu biçimde linke dönmeli (`status` → `live`):
   `https://play.google.com/store/apps/details?id=<paket>&referrer=utm_source%3Dgrid-collection.com%26utm_medium%3Dweb%26utm_campaign%3D<konum>`
 - **Sosyal paylaşım linklerinde UTM:** `https://grid-collection.com/?utm_source=instagram&utm_medium=social&utm_campaign=<kampanya>`

@@ -12,7 +12,7 @@ _src/                 şablonlar (yayınlanmaz: "_" ile başlayan klasörü Jeky
 index.html …          EN sayfalar (üretilir)        tr/…   TR sayfalar (üretilir)
 404.html, sitemap.xml (üretilir)
 assets/
-  analytics-config.js ölçüm kimliği + App Store provider token (tek yer)
+  analytics-config.js ölçüm kimliği, App Store id + provider token, Google Play paket adı (tek yer)
   analytics.js        onay bandı + GA4 + track() (tüm sayfalar)
   site.js             dil tercihi (localStorage)
   pages.css           destek / gizlilik / şartlar / 404 stilleri
@@ -47,15 +47,16 @@ Yerelde açmak: `node tools/serve.mjs` → http://localhost:8080/ (sayfalar kök
   görürse hata verir, `sitemap.xml`'i yeniden yazar (içeriği değişmeyen sayfanın `lastmod`'u korunur).
   Slotlar (ayrıntı betiğin başında): `{{anahtar}}` metin, `{{html:anahtar}}` HTML'li metin, `{{@head}}` (title,
   description, canonical, hreflang, ikonlar, manifest, smart banner, OG/Twitter, JSON-LD, analytics),
-  `{{@href:support}}` dile göre link, `{{@store:hero}}` App Store kampanya linki, `{{@langswitch}}`,
-  `{{@footer}}`, `{{@consent}}`, `{{@text}}` (ana sayfa JS'inin o dildeki sözlüğü).
+  `{{@href:support}}` dile göre link, `{{@store:hero}}` App Store kampanya linki, `{{@play:hero}}` Google Play
+  linki (install referrer'lı), `{{@langswitch}}`, `{{@footer}}`, `{{@consent}}`, `{{@text}}` (ana sayfa JS'inin o
+  dildeki sözlüğü).
 - **Yeni metin:** `_src/i18n/<sayfa>.json`'da `en` ve `tr`'ye aynı anahtar; şablonda `{{anahtar}}`, JS'te `t("anahtar")`.
 - Başlıklar: TR `Grid Collection — 95.000 seviyelik bulmaca oyunu`, EN `Grid Collection — Logic Puzzle Game with
   95,000 Levels`. Description'lar sözlükteki `meta.desc`.
-- Ana sayfada `MobileApplication` JSON-LD (ad, dile göre açıklama, `offers` ücretsiz, `installUrl` / `sameAs` App
-  Store, 3 ekran görüntüsü `assets/screens/`, 16 dil, yayıncı). `aggregateRating` **gerçek** App Store puanı
-  oluşunca `tools/build-langs.mjs`'teki `APP_RATING`'e yazılır; uydurma puan konmaz (22.10.2026: yalnız TR
-  mağazasında 3 puan vardı).
+- Ana sayfada `MobileApplication` JSON-LD (ad, dile göre açıklama, `operatingSystem` "iOS, Android", `offers`
+  ücretsiz ve `installUrl` / `sameAs` App Store + Google Play, 3 ekran görüntüsü `assets/screens/`, 16 dil,
+  yayıncı). `aggregateRating` **gerçek** App Store puanı oluşunca `tools/build-langs.mjs`'teki `APP_RATING`'e
+  yazılır; uydurma puan konmaz (22.10.2026: yalnız TR mağazasında 3 puan vardı).
 - Tüm sayfalarda dosya tabanlı favicon seti, `apple-touch-icon`, `site.webmanifest` ve iOS akıllı banner
   (`<meta name="apple-itunes-app" content="app-id=6761419296">`). `llms.txt` yapay zekâ arayıcıları için özet.
 
@@ -70,7 +71,7 @@ Yerelde açmak: `node tools/serve.mjs` → http://localhost:8080/ (sayfalar kök
 | 03 | **Koleksiyon** (yapışkan, kaydırma) | Canvas 2D: tahta 5x5 → 10x10 büyür, aktif hücreler o boyutun rakamını çizer; Extreme'de 20x20 tahta 400 hamlede kendini çözer. Adımlar tıklanabilir. 820 px altında tahta metnin altına geçer. |
 | 04 | **Ölçek** (yapışkan, kaydırma) | WebGL2, 95.000 nokta = oyundaki 95.000 seviye, oyun sırasıyla: ilerleme spirali (simetrik tahtalı 384 seviye yıldız), "95.000" sayısı, grid başına sütunlar. Sütunlarda üstüne gelince (dokunmatikte dokununca) seviyenin gerçek tahtası açılır ve oynanır. Seviye verisi bölüme yaklaşınca yüklenir; yüklenirken "Seviyeler yükleniyor…". Dar ekranda spiral küçülür. |
 | 05 | **Özellikler** | 8 kart; imleçle 3B eğim + spot ışığı. |
-| — | **CTA + footer** | Küçük GRID logosu, App Store / "Yakında" Google Play, destek / gizlilik / şartlar, çerez tercihleri. |
+| — | **CTA + footer** | Küçük GRID logosu, App Store / Google Play, destek / gizlilik / şartlar, çerez tercihleri. |
 
 **Ekranlar:** 1 rem 1920 px'ten itibaren görünüm genişliğinin 1/120'si (1080p, 1440p, 4K'da birebir ölçeklenir);
 1100 px altında 12 px; **760 px altında telefon düzeni** (14 px kök, tek sütun, hero butonları ve istatistikler
@@ -90,7 +91,7 @@ taşma yok.
 - Uygulamanın adı her yerde **Grid Collection** ("GRID" değil). Şartlar sayfasının adı **Hizmet Şartları** /
   Terms of Service.
 - Özellik metinleri uygulamanın gerçek davranışına uyar: hesap/kayıt yok, ilerleme cihazda (bulut senkronu yok),
-  liderlik tablosu Game Center.
+  liderlik tablosu Game Center (iOS) / Google Play Games (Android).
 - **Marka:** hücreler arasında çizgi/yay yok, en küçük tahta 5x5, hücre renkleri oyundakiyle aynı
   (`#FF6B35` aktif / `#0F3460` hamle yapılmış / `#2D2D4A` pasif, zemin `#1A1A2E`). Hero/CTA'daki hücre logosunda
   turuncu yüz üstten açık degrade (`#FF8A5C` → `#FF6B35`), çevrilince bej (`#F7C59F`) numara.
@@ -107,7 +108,7 @@ taşma yok.
 
 `og-image.png` (EN) ve `og-image-tr.png` (TR), 1200×630, her biri **< 300 KB** (WhatsApp büyükleri sık sık
 göstermiyor). Kaynak `brand-assets/og-image.html` (`?lang=en|tr`; GRID hücre logosu, güncel rakamlar, oyundan
-gerçek bir 7x7 seviye, App Store vurgusu). Üretmek:
+gerçek bir 7x7 seviye, App Store + Google Play rozetleri). Üretmek:
 
 ```bash
 node brand-assets/capture.mjs      # 300 KB'ı aşan olursa hata verir
@@ -151,7 +152,7 @@ Betik `levels-meta.json` ile `_src/index.html`'deki `META` sabitini karşılaşt
 | Event | Parametreler | Nerede |
 |---|---|---|
 | `page_view` | (otomatik) | her sayfa, onaydan sonra |
-| `store_click` | `platform` ios/android, `location` hero/cta, `status` live/coming_soon | mağaza butonları (Google Play "Yakında" `mailto:` = `coming_soon`) |
+| `store_click` | `platform` ios/android, `location` hero/cta, `status` live | mağaza butonları (App Store ve Google Play yayında: `live`) |
 | `lang_switch` | `from`, `to` | TR / EN linkleri (sayfa değişir; yeni sayfa kendi page_view'ını sayar) |
 | `sound_toggle` | `on` | ses düğmesi |
 | `section_view` | `section` hero/rule/play/collection/scale/features/download | bölümün ya da ekranın %50'si görününce, oturumda bölüm başına bir kez |
@@ -177,8 +178,11 @@ kapalı; veri saklama 14 ay (gizlilik politikası "en fazla 14 ay" diyor).
   için ayrı: `web_hero`, `web_cta`, `web_noscript`). Provider token `assets/analytics-config.js`'teki
   `APP_STORE_PROVIDER_TOKEN` sabitinde (App Store Connect → App Analytics → Campaigns; hesap düzeyinde,
   `128707729`). Değişirse `node tools/build-langs.mjs`.
-- **Google Play** yayına girince "Yakında" `mailto:` butonları şu biçimde linke dönmeli (`status` → `live`):
-  `https://play.google.com/store/apps/details?id=<paket>&referrer=utm_source%3Dgrid-collection.com%26utm_medium%3Dweb%26utm_campaign%3D<konum>`
+- **Google Play:** butonlar install referrer'lı mağaza linkidir:
+  `https://play.google.com/store/apps/details?id=com.gridcollection.games&referrer=utm_source%3Dgrid-collection.com%26utm_medium%3Dweb%26utm_campaign%3Dweb_<konum>`
+  (`utm_campaign` App Store'daki `ct` ile aynı: `web_hero`, `web_cta`, `web_noscript`; Play Console → kullanıcı
+  edinme raporlarında görünür). Paket adı `assets/analytics-config.js`'teki `GOOGLE_PLAY_PACKAGE` sabitinde;
+  değişirse `node tools/build-langs.mjs`. JSON-LD'de referrer'sız mağaza linki kullanılır.
 - **Sosyal paylaşım linklerinde UTM:** `https://grid-collection.com/?utm_source=instagram&utm_medium=social&utm_campaign=<kampanya>`
   (TR sayfa için `/tr/?utm_…`). GA4'te kanal/kaynak kırılımında görünür.
 

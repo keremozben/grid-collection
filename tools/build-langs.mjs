@@ -21,6 +21,7 @@
 //                      analytics module
 //   {{@href:<page>}}   that page in the current language (home, support, privacy, terms)
 //   {{@store:<place>}} App Store campaign link, ct=web_<place>
+//   {{@play:<place>}}  Google Play link with an install referrer, utm_campaign=web_<place>
 //   {{@langswitch}}    TR / EN links to this page in the other language
 //   {{@footer}}        site footer (legal links + cookie preferences)
 //   {{@consent}}       the consent banner (assets/analytics.js drives it)
@@ -39,10 +40,11 @@ const LOCALE = { en: "en-US", tr: "tr-TR" };
 const OG_LOCALE = { en: "en_US", tr: "tr_TR" };
 const LANG_NAME = { en: "English", tr: "Türkçe" };
 
-const { APP_STORE_ID, APP_STORE_PROVIDER_TOKEN } = await import(
+const { APP_STORE_ID, APP_STORE_PROVIDER_TOKEN, GOOGLE_PLAY_PACKAGE } = await import(
   pathToFileURL(join(root, "assets", "analytics-config.js")).href
 );
 const APP_STORE_URL = `https://apps.apple.com/app/id${APP_STORE_ID}`;
+const GOOGLE_PLAY_URL = `https://play.google.com/store/apps/details?id=${GOOGLE_PLAY_PACKAGE}`;
 /** App languages (App Store listing) — JSON-LD inLanguage. */
 const APP_LANGUAGES = ["en", "tr", "de", "es", "fr", "hi", "id", "it", "ja", "ko", "pl", "pt-BR", "ru", "vi", "zh-Hans", "zh-Hant"];
 /**
@@ -85,6 +87,16 @@ function storeLink(place) {
   q.set("ct", `web_${place}`);
   q.set("mt", "8");
   return `https://apps.apple.com/app/apple-store/id${APP_STORE_ID}?${q}`;
+}
+
+/**
+ * Google Play link for a button: the install referrer carries the campaign,
+ * utm_campaign=web_<place> (same values as the App Store ct).
+ * @param {string} place
+ */
+function playLink(place) {
+  const referrer = new URLSearchParams({ utm_source: "grid-collection.com", utm_medium: "web", utm_campaign: `web_${place}` });
+  return `${GOOGLE_PLAY_URL}&${new URLSearchParams({ referrer: String(referrer) })}`;
 }
 
 /** @param {Lang} lang */
@@ -148,12 +160,12 @@ function jsonLd(lang, url, desc) {
     description: desc,
     url,
     image: ogImage(lang),
-    operatingSystem: "iOS",
+    operatingSystem: "iOS, Android",
     applicationCategory: "GameApplication",
     genre: ["Puzzle", "Logic"],
-    offers: { "@type": "Offer", price: "0", priceCurrency: "USD", availability: "https://schema.org/InStock", url: APP_STORE_URL },
-    installUrl: APP_STORE_URL,
-    sameAs: [APP_STORE_URL],
+    offers: [APP_STORE_URL, GOOGLE_PLAY_URL].map((url) => ({ "@type": "Offer", price: "0", priceCurrency: "USD", availability: "https://schema.org/InStock", url })),
+    installUrl: [APP_STORE_URL, GOOGLE_PLAY_URL],
+    sameAs: [APP_STORE_URL, GOOGLE_PLAY_URL],
     screenshot: ["home", "gameplay-7x7", "stages"].map((s) => `${ORIGIN}/assets/screens/${lang}-${s}.webp`),
     inLanguage: APP_LANGUAGES,
     publisher: { "@type": "Person", name: "Kerem Özben", url: "https://apps.apple.com/developer/kerem-ozben/id1889505570" },
@@ -242,6 +254,7 @@ function render(html, page, lang, dict) {
     return path(id, lang);
   });
   html = html.replace(/\{\{@store:(\w+)\}\}/g, (_, place) => storeLink(place).replace(/&/g, "&amp;"));
+  html = html.replace(/\{\{@play:(\w+)\}\}/g, (_, place) => playLink(place).replace(/&/g, "&amp;"));
   html = html.replace(/\{\{(en|tr):([\w.-]+)\}\}/g, (_, l, k) => esc(look(l, k)));
   html = html.replace(/\{\{html:([\w.-]+)\}\}/g, (_, k) => t(k));
   html = html.replace(/\{\{([\w.-]+)\}\}/g, (_, k) => esc(t(k)));

@@ -20,6 +20,9 @@
 // The Scale section's popover is solved with the level's real solution, read in
 // Node from the app repo (the site never publishes solutions):
 //   --levels=H:\grid-collection\public\levels   (default; skipped if missing)
+// The privacy policy and terms of service are compared with the app's own texts
+// (src/shell/locales/en.json, tr.json; read only):
+//   --app=H:\grid-collection                     (default; skipped if missing)
 import { existsSync, mkdirSync, readFileSync, statSync } from "node:fs";
 import { dirname, join, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
@@ -32,6 +35,7 @@ const args = process.argv.slice(2);
 const arg = (name) => args.find((a) => a.startsWith(`--${name}=`))?.split("=").slice(1).join("=");
 const ONLY = (arg("only") || "seo,mobile,desktop,consent,events").split(",");
 const LEVELS = arg("levels") || "H:/grid-collection/public/levels";
+const APP = arg("app") || "H:/grid-collection";
 const PORT = 8137;
 const BASE = `http://localhost:${PORT}`;
 const ORIGIN = "https://grid-collection.com";
@@ -44,6 +48,7 @@ const PAGES = [
   { id: "terms", en: "/terms-of-service.html", tr: "/tr/terms-of-service.html", file: "terms-of-service.html" },
 ];
 const ALL_URLS = PAGES.flatMap((p) => [p.en, p.tr]);
+const PLAY_URL = "https://play.google.com/store/apps/details?id=com.gridcollection.games";
 
 let failures = 0;
 const check = (ok, msg) => {
@@ -163,11 +168,14 @@ if (ONLY.includes("seo")) {
         const bytes = Buffer.byteLength(h);
         check(bytes < 250 * 1024, `${u} weighs ${(bytes / 1024).toFixed(0)} KB (< 250 KB)`);
         const ld = JSON.parse(attr(h, /<script type="application\/ld\+json">([\s\S]*?)<\/script>/) || "{}");
+        const stores = (v) => [v].flat().filter(Boolean);
+        const bothStores = (v) => stores(v).some((x) => x.includes("id6761419296")) && stores(v).includes(PLAY_URL);
         const ldOk =
-          ld["@type"] === "MobileApplication" && ld.operatingSystem === "iOS" && ld.applicationCategory === "GameApplication" &&
-          ld.offers?.price === "0" && ld.installUrl?.includes("id6761419296") && ld.sameAs?.length && ld.screenshot?.length === 3 &&
+          ld["@type"] === "MobileApplication" && /\biOS\b/.test(ld.operatingSystem) && /\bAndroid\b/.test(ld.operatingSystem) &&
+          ld.applicationCategory === "GameApplication" && stores(ld.offers).length === 2 && stores(ld.offers).every((o) => o.price === "0") &&
+          bothStores(stores(ld.offers).map((o) => o.url)) && bothStores(ld.installUrl) && bothStores(ld.sameAs) && ld.screenshot?.length === 3 &&
           ld.inLanguage?.length === 16 && ld.publisher?.name && ld.description === desc && !("aggregateRating" in ld);
-        check(ldOk, `${u} JSON-LD ${ld["@type"]}: offers, installUrl, sameAs, ${ld.screenshot?.length} screenshots, ${ld.inLanguage?.length} languages, no invented rating`);
+        check(ldOk, `${u} JSON-LD ${ld["@type"]} (${ld.operatingSystem}): offers, installUrl, sameAs on App Store + Google Play, ${ld.screenshot?.length} screenshots, ${ld.inLanguage?.length} languages, no invented rating`);
         for (const s of ld.screenshot || []) check((await fetch(BASE + s.replace(ORIGIN, ""))).ok, `  screenshot ${s.replace(ORIGIN, "")} served`);
         const store = [...h.matchAll(/href="(https:\/\/apps\.apple\.com[^"]+)"/g)].map((m) => m[1].replace(/&amp;/g, "&"));
         const cts = store.map((s) => new URL(s).searchParams.get("ct"));
@@ -175,8 +183,25 @@ if (ONLY.includes("seo")) {
           store.length >= 2 && store.every((s) => s.startsWith("https://apps.apple.com/app/apple-store/id6761419296?") && /[?&]mt=8/.test(s)) && cts.includes("web_hero") && cts.includes("web_cta"),
           `${u} App Store links are campaign links: ct=${cts.join(", ")}`,
         );
+        // Google Play: the listing with an install referrer, utm_campaign = the App Store ct
+        const playHref = (a) => (attr(a, /href="([^"]+)"/) || "").replace(/&amp;/g, "&");
+        const campaign = (href) => {
+          if (!href.startsWith(`${PLAY_URL}&`)) return null;
+          const ref = new URLSearchParams(new URL(href).searchParams.get("referrer") || "");
+          return ref.get("utm_source") === "grid-collection.com" && ref.get("utm_medium") === "web" ? ref.get("utm_campaign") : null;
+        };
         const play = [...h.matchAll(/<a [^>]*data-track-platform="android"[^>]*>/g)].map((m) => m[0]);
-        check(play.length === 2 && play.every((a) => a.includes('href="mailto:') && a.includes('data-track-status="coming_soon"')), `${u} Google Play "coming soon" mailto measured as store_click coming_soon`);
+        const playCampaigns = play.map((a) => campaign(playHref(a)));
+        check(
+          play.length === 2 &&
+            play.every((a) => a.includes('data-track="store_click"') && a.includes('data-track-status="live"') && a.includes('target="_blank"') && !a.includes("badge--ghost")) &&
+            playCampaigns.join() === ["web_hero", "web_cta"].join() &&
+            play.every((a) => playCampaigns[play.indexOf(a)] === `web_${attr(a, /data-track-location="([^"]+)"/)}`),
+          `${u} Google Play buttons live, referrer links: utm_campaign=${playCampaigns.join(", ")}`,
+        );
+        const noscript = attr(h, /<noscript>([\s\S]*?)<\/noscript>/) || "";
+        const nsPlay = [...noscript.matchAll(/href="([^"]+)"/g)].map((m) => campaign(m[1].replace(/&amp;/g, "&"))).filter(Boolean);
+        check(nsPlay.join() === "web_noscript" && noscript.includes("ct=web_noscript"), `${u} <noscript>: App Store and Google Play links (web_noscript)`);
       }
     }
   }
@@ -184,6 +209,37 @@ if (ONLY.includes("seo")) {
   const all = PAGES.flatMap((p) => [p.en, p.tr]).map((u) => readFileSync(join(root, u.endsWith("/") ? `${u}index.html` : u), "utf8")).join("\n");
   check(!/Kullanım Şartları/.test(all), "one name for the terms page (no 'Kullanım Şartları')");
   check(!/(?<!9)5[.,]000\+|10×10 → |NUMBER PLACEMENT/i.test(all), "no outdated product facts");
+  const stale = all.match(/Coming soon|Yakında|on its way|sürümü yolda|coming_soon|mailto:[^"]*subject=Android|for iPhone(?! and)|iPhone için/i);
+  check(!stale, `Google Play is live: no 'coming soon' / iPhone-only text${stale ? ` (found "${stale[0]}")` : ""}`);
+  const legal = PAGES.filter((p) => p.id === "privacy" || p.id === "terms").flatMap((p) => [p.en, p.tr]).map((u) => readFileSync(join(root, u.replace(/^\//, "")), "utf8")).join("\n");
+  const wrong = legal.match(/synced?|senkronize|player identifier|oyuncu tanımlayıcı|progress backup|ilerleme yedekleme|backed up and restored|yedeklenir ve geri yüklenir|signs you in|oturum açtırır|cloud (servers|storage)|bulut (sunucu|depolama)|Firebase \(Google\) for authentication/i);
+  check(!wrong, `privacy / terms: no cloud sync, Game Center backup or player-ID crash reports${wrong ? ` (found "${wrong[0]}")` : ""}`);
+  // the legal texts are the app's own (src/shell/locales), with the app named Grid Collection
+  const appLocales = join(APP, "src", "shell", "locales");
+  if (existsSync(join(appLocales, "en.json"))) {
+    const flat = (o, out = {}) => {
+      for (const [k, v] of Object.entries(o)) typeof v === "object" ? flat(v, out) : (out[k] = v);
+      return out;
+    };
+    const SITE_KEYS = {
+      privacy: ["Introduction", "InformationCollection", "HowWeUse", "DataStorage", "ThirdPartyServices", "ChildrenPrivacy", "YourRights", "DataRetention", "Changes"].map((k, i) => [`privacyPolicy${k}Text`, `s${i + 1}.p`]),
+      terms: [...["Acceptance", "UseOfApplication", "UserAccounts", "ProhibitedActivities", "IntellectualProperty", "Disclaimers", "LimitationOfLiability", "Termination", "ChangesToTerms"].map((k, i) => [`terms${k}Text`, `s${i + 1}.p`]), ["termsInAppPurchasesText", "s11.p"], ["termsAppleEULAText", "s12.p"]],
+    };
+    // GRID → Grid Collection, with the Turkish suffix following the new last vowel
+    const NAME = { "GRID'i": "Grid Collection'ı", "GRID'e": "Grid Collection'a", "GRID'de": "Grid Collection'da", "GRID'in": "Grid Collection'ın", GRID: "Grid Collection" };
+    const rename = (t) => t.replace(/GRID(?:'(?:in|de|i|e))?/g, (m) => NAME[m]);
+    for (const lang of ["en", "tr"]) {
+      const app = flat(JSON.parse(readFileSync(join(appLocales, `${lang}.json`), "utf8")));
+      for (const [dict, pairs] of Object.entries(SITE_KEYS)) {
+        const site = JSON.parse(readFileSync(join(root, "_src", "i18n", `${dict}.json`), "utf8"))[lang];
+        const diff = pairs.filter(([a, b]) => rename(app[a] ?? "") !== site[b]).map(([, b]) => b);
+        // contact: the site splits the sentence around the mail link
+        const contact = app[dict === "privacy" ? "privacyPolicyContactText" : "termsContactInformationText"];
+        if (contact !== `${site["s10.p"]}{mail}${site["s10.p2"]}`) diff.push("s10");
+        check(diff.length === 0, `${dict} (${lang}) matches the app's text${diff.length ? `: differs in ${diff.join(", ")}` : ""}`);
+      }
+    }
+  } else console.log(`  - app texts not found at ${appLocales}: privacy / terms not compared (--app=<path>)`);
   for (const [f, lang] of [["og-image.png", "en"], ["og-image-tr.png", "tr"]]) {
     const buf = readFileSync(join(root, f));
     const w = buf.readUInt32BE(16), hgt = buf.readUInt32BE(20), kb = statSync(join(root, f)).size / 1024;
@@ -209,10 +265,10 @@ if (ONLY.includes("seo")) {
     "/tr/": ["Tek kural, sekiz yön", "Sıra", "Küçük kural."],
     "/support.html": ["Game Support & Bug Reports"],
     "/tr/support.html": ["Oyun Desteği ve Hata Bildirimleri"],
-    "/privacy-policy.html": ["Website (grid-collection.com)", "Google Analytics 4"],
-    "/tr/privacy-policy.html": ["Web Sitesi (grid-collection.com)", "Google Analytics 4"],
-    "/terms-of-service.html": ["Terms of Service", "Grid Collection is a puzzle game"],
-    "/tr/terms-of-service.html": ["Hizmet Şartları", "Grid Collection bir bulmaca oyunu"],
+    "/privacy-policy.html": ["Website (grid-collection.com)", "Google Analytics 4", "is stored only on your device and is not uploaded to our servers"],
+    "/tr/privacy-policy.html": ["Web Sitesi (grid-collection.com)", "Google Analytics 4", "yalnızca cihazınızda saklanır ve sunucularımıza yüklenmez"],
+    "/terms-of-service.html": ["Terms of Service", "Grid Collection is a puzzle game", "Grid Collection does not require an account"],
+    "/tr/terms-of-service.html": ["Hizmet Şartları", "Grid Collection bir bulmaca oyunu", "Grid Collection bir hesap gerektirmez"],
   };
   for (const [u, words] of Object.entries(expect)) {
     await page.goto(BASE + u);
@@ -224,6 +280,11 @@ if (ONLY.includes("seo")) {
       missing.length === 0 && lang === (u.startsWith("/tr/") ? "tr" : "en") && !grid,
       `JS off ${u}: lang=${lang}${missing.length ? `, missing ${missing.join(" | ")}` : ""}${grid ? ", 'GRID' used as the app name" : ""}`,
     );
+    if (u === "/" || u === "/tr/") {
+      const links = await page.evaluate(() => [...document.querySelectorAll(".noscript a, a.badge")].filter((a) => a.getClientRects().length).map((a) => a.href));
+      const playLinks = links.filter((x) => x.startsWith("https://play.google.com/store/apps/details?id=com.gridcollection.games&referrer="));
+      check(playLinks.length === 3, `JS off ${u}: Google Play reachable (${playLinks.length} visible links: hero, CTA, noscript)`);
+    }
   }
   await ctx.close();
 }
@@ -597,12 +658,12 @@ if (ONLY.includes("events")) {
 
   // static clicks
   await page.locator(".hero__actions a.badge").first().click();
-  await page.locator(".hero__actions a.badge--ghost").click();
+  await page.locator('.hero__actions a[data-track-platform="android"]').click();
   await page.locator('.nav a[data-lang="en"]').click();
   await page.locator('[data-action="sound"]').click();
   await page.waitForTimeout(300);
   check((await has("store_click", (p) => p.platform === "ios" && p.location === "hero" && p.status === "live")).length === 1, "store_click {ios, hero, live}");
-  check((await has("store_click", (p) => p.platform === "android" && p.location === "hero" && p.status === "coming_soon")).length === 1, "store_click {android, hero, coming_soon}");
+  check((await has("store_click", (p) => p.platform === "android" && p.location === "hero" && p.status === "live")).length === 1, "store_click {android, hero, live}");
   check((await has("lang_switch", (p) => p.from === "tr" && p.to === "en")).length === 1, "lang_switch {from: tr, to: en}");
   check((await has("sound_toggle", (p) => p.on === false)).length === 1, "sound_toggle {on: false}");
   const soundProp = await page.evaluate(() => window.dataLayer.filter((a) => a[0] === "set" && a[1] === "user_properties").at(-1)[2].sound_on);
@@ -694,10 +755,11 @@ if (ONLY.includes("events")) {
   // CTA store click
   await page.evaluate(() => document.querySelector("#download").scrollIntoView({ behavior: "instant" }));
   await page.waitForTimeout(800);
-  await page.locator(".cta__actions a.badge").first().click();
-  await page.locator(".cta__actions a.badge--ghost").click();
+  await page.locator('.cta__actions a[data-track-platform="ios"]').click();
+  await page.locator('.cta__actions a[data-track-platform="android"]').click();
   await page.waitForTimeout(200);
-  check((await has("store_click", (p) => p.location === "cta")).length === 2, "store_click from the CTA (ios + android)");
+  const cta = (await has("store_click", (p) => p.location === "cta")).map((e) => `${e.p.platform}:${e.p.status}`);
+  check(cta.sort().join() === "android:live,ios:live", `store_click from the CTA: ${cta.join(", ")}`);
   // web vitals (FCP/TTFB right away; LCP/CLS when the page is hidden)
   await page.evaluate(() => {
     Object.defineProperty(document, "visibilityState", { value: "hidden", configurable: true });

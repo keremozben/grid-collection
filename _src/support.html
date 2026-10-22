@@ -1,0 +1,56 @@
+<!doctype html>
+<!-- Template: tools/build-langs.mjs writes /support.html (EN) and /tr/support.html (TR) from this file and _src/i18n/support.json -->
+<html lang="{{@lang}}">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+{{@head}}
+    <link rel="stylesheet" href="/assets/pages.css" />
+  </head>
+  <body data-legal-page="support">
+    <div class="field" aria-hidden="true"></div>
+    <div class="glow" aria-hidden="true"></div>
+    <header class="nav">
+      <a href="{{@href:home}}" class="nav__brand">
+        <img class="nav__logo" src="/app-icon-128.png" width="128" height="128" alt="" />
+        <span>Grid Collection</span>
+      </a>
+      <nav class="nav__menu">
+        <ul class="nav__links">
+          <li><a class="nav__link" href="{{@href:home}}" data-page="home">{{nav.home}}</a></li>
+          <li><a class="nav__link" href="{{@href:support}}" data-page="support">{{nav.support}}</a></li>
+          <li><a class="nav__link" href="{{@href:privacy}}" data-page="privacy">{{nav.privacy}}</a></li>
+          <li><a class="nav__link" href="{{@href:terms}}" data-page="terms">{{nav.terms}}</a></li>
+        </ul>
+      </nav>
+      {{@langswitch}}
+    </header>
+
+    <main class="doc">
+      <h1 class="doc__title">{{doc.title}}</h1>
+
+      <div class="doc__panel">
+        <p class="doc__intro">{{intro}}</p>
+        <ul class="contacts">
+          <li class="contact">
+            <strong class="contact__label">{{c1.label}}</strong> <span>{{c1.text}}</span>
+            <a class="mail" href="mailto:support@grid-collection.com" data-track="support_contact" data-track-mailto="support">support@grid-collection.com</a>
+          </li>
+          <li class="contact">
+            <strong class="contact__label">{{c2.label}}</strong> <span>{{c2.text}}</span>
+            <a class="mail" href="mailto:info@grid-collection.com" data-track="support_contact" data-track-mailto="info">info@grid-collection.com</a>
+          </li>
+          <li class="contact">
+            <strong class="contact__label">{{c3.label}}</strong> <span>{{c3.text}}</span>
+            <a class="mail" href="mailto:contact@grid-collection.com" data-track="support_contact" data-track-mailto="contact">contact@grid-collection.com</a>
+          </li>
+        </ul>
+      </div>
+    </main>
+
+  {{@footer}}
+
+  {{@consent}}
+    <script type="module" src="/assets/site.js"></script>
+  </body>
+</html>

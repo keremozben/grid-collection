@@ -1,0 +1,6 @@
+# GitHub Pages (legacy Jekyll build): keep the build tooling out of the published site.
+# Folders starting with "_" (_src/) are never published.
+exclude:
+  - tools/
+  - brand-assets/
+  - README.md

@@ -1,0 +1,17 @@
+{
+  "name": "Grid Collection",
+  "short_name": "Grid Collection",
+  "description": "One rule, eight directions, 95,000 levels. A logic puzzle game for iPhone.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "browser",
+  "background_color": "#0b0b16",
+  "theme_color": "#0b0b16",
+  "icons": [
+    { "src": "/favicon-192x192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/icon-512.png", "sizes": "512x512", "type": "image/png" }
+  ],
+  "related_applications": [
+    { "platform": "itunes", "url": "https://apps.apple.com/app/id6761419296", "id": "6761419296" }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "name": "grid-collection-site-tools",
+  "private": true,
+  "type": "module",
+  "description": "Build and check scripts for grid-collection.com (the site itself has no build step).",
+  "scripts": {
+    "build": "node build-langs.mjs",
+    "og": "node ../brand-assets/capture.mjs",
+    "verify": "node verify.mjs",
+    "serve": "node serve.mjs",
+    "vendor": "node vendor.mjs"
+  },
+  "devDependencies": {
+    "playwright": "1.63.0",
+    "web-vitals": "^6.2.3"
+  }
+}

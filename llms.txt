@@ -1,0 +1,28 @@
+# Grid Collection
+
+> Grid Collection is a free logic puzzle game for iPhone (Android coming soon). One rule, eight directions, 95,000 levels: start on any orange cell and jump a fixed distance each move (3 cells straight or 2 cells diagonally) until every active cell is filled exactly once.
+
+- Levels: 95,000, every one solvable to 100%
+- Grid sizes: 6 (5×5, 6×6, 7×7, 8×8, 9×9, 10×10) plus 136 Extreme levels up to 20×20
+- Stages: 55, ordered by active-cell count, easy to hard
+- Stars: one at 80%, two at 90%, three at 100%; finish without an undo for the perfect badge
+- Helpers: the right starting cell, or 25%, 50% or 75% of the solution
+- Daily reward, a milestone reward every 5 levels, Game Center leaderboard
+- No sign-up: progress stays on the device
+- Languages: 16 (English, Turkish, German, Spanish, French, Hindi, Indonesian, Italian, Japanese, Korean, Polish, Brazilian Portuguese, Russian, Vietnamese, Simplified and Traditional Chinese)
+- Price: free on the App Store (in-app purchases and ads)
+
+## Links
+
+- [Website (English)](https://grid-collection.com/): play real levels in the browser
+- [Website (Turkish)](https://grid-collection.com/tr/)
+- [App Store](https://apps.apple.com/app/id6761419296)
+- [Support](https://grid-collection.com/support.html)
+- [Privacy Policy](https://grid-collection.com/privacy-policy.html)
+- [Terms of Service](https://grid-collection.com/terms-of-service.html)
+
+## Contact
+
+- Game support and bug reports: support@grid-collection.com
+- General information: info@grid-collection.com
+- Other requests and feature ideas: contact@grid-collection.com

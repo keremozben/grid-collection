@@ -1,0 +1,97 @@
+<!doctype html>
+<!-- Template: tools/build-langs.mjs writes /404.html (both languages) from this file and _src/i18n/common.json.
+     GitHub Pages serves it for every missing path, so every URL here is root-absolute. -->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Page not found · Sayfa bulunamadı — Grid Collection</title>
+    <meta name="robots" content="noindex" />
+  <meta name="color-scheme" content="dark" />
+  <meta name="theme-color" content="#0b0b16" />
+  <link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48" />
+  <link rel="icon" href="/favicon-32x32.png" type="image/png" sizes="32x32" />
+  <link rel="icon" href="/favicon-192x192.png" type="image/png" sizes="192x192" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <meta name="apple-itunes-app" content="app-id=6761419296" />
+    <link rel="stylesheet" href="/assets/pages.css" />
+    <script type="module" src="/assets/analytics.js"></script>
+  </head>
+  <body>
+    <div class="field" aria-hidden="true"></div>
+    <div class="glow" aria-hidden="true"></div>
+    <header class="nav">
+      <a href="/" class="nav__brand" data-home="en">
+        <img class="nav__logo" src="/app-icon-128.png" width="128" height="128" alt="" />
+        <span>Grid Collection</span>
+      </a>
+    </header>
+
+    <main class="doc">
+      <h1 class="doc__title">404</h1>
+      <div class="doc__panel">
+        <section class="lost__block" lang="en">
+          <h2 class="lost__title">Page not found</h2>
+          <p class="lost__text">The page you're looking for doesn't exist or has moved.</p>
+          <a class="lost__link" href="/">Back to the home page</a>
+        </section>
+        <section class="lost__block" lang="tr">
+          <h2 class="lost__title">Sayfa bulunamadı</h2>
+          <p class="lost__text">Aradığın sayfa yok ya da taşındı.</p>
+          <a class="lost__link" href="/tr/">Ana sayfaya dön</a>
+        </section>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <p class="footer__rights">© 2026 Grid Collection</p>
+      <nav class="footer__links" aria-label="Footer links">
+        <a class="footer__link" href="/support.html">Support</a>
+        <a class="footer__link" href="/tr/support.html" lang="tr">Destek</a>
+        <button class="footer__link footer__link--button" type="button" data-consent-open>Cookie preferences</button>
+      </nav>
+    </footer>
+
+    <section class="consent" data-consent role="region" aria-labelledby="consent-title" hidden>
+    <style>
+      .consent {
+        position: fixed; z-index: 95; right: 1.25rem; bottom: 1.25rem; width: min(26rem, calc(100% - 2.5rem));
+        padding: 1.2rem 1.3rem; border-radius: 1.1rem; color: #fff; font-size: 0.95rem; line-height: 1.5;
+        background: rgba(16, 16, 32, 0.94); border: 1px solid rgba(255, 255, 255, 0.18);
+        box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.55); backdrop-filter: blur(1rem); -webkit-backdrop-filter: blur(1rem);
+      }
+      .consent[hidden] { display: none; }
+      .consent__title { margin: 0; display: flex; align-items: center; gap: 0.6rem; font-weight: 800; font-size: 1.05rem; }
+      .consent__title::before { content: ""; width: 0.7rem; height: 0.7rem; border-radius: 0.18rem; background: #ff6b35; box-shadow: 0 0 1rem rgba(255, 107, 53, 0.6); }
+      .consent__text { margin: 0.5rem 0 0; color: rgba(255, 255, 255, 0.78); }
+      .consent__text a { color: #ff8a5c; text-underline-offset: 0.2em; }
+      .consent__actions { margin-top: 1rem; display: grid; grid-template-columns: 1fr 1fr; gap: 0.6rem; }
+      .consent__btn {
+        min-height: 2.9rem; padding: 0 1rem; border-radius: 0.8rem; cursor: pointer;
+        font: inherit; font-weight: 700; color: #fff;
+        background: rgba(255, 255, 255, 0.08); border: 1px solid rgba(255, 255, 255, 0.3);
+        transition: background 0.2s, border-color 0.2s;
+      }
+      .consent__btn:hover { background: rgba(255, 107, 53, 0.22); border-color: #ff6b35; }
+      .consent__btn:focus-visible { outline: 0.15rem solid #f7c59f; outline-offset: 0.2rem; }
+      @media (max-width: 600px) { .consent { right: 0.75rem; bottom: 0.75rem; width: calc(100% - 1.5rem); font-size: 15px; } }
+    </style>
+    <p class="consent__title" id="consent-title">Cookies</p>
+    <p class="consent__text">We'd like to use Google Analytics cookies to understand how the site is used. Nothing is measured unless you agree. <a href="/privacy-policy.html#website">Details</a></p>
+    <div class="consent__actions">
+      <button class="consent__btn" type="button" data-consent-choice="denied">Reject</button>
+      <button class="consent__btn" type="button" data-consent-choice="granted">Accept</button>
+    </div>
+  </section>
+    <script type="module">
+      // A visitor who picked Turkish gets the Turkish block first and a Turkish home link.
+      import { loadPrefs } from "/assets/site.js";
+      if (loadPrefs().lang === "tr") {
+        const tr = document.querySelector('.lost__block[lang="tr"]');
+        tr?.parentElement?.prepend(tr);
+        document.querySelector("[data-home]")?.setAttribute("href", "/tr/");
+      }
+    </script>
+  </body>
+</html>

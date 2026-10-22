@@ -1,0 +1,40 @@
+{
+  "tr": {
+    "a11y.lang": "Dil",
+    "nav.home": "Ana Sayfa",
+    "nav.support": "Destek",
+    "nav.privacy": "Gizlilik Politikası",
+    "nav.terms": "Hizmet Şartları",
+    "footer.rights": "© 2026 Grid Collection. Tüm hakları saklıdır.",
+    "a11y.footer": "Alt bağlantılar",
+    "og.alt": "Grid Collection: 95.000 seviyelik mantık bulmacası. 6 grid boyutu, 55 aşama, App Store'da ücretsiz.",
+    "consent.title": "Çerezler",
+    "consent.text": "Sitenin nasıl kullanıldığını anlamak için Google Analytics çerezleri kullanmak istiyoruz. Onay vermezsen hiçbir ölçüm yapılmaz.",
+    "consent.more": "Ayrıntılar",
+    "consent.accept": "Kabul et",
+    "consent.reject": "Reddet",
+    "consent.prefs": "Çerez tercihleri",
+    "nf.title": "Sayfa bulunamadı",
+    "nf.text": "Aradığın sayfa yok ya da taşındı.",
+    "nf.home": "Ana sayfaya dön"
+  },
+  "en": {
+    "a11y.lang": "Language",
+    "nav.home": "Home",
+    "nav.support": "Support",
+    "nav.privacy": "Privacy Policy",
+    "nav.terms": "Terms of Service",
+    "footer.rights": "© 2026 Grid Collection. All rights reserved.",
+    "a11y.footer": "Footer links",
+    "og.alt": "Grid Collection: a logic puzzle with 95,000 levels. 6 grid sizes, 55 stages, free on the App Store.",
+    "consent.title": "Cookies",
+    "consent.text": "We'd like to use Google Analytics cookies to understand how the site is used. Nothing is measured unless you agree.",
+    "consent.more": "Details",
+    "consent.accept": "Accept",
+    "consent.reject": "Reject",
+    "consent.prefs": "Cookie preferences",
+    "nf.title": "Page not found",
+    "nf.text": "The page you're looking for doesn't exist or has moved.",
+    "nf.home": "Back to the home page"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "tr": {
+    "meta.title": "Destek - Grid Collection",
+    "meta.desc": "Grid Collection desteği: oyunla ilgili yardım, hata bildirimi, genel bilgi ve özellik istekleri için e-posta adreslerimiz.",
+    "doc.title": "Destek",
+    "intro": "Yardıma ihtiyacınız olursa, talebinize göre aşağıdaki e-posta adreslerinden biri üzerinden bizimle iletişime geçmekten çekinmeyin:",
+    "c1.label": "Oyun Desteği ve Hata Bildirimleri:",
+    "c1.text": "Oyunla ilgili yardım almak veya hata bildirmek için bize şu adresten e-posta gönderin:",
+    "c2.label": "Genel Bilgi:",
+    "c2.text": "Oyunla ilgili bilgi almak için bize şu adresten e-posta gönderin:",
+    "c3.label": "Diğer Talepler ve Özellik İstekleri:",
+    "c3.text": "Oyunla ilgili diğer konularda destek almak veya yeni özellik talep etmek için bize şu adresten e-posta gönderin:"
+  },
+  "en": {
+    "meta.title": "Support - Grid Collection",
+    "meta.desc": "Grid Collection support: email addresses for help with the game, bug reports, general information and feature requests.",
+    "doc.title": "Support",
+    "intro": "If you need assistance, please feel free to contact us through one of the following email addresses based on your inquiry:",
+    "c1.label": "Game Support & Bug Reports:",
+    "c1.text": "For help related to the game or to report bugs, email us at",
+    "c2.label": "General Information:",
+    "c2.text": "For information related to the game, email us at",
+    "c3.label": "Other Inquiries & Feature Requests:",
+    "c3.text": "For support on any other topics related to the game or to request new features, email us at"
+  }
+}

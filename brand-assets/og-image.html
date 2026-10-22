@@ -1,0 +1,190 @@
+<!doctype html>
+<!--
+  Share image (Open Graph / Twitter) for grid-collection.com, 1200 × 630.
+  node brand-assets/capture.mjs renders it twice:
+    og-image.html?lang=en → /og-image.png      og-image.html?lang=tr → /og-image-tr.png
+  Same visual language as the site: the GRID wordmark drawn with board cells,
+  cell colours #FF6B35 / #0F3460 / #2D2D4A on #1A1A2E, no lines between cells,
+  and a real 7x7 level from the game shown mid-solve (decoded and checked below).
+  Keep it flat (few gradients, no noise): each PNG must stay under 300 KB.
+-->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { width: 1200px; height: 630px; overflow: hidden; background: #0b0b16; }
+      body {
+        font-family: "SF Pro Display", "Segoe UI Variable Display", "Segoe UI", system-ui, sans-serif;
+        color: #fff; -webkit-font-smoothing: antialiased;
+      }
+      .og {
+        position: relative; width: 1200px; height: 630px; display: grid; grid-template-columns: 1fr 430px; gap: 40px;
+        align-items: center; padding: 0 64px 0 70px;
+        background: radial-gradient(70% 90% at 80% 55%, #1a1a2e 0%, #0b0b16 70%);
+      }
+      .brand { display: flex; align-items: center; gap: 18px; }
+      .brand__icon { width: 64px; height: 64px; border-radius: 15px; box-shadow: 0 10px 24px rgba(0, 0, 0, 0.5); }
+      .brand__name { font-size: 26px; font-weight: 800; letter-spacing: -0.01em; }
+      .brand__tag { font-size: 17px; font-weight: 600; color: #ff8a5c; letter-spacing: 0.04em; }
+      .wordmark { margin-top: 38px; display: grid; grid-template-columns: repeat(18, 25px); grid-auto-rows: 25px; gap: 5px; }
+      .wm { border-radius: 5px; }
+      .wm--on { background: #ff6b35; box-shadow: inset 0 3px 0 rgba(255, 255, 255, 0.25), inset 0 -3px 0 rgba(0, 0, 0, 0.16); }
+      .collection { margin-top: 16px; font-size: 24px; font-weight: 600; letter-spacing: 0.86em; }
+      .tagline { margin-top: 26px; font-size: 30px; line-height: 1.25; font-weight: 700; letter-spacing: -0.01em; }
+      .tagline b { color: #ff8a5c; }
+      .stats { margin-top: 26px; display: flex; gap: 10px; }
+      .stat {
+        padding: 9px 15px 10px; border-radius: 14px; border: 1px solid rgba(255, 255, 255, 0.16); background: #14142a;
+        font-size: 16px; color: rgba(255, 255, 255, 0.72); white-space: nowrap;
+      }
+      .stat b { display: block; font-size: 25px; line-height: 1.15; color: #fff; font-weight: 800; }
+      .stat--hot { border-color: rgba(255, 107, 53, 0.7); }
+      .stat--hot b { color: #ff8a5c; }
+      .store {
+        margin-top: 28px; display: inline-flex; align-items: center; gap: 14px; padding: 10px 22px 10px 16px;
+        border-radius: 14px; background: #fff; color: #0b0b16;
+      }
+      .store svg { width: 30px; height: 30px; }
+      .store small { display: block; font-size: 13px; font-weight: 600; opacity: 0.7; }
+      .store strong { display: block; font-size: 24px; font-weight: 800; line-height: 1.05; }
+      .store__free { margin-left: 16px; font-size: 18px; font-weight: 700; color: rgba(255, 255, 255, 0.8); }
+      .board {
+        position: relative; padding: 18px; border-radius: 30px;
+        background: #15172d; border: 1px solid rgba(255, 255, 255, 0.1);
+        box-shadow: 0 30px 70px rgba(0, 0, 0, 0.6);
+        transform: rotate(-3deg);
+      }
+      .board__grid { display: grid; grid-template-columns: repeat(7, 1fr); gap: 8px; }
+      .cell {
+        aspect-ratio: 1; border-radius: 10px; display: grid; place-items: center;
+        font-size: 22px; font-weight: 800; font-variant-numeric: tabular-nums;
+      }
+      .cell--active { background: #ff6b35; box-shadow: inset 0 3px 0 rgba(255, 255, 255, 0.25), inset 0 -3px 0 rgba(0, 0, 0, 0.16); }
+      .cell--passive { background: #2d2d4a; }
+      .cell--filled { background: #0f3460; box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.08); }
+      .cell--last { background: #ff6b35; box-shadow: 0 0 22px rgba(255, 107, 53, 0.7); }
+      .cell--target { background: #6e3a2f; outline: 3px dashed #ff6b35; outline-offset: -3px; }
+      .board__label {
+        position: absolute; left: 18px; right: 18px; bottom: -48px; display: flex; justify-content: space-between;
+        font-size: 17px; color: rgba(255, 255, 255, 0.6); font-family: ui-monospace, "Cascadia Mono", Consolas, monospace;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="og">
+      <div>
+        <div class="brand">
+          <img class="brand__icon" src="../apple-touch-icon.png" alt="" />
+          <div>
+            <p class="brand__name">Grid Collection</p>
+            <p class="brand__tag" data-t="genre"></p>
+          </div>
+        </div>
+        <div class="wordmark" aria-hidden="true"></div>
+        <p class="collection">COLLECTION</p>
+        <p class="tagline" data-t="tagline"></p>
+        <div class="stats">
+          <p class="stat stat--hot"><b data-t="n.levels"></b><span data-t="levels"></span></p>
+          <p class="stat"><b>6</b><span data-t="grids"></span></p>
+          <p class="stat"><b>55</b><span data-t="stages"></span></p>
+          <p class="stat"><b>136</b><span data-t="extreme"></span></p>
+        </div>
+        <div>
+          <p class="store">
+            <svg viewBox="7.94 8.72 21.78 21.78" fill="currentColor" aria-hidden="true"><path d="M24.76888,20.30068a4.94881,4.94881,0,0,1,2.35656-4.15206,5.06566,5.06566,0,0,0-3.99116-2.15768c-1.67924-.17626-3.30719,1.00483-4.1629,1.00483-.87227,0-2.18977-.98733-3.6085-.95814a5.31529,5.31529,0,0,0-4.47292,2.72787c-1.934,3.34842-.49141,8.26947,1.36114,10.97608.9269,1.32535,2.01018,2.8058,3.42763,2.7533,1.38706-.05753,1.9051-.88448,3.5794-.88448,1.65876,0,2.14479.88448,3.591.8511,1.48838-.02416,2.42613-1.33124,3.32051-2.66914a10.962,10.962,0,0,0,1.51842-3.09251A4.78205,4.78205,0,0,1,24.76888,20.30068Z"/><path d="M22.03725,12.21089a4.87248,4.87248,0,0,0,1.11452-3.49062,4.95746,4.95746,0,0,0-3.20758,1.65961,4.63634,4.63634,0,0,0-1.14371,3.36139A4.09905,4.09905,0,0,0,22.03725,12.21089Z"/></svg>
+            <span><small data-t="store.small"></small><strong>App Store</strong></span>
+          </p>
+          <span class="store__free" data-t="free"></span>
+        </div>
+      </div>
+      <div class="board">
+        <div class="board__grid"></div>
+        <p class="board__label"><span data-t="board"></span><span data-t="filled"></span></p>
+      </div>
+    </div>
+    <script>
+      const TEXT = {
+        en: {
+          genre: "Logic puzzle for iPhone",
+          tagline: "One rule, eight directions,",
+          tagline2: "95,000 levels.",
+          "n.levels": "95,000",
+          levels: "levels",
+          grids: "grid sizes",
+          stages: "stages",
+          extreme: "Extreme levels",
+          "store.small": "Download on the",
+          free: "Free",
+          board: "7×7 · Stage 3 · Level 3",
+          filled: "10 / 22",
+        },
+        tr: {
+          genre: "iPhone için mantık bulmacası",
+          tagline: "Tek kural, sekiz yön,",
+          tagline2: "95.000 seviye.",
+          "n.levels": "95.000",
+          levels: "seviye",
+          grids: "grid boyutu",
+          stages: "aşama",
+          extreme: "Extreme seviye",
+          "store.small": "Hemen indir",
+          free: "Ücretsiz",
+          board: "7×7 · Aşama 3 · Seviye 3",
+          filled: "10 / 22",
+        },
+      };
+      const lang = new URLSearchParams(location.search).get("lang") === "tr" ? "tr" : "en";
+      document.documentElement.lang = lang;
+      const T = TEXT[lang];
+      document.querySelectorAll("[data-t]").forEach((n) => (n.textContent = T[n.dataset.t]));
+      const tag = document.querySelector(".tagline");
+      tag.textContent = `${T.tagline} `;
+      tag.append(Object.assign(document.createElement("b"), { textContent: T.tagline2 }));
+
+      // GRID wordmark from cells, same glyphs as the site (brand rule: cells only, no lines)
+      const GLYPHS = {
+        G: [".###", "#...", "#.##", "#..#", ".###"],
+        R: ["###.", "#..#", "###.", "#.#.", "#..#"],
+        I: ["###", ".#.", ".#.", ".#.", "###"],
+        D: ["###.", "#..#", "#..#", "#..#", "###."],
+      };
+      const rows = ["", "", "", "", ""];
+      ["G", "R", "I", "D"].forEach((L, i) => {
+        for (let r = 0; r < 5; r++) rows[r] += GLYPHS[L][r] + (i < 3 ? "." : "");
+      });
+      const wm = document.querySelector(".wordmark");
+      for (const row of rows) for (const ch of row) wm.append(Object.assign(document.createElement("span"), { className: `wm${ch === "#" ? " wm--on" : ""}` }));
+
+      // Real level (game data: 7x7, 22 active cells, stage 3, level 3), shown after 10 moves.
+      const DR = [-3, 3, 0, 0, -2, -2, 2, 2];
+      const DC = [0, 0, -3, 3, -2, 2, -2, 2];
+      const level = { n: 7, b: "0269682BB9698", s: "0e313443164360413453162" };
+      let bin = "";
+      for (const ch of level.b) bin += parseInt(ch, 16).toString(2).padStart(4, "0");
+      bin = bin.slice(-49).padStart(49, "0");
+      const active = [...bin].map((c) => c === "1");
+      let cell = parseInt(level.s.slice(0, 2), 36);
+      const solution = [cell];
+      for (const ch of level.s.slice(2)) solution.push((cell += DR[+ch] * 7 + DC[+ch]));
+      const count = active.filter(Boolean).length;
+      if (solution.length !== count || new Set(solution).size !== count || !solution.every((i) => active[i])) throw new Error("level does not decode");
+      const SHOWN = 10;
+      const order = new Map(solution.slice(0, SHOWN).map((c, i) => [c, i + 1]));
+      const last = solution[SHOWN - 1];
+      const targets = new Set();
+      for (let d = 0; d < 8; d++) {
+        const r = Math.floor(last / 7) + DR[d], c = (last % 7) + DC[d];
+        if (r >= 0 && r < 7 && c >= 0 && c < 7 && active[r * 7 + c] && !order.has(r * 7 + c)) targets.add(r * 7 + c);
+      }
+      const grid = document.querySelector(".board__grid");
+      for (let i = 0; i < 49; i++) {
+        const el = document.createElement("span");
+        const k = !active[i] ? "passive" : i === last ? "last" : order.has(i) ? "filled" : targets.has(i) ? "target" : "active";
+        el.className = `cell cell--${k}`;
+        if (order.has(i)) el.textContent = String(order.get(i));
+        grid.append(el);
+      }
+    </script>
+  </body>
+</html>

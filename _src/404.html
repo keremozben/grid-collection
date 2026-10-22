@@ -1,0 +1,60 @@
+<!doctype html>
+<!-- Template: tools/build-langs.mjs writes /404.html (both languages) from this file and _src/i18n/common.json.
+     GitHub Pages serves it for every missing path, so every URL here is root-absolute. -->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{en:nf.title}} · {{tr:nf.title}} — Grid Collection</title>
+    <meta name="robots" content="noindex" />
+{{@icons}}
+    <link rel="stylesheet" href="/assets/pages.css" />
+    <script type="module" src="/assets/analytics.js"></script>
+  </head>
+  <body>
+    <div class="field" aria-hidden="true"></div>
+    <div class="glow" aria-hidden="true"></div>
+    <header class="nav">
+      <a href="/" class="nav__brand" data-home="en">
+        <img class="nav__logo" src="/app-icon-128.png" width="128" height="128" alt="" />
+        <span>Grid Collection</span>
+      </a>
+    </header>
+
+    <main class="doc">
+      <h1 class="doc__title">404</h1>
+      <div class="doc__panel">
+        <section class="lost__block" lang="en">
+          <h2 class="lost__title">{{en:nf.title}}</h2>
+          <p class="lost__text">{{en:nf.text}}</p>
+          <a class="lost__link" href="/">{{en:nf.home}}</a>
+        </section>
+        <section class="lost__block" lang="tr">
+          <h2 class="lost__title">{{tr:nf.title}}</h2>
+          <p class="lost__text">{{tr:nf.text}}</p>
+          <a class="lost__link" href="/tr/">{{tr:nf.home}}</a>
+        </section>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <p class="footer__rights">© 2026 Grid Collection</p>
+      <nav class="footer__links" aria-label="{{en:a11y.footer}}">
+        <a class="footer__link" href="/support.html">{{en:nav.support}}</a>
+        <a class="footer__link" href="/tr/support.html" lang="tr">{{tr:nav.support}}</a>
+        <button class="footer__link footer__link--button" type="button" data-consent-open>{{en:consent.prefs}}</button>
+      </nav>
+    </footer>
+
+    {{@consent}}
+    <script type="module">
+      // A visitor who picked Turkish gets the Turkish block first and a Turkish home link.
+      import { loadPrefs } from "/assets/site.js";
+      if (loadPrefs().lang === "tr") {
+        const tr = document.querySelector('.lost__block[lang="tr"]');
+        tr?.parentElement?.prepend(tr);
+        document.querySelector("[data-home]")?.setAttribute("href", "/tr/");
+      }
+    </script>
+  </body>
+</html>

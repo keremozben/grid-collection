@@ -1,0 +1,79 @@
+<!doctype html>
+<!-- Template: tools/build-langs.mjs writes /terms-of-service.html (EN) and /tr/terms-of-service.html (TR) from this file and _src/i18n/terms.json -->
+<html lang="{{@lang}}">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+{{@head}}
+    <link rel="stylesheet" href="/assets/pages.css" />
+  </head>
+  <body data-legal-page="terms">
+    <div class="field" aria-hidden="true"></div>
+    <div class="glow" aria-hidden="true"></div>
+    <header class="nav">
+      <a href="{{@href:home}}" class="nav__brand">
+        <img class="nav__logo" src="/app-icon-128.png" width="128" height="128" alt="" />
+        <span>Grid Collection</span>
+      </a>
+      <nav class="nav__menu">
+        <ul class="nav__links">
+          <li><a class="nav__link" href="{{@href:home}}" data-page="home">{{nav.home}}</a></li>
+          <li><a class="nav__link" href="{{@href:support}}" data-page="support">{{nav.support}}</a></li>
+          <li><a class="nav__link" href="{{@href:privacy}}" data-page="privacy">{{nav.privacy}}</a></li>
+          <li><a class="nav__link" href="{{@href:terms}}" data-page="terms">{{nav.terms}}</a></li>
+        </ul>
+      </nav>
+      {{@langswitch}}
+    </header>
+
+    <main class="doc">
+      <h1 class="doc__title">{{doc.title}}</h1>
+
+      <div class="doc__panel">
+        <h2 class="doc__heading">{{s1.h}}</h2>
+        <p class="doc__text">{{s1.p}}</p>
+
+        <h2 class="doc__heading">{{s2.h}}</h2>
+        <p class="doc__text">{{s2.p}}</p>
+
+        <h2 class="doc__heading">{{s3.h}}</h2>
+        <p class="doc__text">{{s3.p}}</p>
+
+        <h2 class="doc__heading">{{s4.h}}</h2>
+        <p class="doc__text">{{s4.p}}</p>
+
+        <h2 class="doc__heading">{{s5.h}}</h2>
+        <p class="doc__text">{{s5.p}}</p>
+
+        <h2 class="doc__heading">{{s6.h}}</h2>
+        <p class="doc__text">{{s6.p}}</p>
+
+        <h2 class="doc__heading">{{s7.h}}</h2>
+        <p class="doc__text">{{s7.p}}</p>
+
+        <h2 class="doc__heading">{{s8.h}}</h2>
+        <p class="doc__text">{{s8.p}}</p>
+
+        <h2 class="doc__heading">{{s9.h}}</h2>
+        <p class="doc__text">{{s9.p}}</p>
+
+        <h2 class="doc__heading">{{s10.h}}</h2>
+        <p class="doc__text"><span>{{s10.p}}</span><a class="mail" href="mailto:contact@grid-collection.com" data-track="support_contact" data-track-mailto="contact">contact@grid-collection.com</a><span>{{s10.p2}}</span></p>
+
+        <h2 class="doc__heading">{{s11.h}}</h2>
+        <p class="doc__text">{{s11.p}}</p>
+
+        <h2 class="doc__heading">{{s12.h}}</h2>
+        <p class="doc__text">{{s12.p}}</p>
+
+        <h2 class="doc__heading">{{s13.h}}</h2>
+        <p class="doc__text">{{s13.p}}</p>
+      </div>
+    </main>
+
+  {{@footer}}
+
+  {{@consent}}
+    <script type="module" src="/assets/site.js"></script>
+  </body>
+</html>

@@ -1,30 +1,12 @@
 <!doctype html>
-<html lang="en">
+<html lang="tr">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Support page for Grid Collection puzzle game." />
+    <meta name="description" content="Grid Collection bulmaca oyunu için destek sayfası." />
     <meta name="color-scheme" content="dark" />
     <meta name="theme-color" content="#0b0b16" />
-    <title>Support - Grid Collection</title>
-    <link rel="canonical" href="https://grid-collection.com/support.html" />
-    <link rel="alternate" hreflang="en" href="https://grid-collection.com/support.html" />
-    <link rel="alternate" hreflang="tr" href="https://grid-collection.com/tr/support.html" />
-    <link rel="alternate" hreflang="de" href="https://grid-collection.com/de/support.html" />
-    <link rel="alternate" hreflang="es" href="https://grid-collection.com/es/support.html" />
-    <link rel="alternate" hreflang="fr" href="https://grid-collection.com/fr/support.html" />
-    <link rel="alternate" hreflang="it" href="https://grid-collection.com/it/support.html" />
-    <link rel="alternate" hreflang="pt-BR" href="https://grid-collection.com/pt-br/support.html" />
-    <link rel="alternate" hreflang="pl" href="https://grid-collection.com/pl/support.html" />
-    <link rel="alternate" hreflang="id" href="https://grid-collection.com/id/support.html" />
-    <link rel="alternate" hreflang="vi" href="https://grid-collection.com/vi/support.html" />
-    <link rel="alternate" hreflang="ru" href="https://grid-collection.com/ru/support.html" />
-    <link rel="alternate" hreflang="hi" href="https://grid-collection.com/hi/support.html" />
-    <link rel="alternate" hreflang="zh-Hans" href="https://grid-collection.com/zh-hans/support.html" />
-    <link rel="alternate" hreflang="zh-Hant" href="https://grid-collection.com/zh-hant/support.html" />
-    <link rel="alternate" hreflang="ja" href="https://grid-collection.com/ja/support.html" />
-    <link rel="alternate" hreflang="ko" href="https://grid-collection.com/ko/support.html" />
-    <link rel="alternate" hreflang="x-default" href="https://grid-collection.com/support.html" />
+    <title>Destek - Grid Collection</title>
     <link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48" />
     <link rel="icon" href="/favicon-32x32.png" type="image/png" sizes="32x32" />
     <link rel="icon" href="/favicon-192x192.png" type="image/png" sizes="192x192" />
@@ -114,15 +96,16 @@
     }
     .nav__link:hover { color: #fff; background: rgba(255, 255, 255, 0.07); }
     .nav__link--active { color: #fff; background: rgba(255, 107, 53, 0.18); }
-    .lang-select {
-      min-height: 2.75rem; padding: 0 2.4rem 0 1rem; border-radius: 99rem;
-      border: 1px solid var(--c-line); color: var(--c-text);
-      background: rgba(255, 255, 255, 0.06) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 8'%3E%3Cpath d='M1 1.5 6 6.5 11 1.5' fill='none' stroke='%23ff8a5c' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") right 1rem center / 0.75rem no-repeat;
-      font: 600 0.9rem var(--font); cursor: pointer; appearance: none; -webkit-appearance: none;
-      transition: border-color 0.2s;
+    .seg {
+      display: inline-flex; padding: 0.25rem; border-radius: 99rem;
+      background: rgba(255, 255, 255, 0.06); border: 1px solid var(--c-line);
     }
-    .lang-select:hover { border-color: var(--c-line-2); }
-    .lang-select option { background: var(--c-bg-2); color: var(--c-text); }
+    .seg__btn {
+      min-width: 3.2rem; min-height: 2.6rem; padding: 0 0.9rem; border: 0; border-radius: 99rem;
+      background: transparent; font-family: var(--mono); font-size: 0.9rem; font-weight: 700; letter-spacing: 0.08em;
+      color: var(--c-text-3); cursor: pointer; transition: background 0.25s, color 0.25s;
+    }
+    .seg__btn[aria-pressed="true"] { background: var(--c-orange); color: #fff; box-shadow: 0 0 1.2rem rgba(255, 107, 53, 0.45); }
 
     /* ---------- document ---------- */
     .doc {
@@ -196,7 +179,7 @@
     @media (max-width: 760px) {
       .nav { gap: 0.5rem 0.75rem; }
       .nav__brand { order: 1; font-size: 1.05rem; }
-      .lang-select { order: 2; max-width: 9rem; padding-left: 0.85rem; text-overflow: ellipsis; }
+      .seg { order: 2; }
       .nav__menu { order: 3; flex: 1 0 100%; margin: 0 -0.5rem; }
       .nav__links { flex-wrap: wrap; }
       .nav__link { padding: 0 0.75rem; }
@@ -218,65 +201,45 @@
 
       gtag("config", "G-EHP1CQ1RV4");
     </script>
-    <script src="/lang.js" defer></script>
   </head>
   <body>
     <div class="field" aria-hidden="true"></div>
     <div class="glow" aria-hidden="true"></div>
     <header class="nav">
-      <a href="/" class="nav__brand" data-nav="home">
+      <a href="/" class="nav__brand">
         <img class="nav__logo" src="/app-icon-128.png" width="128" height="128" alt="" />
         <span>Grid Collection</span>
       </a>
       <nav class="nav__menu">
         <ul class="nav__links">
-          <li><a class="nav__link" href="/" data-nav="home">Home</a></li>
-          <li><a class="nav__link nav__link--active" href="/support.html" data-nav="support" aria-current="page">Support</a></li>
-          <li><a class="nav__link" href="/privacy-policy.html" data-nav="privacy">Privacy Policy</a></li>
-          <li><a class="nav__link" href="/terms-of-service.html" data-nav="terms">Terms of Service</a></li>
+          <li><a class="nav__link" href="/" data-i18n="nav.home">Ana Sayfa</a></li>
+          <li><a class="nav__link nav__link--active" href="/support.html" aria-current="page" data-i18n="nav.support">Destek</a></li>
+          <li><a class="nav__link" href="/privacy-policy.html" data-i18n="nav.privacy">Gizlilik Politikası</a></li>
+          <li><a class="nav__link" href="/terms-of-service.html" data-i18n="nav.terms">Hizmet Şartları</a></li>
         </ul>
       </nav>
-      <select
-        class="lang-select"
-        aria-label="Language"
-        onchange="if(this.value)location.href=this.value"
-      >
-        <option value="/" selected>English</option>
-        <option value="/tr/">Türkçe</option>
-        <option value="/de/">Deutsch</option>
-        <option value="/es/">Español</option>
-        <option value="/fr/">Français</option>
-        <option value="/it/">Italiano</option>
-        <option value="/pt-br/">Português (BR)</option>
-        <option value="/pl/">Polski</option>
-        <option value="/id/">Bahasa Indonesia</option>
-        <option value="/vi/">Tiếng Việt</option>
-        <option value="/ru/">Русский</option>
-        <option value="/hi/">हिन्दी</option>
-        <option value="/zh-hans/">简体中文</option>
-        <option value="/zh-hant/">繁體中文</option>
-        <option value="/ja/">日本語</option>
-        <option value="/ko/">한국어</option>
-      </select>
+      <div class="seg" role="group" aria-label="Dil" data-i18n-aria="a11y.lang">
+        <button class="seg__btn" type="button" data-action="lang" data-lang="tr" aria-pressed="true">TR</button>
+        <button class="seg__btn" type="button" data-action="lang" data-lang="en" aria-pressed="false">EN</button>
+      </div>
     </header>
 
     <main class="doc">
-      <h1 class="doc__title">Support</h1>
+      <h1 class="doc__title" data-i18n="doc.title">Destek</h1>
 
       <div class="doc__panel">
-        <p class="doc__intro">If you need assistance, please feel free to contact us through one of the following email addresses based on your inquiry:</p>
-
+        <p class="doc__intro" data-i18n="intro">Yardıma ihtiyacınız olursa, talebinize göre aşağıdaki e-posta adreslerinden biri üzerinden bizimle iletişime geçmekten çekinmeyin:</p>
         <ul class="contacts">
           <li class="contact">
-            <strong class="contact__label">Game Support &amp; Bug Reports:</strong> For help related to the game or to report bugs, email us at
+            <strong class="contact__label" data-i18n="c1.label">Oyun Desteği ve Hata Bildirimleri:</strong> <span data-i18n="c1.text">Oyunla ilgili yardım almak veya hata bildirmek için bize şu adresten e-posta gönderin:</span>
             <a class="mail" href="mailto:support@grid-collection.com">support@grid-collection.com</a>
           </li>
           <li class="contact">
-            <strong class="contact__label">General Information:</strong> For information related to the game, email us at
+            <strong class="contact__label" data-i18n="c2.label">Genel Bilgi:</strong> <span data-i18n="c2.text">Oyunla ilgili bilgi almak için bize şu adresten e-posta gönderin:</span>
             <a class="mail" href="mailto:info@grid-collection.com">info@grid-collection.com</a>
           </li>
           <li class="contact">
-            <strong class="contact__label">Other Inquiries &amp; Feature Requests:</strong> For support on any other topics related to the game or to request new features, email us at
+            <strong class="contact__label" data-i18n="c3.label">Diğer Talepler ve Özellik İstekleri:</strong> <span data-i18n="c3.text">Oyunla ilgili diğer konularda destek almak veya yeni özellik talep etmek için bize şu adresten e-posta gönderin:</span>
             <a class="mail" href="mailto:contact@grid-collection.com">contact@grid-collection.com</a>
           </li>
         </ul>
@@ -284,12 +247,118 @@
     </main>
 
     <footer class="footer">
-      <p>© 2026 Grid Collection. All rights reserved.</p>
+      <p data-i18n="footer.rights">© 2026 Grid Collection. Tüm hakları saklıdır.</p>
       <div class="footer__links">
-        <a class="footer__link" href="/support.html" data-nav="support">Support</a>
-        <a class="footer__link" href="/privacy-policy.html" data-nav="privacy">Privacy Policy</a>
-        <a class="footer__link" href="/terms-of-service.html" data-nav="terms">Terms of Service</a>
+        <a class="footer__link" href="/support.html" data-i18n="nav.support">Destek</a>
+        <a class="footer__link" href="/privacy-policy.html" data-i18n="nav.privacy">Gizlilik Politikası</a>
+        <a class="footer__link" href="/terms-of-service.html" data-i18n="nav.terms">Hizmet Şartları</a>
       </div>
     </footer>
+    <script>
+      // Same language handling as index.html: TR/EN switch, choice shared with
+      // the landing page through the same localStorage entry.
+      const STORAGE_KEY = "grid-site:v1";
+
+      /** @typedef {"tr" | "en"} Lang */
+      /** @type {Record<Lang, Record<string, string>>} */
+      const TEXT = {
+        tr: {
+          "meta.title": "Destek - Grid Collection",
+          "meta.desc": "Grid Collection bulmaca oyunu için destek sayfası.",
+          "a11y.lang": "Dil",
+          "nav.home": "Ana Sayfa",
+          "nav.support": "Destek",
+          "nav.privacy": "Gizlilik Politikası",
+          "nav.terms": "Hizmet Şartları",
+          "footer.rights": "© 2026 Grid Collection. Tüm hakları saklıdır.",
+          "doc.title": "Destek",
+          "intro": "Yardıma ihtiyacınız olursa, talebinize göre aşağıdaki e-posta adreslerinden biri üzerinden bizimle iletişime geçmekten çekinmeyin:",
+          "c1.label": "Oyun Desteği ve Hata Bildirimleri:",
+          "c1.text": "Oyunla ilgili yardım almak veya hata bildirmek için bize şu adresten e-posta gönderin:",
+          "c2.label": "Genel Bilgi:",
+          "c2.text": "Oyunla ilgili bilgi almak için bize şu adresten e-posta gönderin:",
+          "c3.label": "Diğer Talepler ve Özellik İstekleri:",
+          "c3.text": "Oyunla ilgili diğer konularda destek almak veya yeni özellik talep etmek için bize şu adresten e-posta gönderin:",
+        },
+        en: {
+          "meta.title": "Support - Grid Collection",
+          "meta.desc": "Support page for Grid Collection puzzle game.",
+          "a11y.lang": "Language",
+          "nav.home": "Home",
+          "nav.support": "Support",
+          "nav.privacy": "Privacy Policy",
+          "nav.terms": "Terms of Service",
+          "footer.rights": "© 2026 Grid Collection. All rights reserved.",
+          "doc.title": "Support",
+          "intro": "If you need assistance, please feel free to contact us through one of the following email addresses based on your inquiry:",
+          "c1.label": "Game Support & Bug Reports:",
+          "c1.text": "For help related to the game or to report bugs, email us at",
+          "c2.label": "General Information:",
+          "c2.text": "For information related to the game, email us at",
+          "c3.label": "Other Inquiries & Feature Requests:",
+          "c3.text": "For support on any other topics related to the game or to request new features, email us at",
+        },
+      };
+
+      /** @typedef {{ lang: Lang, sound: boolean }} Prefs */
+
+      /** @param {unknown} v @returns {v is Prefs} */
+      function isPrefs(v) {
+        if (!v || typeof v !== "object") return false;
+        const o = /** @type {Record<string, unknown>} */ (v);
+        return (o.lang === "tr" || o.lang === "en") && typeof o.sound === "boolean";
+      }
+
+      /** @returns {Prefs} */
+      function loadPrefs() {
+        try {
+          const raw = localStorage.getItem(STORAGE_KEY);
+          const parsed = raw ? JSON.parse(raw) : null;
+          if (isPrefs(parsed)) return parsed;
+        } catch {
+          /* storage blocked or corrupt — fall through to defaults */
+        }
+        const nav = (navigator.language || "en").toLowerCase();
+        return { lang: nav.startsWith("tr") ? "tr" : "en", sound: true };
+      }
+
+      const prefs = loadPrefs();
+
+      function savePrefs() {
+        try {
+          localStorage.setItem(STORAGE_KEY, JSON.stringify(prefs));
+        } catch {
+          /* ignore */
+        }
+      }
+
+      /** @param {string} key */
+      const t = (key) => TEXT[prefs.lang][key] ?? TEXT.en[key] ?? key;
+
+      function applyLang() {
+        document.documentElement.lang = prefs.lang;
+        document.title = t("meta.title");
+        document.querySelector('meta[name="description"]')?.setAttribute("content", t("meta.desc"));
+        document.querySelectorAll("[data-i18n]").forEach((n) => {
+          n.textContent = t(/** @type {string} */ (/** @type {HTMLElement} */ (n).dataset.i18n));
+        });
+        document.querySelectorAll("[data-i18n-aria]").forEach((n) => {
+          n.setAttribute("aria-label", t(/** @type {string} */ (/** @type {HTMLElement} */ (n).dataset.i18nAria)));
+        });
+        document.querySelectorAll('[data-action="lang"]').forEach((b) => {
+          b.setAttribute("aria-pressed", String(/** @type {HTMLElement} */ (b).dataset.lang === prefs.lang));
+        });
+      }
+
+      document.addEventListener("click", (ev) => {
+        const act = /** @type {HTMLElement | null} */ (/** @type {HTMLElement} */ (ev.target).closest('[data-action="lang"]'));
+        if (!act) return;
+        prefs.lang = act.dataset.lang === "en" ? "en" : "tr";
+        savePrefs();
+        applyLang();
+      });
+
+      applyLang();
+    </script>
   </body>
 </html>

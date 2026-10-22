@@ -1083,9 +1083,9 @@
   <footer class="footer">
     <span data-i18n="footer.rights">© 2026 Grid Collection</span>
     <nav class="footer__links" aria-label="Alt bağlantılar" data-i18n-aria="a11y.footer">
-      <a class="footer__link" data-link="support" href="https://grid-collection.com/tr/support.html" data-i18n="footer.support">Destek</a>
-      <a class="footer__link" data-link="privacy-policy" href="https://grid-collection.com/tr/privacy-policy.html" data-i18n="footer.privacy">Gizlilik Politikası</a>
-      <a class="footer__link" data-link="terms-of-service" href="https://grid-collection.com/tr/terms-of-service.html" data-i18n="footer.terms">Kullanım Şartları</a>
+      <a class="footer__link" href="/support.html" data-i18n="footer.support">Destek</a>
+      <a class="footer__link" href="/privacy-policy.html" data-i18n="footer.privacy">Gizlilik Politikası</a>
+      <a class="footer__link" href="/terms-of-service.html" data-i18n="footer.terms">Kullanım Şartları</a>
     </nav>
   </footer>
 
@@ -3965,10 +3965,6 @@ fFEpOLlYSEOn+w25ktyABAO+ZNTIpNb0GdI1XD8WjJIrGeY3pCJuePrxwg8g2q4gcsmarJZu0OwsDLGx
       });
       document.querySelectorAll('[data-action="lang"]').forEach((b) => {
         b.setAttribute("aria-pressed", String(/** @type {HTMLElement} */ (b).dataset.lang === prefs.lang));
-      });
-      document.querySelectorAll("[data-link]").forEach((a) => {
-        const page = /** @type {HTMLElement} */ (a).dataset.link;
-        a.setAttribute("href", `https://grid-collection.com/${prefs.lang === "tr" ? "tr/" : ""}${page}.html`);
       });
       document.querySelectorAll("[data-count]").forEach((node) => {
         const v = Number(/** @type {HTMLElement} */ (node).dataset.count);

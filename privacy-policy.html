@@ -1,12 +1,12 @@
 <!doctype html>
-<html lang="en">
+<html lang="tr">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Privacy Policy for Grid Collection puzzle game." />
+    <meta name="description" content="Grid Collection bulmaca oyunu için Gizlilik Politikası." />
     <meta name="color-scheme" content="dark" />
     <meta name="theme-color" content="#0b0b16" />
-    <title>Privacy Policy - Grid Collection</title>
+    <title>Gizlilik Politikası - Grid Collection</title>
     <link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48" />
     <link rel="icon" href="/favicon-32x32.png" type="image/png" sizes="32x32" />
     <link rel="icon" href="/favicon-192x192.png" type="image/png" sizes="192x192" />
@@ -96,15 +96,16 @@
     }
     .nav__link:hover { color: #fff; background: rgba(255, 255, 255, 0.07); }
     .nav__link--active { color: #fff; background: rgba(255, 107, 53, 0.18); }
-    .lang-select {
-      min-height: 2.75rem; padding: 0 2.4rem 0 1rem; border-radius: 99rem;
-      border: 1px solid var(--c-line); color: var(--c-text);
-      background: rgba(255, 255, 255, 0.06) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 8'%3E%3Cpath d='M1 1.5 6 6.5 11 1.5' fill='none' stroke='%23ff8a5c' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") right 1rem center / 0.75rem no-repeat;
-      font: 600 0.9rem var(--font); cursor: pointer; appearance: none; -webkit-appearance: none;
-      transition: border-color 0.2s;
+    .seg {
+      display: inline-flex; padding: 0.25rem; border-radius: 99rem;
+      background: rgba(255, 255, 255, 0.06); border: 1px solid var(--c-line);
     }
-    .lang-select:hover { border-color: var(--c-line-2); }
-    .lang-select option { background: var(--c-bg-2); color: var(--c-text); }
+    .seg__btn {
+      min-width: 3.2rem; min-height: 2.6rem; padding: 0 0.9rem; border: 0; border-radius: 99rem;
+      background: transparent; font-family: var(--mono); font-size: 0.9rem; font-weight: 700; letter-spacing: 0.08em;
+      color: var(--c-text-3); cursor: pointer; transition: background 0.25s, color 0.25s;
+    }
+    .seg__btn[aria-pressed="true"] { background: var(--c-orange); color: #fff; box-shadow: 0 0 1.2rem rgba(255, 107, 53, 0.45); }
 
     /* ---------- document ---------- */
     .doc {
@@ -178,7 +179,7 @@
     @media (max-width: 760px) {
       .nav { gap: 0.5rem 0.75rem; }
       .nav__brand { order: 1; font-size: 1.05rem; }
-      .lang-select { order: 2; max-width: 9rem; padding-left: 0.85rem; text-overflow: ellipsis; }
+      .seg { order: 2; }
       .nav__menu { order: 3; flex: 1 0 100%; margin: 0 -0.5rem; }
       .nav__links { flex-wrap: wrap; }
       .nav__link { padding: 0 0.75rem; }
@@ -200,94 +201,213 @@
 
       gtag("config", "G-EHP1CQ1RV4");
     </script>
-    <script src="/lang.js" defer></script>
   </head>
   <body>
     <div class="field" aria-hidden="true"></div>
     <div class="glow" aria-hidden="true"></div>
     <header class="nav">
-      <a href="/" class="nav__brand" data-nav="home">
+      <a href="/" class="nav__brand">
         <img class="nav__logo" src="/app-icon-128.png" width="128" height="128" alt="" />
         <span>Grid Collection</span>
       </a>
       <nav class="nav__menu">
         <ul class="nav__links">
-          <li><a class="nav__link" href="/" data-nav="home">Home</a></li>
-          <li><a class="nav__link" href="/support.html" data-nav="support">Support</a></li>
-          <li><a class="nav__link nav__link--active" href="/privacy-policy.html" data-nav="privacy" aria-current="page">Privacy Policy</a></li>
-          <li><a class="nav__link" href="/terms-of-service.html" data-nav="terms">Terms of Service</a></li>
+          <li><a class="nav__link" href="/" data-i18n="nav.home">Ana Sayfa</a></li>
+          <li><a class="nav__link" href="/support.html" data-i18n="nav.support">Destek</a></li>
+          <li><a class="nav__link nav__link--active" href="/privacy-policy.html" aria-current="page" data-i18n="nav.privacy">Gizlilik Politikası</a></li>
+          <li><a class="nav__link" href="/terms-of-service.html" data-i18n="nav.terms">Hizmet Şartları</a></li>
         </ul>
       </nav>
-      <select
-        class="lang-select"
-        aria-label="Language"
-        onchange="if(this.value)location.href=this.value"
-      >
-        <option value="/" selected>English</option>
-        <option value="/tr/">Türkçe</option>
-        <option value="/de/">Deutsch</option>
-        <option value="/es/">Español</option>
-        <option value="/fr/">Français</option>
-        <option value="/it/">Italiano</option>
-        <option value="/pt-br/">Português (BR)</option>
-        <option value="/pl/">Polski</option>
-        <option value="/id/">Bahasa Indonesia</option>
-        <option value="/vi/">Tiếng Việt</option>
-        <option value="/ru/">Русский</option>
-        <option value="/hi/">हिन्दी</option>
-        <option value="/zh-hans/">简体中文</option>
-        <option value="/zh-hant/">繁體中文</option>
-        <option value="/ja/">日本語</option>
-        <option value="/ko/">한국어</option>
-      </select>
+      <div class="seg" role="group" aria-label="Dil" data-i18n-aria="a11y.lang">
+        <button class="seg__btn" type="button" data-action="lang" data-lang="tr" aria-pressed="true">TR</button>
+        <button class="seg__btn" type="button" data-action="lang" data-lang="en" aria-pressed="false">EN</button>
+      </div>
     </header>
 
     <main class="doc">
-      <h1 class="doc__title">Privacy Policy</h1>
+      <h1 class="doc__title" data-i18n="doc.title">Gizlilik Politikası</h1>
 
       <div class="doc__panel">
-        <h2 class="doc__heading">1. Introduction</h2>
-        <p class="doc__text">At GRID, we respect your privacy and are committed to protecting your personal information. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our mobile puzzle game application.</p>
+        <h2 class="doc__heading" data-i18n="s1.h">1. Giriş</h2>
+        <p class="doc__text" data-i18n="s1.p">GRID olarak gizliliğinize saygı duyuyor ve kişisel bilgilerinizi korumaya kararlıyız. Bu Gizlilik Politikası, mobil bulmaca oyunu uygulamamızı kullanırken bilgilerinizi nasıl topladığımızı, kullandığımızı, paylaştığımızı ve koruduğumuzu açıklar.</p>
 
-        <h2 class="doc__heading">2. Information We Collect</h2>
-        <p class="doc__text">We collect game progress data, including levels completed, scores, achievements, gameplay statistics, and purchase history. This data is stored locally on your device and synced to our cloud servers using Firebase. To save and restore your progress we sign you in automatically through Game Center (iOS) or Google Play Games (Android); we receive only a player identifier from these services — not your email address, name, or any other personal profile information. We also collect diagnostic data and crash reports to help us identify and fix issues in the game. Diagnostic data and crash reports include your player identifier so we can match issues to affected players; they never include your name or email address.</p>
+        <h2 class="doc__heading" data-i18n="s2.h">2. Topladığımız Bilgiler</h2>
+        <p class="doc__text" data-i18n="s2.p">Tamamlanan seviyeler, puanlar, başarımlar, oynanış istatistikleri ve satın alma geçmişi dahil olmak üzere oyun ilerleme verilerinizi topluyoruz. Bu veriler cihazınızda yerel olarak saklanır ve Firebase kullanılarak bulut sunucularımıza senkronize edilir. İlerlemenizi kaydetmek ve geri yüklemek için sizi otomatik olarak Game Center (iOS) veya Google Play Games (Android) üzerinden oturum açtırırız; bu hizmetlerden yalnızca bir oyuncu tanımlayıcısı alırız — e-posta adresinizi, adınızı veya başka herhangi bir kişisel profil bilgisini değil. Ayrıca oyundaki sorunları belirlememize ve düzeltmemize yardımcı olması için tanılama verileri ve çökme raporları toplarız. Tanılama verileri ve çökme raporları, sorunları etkilenen oyuncularla eşleştirebilmemiz için oyuncu tanımlayıcınızı içerir; ancak hiçbir zaman adınızı veya e-posta adresinizi içermez.</p>
 
-        <h2 class="doc__heading">3. How We Use Your Information</h2>
-        <p class="doc__text">We use your game progress data to provide game functionality and to back up and restore your progress on the same platform. We use purchase data to manage in-app purchases and restore purchases when needed. We use diagnostic data to identify and fix bugs, improve game stability, and enhance user experience. We do not use your game progress data for advertising or marketing purposes, though third-party advertising partners may use device identifiers for ad serving.</p>
+        <h2 class="doc__heading" data-i18n="s3.h">3. Bilgilerinizi Nasıl Kullanıyoruz</h2>
+        <p class="doc__text" data-i18n="s3.p">Oyun ilerleme verilerinizi, oyun işlevselliğini sağlamak ve ilerlemenizi aynı platformda yedeklemek ve geri yüklemek için kullanırız. Satın alma verilerini, uygulama içi satın alımları yönetmek ve gerektiğinde satın alımları geri yüklemek için kullanırız. Tanılama verilerini, hataları belirleyip düzeltmek, oyun kararlılığını artırmak ve kullanıcı deneyimini iyileştirmek için kullanırız. Üçüncü taraf reklam ortakları reklam sunmak için cihaz tanımlayıcılarını kullanabilse de, oyun ilerleme verilerinizi reklam veya pazarlama amaçlarıyla kullanmayız.</p>
 
-        <h2 class="doc__heading">4. Data Storage and Security</h2>
-        <p class="doc__text">Your game data is stored locally on your device using secure local storage and is automatically synced to the cloud using Firebase services. We implement appropriate technical and organizational measures to protect your personal information against unauthorized access, alteration, disclosure, or destruction.</p>
+        <h2 class="doc__heading" data-i18n="s4.h">4. Veri Saklama ve Güvenlik</h2>
+        <p class="doc__text" data-i18n="s4.p">Oyun verileriniz, güvenli yerel depolama kullanılarak cihazınızda yerel olarak saklanır ve Firebase hizmetleri kullanılarak otomatik olarak buluta senkronize edilir. Kişisel bilgilerinizi yetkisiz erişime, değiştirilmeye, ifşa edilmeye veya yok edilmeye karşı korumak için uygun teknik ve organizasyonel önlemler uygularız.</p>
 
-        <h2 class="doc__heading">5. Third-Party Services</h2>
-        <p class="doc__text">We use various third-party services to provide and improve our game. These include Apple Game Center and Google Play Games for automatic sign-in and progress backup; Firebase (Google) for authentication, cloud storage, and security; Firebase Crashlytics (Google) for diagnostic and crash reports; RevenueCat for managing in-app purchases; and Google AdMob for displaying advertisements. These services have their own privacy policies governing the collection and use of your information. We encourage you to review their privacy policies. We also use Firebase Analytics (Google) to collect aggregated gameplay and usage statistics that help us improve the game.</p>
+        <h2 class="doc__heading" data-i18n="s5.h">5. Üçüncü Taraf Hizmetler</h2>
+        <p class="doc__text" data-i18n="s5.p">Oyunumuzu sunmak ve iyileştirmek için çeşitli üçüncü taraf hizmetler kullanırız. Bunlar arasında otomatik oturum açma ve ilerleme yedekleme için Apple Game Center ve Google Play Games; kimlik doğrulama, bulut depolama ve güvenlik için Firebase (Google); tanılama ve çökme raporları için Firebase Crashlytics (Google); uygulama içi satın alımları yönetmek için RevenueCat; ve reklam göstermek için Google AdMob yer alır. Bu hizmetlerin, bilgilerinizin toplanmasını ve kullanılmasını düzenleyen kendi gizlilik politikaları vardır. Bu hizmetlerin gizlilik politikalarını incelemenizi öneririz. Ayrıca oyunu iyileştirmemize yardımcı olan toplu oynanış ve kullanım istatistiklerini toplamak için Firebase Analytics (Google) kullanırız.</p>
 
-        <h2 class="doc__heading">6. Children's Privacy</h2>
-        <p class="doc__text">Our game is intended for users aged 8 and above. We do not knowingly collect personal information from children under 8. If you are a parent or guardian and believe your child under 8 has provided us with personal information, please contact us immediately.</p>
+        <h2 class="doc__heading" data-i18n="s6.h">6. Çocukların Gizliliği</h2>
+        <p class="doc__text" data-i18n="s6.p">Oyunumuz 8 yaş ve üzeri kullanıcılara yöneliktir. 8 yaşından küçük çocuklardan bilerek kişisel bilgi toplamayız. Bir ebeveyn veya vasi iseniz ve 8 yaşından küçük çocuğunuzun bize kişisel bilgi verdiğini düşünüyorsanız, lütfen derhal bizimle iletişime geçin.</p>
 
-        <h2 class="doc__heading">7. Your Rights</h2>
-        <p class="doc__text">You have the right to access, correct, or delete your personal information. Because the game signs you in automatically through Game Center or Google Play Games and does not require you to create an account with an email or password, there is no in-app account to manage or delete. To request deletion of your data, contact us at the email address below and we will erase your data from our databases and connected third-party services (such as RevenueCat).</p>
+        <h2 class="doc__heading" data-i18n="s7.h">7. Haklarınız</h2>
+        <p class="doc__text" data-i18n="s7.p">Kişisel bilgilerinize erişme, bunları düzeltme veya silme hakkına sahipsiniz. Oyun sizi otomatik olarak Game Center veya Google Play Games üzerinden oturum açtırdığından ve e-posta ya da parola ile hesap oluşturmanızı gerektirmediğinden, yönetilecek veya silinecek bir uygulama içi hesap yoktur. Verilerinizin silinmesini talep etmek için aşağıdaki e-posta adresinden bizimle iletişime geçin; verilerinizi veritabanlarımızdan ve bağlı üçüncü taraf hizmetlerden (örneğin RevenueCat) sileceğiz.</p>
 
-        <h2 class="doc__heading">8. Data Retention</h2>
-        <p class="doc__text">We retain your personal information for as long as necessary to provide our services and fulfill the purposes outlined in this Privacy Policy. When you request deletion of your data, we will remove your personal information from our servers and connected third-party platforms, except where we are required to retain it for legal or regulatory purposes.</p>
+        <h2 class="doc__heading" data-i18n="s8.h">8. Veri Saklama Süresi</h2>
+        <p class="doc__text" data-i18n="s8.p">Kişisel bilgilerinizi, hizmetlerimizi sunmak ve bu Gizlilik Politikasında belirtilen amaçları yerine getirmek için gerekli olduğu sürece saklarız. Verilerinizin silinmesini talep ettiğinizde, yasal veya mevzuata ilişkin nedenlerle saklamamız gereken durumlar dışında, kişisel bilgilerinizi sunucularımızdan ve bağlı üçüncü taraf platformlarından kaldıracağız.</p>
 
-        <h2 class="doc__heading">9. Changes to This Privacy Policy</h2>
-        <p class="doc__text">We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the "Last Updated" date. You are advised to review this Privacy Policy periodically for any changes.</p>
+        <h2 class="doc__heading" data-i18n="s9.h">9. Bu Gizlilik Politikasındaki Değişiklikler</h2>
+        <p class="doc__text" data-i18n="s9.p">Bu Gizlilik Politikasını zaman zaman güncelleyebiliriz. Herhangi bir değişikliği, yeni Gizlilik Politikasını bu sayfada yayımlayarak ve "Son Güncelleme" tarihini güncelleyerek size bildireceğiz. Bu Gizlilik Politikasını herhangi bir değişiklik için düzenli olarak gözden geçirmeniz önerilir.</p>
 
-        <h2 class="doc__heading">10. Contact Us</h2>
-        <p class="doc__text">If you have any questions about this Privacy Policy or our data practices, please contact us at <a class="mail" href="mailto:contact@grid-collection.com">contact@grid-collection.com</a>.</p>
+        <h2 class="doc__heading" data-i18n="s10.h">10. Bizimle İletişime Geçin</h2>
+        <p class="doc__text"><span data-i18n="s10.p">Bu Gizlilik Politikası veya veri uygulamalarımız hakkında herhangi bir sorunuz varsa, lütfen </span><a class="mail" href="mailto:contact@grid-collection.com">contact@grid-collection.com</a><span data-i18n="s10.p2"> adresinden bizimle iletişime geçin.</span></p>
 
-        <h2 class="doc__heading">11. Last Updated</h2>
-        <p class="doc__text">Last updated: June 2026</p>
+        <h2 class="doc__heading" data-i18n="s11.h">11. Son Güncelleme</h2>
+        <p class="doc__text" data-i18n="s11.p">Son güncelleme: Haziran 2026</p>
       </div>
     </main>
 
     <footer class="footer">
-      <p>© 2026 Grid Collection. All rights reserved.</p>
+      <p data-i18n="footer.rights">© 2026 Grid Collection. Tüm hakları saklıdır.</p>
       <div class="footer__links">
-        <a class="footer__link" href="/support.html" data-nav="support">Support</a>
-        <a class="footer__link" href="/privacy-policy.html" data-nav="privacy">Privacy Policy</a>
-        <a class="footer__link" href="/terms-of-service.html" data-nav="terms">Terms of Service</a>
+        <a class="footer__link" href="/support.html" data-i18n="nav.support">Destek</a>
+        <a class="footer__link" href="/privacy-policy.html" data-i18n="nav.privacy">Gizlilik Politikası</a>
+        <a class="footer__link" href="/terms-of-service.html" data-i18n="nav.terms">Hizmet Şartları</a>
       </div>
     </footer>
+    <script>
+      // Same language handling as index.html: TR/EN switch, choice shared with
+      // the landing page through the same localStorage entry.
+      const STORAGE_KEY = "grid-site:v1";
+
+      /** @typedef {"tr" | "en"} Lang */
+      /** @type {Record<Lang, Record<string, string>>} */
+      const TEXT = {
+        tr: {
+          "meta.title": "Gizlilik Politikası - Grid Collection",
+          "meta.desc": "Grid Collection bulmaca oyunu için Gizlilik Politikası.",
+          "a11y.lang": "Dil",
+          "nav.home": "Ana Sayfa",
+          "nav.support": "Destek",
+          "nav.privacy": "Gizlilik Politikası",
+          "nav.terms": "Hizmet Şartları",
+          "footer.rights": "© 2026 Grid Collection. Tüm hakları saklıdır.",
+          "doc.title": "Gizlilik Politikası",
+          "s1.h": "1. Giriş",
+          "s1.p": "GRID olarak gizliliğinize saygı duyuyor ve kişisel bilgilerinizi korumaya kararlıyız. Bu Gizlilik Politikası, mobil bulmaca oyunu uygulamamızı kullanırken bilgilerinizi nasıl topladığımızı, kullandığımızı, paylaştığımızı ve koruduğumuzu açıklar.",
+          "s2.h": "2. Topladığımız Bilgiler",
+          "s2.p": "Tamamlanan seviyeler, puanlar, başarımlar, oynanış istatistikleri ve satın alma geçmişi dahil olmak üzere oyun ilerleme verilerinizi topluyoruz. Bu veriler cihazınızda yerel olarak saklanır ve Firebase kullanılarak bulut sunucularımıza senkronize edilir. İlerlemenizi kaydetmek ve geri yüklemek için sizi otomatik olarak Game Center (iOS) veya Google Play Games (Android) üzerinden oturum açtırırız; bu hizmetlerden yalnızca bir oyuncu tanımlayıcısı alırız — e-posta adresinizi, adınızı veya başka herhangi bir kişisel profil bilgisini değil. Ayrıca oyundaki sorunları belirlememize ve düzeltmemize yardımcı olması için tanılama verileri ve çökme raporları toplarız. Tanılama verileri ve çökme raporları, sorunları etkilenen oyuncularla eşleştirebilmemiz için oyuncu tanımlayıcınızı içerir; ancak hiçbir zaman adınızı veya e-posta adresinizi içermez.",
+          "s3.h": "3. Bilgilerinizi Nasıl Kullanıyoruz",
+          "s3.p": "Oyun ilerleme verilerinizi, oyun işlevselliğini sağlamak ve ilerlemenizi aynı platformda yedeklemek ve geri yüklemek için kullanırız. Satın alma verilerini, uygulama içi satın alımları yönetmek ve gerektiğinde satın alımları geri yüklemek için kullanırız. Tanılama verilerini, hataları belirleyip düzeltmek, oyun kararlılığını artırmak ve kullanıcı deneyimini iyileştirmek için kullanırız. Üçüncü taraf reklam ortakları reklam sunmak için cihaz tanımlayıcılarını kullanabilse de, oyun ilerleme verilerinizi reklam veya pazarlama amaçlarıyla kullanmayız.",
+          "s4.h": "4. Veri Saklama ve Güvenlik",
+          "s4.p": "Oyun verileriniz, güvenli yerel depolama kullanılarak cihazınızda yerel olarak saklanır ve Firebase hizmetleri kullanılarak otomatik olarak buluta senkronize edilir. Kişisel bilgilerinizi yetkisiz erişime, değiştirilmeye, ifşa edilmeye veya yok edilmeye karşı korumak için uygun teknik ve organizasyonel önlemler uygularız.",
+          "s5.h": "5. Üçüncü Taraf Hizmetler",
+          "s5.p": "Oyunumuzu sunmak ve iyileştirmek için çeşitli üçüncü taraf hizmetler kullanırız. Bunlar arasında otomatik oturum açma ve ilerleme yedekleme için Apple Game Center ve Google Play Games; kimlik doğrulama, bulut depolama ve güvenlik için Firebase (Google); tanılama ve çökme raporları için Firebase Crashlytics (Google); uygulama içi satın alımları yönetmek için RevenueCat; ve reklam göstermek için Google AdMob yer alır. Bu hizmetlerin, bilgilerinizin toplanmasını ve kullanılmasını düzenleyen kendi gizlilik politikaları vardır. Bu hizmetlerin gizlilik politikalarını incelemenizi öneririz. Ayrıca oyunu iyileştirmemize yardımcı olan toplu oynanış ve kullanım istatistiklerini toplamak için Firebase Analytics (Google) kullanırız.",
+          "s6.h": "6. Çocukların Gizliliği",
+          "s6.p": "Oyunumuz 8 yaş ve üzeri kullanıcılara yöneliktir. 8 yaşından küçük çocuklardan bilerek kişisel bilgi toplamayız. Bir ebeveyn veya vasi iseniz ve 8 yaşından küçük çocuğunuzun bize kişisel bilgi verdiğini düşünüyorsanız, lütfen derhal bizimle iletişime geçin.",
+          "s7.h": "7. Haklarınız",
+          "s7.p": "Kişisel bilgilerinize erişme, bunları düzeltme veya silme hakkına sahipsiniz. Oyun sizi otomatik olarak Game Center veya Google Play Games üzerinden oturum açtırdığından ve e-posta ya da parola ile hesap oluşturmanızı gerektirmediğinden, yönetilecek veya silinecek bir uygulama içi hesap yoktur. Verilerinizin silinmesini talep etmek için aşağıdaki e-posta adresinden bizimle iletişime geçin; verilerinizi veritabanlarımızdan ve bağlı üçüncü taraf hizmetlerden (örneğin RevenueCat) sileceğiz.",
+          "s8.h": "8. Veri Saklama Süresi",
+          "s8.p": "Kişisel bilgilerinizi, hizmetlerimizi sunmak ve bu Gizlilik Politikasında belirtilen amaçları yerine getirmek için gerekli olduğu sürece saklarız. Verilerinizin silinmesini talep ettiğinizde, yasal veya mevzuata ilişkin nedenlerle saklamamız gereken durumlar dışında, kişisel bilgilerinizi sunucularımızdan ve bağlı üçüncü taraf platformlarından kaldıracağız.",
+          "s9.h": "9. Bu Gizlilik Politikasındaki Değişiklikler",
+          "s9.p": "Bu Gizlilik Politikasını zaman zaman güncelleyebiliriz. Herhangi bir değişikliği, yeni Gizlilik Politikasını bu sayfada yayımlayarak ve \"Son Güncelleme\" tarihini güncelleyerek size bildireceğiz. Bu Gizlilik Politikasını herhangi bir değişiklik için düzenli olarak gözden geçirmeniz önerilir.",
+          "s10.h": "10. Bizimle İletişime Geçin",
+          "s10.p": "Bu Gizlilik Politikası veya veri uygulamalarımız hakkında herhangi bir sorunuz varsa, lütfen ",
+          "s10.p2": " adresinden bizimle iletişime geçin.",
+          "s11.h": "11. Son Güncelleme",
+          "s11.p": "Son güncelleme: Haziran 2026",
+        },
+        en: {
+          "meta.title": "Privacy Policy - Grid Collection",
+          "meta.desc": "Privacy Policy for Grid Collection puzzle game.",
+          "a11y.lang": "Language",
+          "nav.home": "Home",
+          "nav.support": "Support",
+          "nav.privacy": "Privacy Policy",
+          "nav.terms": "Terms of Service",
+          "footer.rights": "© 2026 Grid Collection. All rights reserved.",
+          "doc.title": "Privacy Policy",
+          "s1.h": "1. Introduction",
+          "s1.p": "At GRID, we respect your privacy and are committed to protecting your personal information. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our mobile puzzle game application.",
+          "s2.h": "2. Information We Collect",
+          "s2.p": "We collect game progress data, including levels completed, scores, achievements, gameplay statistics, and purchase history. This data is stored locally on your device and synced to our cloud servers using Firebase. To save and restore your progress we sign you in automatically through Game Center (iOS) or Google Play Games (Android); we receive only a player identifier from these services — not your email address, name, or any other personal profile information. We also collect diagnostic data and crash reports to help us identify and fix issues in the game. Diagnostic data and crash reports include your player identifier so we can match issues to affected players; they never include your name or email address.",
+          "s3.h": "3. How We Use Your Information",
+          "s3.p": "We use your game progress data to provide game functionality and to back up and restore your progress on the same platform. We use purchase data to manage in-app purchases and restore purchases when needed. We use diagnostic data to identify and fix bugs, improve game stability, and enhance user experience. We do not use your game progress data for advertising or marketing purposes, though third-party advertising partners may use device identifiers for ad serving.",
+          "s4.h": "4. Data Storage and Security",
+          "s4.p": "Your game data is stored locally on your device using secure local storage and is automatically synced to the cloud using Firebase services. We implement appropriate technical and organizational measures to protect your personal information against unauthorized access, alteration, disclosure, or destruction.",
+          "s5.h": "5. Third-Party Services",
+          "s5.p": "We use various third-party services to provide and improve our game. These include Apple Game Center and Google Play Games for automatic sign-in and progress backup; Firebase (Google) for authentication, cloud storage, and security; Firebase Crashlytics (Google) for diagnostic and crash reports; RevenueCat for managing in-app purchases; and Google AdMob for displaying advertisements. These services have their own privacy policies governing the collection and use of your information. We encourage you to review their privacy policies. We also use Firebase Analytics (Google) to collect aggregated gameplay and usage statistics that help us improve the game.",
+          "s6.h": "6. Children's Privacy",
+          "s6.p": "Our game is intended for users aged 8 and above. We do not knowingly collect personal information from children under 8. If you are a parent or guardian and believe your child under 8 has provided us with personal information, please contact us immediately.",
+          "s7.h": "7. Your Rights",
+          "s7.p": "You have the right to access, correct, or delete your personal information. Because the game signs you in automatically through Game Center or Google Play Games and does not require you to create an account with an email or password, there is no in-app account to manage or delete. To request deletion of your data, contact us at the email address below and we will erase your data from our databases and connected third-party services (such as RevenueCat).",
+          "s8.h": "8. Data Retention",
+          "s8.p": "We retain your personal information for as long as necessary to provide our services and fulfill the purposes outlined in this Privacy Policy. When you request deletion of your data, we will remove your personal information from our servers and connected third-party platforms, except where we are required to retain it for legal or regulatory purposes.",
+          "s9.h": "9. Changes to This Privacy Policy",
+          "s9.p": "We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the \"Last Updated\" date. You are advised to review this Privacy Policy periodically for any changes.",
+          "s10.h": "10. Contact Us",
+          "s10.p": "If you have any questions about this Privacy Policy or our data practices, please contact us at ",
+          "s10.p2": ".",
+          "s11.h": "11. Last Updated",
+          "s11.p": "Last updated: June 2026",
+        },
+      };
+
+      /** @typedef {{ lang: Lang, sound: boolean }} Prefs */
+
+      /** @param {unknown} v @returns {v is Prefs} */
+      function isPrefs(v) {
+        if (!v || typeof v !== "object") return false;
+        const o = /** @type {Record<string, unknown>} */ (v);
+        return (o.lang === "tr" || o.lang === "en") && typeof o.sound === "boolean";
+      }
+
+      /** @returns {Prefs} */
+      function loadPrefs() {
+        try {
+          const raw = localStorage.getItem(STORAGE_KEY);
+          const parsed = raw ? JSON.parse(raw) : null;
+          if (isPrefs(parsed)) return parsed;
+        } catch {
+          /* storage blocked or corrupt — fall through to defaults */
+        }
+        const nav = (navigator.language || "en").toLowerCase();
+        return { lang: nav.startsWith("tr") ? "tr" : "en", sound: true };
+      }
+
+      const prefs = loadPrefs();
+
+      function savePrefs() {
+        try {
+          localStorage.setItem(STORAGE_KEY, JSON.stringify(prefs));
+        } catch {
+          /* ignore */
+        }
+      }
+
+      /** @param {string} key */
+      const t = (key) => TEXT[prefs.lang][key] ?? TEXT.en[key] ?? key;
+
+      function applyLang() {
+        document.documentElement.lang = prefs.lang;
+        document.title = t("meta.title");
+        document.querySelector('meta[name="description"]')?.setAttribute("content", t("meta.desc"));
+        document.querySelectorAll("[data-i18n]").forEach((n) => {
+          n.textContent = t(/** @type {string} */ (/** @type {HTMLElement} */ (n).dataset.i18n));
+        });
+        document.querySelectorAll("[data-i18n-aria]").forEach((n) => {
+          n.setAttribute("aria-label", t(/** @type {string} */ (/** @type {HTMLElement} */ (n).dataset.i18nAria)));
+        });
+        document.querySelectorAll('[data-action="lang"]').forEach((b) => {
+          b.setAttribute("aria-pressed", String(/** @type {HTMLElement} */ (b).dataset.lang === prefs.lang));
+        });
+      }
+
+      document.addEventListener("click", (ev) => {
+        const act = /** @type {HTMLElement | null} */ (/** @type {HTMLElement} */ (ev.target).closest('[data-action="lang"]'));
+        if (!act) return;
+        prefs.lang = act.dataset.lang === "en" ? "en" : "tr";
+        savePrefs();
+        applyLang();
+      });
+
+      applyLang();
+    </script>
   </body>
 </html>

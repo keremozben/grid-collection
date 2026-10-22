@@ -1,12 +1,12 @@
 <!doctype html>
-<html lang="en">
+<html lang="tr">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Terms of Service for Grid Collection puzzle game." />
+    <meta name="description" content="Grid Collection bulmaca oyunu için Hizmet Şartları." />
     <meta name="color-scheme" content="dark" />
     <meta name="theme-color" content="#0b0b16" />
-    <title>Terms of Service - Grid Collection</title>
+    <title>Hizmet Şartları - Grid Collection</title>
     <link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48" />
     <link rel="icon" href="/favicon-32x32.png" type="image/png" sizes="32x32" />
     <link rel="icon" href="/favicon-192x192.png" type="image/png" sizes="192x192" />
@@ -96,15 +96,16 @@
     }
     .nav__link:hover { color: #fff; background: rgba(255, 255, 255, 0.07); }
     .nav__link--active { color: #fff; background: rgba(255, 107, 53, 0.18); }
-    .lang-select {
-      min-height: 2.75rem; padding: 0 2.4rem 0 1rem; border-radius: 99rem;
-      border: 1px solid var(--c-line); color: var(--c-text);
-      background: rgba(255, 255, 255, 0.06) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 8'%3E%3Cpath d='M1 1.5 6 6.5 11 1.5' fill='none' stroke='%23ff8a5c' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") right 1rem center / 0.75rem no-repeat;
-      font: 600 0.9rem var(--font); cursor: pointer; appearance: none; -webkit-appearance: none;
-      transition: border-color 0.2s;
+    .seg {
+      display: inline-flex; padding: 0.25rem; border-radius: 99rem;
+      background: rgba(255, 255, 255, 0.06); border: 1px solid var(--c-line);
     }
-    .lang-select:hover { border-color: var(--c-line-2); }
-    .lang-select option { background: var(--c-bg-2); color: var(--c-text); }
+    .seg__btn {
+      min-width: 3.2rem; min-height: 2.6rem; padding: 0 0.9rem; border: 0; border-radius: 99rem;
+      background: transparent; font-family: var(--mono); font-size: 0.9rem; font-weight: 700; letter-spacing: 0.08em;
+      color: var(--c-text-3); cursor: pointer; transition: background 0.25s, color 0.25s;
+    }
+    .seg__btn[aria-pressed="true"] { background: var(--c-orange); color: #fff; box-shadow: 0 0 1.2rem rgba(255, 107, 53, 0.45); }
 
     /* ---------- document ---------- */
     .doc {
@@ -178,7 +179,7 @@
     @media (max-width: 760px) {
       .nav { gap: 0.5rem 0.75rem; }
       .nav__brand { order: 1; font-size: 1.05rem; }
-      .lang-select { order: 2; max-width: 9rem; padding-left: 0.85rem; text-overflow: ellipsis; }
+      .seg { order: 2; }
       .nav__menu { order: 3; flex: 1 0 100%; margin: 0 -0.5rem; }
       .nav__links { flex-wrap: wrap; }
       .nav__link { padding: 0 0.75rem; }
@@ -200,100 +201,227 @@
 
       gtag("config", "G-EHP1CQ1RV4");
     </script>
-    <script src="/lang.js" defer></script>
   </head>
   <body>
     <div class="field" aria-hidden="true"></div>
     <div class="glow" aria-hidden="true"></div>
     <header class="nav">
-      <a href="/" class="nav__brand" data-nav="home">
+      <a href="/" class="nav__brand">
         <img class="nav__logo" src="/app-icon-128.png" width="128" height="128" alt="" />
         <span>Grid Collection</span>
       </a>
       <nav class="nav__menu">
         <ul class="nav__links">
-          <li><a class="nav__link" href="/" data-nav="home">Home</a></li>
-          <li><a class="nav__link" href="/support.html" data-nav="support">Support</a></li>
-          <li><a class="nav__link" href="/privacy-policy.html" data-nav="privacy">Privacy Policy</a></li>
-          <li><a class="nav__link nav__link--active" href="/terms-of-service.html" data-nav="terms" aria-current="page">Terms of Service</a></li>
+          <li><a class="nav__link" href="/" data-i18n="nav.home">Ana Sayfa</a></li>
+          <li><a class="nav__link" href="/support.html" data-i18n="nav.support">Destek</a></li>
+          <li><a class="nav__link" href="/privacy-policy.html" data-i18n="nav.privacy">Gizlilik Politikası</a></li>
+          <li><a class="nav__link nav__link--active" href="/terms-of-service.html" aria-current="page" data-i18n="nav.terms">Hizmet Şartları</a></li>
         </ul>
       </nav>
-      <select
-        class="lang-select"
-        aria-label="Language"
-        onchange="if(this.value)location.href=this.value"
-      >
-        <option value="/" selected>English</option>
-        <option value="/tr/">Türkçe</option>
-        <option value="/de/">Deutsch</option>
-        <option value="/es/">Español</option>
-        <option value="/fr/">Français</option>
-        <option value="/it/">Italiano</option>
-        <option value="/pt-br/">Português (BR)</option>
-        <option value="/pl/">Polski</option>
-        <option value="/id/">Bahasa Indonesia</option>
-        <option value="/vi/">Tiếng Việt</option>
-        <option value="/ru/">Русский</option>
-        <option value="/hi/">हिन्दी</option>
-        <option value="/zh-hans/">简体中文</option>
-        <option value="/zh-hant/">繁體中文</option>
-        <option value="/ja/">日本語</option>
-        <option value="/ko/">한국어</option>
-      </select>
+      <div class="seg" role="group" aria-label="Dil" data-i18n-aria="a11y.lang">
+        <button class="seg__btn" type="button" data-action="lang" data-lang="tr" aria-pressed="true">TR</button>
+        <button class="seg__btn" type="button" data-action="lang" data-lang="en" aria-pressed="false">EN</button>
+      </div>
     </header>
 
     <main class="doc">
-      <h1 class="doc__title">Terms of Service</h1>
+      <h1 class="doc__title" data-i18n="doc.title">Hizmet Şartları</h1>
 
       <div class="doc__panel">
-        <h2 class="doc__heading">1. Acceptance of Terms</h2>
-        <p class="doc__text">By downloading, installing, or using GRID, you agree to be bound by these Terms of Service. If you do not agree to these terms, please do not use our application.</p>
+        <h2 class="doc__heading" data-i18n="s1.h">1. Şartların Kabulü</h2>
+        <p class="doc__text" data-i18n="s1.p">GRID'i indirerek, kurarak veya kullanarak bu Hizmet Şartlarına bağlı kalmayı kabul edersiniz. Bu şartları kabul etmiyorsanız, lütfen uygulamamızı kullanmayın.</p>
 
-        <h2 class="doc__heading">2. Use of the Application</h2>
-        <p class="doc__text">GRID is a puzzle game application. You may use the app for personal, non-commercial purposes. You agree not to modify, reverse engineer, or create derivative works based on the app.</p>
+        <h2 class="doc__heading" data-i18n="s2.h">2. Uygulamanın Kullanımı</h2>
+        <p class="doc__text" data-i18n="s2.p">GRID bir bulmaca oyunu uygulamasıdır. Uygulamayı kişisel, ticari olmayan amaçlarla kullanabilirsiniz. Uygulamayı değiştirmemeyi, tersine mühendislik yapmamayı veya uygulamaya dayalı türev çalışmalar oluşturmamayı kabul edersiniz.</p>
 
-        <h2 class="doc__heading">3. User Accounts</h2>
-        <p class="doc__text">GRID signs you in automatically using Game Center on iOS or Google Play Games on Android, so your progress is backed up and restored on the same platform without creating an account or providing an email. There is no in-app account to create or manage. Your progress data is stored locally on your device and synced to cloud servers. You are responsible for all activities that occur under your identity.</p>
+        <h2 class="doc__heading" data-i18n="s3.h">3. Kullanıcı Hesapları</h2>
+        <p class="doc__text" data-i18n="s3.p">GRID, sizi iOS'ta Game Center veya Android'de Google Play Games kullanarak otomatik olarak oturum açtırır; böylece ilerlemeniz, bir hesap oluşturmadan veya e-posta vermeden aynı platformda yedeklenir ve geri yüklenir. Oluşturulacak veya yönetilecek bir uygulama içi hesap yoktur. İlerleme verileriniz cihazınızda yerel olarak saklanır ve bulut sunucularına senkronize edilir. Kimliğiniz altında gerçekleşen tüm faaliyetlerden siz sorumlusunuz.</p>
 
-        <h2 class="doc__heading">4. Prohibited Activities</h2>
-        <p class="doc__text">You agree not to: (a) use the app for any unlawful purpose; (b) attempt to hack or disrupt the app's functionality; (c) share your account with others; (d) use automated tools to interact with the app.</p>
+        <h2 class="doc__heading" data-i18n="s4.h">4. Yasaklı Faaliyetler</h2>
+        <p class="doc__text" data-i18n="s4.p">Şunları yapmamayı kabul edersiniz: (a) uygulamayı herhangi bir yasa dışı amaçla kullanmak; (b) uygulamanın işlevselliğini hacklemeye veya bozmaya çalışmak; (c) hesabınızı başkalarıyla paylaşmak; (d) uygulamayla etkileşim için otomatik araçlar kullanmak.</p>
 
-        <h2 class="doc__heading">5. Intellectual Property</h2>
-        <p class="doc__text">All content, features, and functionality of GRID are owned by us and are protected by international copyright, trademark, and other intellectual property laws.</p>
+        <h2 class="doc__heading" data-i18n="s5.h">5. Fikri Mülkiyet</h2>
+        <p class="doc__text" data-i18n="s5.p">GRID'in tüm içeriği, özellikleri ve işlevselliği bize aittir ve uluslararası telif hakkı, ticari marka ve diğer fikri mülkiyet yasalarıyla korunmaktadır.</p>
 
-        <h2 class="doc__heading">6. Disclaimers</h2>
-        <p class="doc__text">GRID is provided "as is" without warranties of any kind. We do not guarantee that the app will be error-free or continuously available.</p>
+        <h2 class="doc__heading" data-i18n="s6.h">6. Sorumluluk Reddi</h2>
+        <p class="doc__text" data-i18n="s6.p">GRID, herhangi bir türde garanti olmaksızın "olduğu gibi" sunulur. Uygulamanın hatasız veya kesintisiz olarak kullanılabilir olacağını garanti etmeyiz.</p>
 
-        <h2 class="doc__heading">7. Limitation of Liability</h2>
-        <p class="doc__text">In no event shall we be liable for any indirect, incidental, special, or consequential damages arising out of or in connection with your use of GRID.</p>
+        <h2 class="doc__heading" data-i18n="s7.h">7. Sorumluluğun Sınırlandırılması</h2>
+        <p class="doc__text" data-i18n="s7.p">Hiçbir durumda, GRID'i kullanmanızdan kaynaklanan veya bununla bağlantılı olarak ortaya çıkan dolaylı, arızi, özel veya sonuç olarak ortaya çıkan zararlardan sorumlu tutulamayız.</p>
 
-        <h2 class="doc__heading">8. Termination</h2>
-        <p class="doc__text">We may terminate or suspend your access to GRID at any time, without prior notice, for any reason, including breach of these Terms of Service.</p>
+        <h2 class="doc__heading" data-i18n="s8.h">8. Fesih</h2>
+        <p class="doc__text" data-i18n="s8.p">Bu Hizmet Şartlarının ihlali dahil olmak üzere herhangi bir nedenle, önceden bildirimde bulunmaksızın, herhangi bir zamanda GRID'e erişiminizi sonlandırabilir veya askıya alabiliriz.</p>
 
-        <h2 class="doc__heading">9. Changes to Terms</h2>
-        <p class="doc__text">We reserve the right to modify these terms at any time. Continued use of the app after changes constitutes acceptance of the new terms.</p>
+        <h2 class="doc__heading" data-i18n="s9.h">9. Şartlardaki Değişiklikler</h2>
+        <p class="doc__text" data-i18n="s9.p">Bu şartları herhangi bir zamanda değiştirme hakkını saklı tutarız. Değişikliklerden sonra uygulamayı kullanmaya devam etmeniz, yeni şartların kabul edildiği anlamına gelir.</p>
 
-        <h2 class="doc__heading">10. Contact Information</h2>
-        <p class="doc__text">If you have any questions about these Terms of Service, please contact us at <a class="mail" href="mailto:contact@grid-collection.com">contact@grid-collection.com</a>.</p>
+        <h2 class="doc__heading" data-i18n="s10.h">10. İletişim Bilgileri</h2>
+        <p class="doc__text"><span data-i18n="s10.p">Bu Hizmet Şartları hakkında herhangi bir sorunuz varsa, lütfen </span><a class="mail" href="mailto:contact@grid-collection.com">contact@grid-collection.com</a><span data-i18n="s10.p2"> adresinden bizimle iletişime geçin.</span></p>
 
-        <h2 class="doc__heading">12. In-App Purchases</h2>
-        <p class="doc__text">GRID offers in-app purchases for consumable and non-consumable items. Payment will be charged to your Apple ID account at the confirmation of purchase. All purchases are one-time payments and we do not offer any recurring subscriptions. You can restore your non-consumable purchases at any time within the app.</p>
+        <h2 class="doc__heading" data-i18n="s11.h">12. Uygulama İçi Satın Alımlar</h2>
+        <p class="doc__text" data-i18n="s11.p">GRID, tüketilebilir ve tüketilemez öğeler için uygulama içi satın alımlar sunar. Satın alma onaylandığında ücret Apple ID hesabınızdan tahsil edilir. Tüm satın alımlar tek seferlik ödemelerdir ve herhangi bir yinelenen abonelik sunmuyoruz. Tüketilemez satın alımlarınızı uygulama içinde istediğiniz zaman geri yükleyebilirsiniz.</p>
 
-        <h2 class="doc__heading">13. Apple End User License Agreement</h2>
-        <p class="doc__text">This agreement is concluded between you and us, and not with Apple. We are solely responsible for the application and its content. Apple has no obligation whatsoever to furnish any maintenance and support services with respect to the application. Apple is not responsible for addressing any claims by you or any third party relating to the application.</p>
+        <h2 class="doc__heading" data-i18n="s12.h">13. Apple Son Kullanıcı Lisans Sözleşmesi</h2>
+        <p class="doc__text" data-i18n="s12.p">Bu sözleşme, Apple ile değil, sizinle bizim aramızda akdedilmiştir. Uygulamadan ve içeriğinden yalnızca biz sorumluyuz. Apple'ın, uygulamayla ilgili herhangi bir bakım ve destek hizmeti sağlama konusunda hiçbir yükümlülüğü yoktur. Apple, sizin veya herhangi bir üçüncü tarafın uygulamayla ilgili öne süreceği talepleri ele almaktan sorumlu değildir.</p>
 
-        <h2 class="doc__heading">11. Last updated</h2>
-        <p class="doc__text">Last updated: June 2026</p>
+        <h2 class="doc__heading" data-i18n="s13.h">11. Son güncelleme</h2>
+        <p class="doc__text" data-i18n="s13.p">Son güncelleme: Haziran 2026</p>
       </div>
     </main>
 
     <footer class="footer">
-      <p>© 2026 Grid Collection. All rights reserved.</p>
+      <p data-i18n="footer.rights">© 2026 Grid Collection. Tüm hakları saklıdır.</p>
       <div class="footer__links">
-        <a class="footer__link" href="/support.html" data-nav="support">Support</a>
-        <a class="footer__link" href="/privacy-policy.html" data-nav="privacy">Privacy Policy</a>
-        <a class="footer__link" href="/terms-of-service.html" data-nav="terms">Terms of Service</a>
+        <a class="footer__link" href="/support.html" data-i18n="nav.support">Destek</a>
+        <a class="footer__link" href="/privacy-policy.html" data-i18n="nav.privacy">Gizlilik Politikası</a>
+        <a class="footer__link" href="/terms-of-service.html" data-i18n="nav.terms">Hizmet Şartları</a>
       </div>
     </footer>
+    <script>
+      // Same language handling as index.html: TR/EN switch, choice shared with
+      // the landing page through the same localStorage entry.
+      const STORAGE_KEY = "grid-site:v1";
+
+      /** @typedef {"tr" | "en"} Lang */
+      /** @type {Record<Lang, Record<string, string>>} */
+      const TEXT = {
+        tr: {
+          "meta.title": "Hizmet Şartları - Grid Collection",
+          "meta.desc": "Grid Collection bulmaca oyunu için Hizmet Şartları.",
+          "a11y.lang": "Dil",
+          "nav.home": "Ana Sayfa",
+          "nav.support": "Destek",
+          "nav.privacy": "Gizlilik Politikası",
+          "nav.terms": "Hizmet Şartları",
+          "footer.rights": "© 2026 Grid Collection. Tüm hakları saklıdır.",
+          "doc.title": "Hizmet Şartları",
+          "s1.h": "1. Şartların Kabulü",
+          "s1.p": "GRID'i indirerek, kurarak veya kullanarak bu Hizmet Şartlarına bağlı kalmayı kabul edersiniz. Bu şartları kabul etmiyorsanız, lütfen uygulamamızı kullanmayın.",
+          "s2.h": "2. Uygulamanın Kullanımı",
+          "s2.p": "GRID bir bulmaca oyunu uygulamasıdır. Uygulamayı kişisel, ticari olmayan amaçlarla kullanabilirsiniz. Uygulamayı değiştirmemeyi, tersine mühendislik yapmamayı veya uygulamaya dayalı türev çalışmalar oluşturmamayı kabul edersiniz.",
+          "s3.h": "3. Kullanıcı Hesapları",
+          "s3.p": "GRID, sizi iOS'ta Game Center veya Android'de Google Play Games kullanarak otomatik olarak oturum açtırır; böylece ilerlemeniz, bir hesap oluşturmadan veya e-posta vermeden aynı platformda yedeklenir ve geri yüklenir. Oluşturulacak veya yönetilecek bir uygulama içi hesap yoktur. İlerleme verileriniz cihazınızda yerel olarak saklanır ve bulut sunucularına senkronize edilir. Kimliğiniz altında gerçekleşen tüm faaliyetlerden siz sorumlusunuz.",
+          "s4.h": "4. Yasaklı Faaliyetler",
+          "s4.p": "Şunları yapmamayı kabul edersiniz: (a) uygulamayı herhangi bir yasa dışı amaçla kullanmak; (b) uygulamanın işlevselliğini hacklemeye veya bozmaya çalışmak; (c) hesabınızı başkalarıyla paylaşmak; (d) uygulamayla etkileşim için otomatik araçlar kullanmak.",
+          "s5.h": "5. Fikri Mülkiyet",
+          "s5.p": "GRID'in tüm içeriği, özellikleri ve işlevselliği bize aittir ve uluslararası telif hakkı, ticari marka ve diğer fikri mülkiyet yasalarıyla korunmaktadır.",
+          "s6.h": "6. Sorumluluk Reddi",
+          "s6.p": "GRID, herhangi bir türde garanti olmaksızın \"olduğu gibi\" sunulur. Uygulamanın hatasız veya kesintisiz olarak kullanılabilir olacağını garanti etmeyiz.",
+          "s7.h": "7. Sorumluluğun Sınırlandırılması",
+          "s7.p": "Hiçbir durumda, GRID'i kullanmanızdan kaynaklanan veya bununla bağlantılı olarak ortaya çıkan dolaylı, arızi, özel veya sonuç olarak ortaya çıkan zararlardan sorumlu tutulamayız.",
+          "s8.h": "8. Fesih",
+          "s8.p": "Bu Hizmet Şartlarının ihlali dahil olmak üzere herhangi bir nedenle, önceden bildirimde bulunmaksızın, herhangi bir zamanda GRID'e erişiminizi sonlandırabilir veya askıya alabiliriz.",
+          "s9.h": "9. Şartlardaki Değişiklikler",
+          "s9.p": "Bu şartları herhangi bir zamanda değiştirme hakkını saklı tutarız. Değişikliklerden sonra uygulamayı kullanmaya devam etmeniz, yeni şartların kabul edildiği anlamına gelir.",
+          "s10.h": "10. İletişim Bilgileri",
+          "s10.p": "Bu Hizmet Şartları hakkında herhangi bir sorunuz varsa, lütfen ",
+          "s10.p2": " adresinden bizimle iletişime geçin.",
+          "s11.h": "12. Uygulama İçi Satın Alımlar",
+          "s11.p": "GRID, tüketilebilir ve tüketilemez öğeler için uygulama içi satın alımlar sunar. Satın alma onaylandığında ücret Apple ID hesabınızdan tahsil edilir. Tüm satın alımlar tek seferlik ödemelerdir ve herhangi bir yinelenen abonelik sunmuyoruz. Tüketilemez satın alımlarınızı uygulama içinde istediğiniz zaman geri yükleyebilirsiniz.",
+          "s12.h": "13. Apple Son Kullanıcı Lisans Sözleşmesi",
+          "s12.p": "Bu sözleşme, Apple ile değil, sizinle bizim aramızda akdedilmiştir. Uygulamadan ve içeriğinden yalnızca biz sorumluyuz. Apple'ın, uygulamayla ilgili herhangi bir bakım ve destek hizmeti sağlama konusunda hiçbir yükümlülüğü yoktur. Apple, sizin veya herhangi bir üçüncü tarafın uygulamayla ilgili öne süreceği talepleri ele almaktan sorumlu değildir.",
+          "s13.h": "11. Son güncelleme",
+          "s13.p": "Son güncelleme: Haziran 2026",
+        },
+        en: {
+          "meta.title": "Terms of Service - Grid Collection",
+          "meta.desc": "Terms of Service for Grid Collection puzzle game.",
+          "a11y.lang": "Language",
+          "nav.home": "Home",
+          "nav.support": "Support",
+          "nav.privacy": "Privacy Policy",
+          "nav.terms": "Terms of Service",
+          "footer.rights": "© 2026 Grid Collection. All rights reserved.",
+          "doc.title": "Terms of Service",
+          "s1.h": "1. Acceptance of Terms",
+          "s1.p": "By downloading, installing, or using GRID, you agree to be bound by these Terms of Service. If you do not agree to these terms, please do not use our application.",
+          "s2.h": "2. Use of the Application",
+          "s2.p": "GRID is a puzzle game application. You may use the app for personal, non-commercial purposes. You agree not to modify, reverse engineer, or create derivative works based on the app.",
+          "s3.h": "3. User Accounts",
+          "s3.p": "GRID signs you in automatically using Game Center on iOS or Google Play Games on Android, so your progress is backed up and restored on the same platform without creating an account or providing an email. There is no in-app account to create or manage. Your progress data is stored locally on your device and synced to cloud servers. You are responsible for all activities that occur under your identity.",
+          "s4.h": "4. Prohibited Activities",
+          "s4.p": "You agree not to: (a) use the app for any unlawful purpose; (b) attempt to hack or disrupt the app's functionality; (c) share your account with others; (d) use automated tools to interact with the app.",
+          "s5.h": "5. Intellectual Property",
+          "s5.p": "All content, features, and functionality of GRID are owned by us and are protected by international copyright, trademark, and other intellectual property laws.",
+          "s6.h": "6. Disclaimers",
+          "s6.p": "GRID is provided \"as is\" without warranties of any kind. We do not guarantee that the app will be error-free or continuously available.",
+          "s7.h": "7. Limitation of Liability",
+          "s7.p": "In no event shall we be liable for any indirect, incidental, special, or consequential damages arising out of or in connection with your use of GRID.",
+          "s8.h": "8. Termination",
+          "s8.p": "We may terminate or suspend your access to GRID at any time, without prior notice, for any reason, including breach of these Terms of Service.",
+          "s9.h": "9. Changes to Terms",
+          "s9.p": "We reserve the right to modify these terms at any time. Continued use of the app after changes constitutes acceptance of the new terms.",
+          "s10.h": "10. Contact Information",
+          "s10.p": "If you have any questions about these Terms of Service, please contact us at ",
+          "s10.p2": ".",
+          "s11.h": "12. In-App Purchases",
+          "s11.p": "GRID offers in-app purchases for consumable and non-consumable items. Payment will be charged to your Apple ID account at the confirmation of purchase. All purchases are one-time payments and we do not offer any recurring subscriptions. You can restore your non-consumable purchases at any time within the app.",
+          "s12.h": "13. Apple End User License Agreement",
+          "s12.p": "This agreement is concluded between you and us, and not with Apple. We are solely responsible for the application and its content. Apple has no obligation whatsoever to furnish any maintenance and support services with respect to the application. Apple is not responsible for addressing any claims by you or any third party relating to the application.",
+          "s13.h": "11. Last updated",
+          "s13.p": "Last updated: June 2026",
+        },
+      };
+
+      /** @typedef {{ lang: Lang, sound: boolean }} Prefs */
+
+      /** @param {unknown} v @returns {v is Prefs} */
+      function isPrefs(v) {
+        if (!v || typeof v !== "object") return false;
+        const o = /** @type {Record<string, unknown>} */ (v);
+        return (o.lang === "tr" || o.lang === "en") && typeof o.sound === "boolean";
+      }
+
+      /** @returns {Prefs} */
+      function loadPrefs() {
+        try {
+          const raw = localStorage.getItem(STORAGE_KEY);
+          const parsed = raw ? JSON.parse(raw) : null;
+          if (isPrefs(parsed)) return parsed;
+        } catch {
+          /* storage blocked or corrupt — fall through to defaults */
+        }
+        const nav = (navigator.language || "en").toLowerCase();
+        return { lang: nav.startsWith("tr") ? "tr" : "en", sound: true };
+      }
+
+      const prefs = loadPrefs();
+
+      function savePrefs() {
+        try {
+          localStorage.setItem(STORAGE_KEY, JSON.stringify(prefs));
+        } catch {
+          /* ignore */
+        }
+      }
+
+      /** @param {string} key */
+      const t = (key) => TEXT[prefs.lang][key] ?? TEXT.en[key] ?? key;
+
+      function applyLang() {
+        document.documentElement.lang = prefs.lang;
+        document.title = t("meta.title");
+        document.querySelector('meta[name="description"]')?.setAttribute("content", t("meta.desc"));
+        document.querySelectorAll("[data-i18n]").forEach((n) => {
+          n.textContent = t(/** @type {string} */ (/** @type {HTMLElement} */ (n).dataset.i18n));
+        });
+        document.querySelectorAll("[data-i18n-aria]").forEach((n) => {
+          n.setAttribute("aria-label", t(/** @type {string} */ (/** @type {HTMLElement} */ (n).dataset.i18nAria)));
+        });
+        document.querySelectorAll('[data-action="lang"]').forEach((b) => {
+          b.setAttribute("aria-pressed", String(/** @type {HTMLElement} */ (b).dataset.lang === prefs.lang));
+        });
+      }
+
+      document.addEventListener("click", (ev) => {
+        const act = /** @type {HTMLElement | null} */ (/** @type {HTMLElement} */ (ev.target).closest('[data-action="lang"]'));
+        if (!act) return;
+        prefs.lang = act.dataset.lang === "en" ? "en" : "tr";
+        savePrefs();
+        applyLang();
+      });
+
+      applyLang();
+    </script>
   </body>
 </html>
